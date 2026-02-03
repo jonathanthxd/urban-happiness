@@ -1,0 +1,111 @@
+# ~Written by RopeFire~
+
+#                                                   ~Items~
+
+# Empowered Heart of Ender
+empowered_heart_of_ender:
+  material: PAPER
+  Pack:
+    parent_model: item/generated
+    texture: tugkandeman/items/empowered_heart_of_ender
+    custom_model_data: 1020
+  itemname: <pink>Empowered Heart of Ender
+
+# Empowered Void Claw
+empowered_void_claw:
+  material: PAPER
+  Pack:
+    parent_model: item/generated
+    texture: tugkandeman/items/empowered_void_claw
+    custom_model_data: 1021
+  itemname: <pink>Empowered Void Claw
+
+# Empowered Void Crystal
+empowered_void_crystal:
+  material: PAPER
+  Pack:
+    parent_model: item/generated
+    texture: tugkandeman/items/empowered_void_crystal
+    custom_model_data: 1022
+  itemname: <pink>Empowered Void Crystal
+
+# Empowered Void Tendril
+empowered_void_tendril:
+  material: PAPER
+  Pack:
+    parent_model: item/generated
+    texture: tugkandeman/items/empowered_void_tendril
+    custom_model_data: 1023
+  itemname: <pink>Empowered Void Tendril
+
+# End Soul
+end_soul:
+  material: PAPER
+  Pack:
+    parent_model: item/generated
+    texture: tugkandeman/items/end_soul
+    custom_model_data: 1024
+  itemname: <pink>End Soul
+
+# Ender Carapace
+ender_carapace:
+  material: PAPER
+  Pack:
+    parent_model: item/generated
+    texture: tugkandeman/items/ender_carapace
+    custom_model_data: 1025
+  itemname: <white>Ender Carapace
+
+# Heart of Ender
+heart_of_ender:
+  material: PAPER
+  Pack:
+    parent_model: item/generated
+    texture: tugkandeman/items/heart_of_ender
+    custom_model_data: 1026
+  itemname: <white>Heart of Ender
+
+# Phantasmal Eye of Ender
+phantasmal_eye_of_ender:
+  material: PAPER
+  Pack:
+    parent_model: item/generated
+    texture: tugkandeman/items/phantasmal_eye_of_ender
+    custom_model_data: 1027
+  itemname: <pink>Phantasmal Eye of Ender
+
+# Third Eye of Ender
+third_eye_of_ender:
+  material: PAPER
+  Pack:
+    parent_model: item/generated
+    texture: tugkandeman/items/third_eye_of_ender
+    custom_model_data: 1028
+  itemname: <pink>Third Eye of Ender
+
+# Void Claw
+void_claw:
+  material: PAPER
+  Pack:
+    parent_model: item/generated
+    texture: tugkandeman/items/void_claw
+    custom_model_data: 1029
+  itemname: <white>Void Claw
+
+# Void Fabric
+void_fabric:
+  material: PAPER
+  Pack:
+    parent_model: item/generated
+    texture: tugkandeman/items/void_fabric
+    custom_model_data: 1030
+  itemname: <white>Void Fabric
+
+# Void Growth
+void_growth:
+  material: PAPER
+  Pack:
+    parent_model: item/generated
+    texture: tugkandeman/items/void_growth
+    custom_model_data: 1031
+  itemname: <white>Void Growth

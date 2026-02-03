@@ -1,0 +1,137 @@
+menu_title: '<shift:-12><glyph:page_one>'
+open_command: 
+  - huds
+  - fantasyhud
+  - fhuds
+size: 54
+open_requirement:
+  requirements:
+    permission:
+      type: has permission
+      permission: fantasy.controls.huds
+      deny_commands:
+        - "[message] &cYou don't have &e&nPermission!"
+items:
+#------------------------------------------------------------------------------------------- Enable Button ------------------
+  'player_mian_status':
+    material: BOOK
+    model_data: 85099
+    slots: 
+      - 0
+    display_name: '&aEnable'
+    lore:
+      - '&7Enable this function!'
+    left_click_commands:
+      - '[console] hud hud add %player_name% fantasy_hud' 
+      - "[message] &9[Fantasy-HUD] &fYou have &aEnabled &ePlayer Main Status"
+  'player_sub_skills_bar':
+    material: BOOK
+    model_data: 85099
+    slots: 
+      - 9
+    display_name: '&aEnable'
+    lore:
+      - '&7Enable this function!'
+    left_click_commands:
+      - '[console] hud hud add %player_name% fantasy_hud_sublevel_images' 
+      - "[message] &9[Fantasy-HUD] &fYou have &aEnabled &ePlayer sub skills bar"
+  'player_sub_skills_number':
+    material: BOOK
+    model_data: 85099
+    slots: 
+      - 18
+    display_name: '&aEnable'
+    lore:
+      - '&7Enable this function!'
+    left_click_commands:
+      - '[console] hud hud add %player_name% fantasy_hud_sublevel_texts' 
+      - "[message] &9[Fantasy-HUD] &fYou have &aEnabled &ePlayer sub skills number"
+  'season_text_box':
+    material: BOOK
+    model_data: 85099
+    slots: 
+      - 27
+    display_name: '&aEnable'
+    lore:
+      - '&7Enable this function!'
+    left_click_commands:
+      - '[console] hud hud add %player_name% fantasy_hud_season' 
+      - "[message] &9[Fantasy-HUD] &fYou have &aEnabled &eSeason world text box"
+  'armor_durability_icons':
+    material: BOOK
+    model_data: 85099
+    slots: 
+      - 36
+    display_name: '&aEnable'
+    lore:
+      - '&7Enable this function!'
+    left_click_commands:
+      - '[console] hud hud add %player_name% fantasy_hud_durability' 
+      - "[message] &9[Fantasy-HUD] &fYou have &aEnabled &ePlayer armor durability icons"
+#------------------------------------------------------------------------------------------- Disabled Button ------------------
+  'player_mian_status2':
+    material: BOOK
+    model_data: 85099
+    slots: 
+      - 8
+    display_name: '&cDisabled'
+    lore:
+      - '&7Disabled this function!'
+    left_click_commands:
+      - '[console] hud hud remove %player_name% fantasy_hud' 
+      - "[message] &9[Fantasy-HUD] &fYou have &cDisabled &ePlayer Main Status"
+  'player_sub_skills_bar2':
+    material: BOOK
+    model_data: 85099
+    slots: 
+      - 17
+    display_name: '&cDisabled'
+    lore:
+      - '&7Disabled this function!'
+    left_click_commands:
+      - '[console] hud hud remove %player_name% fantasy_hud_sublevel_images' 
+      - "[message] &9[Fantasy-HUD] &fYou have &cDisabled &ePlayer sub skills bar"
+  'player_sub_skills_number2':
+    material: BOOK
+    model_data: 85099
+    slots: 
+      - 26
+    display_name: '&cDisabled'
+    lore:
+      - '&7Disabled this function!'
+    left_click_commands:
+      - '[console] hud hud remove %player_name% fantasy_hud_sublevel_texts' 
+      - "[message] &9[Fantasy-HUD] &fYou have &cDisabled &ePlayer sub skills number"
+  'season_text_box2':
+    material: BOOK
+    model_data: 85099
+    slots: 
+      - 35
+    display_name: '&cDisabled'
+    lore:
+      - '&7Disabled this function!'
+    left_click_commands:
+      - '[console] hud hud remove %player_name% fantasy_hud_season' 
+      - "[message] &9[Fantasy-HUD] &fYou have &cDisabled &eSeason world text box"
+  'armor_durability_icons2':
+    material: BOOK
+    model_data: 85099
+    slots: 
+      - 44
+    display_name: '&cDisabled'
+    lore:
+      - '&7Disabled this function!'
+    left_click_commands:
+      - '[console] hud hud remove %player_name% fantasy_hud_durability' 
+      - "[message] &9[Fantasy-HUD] &fYou have &cDisabled &ePlayer armor durability icons"
+#------------------------------------------------------------------------------------------- Next Page ------------------
+  'next_page':
+    material: BOOK
+    model_data: 85099
+    slots: 
+      - 49
+    display_name: '&eNEXT'
+    lore:
+      - '&7Go to the next page'
+    left_click_commands:
+      - '[openguimenu] control_huds_2'

@@ -1,0 +1,947 @@
+info:
+  namespace: lzfurniture
+items:
+  medieval_market_stalltable:
+    display_name: Market Stall Table
+    permission: medieval_market
+    resource:
+      material: PAPER
+      generate: false
+      model_path: furniture/medieval_market/medieval_market_stalltable
+    behaviours:
+      furniture:
+        gravity: false
+        fixed_rotation: true
+        small: false
+        solid: true
+        opposite_direction: false
+        placeable_on:
+          floor: true
+          ceiling: false
+          walls: false
+        hitbox:
+          length: 1
+          width: 3
+          height: 1
+          length_offset: 0
+        sound:
+          place:
+            name: block.wood.place
+          break:
+            name: block.wood.break
+  medieval_market_scarecrow:
+    display_name: Market Scarecrow
+    permission: medieval_market
+    resource:
+      material: PAPER
+      generate: false
+      model_path: furniture/medieval_market/medieval_market_scarecrow
+    behaviours:
+      furniture:
+        gravity: false
+        fixed_rotation: false
+        small: false
+        solid: false
+        opposite_direction: false
+        placeable_on:
+          floor: true
+          ceiling: false
+          walls: false
+        hitbox:
+          length: 1
+          width: 1
+          height: 2
+          length_offset: 0
+        sound:
+          place:
+            name: block.grass.place
+          break:
+            name: block.grass.break
+  medieval_market_campfire:
+    display_name: Market Campfire
+    permission: medieval_market
+    resource:
+      material: PAPER
+      generate: false
+      model_path: furniture/medieval_market/medieval_market_campfire
+    behaviours:
+      furniture:
+        gravity: false
+        fixed_rotation: false
+        small: false
+        solid: false
+        light_level: 8
+        opposite_direction: false
+        placeable_on:
+          floor: true
+          ceiling: false
+          walls: false
+        hitbox:
+          length: 1
+          width: 1
+          height: 1.2
+          length_offset: 0
+        sound:
+          place:
+            name: block.wood.place
+          break:
+            name: block.wood.break
+  medieval_market_chest:
+    display_name: Market Chest
+    permission: medieval_market
+    resource:
+      material: PAPER
+      generate: false
+      model_path: furniture/medieval_market/medieval_market_chest
+    behaviours:
+      furniture:
+        gravity: false
+        fixed_rotation: false
+        small: false
+        solid: true
+        opposite_direction: false
+        placeable_on:
+          floor: true
+          ceiling: false
+          walls: false
+        hitbox:
+          length: 1
+          width: 1
+          height: 1
+          length_offset: 0
+        sound:
+          place:
+            name: block.wood.place
+          break:
+            name: block.wood.break
+  medieval_market_direction_sign:
+    display_name: Market Direction Sign
+    permission: medieval_market
+    resource:
+      material: PAPER
+      generate: false
+      model_path: furniture/medieval_market/medieval_market_direction_sign
+    behaviours:
+      furniture:
+        gravity: false
+        fixed_rotation: false
+        small: false
+        solid: false
+        opposite_direction: false
+        placeable_on:
+          floor: true
+          ceiling: false
+          walls: false
+        hitbox:
+          length: 0.6
+          width: 0.6
+          height: 2
+          length_offset: 0
+        sound:
+          place:
+            name: block.wood.place
+          break:
+            name: block.wood.break
+  medieval_market_hangingpot:
+    display_name: Market Hanging Pot
+    permission: medieval_market
+    resource:
+      material: PAPER
+      generate: false
+      model_path: furniture/medieval_market/medieval_market_hangingpot
+    behaviours:
+      furniture:
+        gravity: false
+        fixed_rotation: false
+        small: false
+        solid: true
+        opposite_direction: false
+        entity: item_frame
+        placeable_on:
+          floor: false
+          ceiling: true
+          walls: false
+        hitbox:
+          length: 1
+          width: 1
+          height: 1
+          length_offset: 0
+        sound:
+          place:
+            name: block.metal.place
+          break:
+            name: block.metal.break
+  medieval_market_haybales:
+    display_name: Market Haybales
+    permission: medieval_market
+    resource:
+      material: PAPER
+      generate: false
+      model_path: furniture/medieval_market/medieval_market_haybales
+    behaviours:
+      furniture:
+        gravity: false
+        fixed_rotation: false
+        small: false
+        solid: true
+        opposite_direction: false
+        placeable_on:
+          floor: true
+          ceiling: false
+          walls: false
+        hitbox:
+          length: 1
+          width: 1
+          height: 1
+          length_offset: 0
+        sound:
+          place:
+            name: block.grass.place
+          break:
+            name: block.grass.break
+  medieval_market_lantern_big_double:
+    display_name: Market Lantern
+    permission: medieval_market
+    resource:
+      material: PAPER
+      generate: false
+      model_path: furniture/medieval_market/medieval_market_lantern_big_double
+    behaviours:
+      furniture:
+        gravity: false
+        fixed_rotation: false
+        small: false
+        solid: true
+        opposite_direction: false
+        placeable_on:
+          floor: true
+          ceiling: false
+          walls: false
+        light_level: 17
+        hitbox:
+          length: 1
+          width: 1
+          height: 3
+          length_offset: 0
+        sound:
+          place:
+            name: block.wood.place
+          break:
+            name: block.wood.break
+  medieval_market_lantern_big:
+    display_name: Market Lantern
+    permission: medieval_market
+    resource:
+      material: PAPER
+      generate: false
+      model_path: furniture/medieval_market/medieval_market_lantern_big
+    behaviours:
+      furniture:
+        gravity: false
+        fixed_rotation: false
+        small: false
+        solid: true
+        opposite_direction: false
+        placeable_on:
+          floor: true
+          ceiling: false
+          walls: false
+        light_level: 17
+        hitbox:
+          length: 1
+          width: 1
+          height: 3
+          length_offset: 0
+        sound:
+          place:
+            name: block.wood.place
+          break:
+            name: block.wood.break
+  medieval_market_lantern_small:
+    display_name: Market Lantern Small
+    permission: medieval_market
+    resource:
+      material: PAPER
+      generate: false
+      model_path: furniture/medieval_market/medieval_market_lantern_small
+    behaviours:
+      furniture:
+        gravity: false
+        fixed_rotation: false
+        small: false
+        solid: true
+        opposite_direction: false
+        placeable_on:
+          floor: true
+          ceiling: false
+          walls: false
+        light_level: 17
+        hitbox:
+          length: 1
+          width: 1
+          height: 1
+          length_offset: 0
+        sound:
+          place:
+            name: block.wood.place
+          break:
+            name: block.wood.break
+  medieval_market_lantern_double:
+    display_name: Market Lantern Double
+    permission: medieval_market
+    resource:
+      material: PAPER
+      generate: false
+      model_path: furniture/medieval_market/medieval_market_lantern_double
+    behaviours:
+      furniture:
+        gravity: false
+        fixed_rotation: false
+        small: false
+        solid: true
+        opposite_direction: false
+        placeable_on:
+          floor: true
+          ceiling: false
+          walls: false
+        light_level: 20
+        hitbox:
+          length: 1
+          width: 1
+          height: 2
+          length_offset: 0
+        sound:
+          place:
+            name: block.wood.place
+          break:
+            name: block.wood.break
+  medieval_market_lantern:
+    display_name: Market Lantern
+    permission: medieval_market
+    resource:
+      material: PAPER
+      generate: false
+      model_path: furniture/medieval_market/medieval_market_lantern
+    behaviours:
+      furniture:
+        gravity: false
+        fixed_rotation: false
+        small: false
+        solid: true
+        opposite_direction: false
+        placeable_on:
+          floor: true
+          ceiling: false
+          walls: false
+        light_level: 17
+        hitbox:
+          length: 1
+          width: 1
+          height: 2
+          length_offset: 0
+        sound:
+          place:
+            name: block.wood.place
+          break:
+            name: block.wood.break
+  medieval_market_marketstall_red:
+    display_name: Market Red Stall
+    permission: medieval_market
+    resource:
+      material: PAPER
+      generate: false
+      model_path: furniture/medieval_market/medieval_market_marketstall_red
+    behaviours:
+      furniture:
+        gravity: false
+        fixed_rotation: true
+        small: false
+        solid: false
+        opposite_direction: false
+        placeable_on:
+          floor: true
+          ceiling: false
+          walls: false
+        hitbox:
+          length: 1
+          width: 3
+          height: 3
+          length_offset: 0
+        sound:
+          place:
+            name: block.wood.place
+          break:
+            name: block.wood.break
+  medieval_market_marketstall_purple:
+    display_name: Market Purple Stall
+    permission: medieval_market
+    resource:
+      material: PAPER
+      generate: false
+      model_path: furniture/medieval_market/medieval_market_marketstall_purple
+    behaviours:
+      furniture:
+        gravity: false
+        fixed_rotation: true
+        small: false
+        solid: false
+        opposite_direction: false
+        placeable_on:
+          floor: true
+          ceiling: false
+          walls: false
+        hitbox:
+          length: 1
+          width: 3
+          height: 3
+          length_offset: 0
+        sound:
+          place:
+            name: block.wood.place
+          break:
+            name: block.wood.break
+  medieval_market_open_chest:
+    display_name: Market Chest Open
+    permission: medieval_market
+    resource:
+      material: PAPER
+      generate: false
+      model_path: furniture/medieval_market/medieval_market_open_chest
+    behaviours:
+      furniture:
+        gravity: false
+        fixed_rotation: false
+        small: false
+        solid: true
+        opposite_direction: false
+        placeable_on:
+          floor: true
+          ceiling: false
+          walls: false
+        hitbox:
+          length: 1
+          width: 1
+          height: 1
+          length_offset: 0
+        sound:
+          place:
+            name: block.wood.place
+          break:
+            name: block.wood.break
+  medieval_market_pot:
+    display_name: Market Cooking Pot
+    permission: medieval_market
+    resource:
+      material: PAPER
+      generate: false
+      model_path: furniture/medieval_market/medieval_market_pot
+    behaviours:
+      furniture:
+        gravity: false
+        fixed_rotation: false
+        small: false
+        solid: true
+        opposite_direction: false
+        placeable_on:
+          floor: true
+          ceiling: false
+          walls: false
+        hitbox:
+          length: 1
+          width: 1
+          height: 1
+          length_offset: 0
+        sound:
+          place:
+            name: block.metal.place
+          break:
+            name: block.metal.break
+  medieval_market_bench:
+    display_name: Market Bench
+    permission: medieval_market
+    resource:
+      material: PAPER
+      generate: false
+      model_path: furniture/medieval_market/medieval_market_bench
+    behaviours:
+      furniture:
+        gravity: false
+        fixed_rotation: true
+        small: false
+        solid: true
+        opposite_direction: false
+        placeable_on:
+          floor: true
+          ceiling: false
+          walls: false
+        hitbox:
+          length: 1
+          width: 2
+          height: 1
+          width_offset: -0.5
+        sound:
+          place:
+            name: block.wood.place
+          break:
+            name: block.wood.break
+      furniture_sit:
+        sit_height: 0.9
+  medieval_market_box:
+    display_name: Market Box
+    permission: medieval_market
+    resource:
+      material: PAPER
+      generate: false
+      model_path: furniture/medieval_market/medieval_market_box
+    behaviours:
+      furniture:
+        gravity: false
+        fixed_rotation: false
+        small: false
+        solid: false
+        opposite_direction: false
+        placeable_on:
+          floor: true
+          ceiling: false
+          walls: false
+        hitbox:
+          length: 1
+          width: 0.9
+          height: 0.6
+          length_offset: 0
+        sound:
+          place:
+            name: block.wood.place
+          break:
+            name: block.wood.break
+  medieval_market_box_apples:
+    display_name: Market Box with Apples
+    permission: medieval_market
+    resource:
+      material: PAPER
+      generate: false
+      model_path: furniture/medieval_market/medieval_market_box_apples
+    behaviours:
+      furniture:
+        gravity: false
+        fixed_rotation: false
+        small: false
+        solid: false
+        opposite_direction: false
+        placeable_on:
+          floor: true
+          ceiling: false
+          walls: false
+        hitbox:
+          length: 1
+          width: 0.9
+          height: 0.6
+          length_offset: 0
+        sound:
+          place:
+            name: block.wood.place
+          break:
+            name: block.wood.break
+  medieval_market_box_bread:
+    display_name: Market Box with Bread
+    permission: medieval_market
+    resource:
+      material: PAPER
+      generate: false
+      model_path: furniture/medieval_market/medieval_market_box_bread
+    behaviours:
+      furniture:
+        gravity: false
+        fixed_rotation: false
+        small: false
+        solid: false
+        opposite_direction: false
+        placeable_on:
+          floor: true
+          ceiling: false
+          walls: false
+        hitbox:
+          length: 1
+          width: 0.9
+          height: 0.6
+          length_offset: 0
+        sound:
+          place:
+            name: block.wood.place
+          break:
+            name: block.wood.break
+  medieval_market_bed:
+    display_name: Market Bed
+    permission: medieval_market
+    resource:
+      material: PAPER
+      generate: false
+      model_path: furniture/medieval_market/medieval_market_bed
+    behaviours:
+      furniture:
+        gravity: false
+        fixed_rotation: true
+        small: false
+        solid: true
+        opposite_direction: false
+        placeable_on:
+          floor: true
+          ceiling: false
+          walls: false
+        hitbox:
+          length: 2
+          width: 2
+          height: 1
+          length_offset: 0.5
+          width_offset: -0.5
+        sound:
+          place:
+            name: block.wood.place
+          break:
+            name: block.wood.break
+      furniture_sit:
+        sit_height: 0.9
+  medieval_market_barell:
+    display_name: Market Barell
+    permission: medieval_market
+    resource:
+      material: PAPER
+      generate: false
+      model_path: furniture/medieval_market/medieval_market_barell
+    behaviours:
+      furniture:
+        gravity: false
+        fixed_rotation: false
+        small: false
+        solid: true
+        opposite_direction: false
+        placeable_on:
+          floor: true
+          ceiling: false
+          walls: false
+        hitbox:
+          length: 1
+          width: 1
+          height: 1
+          length_offset: 0
+        sound:
+          place:
+            name: block.wood.place
+          break:
+            name: block.wood.break
+  medieval_market_bath:
+    display_name: Market Bath
+    permission: medieval_market
+    resource:
+      material: PAPER
+      generate: false
+      model_path: furniture/medieval_market/medieval_market_bath
+    behaviours:
+      furniture:
+        gravity: false
+        fixed_rotation: true
+        small: false
+        solid: true
+        opposite_direction: false
+        placeable_on:
+          floor: true
+          ceiling: false
+          walls: false
+        hitbox:
+          length: 1
+          width: 1
+          height: 1
+          length_offset: 0
+          width_offset: 0
+        sound:
+          place:
+            name: block.wood.place
+          break:
+            name: block.wood.break
+      furniture_sit:
+        sit_height: 0.5      
+  medieval_market_bag:
+    display_name: Market Bag
+    permission: medieval_market
+    resource:
+      material: PAPER
+      generate: false
+      model_path: furniture/medieval_market/medieval_market_bag
+    behaviours:
+      furniture:
+        gravity: false
+        fixed_rotation: false
+        small: false
+        solid: true
+        opposite_direction: false
+        placeable_on:
+          floor: true
+          ceiling: false
+          walls: false
+        hitbox:
+          length: 1
+          width: 1
+          height: 1
+          length_offset: 0
+        sound:
+          place:
+            name: block.wood.place
+          break:
+            name: block.wood.break
+  medieval_market_chair:
+    display_name: Market Chair
+    permission: medieval_market
+    resource:
+      material: PAPER
+      generate: false
+      model_path: furniture/medieval_market/medieval_market_chair
+    behaviours:
+      furniture:
+        gravity: false
+        fixed_rotation: false
+        small: false
+        solid: true
+        opposite_direction: false
+        placeable_on:
+          floor: true
+          ceiling: false
+          walls: false
+        hitbox:
+          length: 1
+          width: 1
+          height: 1
+          length_offset: 0
+        sound:
+          place:
+            name: block.wood.place
+          break:
+            name: block.wood.break
+      furniture_sit:
+        sit_height: 0.9        
+  medieval_market_stool:
+    display_name: Market Stool
+    permission: medieval_market
+    resource:
+      material: PAPER
+      generate: false
+      model_path: furniture/medieval_market/medieval_market_stool
+    behaviours:
+      furniture:
+        gravity: false
+        fixed_rotation: false
+        small: false
+        solid: true
+        opposite_direction: false
+        placeable_on:
+          floor: true
+          ceiling: false
+          walls: false
+        hitbox:
+          length: 1
+          width: 1
+          height: 1
+          length_offset: 0
+        sound:
+          place:
+            name: block.wood.place
+          break:
+            name: block.wood.break
+      furniture_sit:
+        sit_height: 0.9
+  medieval_market_table:
+    display_name: Market Table
+    permission: medieval_market
+    resource:
+      material: PAPER
+      generate: false
+      model_path: furniture/medieval_market/medieval_market_table
+    behaviours:
+      furniture:
+        gravity: false
+        fixed_rotation: false
+        small: false
+        solid: true
+        opposite_direction: false
+        placeable_on:
+          floor: true
+          ceiling: false
+          walls: false
+        hitbox:
+          length: 1
+          width: 1
+          height: 1
+          length_offset: 0
+        sound:
+          place:
+            name: block.wood.place
+          break:
+            name: block.wood.break
+  medieval_market_wagon_red:
+    display_name: Market Vendor Wagon Red
+    permission: medieval_market
+    resource:
+      material: PAPER
+      generate: false
+      model_path: furniture/medieval_market/medieval_market_wagon_red
+    behaviours:
+      furniture:
+        gravity: false
+        fixed_rotation: true
+        small: false
+        solid: true
+        opposite_direction: false
+        placeable_on:
+          floor: true
+          ceiling: false
+          walls: false
+        hitbox:
+          length: 2
+          width: 1
+          height: 2
+          length_offset: 0.5
+        sound:
+          place:
+            name: block.wood.place
+          break:
+            name: block.wood.break
+  medieval_market_wagon_purple:
+    display_name: Market Vendor Wagon Purple
+    permission: medieval_market
+    resource:
+      material: PAPER
+      generate: false
+      model_path: furniture/medieval_market/medieval_market_wagon_purple
+    behaviours:
+      furniture:
+        gravity: false
+        fixed_rotation: true
+        small: false
+        solid: true
+        opposite_direction: false
+        placeable_on:
+          floor: true
+          ceiling: false
+          walls: false
+        hitbox:
+          length: 2
+          width: 1
+          height: 2
+          length_offset: 0.5
+        sound:
+          place:
+            name: block.wood.place
+          break:
+            name: block.wood.break
+  medieval_market_wagon2:
+    display_name: Market Hay Wagon
+    permission: medieval_market
+    resource:
+      material: PAPER
+      generate: false
+      model_path: furniture/medieval_market/medieval_market_wagon2
+    behaviours:
+      furniture:
+        gravity: false
+        fixed_rotation: true
+        small: false
+        solid: true
+        opposite_direction: false
+        placeable_on:
+          floor: true
+          ceiling: false
+          walls: false
+        hitbox:
+          length: 2
+          width: 1
+          height: 1
+          length_offset: 0.5
+        sound:
+          place:
+            name: block.wood.place
+          break:
+            name: block.wood.break
+  medieval_market_wall_lantern:
+    display_name: Market Wall Lantern
+    permission: medieval_market
+    resource:
+      material: PAPER
+      generate: false
+      model_path: furniture/medieval_market/medieval_market_wall_lantern
+    behaviours:
+      furniture:
+        gravity: false
+        fixed_rotation: true
+        small: false
+        solid: true
+        opposite_direction: false
+        light_level: 17
+        placeable_on:
+          floor: false
+          ceiling: false
+          walls: true
+        hitbox:
+          length: 1
+          width: 1
+          height: 1
+          length_offset: 0
+        sound:
+          place:
+            name: block.wood.place
+          break:
+            name: block.wood.break  
+  medieval_market_well:
+    display_name: Market Well
+    permission: medieval_market
+    resource:
+      material: PAPER
+      generate: false
+      model_path: furniture/medieval_market/medieval_market_well
+    behaviours:
+      furniture:
+        gravity: false
+        fixed_rotation: true
+        small: false
+        solid: true
+        opposite_direction: false
+        placeable_on:
+          floor: true
+          ceiling: false
+          walls: false
+        hitbox:
+          length: 1
+          width: 3
+          height: 2
+          length_offset: 0
+        sound:
+          place:
+            name: block.stone.place
+          break:
+            name: block.stone.break    
+  medieval_market_wood_pile:
+    display_name: Market Wood Pile
+    permission: medieval_market
+    resource:
+      material: PAPER
+      generate: false
+      model_path: furniture/medieval_market/medieval_market_wood_pile
+    behaviours:
+      furniture:
+        gravity: false
+        fixed_rotation: false
+        small: false
+        solid: true
+        opposite_direction: false
+        placeable_on:
+          floor: true
+          ceiling: false
+          walls: false
+        hitbox:
+          length: 1
+          width: 1
+          height: 1
+          length_offset: 0
+        sound:
+          place:
+            name: block.wood.place
+          break:
+            name: block.wood.break               

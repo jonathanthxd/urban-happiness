@@ -1,0 +1,71 @@
+DragonMedaillonEarth:
+  Id: rabbit_foot
+  Model: 2000017
+  Data: 0
+  Options:
+    Unbreakable: true
+    Repairable: false
+    PreventEnchanting: true
+    PreventAnvil: true
+    KeepOnDeath: true
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Display: '&eEarth Dragon Medallion'
+  Lore:
+  - '<#9D2113>****************************'
+  - '&eDefault Stats:'
+  - '&fHealth: &c100 <&heart>'
+  - '&fPower: &410 <&skull>' 
+  - '&fLand Speed: &20.25 &l╰┈➤'
+  - '&fFly Power Up/Down: &20.20 &l⬆⬇'
+  - '&fFly Speed: &20.3 &l↗'
+  - '&fLand Speed: &20.25 &l╰┈➤'
+  - '&fMax Stamina: &6300 &l⇣⇡'
+  - '&fResistance: &80% &l˃ᗜ˂'
+  - '<#9D2113>****************************'
+  - '&e&lFunctions:'
+  - '<#9D2113>****************************'
+  - '&6RMB &fto summon Dino'
+  - ''
+  - '&6SNEAK &f+ &6RMB'
+  - '&fon your Dino ='
+  - 'will recall Dino'
+  - ''
+  - '&6LMB &fwhile mounted ='
+  - 'to mark target'
+  - ''
+  - '&6RMB &f+ &6SNEAK &f='
+  - '&frecharge Medallion'
+  - '<#9D2113>****************************'
+  Skills:
+  - skill{s=EarthDragonSummon} @self ~onUse 1
+  - skill{s=EarthDragonItemRefresh} @self ~onUse 1
+DragonEarthTrophy: 
+  Id: rabbit_foot
+  Model: 2000018
+  Data: 0
+  Amount: 1
+  Display: ''
+  Options:
+    Repairable: false
+    Unbreakable: true 
+DragonEarthScales: 
+  Id: rabbit_foot
+  Model: 2000019
+  Data: 0
+  Amount: 1
+  Display: ''
+  Options:
+    Repairable: false
+    Unbreakable: true 
+DragonEarthToken: 
+  Id: rabbit_foot
+  Model: 2000017
+  Data: 0
+  Amount: 1
+  Display: ''
+  Options:
+    Repairable: false
+    Unbreakable: true 
+# eyJ1c2VyLW5hbWUiOiJGYXp6ZXIiLCJ1c2VyLWlkIjoiNzI4MSIsImRhdGUiOiIyMDI2LTAyLTAyIDAwOjE3Iiwic2l0ZSI6Imh0dHBzOi8vZ2xlYWtzLnBybyJ9

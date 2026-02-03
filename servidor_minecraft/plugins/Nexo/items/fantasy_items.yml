@@ -1,0 +1,8 @@
+transparent_button:
+  itemname: <#FFFFFF>Transparent Button
+  material: BOOK
+  Pack:
+    texture: fantasy_gui/item/transparent_texture.png
+    custom_model_data: 85099
+
+

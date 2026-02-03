@@ -1,0 +1,288 @@
+EarthDragon:
+  Type: pillager
+  Display: '&5Earth Dragon'
+  Health: 500
+  Damage: 0
+  Options:
+    Despawn: true
+    Collidable: true
+    LockPitch: true
+    KnockbackResistance: 1
+    PreventOtherDrops: true
+    ApplyInvisibility: true
+    Silent: true
+    FollowRange: 60
+    MaxCombatDistance: 80
+    MovementSpeed: 0.25
+    PreventMobKillDrops: true
+    PreventItemPickup: true
+    PreventSunburn: true
+    ShowHealth: true
+  KillMessages:
+  - '<target.name> has been turned into thousands of pieces by Earth Dragon'
+  - '<target.name> has been eaten alive by Earth Dragon'
+  - '<target.name> got punched to death by Earth Dragon'
+  Modules:
+    ThreatTable: true
+    ImmunityTable: false
+  DamageModifiers:
+  - MAGIC 0.01
+  - FALL 0.01
+  - SUFFOCATION 0.01
+  Faction: EarthDragon
+  BossBar:
+    Enabled: true
+    Title: '<#6e2c00>&lEarth Dragon &fHP:&2<caster.mhp> &fPOW:&3<caster.var.damagepower>'
+    Range: 50
+    Color: RED
+    Style: SOLID
+  AIGoalSelectors:
+  - 0 clear
+  - 1 MeleeAttack
+  - 2 RandomStroll 
+  AITargetSelectors:
+  - 0 clear
+  Skills:  
+  - cancelevent{sync=true} @Self ~onAttack
+  - model{mid=ecdragonearthboss;n=false;damagetint=false;i=true;pbone=jaws;mount=true;drive=true;ride=true;radius=120;step=2;delay=0} @self ~onSpawn 
+  - model{mid=ecdragonearthboss;n=false;damagetint=false;i=true;pbone=jaws;mount=true;drive=true;ride=true;radius=120;step=2;delay=0} @self ~onLoad
+  - cullconfig{vc=false;delay=1} @self ~onSpawn   
+  - cullconfig{vc=false;delay=1} @self ~onLoad
+  - effect:particles{p=block_crack;m=Earth_block;amount=30;speed=0;hS=0.1;vS=0.1;y=3.5} @self ~onDamaged 0.5
+  - Aura{auraName=MechanicsAura;onTick=EarthDragonMechanics;interval=1;duration=999999} @self ~onSpawn
+  - Aura{auraName=MechanicsAura;onTick=EarthDragonMechanics;interval=1;duration=999999} @self ~onLoad
+  - Aura{auraName=AttacksCD;interval=100;duration=20} @self ~onLoad
+  - summon{type=EarthDragonDeath;amount=1;radius=0} @SelfLocation ~onDeath 1
+  - command{c="lp user <trigger.name> permission set mcpets.earthdragonpet true"} @trigger ~onDeath 1 
+  - setvariable{var=flymaneuverability;value="0.3";type=FLOAT;scope=CASTER} @self ~onSpawn
+  - setvariable{var=flypower;value="0.3";type=FLOAT;scope=CASTER} @self ~onSpawn
+  - setvariable{var=damagepower;value="10.0";type=FLOAT;scope=CASTER} @self ~onSpawn
+  - setvariable{var=flymaneuverability;value="0.3";type=FLOAT;scope=CASTER} @self ~onLoad
+  - setvariable{var=flypower;value="0.3";type=FLOAT;scope=CASTER} @self ~onLoad
+  - setvariable{var=damagepower;value="10.0";type=FLOAT;scope=CASTER} @self ~onLoad
+  - remove @self ~onDeath 1
+EarthDragonDeath:
+  Type: zombie
+  Display: ''
+  Health: 1000
+  Damage: 0
+  ShowHealth: true
+  Despawn: true
+  Options:
+    ApplyInvisibility: true
+    PreventOtherDrops: true
+    Silent: true
+    PreventMobKillDrops: true
+    PreventItemPickup: true
+    MovementSpeed: 0.0
+    PreventSunburn: true
+  Faction: Carcass
+  Modules:
+    ThreatTable: false
+    ShowName: false
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Skills:   
+  - Aura{auraName=MechanicsAura;onTick=EarthDragonDeathMechanic;interval=1;duration=999999} @self ~onSpawn
+  - model{mid=ecdragonearthboss;n=false;damagetint=false;i=true} @self ~onSpawn 
+  - potion{type=SLOW;duration=1200;level=5;hasParticles=false} @self ~onSpawn 1 
+  - skill{s=EarthDragonDeath} @Self ~onSpawn 1
+  - skill{s=EarthDragonDrop} @Self ~onInteract
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;lvl=1;hasParticles=false} @self ~onSpawn 1
+  - remove @self ~onDeath 1
+EarthDragonPet:
+  Type: pillager
+  Display: '&5Earth Dragon'
+  Health: 200
+  Damage: 0
+  ShowHealth: true
+  Despawn: true
+  Options:
+    Collidable: true
+    LockPitch: true
+    KnockbackResistance: 1
+    PreventOtherDrops: true
+    ApplyInvisibility: true
+    Silent: true
+    FollowRange: 60
+    MaxCombatDistance: 80
+    MovementSpeed: 0.25
+    PreventMobKillDrops: true
+    PreventItemPickup: true
+    PreventSunburn: true
+  KillMessages:
+  - '<target.name> has been turned into thousands of pieces by Earth Dragon'
+  - '<target.name> has been eaten alive by Earth Dragon'
+  - '<target.name> got punched to death by Earth Dragon'
+  Modules:
+    ImmunityTable: false
+    ThreatTable: true
+  DamageModifiers:
+  - MAGIC 0.1
+  - FALL 0
+  - SUFFOCATION 0
+  Faction: EarthDragon
+  BossBar:
+    Enabled: true
+    Title: '<#6e2c00>&lEarth Dragon &fHP:&2<caster.mhp> &fPOW:&3<caster.var.damagepower>'
+    Range: 5
+    Color: RED
+    Style: SOLID
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Skills: 
+  - setvariable{var=stamina;value="100";scope=CASTER;type=INTEGER} @self ~onSpawn
+  - setvariable{var=hunger;value="200";scope=CASTER;type=INTEGER} @self ~onSpawn
+  - skill{s=DragonMountThreatOnDamage} @Self ~onDamaged
+  - skill{s=DragonEarthFeedingMechanic} @self ~onInteract
+  - setfaction{faction=<caster.uuid>} @self ~onSpawn
+  - clearThreat{} @Self ~onSpawn 1
+  - skill{s=DragonCombatOnDamage} @Self ~onDamaged
+  - model{mid=ecdragonearth;c=0;n=false;damagetint=false;i=true;mount=true;drive=true;ride=true;radius=120;step=2} @self ~onSpawn   
+  - model{mid=ecdragonearth;c=0;n=false;damagetint=false;i=true;mount=true;drive=true;ride=true;radius=120;step=2} @self ~onLoad   
+  - cullconfig{vc=false;delay=1} @self ~onSpawn 
+  - cancelevent{sync=true} @Self ~onAttack
+  - cancelevent{sync=true} @Self ~onJump
+  - skill{s=EarthDragonReturnCharge} @trigger ~onInteract
+  - skill{s=EarthDragonMountSkill} @trigger ~onInteract
+  - skill{s=EarthDragonPetAscendSignalReceiver} @Self ~onSignal:Ascend
+  - skill{s=EarthDragonPetDescendSignalReceiver} @Self ~onSignal:Descend
+  - onJump{auraname=JumpAura;oj=DragonJump;cE=true;d=999999;i=1} @self ~onSpawn
+  - onJump{auraname=JumpAura;oj=DragonJump;cE=true;d=999999;i=1} @self ~onLoad
+  - Aura{auraName=MechanicsAura;onTick=EarthDragonPetMechanics;interval=1;duration=999999} @self ~onSpawn
+  - Aura{auraName=MechanicsAura;onTick=EarthDragonPetMechanics;interval=1;duration=999999} @self ~onLoad
+  - summon{type=EarthDragonMountDeath;amount=1;radius=0;summonerIsOwner=true} @SelfLocation ~onDeath 1
+  - setvariable{var=flymaneuverability;value="0.25";type=FLOAT;scope=CASTER} @self ~onSpawn
+  - setvariable{var=flypower;value="0.35";type=FLOAT;scope=CASTER} @self ~onSpawn
+  - setvariable{var=damagepower;value="5.0";type=FLOAT;scope=CASTER} @self ~onSpawn
+  - setvariable{var=flymaneuverability;value="0.25";type=FLOAT;scope=CASTER} @self ~onLoad
+  - setvariable{var=flypower;value="0.35";type=FLOAT;scope=CASTER} @self ~onLoad
+  - setvariable{var=damagepower;value="5.0";type=FLOAT;scope=CASTER} @self ~onLoad
+  - remove @self ~onDeath 1
+  Drops:
+EarthDragonMountDeath:
+  Type: zombie
+  Display: ''
+  Health: 1000
+  Damage: 0
+  ShowHealth: true
+  Despawn: true
+  Options:
+    ApplyInvisibility: true
+    PreventOtherDrops: true
+    Silent: true
+    PreventMobKillDrops: true
+    PreventItemPickup: true
+    MovementSpeed: 0.0
+    PreventSunburn: true
+  Faction: Carcass
+  Modules:
+    ThreatTable: false
+    ShowName: false
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Skills:  
+  - Aura{auraName=MechanicsAura;onTick=EarthDragonDeathPetMechanic;interval=1;duration=999999} @self ~onSpawn 
+  - model{mid=ecdragonearth;n=false;damagetint=false;i=true} @self ~onSpawn 
+  - skill{s=EarthDragonMountDeath} @Self ~onSpawn 1
+  - potion{type=SLOW;duration=1200;level=5;hasParticles=false} @self ~onSpawn 1 
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;lvl=1;hasParticles=false} @self ~onSpawn 1
+  - remove @self ~onDeath 1
+EarthDragonMountPetDespawn:
+  Type: zombie
+  Display: ''
+  Health: 1000
+  Damage: 0
+  ShowHealth: true
+  Despawn: true
+  Options:
+    ApplyInvisibility: true
+    PreventOtherDrops: true
+    Silent: true
+    PreventMobKillDrops: true
+    PreventItemPickup: true
+    MovementSpeed: 0.0
+    PreventSunburn: true
+  Faction: Carcass
+  Modules:
+    ThreatTable: false
+    ShowName: false
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Skills:  
+  - model{mid=ecearthdragon;n=false;damagetint=false;i=true} @self ~onSpawn 
+  - skill{s=EarthDragonMountDespawnSkill} @Self ~onSpawn 1
+  - potion{type=SLOW;duration=1200;level=5;hasParticles=false} @self ~onSpawn 1 
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;lvl=1;hasParticles=false} @self ~onSpawn 1
+  - remove @self ~onDeath 1
+EarthDummyPlanetImplosion:
+  Type: zombie
+  Display: ''
+  Health: 100
+  Damage: 0
+  ShowHealth: true
+  Despawn: true
+  Options:
+    ApplyInvisibility: true
+    PreventOtherDrops: true
+    Silent: true
+    PreventMobKillDrops: true
+    PreventItemPickup: true
+    MovementSpeed: 0.0
+    PreventSunburn: true
+  Faction: EarthDragon
+  AIGoalSelectors:
+  - 0 Clear
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - model{mid=edplanet_implosion;c=0;n=false;damagetint=false;i=true;mount=true;drive=true;ride=true;pbone=passenger;radius=120} @self ~onSpawn   
+  - cullconfig{vc=false;delay=1} @self ~onSpawn 
+  - skill{s=EarthDragonImplosionDummy} @self} ~onSpawn 1 
+  - equip{item=air:4} @self ~onSpawn
+  - equip{item=air:3} @self ~onSpawn
+  - equip{item=air:2} @self ~onSpawn
+  - equip{item=air:1} @self ~onSpawn
+  - equip{item=air:0} @self ~onSpawn
+  - equip{item=air:5} @self ~onSpawn
+  - setvariable{var=damagepower;value="1.0";type=FLOAT;scope=CASTER} @self ~onSpawn
+EarthDummyBoulder:
+  Type: zombie
+  Display: ''
+  Health: 100
+  Damage: 0
+  ShowHealth: true
+  Despawn: true
+  Options:
+    ApplyInvisibility: true
+    PreventOtherDrops: true
+    Silent: true
+    PreventMobKillDrops: true
+    PreventItemPickup: true
+    MovementSpeed: 0.0
+    PreventSunburn: true
+  Faction: EarthDragon
+  AIGoalSelectors:
+  - 0 Clear
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - model{mid=edragonboulder;c=0;n=false;damagetint=false;i=true;mount=true;drive=true;ride=true;pbone=passenger;radius=120;step=5} @self ~onSpawn   
+  - cullconfig{vc=false;delay=1} @self ~onSpawn 
+  - skill{s=EarthDragonBoulderDummy} @self ~onSpawn
+  - equip{item=air:4} @self ~onSpawn
+  - equip{item=air:3} @self ~onSpawn
+  - equip{item=air:2} @self ~onSpawn
+  - equip{item=air:1} @self ~onSpawn
+  - equip{item=air:0} @self ~onSpawn
+  - equip{item=air:5} @self ~onSpawn
+  - setvariable{var=damagepower;value="5.0";type=FLOAT;scope=CASTER} @self ~onSpawn
+

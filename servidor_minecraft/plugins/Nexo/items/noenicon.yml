@@ -1,0 +1,246 @@
+icon_confirm:
+  itemname: icon_confirm
+  material: PAPER
+  Pack:
+    custom_model_data: 200
+    generate_model: true
+    textures:
+    - noenchant/icon_confirm.png
+no_cancel_icon:
+  itemname: no_cancel_icon
+  material: PAPER
+  Pack:
+    custom_model_data: 201
+    generate_model: true
+    textures:
+    - noenchant/icon_cancel.png
+no_invisble_icon:
+  itemname: no_invisble_icon
+  material: PAPER
+  Pack:
+    custom_model_data: 202
+    generate_model: true
+    textures:
+    - noenchant/invisble.png
+no_back_icon:
+  itemname: no_back_icon
+  material: PAPER
+  Pack:
+    custom_model_data: 203
+    generate_model: true
+    textures:
+    - noenchant/back.png
+no_next_icon:
+  itemname: no_next_icon
+  material: PAPER
+  Pack:
+    custom_model_data: 204
+    generate_model: true
+    textures:
+    - noenchant/next.png
+no_black_scroll_icon:
+  itemname: no_black_scroll_icon
+  material: PAPER
+  Pack:
+    custom_model_data: 205
+    generate_model: true
+    textures:
+    - noenchant/black_scroll.png
+no_white_scroll_icon:
+  itemname: no_white_scroll_icon
+  material: PAPER
+  Pack:
+    custom_model_data: 206
+    generate_model: true
+    textures:
+    - noenchant/white_scroll.png
+no_transmogscroll_icon:
+  itemname: no_transmogscroll_icon
+  material: PAPER
+  Pack:
+    custom_model_data: 207
+    generate_model: true
+    textures:
+    - noenchant/transmogscroll.png
+
+no_chest_icon:
+  itemname: no_chest_icon
+  material: SNOWBALL
+  Pack:
+    custom_model_data: 200
+    generate_model: true
+    textures:
+    - noenchant/chest.png
+
+simplebook:
+  itemname: simplebook
+  material: BOOK
+  Pack:
+    custom_model_data: 200
+    generate_model: true
+    textures:
+    - noenchant/book/simplebook.png
+uniquebook:
+  itemname: uniquebook
+  material: BOOK
+  Pack:
+    custom_model_data: 201
+    generate_model: true
+    textures:
+    - noenchant/book/uniquebook.png
+elitebook:
+  itemname: elitebook
+  material: BOOK
+  Pack:
+    custom_model_data: 202
+    generate_model: true
+    textures:
+    - noenchant/book/elitebook.png
+ultimatebook:
+  itemname: ultimatebook
+  material: BOOK
+  Pack:
+    custom_model_data: 203
+    generate_model: true
+    textures:
+    - noenchant/book/ultimatebook.png
+legendarybook:
+  itemname: legendarybook
+  material: BOOK
+  Pack:
+    custom_model_data: 204
+    generate_model: true
+    textures:
+    - noenchant/book/legendarybook.png
+fabledbook:
+  itemname: fabledbook
+  material: BOOK
+  Pack:
+    custom_model_data: 205
+    generate_model: true
+    textures:
+    - noenchant/book/fabledbook.png
+holywhitebook:
+  itemname: holywhitebook
+  material: BOOK
+  Pack:
+    custom_model_data: 206
+    generate_model: true
+    textures:
+    - noenchant/holywhitebook.png
+
+
+no_gem_icon:
+  itemname: no_gem_icon
+  material: EMERALD
+  Pack:
+    custom_model_data: 200
+    generate_model: true
+    textures:
+    - noenchant/gem.png
+no_weapon_orb_icon:
+  itemname: no_weapon_orb_icon
+  material: EMERALD
+  Pack:
+    custom_model_data: 201
+    generate_model: true
+    textures:
+    - noenchant/weapon_orb.png
+no_armor_orb_icon:
+  itemname: no_armor_orb_icon
+  material: EMERALD
+  Pack:
+    custom_model_data: 202
+    generate_model: true
+    textures:
+    - noenchant/armor_orb.png
+no_tool_orb_icon:
+  itemname: no_tool_orb_icon
+  material: EMERALD
+  Pack:
+    custom_model_data: 203
+    generate_model: true
+    textures:
+    - noenchant/tool_orb.png
+
+no_blocktrak_icon:
+  itemname: no_blocktrak_icon
+  material: EMERALD
+  Pack:
+    custom_model_data: 204
+    generate_model: true
+    textures:
+    - noenchant/blocktrak.png
+no_mobtrak_icon:
+  itemname: no_mobtrak_icon
+  material: EMERALD
+  Pack:
+    custom_model_data: 205
+    generate_model: true
+    textures:
+    - noenchant/mobtrak.png
+no_stattrak_icon:
+  itemname: no_stattrak_icon
+  material: EMERALD
+  Pack:
+    custom_model_data: 206
+    generate_model: true
+    textures:
+    - noenchant/stattrak.png
+
+no_mystery_gem_icon:
+  itemname: no_mystery_gem_icon
+  material: EMERALD
+  Pack:
+    custom_model_data: 207
+    generate_model: true
+    textures:
+    - noenchant/mystery_gem.png
+
+
+no_slots_increaser_icon:
+  itemname: no_slots_increaser_icon
+  material: EMERALD
+  Pack:
+    custom_model_data: 208
+    generate_model: true
+    textures:
+    - noenchant/slots_increaser.png
+no_soul_gem_icon:
+  itemname: no_soul_gem_icon
+  material: EMERALD
+  Pack:
+    custom_model_data: 209
+    generate_model: true
+    textures:
+    - noenchant/soul_gem.png
+
+no_name_tag_icon:
+  itemname: no_name_tag_icon
+  material: NAME_TAG
+  Pack:
+    custom_model_data: 200
+    generate_model: true
+    textures:
+    - noenchant/name_tag.png
+
+
+no_magic_dust_icon:
+  itemname: no_magic_dust_icon
+  material: SUGAR
+  Pack:
+    custom_model_data: 200
+    generate_model: true
+    textures:
+    - noenchant/magic_dust.png
+
+no_soul_tracker_icon:
+  itemname: no_soul_tracker_icon
+  material: amethyst_shard
+  Pack:
+    custom_model_data: 200
+    generate_model: true
+    textures:
+    - noenchant/soul_tracker.png
+
+

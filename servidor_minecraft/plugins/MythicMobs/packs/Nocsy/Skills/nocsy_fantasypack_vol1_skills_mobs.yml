@@ -1,0 +1,547 @@
+#=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-#
+#           Fantasy pack Vol.1             #
+#             Mobs - Skills                #
+#               by Nocsy                   #
+#=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-#
+
+############################################
+#           Bokoblin warrior               #
+############################################
+
+#-----------  BW Attack -----------#
+Nocsy_BokoblinW_Attack:
+  Conditions:
+  - targetwithin{d=2.2}
+  - hastag{t=attacking} false
+  Skills:
+  - addtag{t=attacking} @self
+  - state{s=attack1;li=0;lo=0;speed=1} @self
+  - setAI{ai=false} @self
+  - skill{s=Nocsy_Bokoblin_Attack_Sound}
+  - delay 20
+  - sound{s=entity.player.attack.sweep;v=1;p=0.7} @self
+  - delay 3
+  - damage{a=6} @LivingInCone{a=30.0;r=2.8;rot=0.0;target=players}
+  - delay 10
+  - setAI{ai=true} @self
+  - removetag{t=attacking} @self
+  
+
+############################################
+#         Bokoblin swordsman               #
+############################################
+
+#-----------  BS Attack -----------#
+Nocsy_BokoblinS_Attack:
+  Conditions:
+  - targetwithin{d=2.2}
+  - hastag{t=attacking} false
+  Skills:
+  - randomskill{s=Nocsy_BokoblinS_Attack_OneSide,Nocsy_BokoblinS_Attack_Dual,Nocsy_BokoblinS_Circular}  
+
+#-----------  BS OneSide Attack -----------#
+Nocsy_BokoblinS_Attack_OneSide:
+  Conditions:
+  - hastag{t=attacking} false
+  Skills:
+  - addtag{t=attacking} @self
+  - randomskill{s=Nocsy_BokoblinS_Attack_OneSide_Animation1,Nocsy_BokoblinS_Attack_OneSide_Animation2}
+  - setAI{ai=false} @self
+  - skill{s=Nocsy_Bokoblin_Attack_Sound}
+  - delay 20
+  - sound{s=entity.player.attack.sweep;v=1;p=0.7} @self
+  - delay 4
+  - damage{a=10} @LivingInCone{a=30.0;r=3.2;rot=0.0;target=players}
+  - delay 9
+  - setAI{ai=true} @self
+  - removetag{t=attacking} @self
+Nocsy_BokoblinS_Attack_OneSide_Animation1:
+  Skills:
+  - state{s=attack1;li=0;lo=0;speed=1} @self
+Nocsy_BokoblinS_Attack_OneSide_Animation2:
+  Skills:
+  - state{s=attack2;li=0;lo=0;speed=1} @self
+
+#-----------  BS Dual Attack -----------#
+Nocsy_BokoblinS_Attack_Dual:
+  Conditions:
+  - hastag{t=attacking} false
+  Skills:
+  - addtag{t=attacking} @self
+  - state{s=attack_double;li=0;lo=0;speed=1} @self
+  - setAI{ai=false} @self
+  - skill{s=Nocsy_Bokoblin_Attack_Sound}
+  - delay 25
+  - sound{s=entity.player.attack.sweep;v=1;p=0.4} @self
+  - delay 5
+  - damage{a=14} @LivingInCone{a=30.0;r=3.1;rot=0.0;target=players}
+  - delay 20
+  - setAI{ai=true} @self
+  - removetag{t=attacking} @self
+
+#-----------  BS Circular Attack -----------#
+Nocsy_BokoblinS_Circular:
+  Conditions:
+  - hastag{t=attacking} false
+  - hastag{t=circular} false
+  Skills:
+  - addtag{t=attacking} @self
+  - addtag{t=circular} @self
+  - state{s=attack_circular;li=0;lo=0;speed=1} @self
+  - setAI{ai=false} @self
+  - delay 25
+  - skill{s=Nocsy_Bokoblin_Attack_Sound}
+  - setAI{ai=true} @self
+  - potion{type=SLOW;duration=135;level=2;hasParticles=false} @self
+  - skill{s=Nocsy_BokoblinS_Circular-DMG_Aura}
+  - sound{s=entity.player.attack.weak;v=1;p=0.1} @self
+  - state{s=circular_idle;li=0;lo=0;speed=1.2} @self
+  - delay 10
+  - sound{s=entity.player.attack.weak;v=1;p=0.1} @self
+  - delay 12
+  - sound{s=entity.player.attack.weak;v=1;p=0.1} @self
+  - state{s=circular_idle;li=0;lo=0;speed=1.2} @self
+  - delay 10
+  - sound{s=entity.player.attack.weak;v=1;p=0.1} @self
+  - delay 12
+  - sound{s=entity.player.attack.weak;v=1;p=0.1} @self
+  - state{s=circular_idle;li=0;lo=0;speed=1} @self
+  - delay 12
+  - sound{s=entity.player.attack.weak;v=1;p=0.1} @self
+  - delay 15
+  - sound{s=entity.player.attack.weak;v=1;p=0.1} @self
+  - state{s=circular_idle;li=0;lo=0;speed=0.9} @self
+  - delay 10
+  - sound{s=entity.player.attack.weak;v=1;p=0.1} @self
+  - delay 20
+  - sound{s=entity.player.attack.weak;v=1;p=0.1} @self
+  - state{s=circular_idle;li=0;lo=0;speed=0.8} @self
+  - delay 15
+  - sound{s=entity.player.attack.weak;v=1;p=0.1} @self
+  - delay 19
+  - sound{s=entity.player.attack.weak;v=1;p=0.1} @self
+  - state{s=circular_end;li=0;lo=0;speed=1} @self
+  - setAI{ai=false} @self
+  - delay 30
+  - setAI{ai=true} @self
+  - removetag{t=attacking} @self
+  - delay 120
+  - removetag{t=circular} @self
+Nocsy_BokoblinS_Circular-DMG_Aura:
+  Skills:
+  - Aura{auraName=Nocsy_BokoblinS_Circular-DMG_Aura-Aura;onTick=Nocsy_BokoblinS_Circular-DMG_Aura-Tick;interval=10;d=135} @self
+Nocsy_BokoblinS_Circular-DMG_Aura-Tick:
+  Skills:
+  - damage{a=5} @PIR{r=3}
+  - potion{type=WEAKNESS;duration=200;level=2;hasParticles=false} @PIR{r=3}
+  
+############################################
+#           Bokoblin shaman                #
+############################################
+
+#-----------  BSh AI -----------#
+Nocsy_BobokoblinSh_AI:
+  Skills:
+  - Aura{auraName=Nocsy_BobokoblinSh_AI-Aura;onTick=Nocsy_BobokoblinSh_AI-Tick;interval=10;d=916000000} @self
+
+Nocsy_BobokoblinSh_AI-Tick:
+  Conditions:
+  - targetwithin{d=10} castinstead Nocsy_BobokoblinSh_AI-Stop
+  - hastag{t=attacking} false
+  - hastag{t=come} false
+  Skills:
+  - addtag{t=come} @self
+  - removetag{t=flee} @self
+  - removetag{t=stop} @self
+  - removetag{t=idle} @self
+  - runaigoalselector{goal=clear}
+  - runaigoalselector{goal=meleeattack}
+  - runaigoalselector{goal=randomstroll}
+  - runaigoalselector{goal=lookatplayers}
+Nocsy_BobokoblinSh_AI-Stop:
+  Conditions:
+  - targetwithin{d=5} castinstead Nocsy_BobokoblinSh_AI-Flee
+  - hastag{t=attacking} false
+  Skills:
+  - addtag{t=stop} @self
+  - removetag{t=come} @self
+  - removetag{t=flee} @self
+  - runaigoalselector{goal=clear}
+  - runaigoalselector{goal=meleeattack}
+  - runaigoalselector{goal=randomstroll}
+  - runaigoalselector{goal=lookatplayers}
+  - skill{s=Nocsy_BobokoblinSh_AI-Stop-IdleLoop}
+Nocsy_BobokoblinSh_AI-Stop-IdleLoop:
+  Conditions:
+  - hastag{t=idle} false
+  Skills:
+  - state{s=idle_loop;li=0;lo=0;speed=1} @self
+  - potion{type=SLOW;duration=35;lvl=126} @self
+  - addtag{t=idle} @self
+  - delay 25
+  - removetag{t=idle} @self
+Nocsy_BobokoblinSh_AI-Flee:
+  Conditions:
+  - hastag{t=attacking} false
+  - hastag{t=flee} false
+  Skills:
+  - skill{s=Nocsy_BobokoblinSh_Explosion} 0.5
+  - addtag{t=flee} @self
+  - removetag{t=come} @self
+  - removetag{t=stop} @self
+  - removetag{t=idle} @self
+  - runaigoalselector{goal=clear}
+  - runaigoalselector{goal=fleeplayers}
+  
+#-----------  BSh Spells -----------#
+Nocsy_BobokoblinSh_Cast_Spell:
+  Conditions:
+  - hastag{t=attacking} false
+  Skills:
+  - randomskill{s=Nocsy_BobokoblinSh_Attack_Spell,Nocsy_BobokoblinSh_Attack_Spell,Nocsy_BobokoblinSh_Regen,Nocsy_BobokoblinSh_Explosion}
+
+#-----------  BSh Attack Spell -----------#
+Nocsy_BobokoblinSh_Attack_Spell:
+  Conditions:
+  - hastag{t=attacking} false
+  Skills:
+  - addtag{t=attacking} @self
+  - state{s=spell_projectile;li=0;lo=0;speed=1} @self
+  - sound{s=entity.piglin.angry;v=1;p=1.6} @self <=100% 0.5
+  - setAI{ai=false} @self
+  - delay 26
+  - sound{s=entity.illusioner.cast_spell;v=1;p=0.6} @self
+  - missile{
+        oT=Nocsy_BobokoblinSh_Attack_Spell-Tick;
+        oH=Nocsy_BobokoblinSh_Attack_Spell-End;
+        oE=Nocsy_BobokoblinSh_Attack_Spell-End;
+        v=8;
+        hnp=false;
+        i=2;
+        hR=1;
+        vR=1;
+        in=15;
+        md=80;
+        sfo=1.5;
+        } @PIR{r=30;limit=1;sort=RANDOM}
+  - delay 7
+  - setAI{ai=true} @self
+  - removetag{t=attacking} @self
+Nocsy_BobokoblinSh_Attack_Spell-Tick:
+  Skills:
+  - effect:particles{p=reddust;color=#DF01FE;amount=7;hS=0.3;vS=0.3} @origin
+  - effect:particles{p=reddust;color=#8D01FE;amount=7;hS=0.3;vS=0.3} @origin
+  - effect:particles{p=reddust;color=#FE01CB;amount=3;hS=0.3;vS=0.3} @origin
+Nocsy_BobokoblinSh_Attack_Spell-End:
+  Skills:
+  - damage{a=8} @PlayersNearOrigin{r=1.5}
+  - sound{s=block.amethyst_block.hit;v=1;p=0.1} @self
+  - potion{type=WITHER;duration=100;lvl=1} @PIR{r=1.5}
+  - effect:particlesphere{p=reddust;color=#FF00CC;amount=200;radius=1.2} @origin
+  - effect:particlesphere{p=reddust;color=#A94DC0;amount=200;radius=1.2} @origin
+  
+#-----------  BSh Regen Spell -----------#
+Nocsy_BobokoblinSh_Regen:
+  Conditions:
+  - hastag{t=attacking} false
+  - hastag{t=regen} false
+  Skills:
+  - addtag{t=attacking} @self
+  - addtag{t=regen} @self
+  - state{s=spell_heal;li=0;lo=0;speed=1} @self
+  - sound{s=entity.piglin.retreat;v=1;p=1.2} @self
+  - setAI{ai=false} @self
+  - effect:particleorbital{r=2;points=16;t=100;i=1;vy=50;rZ=30;rX=10;particle=villager_happy} @SelfLocation{y=1}
+  - delay 10
+  - sound{s=block.beacon.power_select;v=1;p=0.1} @self
+  - effect:particleorbital{r=2;points=16;t=100;i=1;vy=50;rX=20;rY=-20;particle=glow_squid_ink} @SelfLocation{y=1}
+  - delay 10
+  - effect:particleorbital{r=2;points=16;t=100;i=1;vy=50;rX=45;rY=45;particle=villager_happy} @SelfLocation{y=1}
+  - delay 10
+  - skill{s=Nocsy_BobokoblinSh_Regen_Effect} @MobsInRadius{r=40;types=Nocsy_Moblin_Ravager,Nocsy_Moblin_Brute,Nocsy_Bokoblin_Swordsman,Nocsy_Bokoblin_Warrior}
+  - delay 30
+  - removetag{t=attacking} @self
+  - setAI{ai=true} @self
+  - delay 200
+  - removetag{t=regen} @self
+Nocsy_BobokoblinSh_Regen_Effect:
+  Skills:
+  - heal{a=20}
+  - effect:particleorbital{r=2;points=16;t=100;i=1;vy=50;rZ=30;rX=10;particle=villager_happy}
+  - delay 10
+  - effect:particleorbital{r=2;points=16;t=100;i=1;vy=50;rX=20;rY=-20;particle=glow_squid_ink}
+  - delay 10
+  - effect:particleorbital{r=2;points=16;t=100;i=1;vy=50;rX=45;rY=45;particle=villager_happy}
+  
+#-----------  BSh Explosion Spell -----------#
+Nocsy_BobokoblinSh_Explosion:
+  Conditions:
+  - hastag{t=attacking} false
+  - hastag{t=exploded} false
+  - playerwithin{d=6} true
+  Skills:
+  - addtag{t=attacking} @self
+  - addtag{t=exploded} @self
+  - state{s=spell_explode;li=0;lo=0;speed=1} @self
+  - setAI{ai=false} @self
+  - skill{s=Nocsy_Bokoblin_Attack_Sound}
+  - delay 32
+  - damage{a=14} @PIR{r=5.2}
+  - sound{s=entity.shulker.shoot;v=1;p=2} @self
+  - ignite{ticks=100} @PIR{r=5.2}
+  - throw{velocity=4;velocityY=4} @PIR{r=5}
+  - effect:particlesphere{p=reddust;color=#FF0000;amount=500;radius=5.2} @self
+  - effect:particlesphere{p=reddust;color=#FF7000;amount=500;radius=5.2} @self
+  - effect:particlesphere{p=reddust;color=#231136;amount=400;radius=3.5} @self
+  - effect:particlesphere{p=reddust;color=#FF0000;amount=200;radius=3.5} @self
+  - effect:particlesphere{p=reddust;color=#FF7000;amount=200;radius=2} @self
+  - effect:particlesphere{p=reddust;color=#231136;amount=100;radius=1.7} @self
+  - setAI{ai=true} @self
+  - removetag{t=attacking} @self
+  - delay 200
+  - removetag{t=exploded} @self
+
+############################################
+#              Moblin brute                #
+############################################
+
+#-----------  MB Attack -----------#
+Nocsy_MoblinB_Attack:
+  Conditions:
+  - hastag{t=attacking} false
+  Skills:
+  - randomskill{s=Nocsy_MoblinB_HammerSmash,Nocsy_MoblinB_FistBump}
+ 
+#-----------  MB Hammer Smash -----------#
+Nocsy_MoblinB_HammerSmash:
+  Conditions:
+  - hastag{t=attacking} false
+  Skills:
+  - addtag{t=attacking} @self
+  - state{s=hammer_attack;li=0;lo=0;speed=1} @self
+  - setAI{ai=false} @self
+  - skill{s=Nocsy_Moblin_Attack_Sound}
+  - delay 20
+  - sound{s=entity.player.attack.sweep;v=1.5;p=0.1} @self
+  - delay 8
+  - sound{s=entity.shulker.death;v=1;p=0.1} @self
+  - damage{a=15} @LivingInCone{a=80.0;r=4.2;rot=0.0;target=players}
+  - throw{velocity=5;velocityY=3} @LivingInCone{a=80.0;r=4.2;rot=0.0;target=players}
+  - effect:particles{p=explosion_normal;amount=2;speed=0.1;hS=0.01;vS=0.15} @Cone{angle=80;points=20;range=4.2;rotation=0;yoffset=-0.1}
+  - delay 44
+  - setAI{ai=true} @self
+  - removetag{t=attacking} @self
+
+#-----------  MB Fist Bump -----------#
+Nocsy_MoblinB_FistBump:
+  Conditions:
+  - hastag{t=attacking} false
+  Skills:
+  - addtag{t=attacking} @self
+  - state{s=hand_attack;li=0;lo=0;speed=1} @self
+  - setAI{ai=false} @self
+  - skill{s=Nocsy_Moblin_Attack_Sound}
+  - delay 17
+  - sound{s=entity.player.attack.weak;v=1.5;p=0.2} @self
+  - damage{a=10} @LivingInCone{a=90.0;r=4.2;rot=0.0;target=players}
+  - potion{type=SLOW;duration=200;level=2;hasParticles=false} @Forward{f=3}
+  - potion{type=WEAKNESS;duration=200;level=1;hasParticles=false} @Forward{f=3}
+  - delay 12
+  - setAI{ai=true} @self
+  - removetag{t=attacking} @self
+
+############################################
+#            Moblin ravager                #
+############################################
+
+#-----------  MR Attack -----------#
+Nocsy_MoblinR_Attack:
+  Conditions:
+  - hastag{t=attacking} false
+  Skills:
+  - randomskill{s=Nocsy_MoblinR_SwordSlash,Nocsy_MoblinR_FistBump}
+  
+#-----------  MR Sword Slash -----------#
+Nocsy_MoblinR_SwordSlash:
+  Conditions:
+  - hastag{t=attacking} false
+  Skills:
+  - addtag{t=attacking} @self
+  - state{s=sword_attack;li=0;lo=0;speed=1} @self
+  - setAI{ai=false} @self
+  - skill{s=Nocsy_Moblin_Attack_Sound}
+  - delay 20
+  - sound{s=entity.player.attack.weak;v=1.5;p=0.1} @self
+  - delay 10
+  - sound{s=entity.player.attack.weak;v=1.5;p=0.1} @self
+  - sound{s=entity.player.attack.crit;v=1.5;p=0.1} @self
+  - damage{a=20} @LivingInCone{a=80.0;r=4.2;rot=0.0;target=players}
+  - potion{type=SLOW;duration=135;level=2;hasParticles=false} @LivingInCone{a=80.0;r=4.2;rot=0.0;target=players}
+  - effect:particles{p=sweep_attack;amount=5;speed=0.01;hS=0.01;vS=0.01} @Cone{angle=80;points=40;range=4.2;rotation=0;yoffset=-0.1}
+  - delay 13
+  - setAI{ai=true} @self
+  - removetag{t=attacking} @self
+  
+#-----------  MR Fist Bump -----------#
+Nocsy_MoblinR_FistBump:
+  Conditions:
+  - hastag{t=attacking} false
+  Skills:
+  - addtag{t=attacking} @self
+  - state{s=hand_attack;li=0;lo=0;speed=1} @self
+  - setAI{ai=false} @self
+  - skill{s=Nocsy_Moblin_Attack_Sound}
+  - delay 17
+  - sound{s=entity.player.attack.weak;v=1.5;p=0.2} @self
+  - damage{a=14} @LivingInCone{a=80.0;r=4.2;rot=0.0;target=players}
+  - potion{type=SLOW;duration=200;level=2;hasParticles=false} @LivingInCone{a=80.0;r=4.2;rot=0.0;target=players}
+  - potion{type=BLINDNESS;duration=200;level=1;hasParticles=false} @LivingInCone{a=80.0;r=4.2;rot=0.0;target=players}
+  - delay 12
+  - setAI{ai=true} @self
+  - removetag{t=attacking} @self
+  
+############################################
+#                 Fairy                    #
+############################################
+
+#-----------  Fairy Spawn -----------#
+Nocsy_FPV1_Spawn:
+  Skills:
+  - state{s=spawn;li=0;lo=0;speed=1} @self
+  
+#-----------  Fairy Interact -----------#
+Nocsy_FPV1_Interact:
+  Conditions:
+  - hastag{t=interacted} false
+  Skills:
+  - addtag{t=interacted} @self
+  - state{s=interact;li=0;lo=0;speed=1} @self
+  - delay 100
+  - removetag{t=interacted} @self
+  
+#-----------  Fairy Despawn -----------#
+Nocsy_FPV1_Despawn:
+  Skills:
+  - state{s=despawn;li=0;lo=0;speed=1} @self
+  - delay 30
+  - remove @self
+  
+#-----------  Fairy Particles -----------#
+Nocsy_FPV1_Particles:
+  Skills:
+  - Aura{auraName=Nocsy_FPV1_Particles-Aura;onTick=Nocsy_FPV1_Particles-Tick;interval=10;d=91600000} @self
+Nocsy_FPV1_Particles-Tick:
+  Skills:
+  - effect:particles{p=fireworks_spark;amount=5;speed=0.01;hS=0.1;vS=0.1} @SelfLocation{y=1.6}
+  
+############################################
+#             Global skills                #
+############################################
+
+#-----------  Bokoblin Hurt Animation -----------#
+Nocsy_Bokoblin_Hurt:
+  Conditions:
+  - hastag{t=attacking} false
+  - hastag{t=hurt} false
+  Skills:
+  - addtag{t=hurt} @self
+  - addtag{t=attacking} @self
+  - state{s=hurt;li=0;lo=0;speed=1} @self
+  - setAI{ai=false} @self
+  - skill{s=Nocsy_Bokoblin_Hurt_Sound}
+  - delay 20
+  - setAI{ai=true} @self
+  - removetag{t=attacking} @self
+  - delay 120
+  - removetag{t=hurt} @self
+
+#-----------  Moblin Hurt Animation -----------#
+Nocsy_Moblin_Hurt:
+  Conditions:
+  - hastag{t=attacking} false
+  - hastag{t=hurt} false
+  Skills:
+  - addtag{t=hurt} @self
+  - addtag{t=attacking} @self
+  - state{s=hurt;li=0;lo=0;speed=1} @self
+  - setAI{ai=false} @self
+  - skill{s=Nocsy_Moblin_Hurt_Sound}
+  - delay 15
+  - setAI{ai=true} @self
+  - removetag{t=attacking} @self
+  - delay 120
+  - removetag{t=hurt} @self
+
+#-----------  Sounds -----------#
+Nocsy_Bokoblin_Hurt_Sound:
+  Conditions:
+  - hastag{t=sound} false
+  - hastag{t=hurtsound} false
+  Skills:
+  - addtag{t=sound} @self
+  - addtag{t=hurtsound} @self
+  - sound{s=entity.piglin.admiring_item;v=1;p=0.7} @self
+  - delay 20
+  - removetag{t=sound} @self
+  - delay 80
+  - removetag{t=hurtsound} @self
+Nocsy_Bokoblin_Attack_Sound:
+  Conditions:
+  - hastag{t=sound} false
+  - hastag{t=attacksound} false
+  Skills:
+  - addtag{t=sound} @self
+  - addtag{t=attacksound} @self
+  - sound{s=entity.piglin.celebrate;v=1;p=0.9} @self
+  - delay 20
+  - removetag{t=sound} @self
+  - delay 100
+  - removetag{t=attacksound} @self
+
+Nocsy_Moblin_Hurt_Sound:
+  Conditions:
+  - hastag{t=sound} false
+  - hastag{t=hurtsound} false
+  Skills:
+  - addtag{t=sound} @self
+  - addtag{t=hurtsound} @self
+  - sound{s=entity.piglin.jealous;v=1;p=0.1} @self
+  - delay 20
+  - removetag{t=sound} @self
+  - delay 80
+  - removetag{t=hurtsound} @self
+Nocsy_Moblin_Attack_Sound:
+  Conditions:
+  - hastag{t=sound} false
+  - hastag{t=attacksound} false
+  Skills:
+  - addtag{t=sound} @self
+  - addtag{t=attacksound} @self
+  - sound{s=entity.piglin.angry;v=1;p=0.5} @self
+  - delay 20
+  - removetag{t=sound} @self
+  - delay 100
+  - removetag{t=attacksound} @self
+
+Nocsy_FPV1_Fairy_Sounds:
+  Skills:
+  - Aura{auraName=Nocsy_FPV1_Fairy_Sounds-Aura;onTick=Nocsy_FPV1_Fairy_Sounds-Tick;interval=60;d=91600000} @self  
+Nocsy_FPV1_Fairy_Sounds-Tick:
+  Skills:
+  - randomskill{s=Nocsy_FPV1_Fairy_Sounds_variation1,Nocsy_FPV1_Fairy_Sounds_variation2,Nocsy_FPV1_Fairy_Sounds_variation3,Nocsy_FPV1_Fairy_Sounds_variation4}
+Nocsy_FPV1_Fairy_Sounds_variation1:
+  Skills:
+  - sound{s=block.amethyst_block.chime;v=1;p=2} @self
+Nocsy_FPV1_Fairy_Sounds_variation2:
+  Skills:
+  - sound{s=block.amethyst_block.chime;v=1;p=1.2} @self
+Nocsy_FPV1_Fairy_Sounds_variation3:
+  Skills:
+  - sound{s=block.amethyst_block.chime;v=1;p=1.5} @self
+Nocsy_FPV1_Fairy_Sounds_variation4:
+  Skills:
+  - sound{s=block.amethyst_block.chime;v=1;p=1.8} @self
+#-----------  Cancel Attack -----------#
+Nocsy_FPV1_CancelEvent:
+  Skills:
+  - CancelEvent

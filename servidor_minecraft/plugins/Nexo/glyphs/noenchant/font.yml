@@ -1,0 +1,30 @@
+no_simple:
+  texture: noenchant/font/gui/simple
+  ascent: 8
+  height: 9
+  char: 
+no_unique:
+  texture: noenchant/font/gui/unique
+  ascent: 8
+  height: 9
+  char: 
+no_elite:
+  texture: noenchant/font/gui/elite
+  ascent: 8
+  height: 9
+  char: 
+no_ultimate:
+  texture: noenchant/font/gui/ultimate
+  ascent: 8
+  height: 9
+  char: 
+no_legendary:
+  texture: noenchant/font/gui/legendary
+  ascent: 8
+  height: 9
+  char: 
+no_fabled:
+  texture: noenchant/font/gui/fabled
+  ascent: 8
+  height: 9
+  char: 

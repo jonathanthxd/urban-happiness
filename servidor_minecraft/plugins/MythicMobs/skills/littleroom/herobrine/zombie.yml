@@ -1,0 +1,653 @@
+
+#########################################################
+## Developed by Little Room, patreon.com/littleroomdev ##
+#########################################################
+
+#### SOUNDS ####
+
+herobrine_zombieswingsound:
+  Skills:
+  - randomskill{skills=herobrine_zombieswing1,herobrine_zombieswing2,herobrine_zombieswing3,herobrine_zombieswing4,herobrine_zombieswing5} @self
+
+herobrine_zombieswing1:
+  Skills:
+  - sound{s=littleroom_herobrine:littleroom.herobrine.swing1;v=1;sc=HOSTILE} @self
+  
+herobrine_zombieswing2:
+  Skills:
+  - sound{s=littleroom_herobrine:littleroom.herobrine.swing2;v=1;sc=HOSTILE} @self
+  
+herobrine_zombieswing3:
+  Skills:
+  - sound{s=littleroom_herobrine:littleroom.herobrine.swing3;v=1;sc=HOSTILE} @self
+  
+herobrine_zombieswing4:
+  Skills:
+  - sound{s=littleroom_herobrine:littleroom.herobrine.swing4;v=1;sc=HOSTILE} @self
+  
+herobrine_zombieswing5:
+  Skills:
+  - sound{s=littleroom_herobrine:littleroom.herobrine.swing5;v=1;sc=HOSTILE} @self
+
+herobrine_zombieimpactsound:
+  Skills:
+  - randomskill{skills=herobrine_zombieimpact1,herobrine_zombieimpact2,herobrine_zombieimpact3,herobrine_zombieimpact4} @self
+
+herobrine_zombieimpact1:
+  Skills:
+  - sound{s=littleroom_herobrine:littleroom.herobrine.impact1;v=1;sc=HOSTILE} @self
+  
+herobrine_zombieimpact2:
+  Skills:
+  - sound{s=littleroom_herobrine:littleroom.herobrine.impact2;v=1;sc=HOSTILE} @self
+  
+herobrine_zombieimpact3:
+  Skills:
+  - sound{s=littleroom_herobrine:littleroom.herobrine.impact3;v=1;sc=HOSTILE} @self
+  
+herobrine_zombieimpact4:
+  Skills:
+  - sound{s=littleroom_herobrine:littleroom.herobrine.impact4;v=1;sc=HOSTILE} @self
+
+
+
+
+herobrine_zombieLEAPKICK:
+  Cooldown: 20
+  TargetConditions:
+  - distance{d=4to6}
+  - lineofsight true
+  Conditions:
+  - incombat true
+  - onground true
+  - offgcd true
+  Skills:
+  - gcd{ticks=20}
+  - state{s=jump} @self
+  - sound{s=littleroom_herobrine:littleroom.herobrine.jump;v=1;sc=HOSTILE} @self
+  - delay 5
+  - setspeed{speed=0;type=walking} @self
+  - lunge{velocity=1.75;velocityY=.25} @Target
+  - sound{s=littleroom_herobrine:littleroom.herobrine.jump;v=1;sc=HOSTILE} @self
+  - state{s=inair_kick} @self
+  - skill{s=herobrine_zombieswingsound} @self
+  - delay 5
+  - setstance{stance=inair} @self
+  - totem{ch=5;oH=herobrine_zombieDROPKICKDamage;int=1;hR=3;md=10;hnp=true} @Forward{f=0.25}
+  
+herobrine_zombieDROPKICKDamage:
+  Skills:
+  - skill{s=herobrine_zombieBLOODfx} @EIR{r=2}
+  - velocity{m=set;x=0;y=0;z=0} @self @EIR{r=2}
+  - throw{velocity=15;velocityY=1} @EIR{r=2}
+  - damage{a=<caster.score.herodamage>} @EIR{r=2}
+  
+
+
+herobrine_zombieROLL:
+  Conditions:
+  - incombat true
+  - onground true
+  - offgcd true
+  - targetwithin{d=8} false
+  Skills:
+  - gcd{ticks=30}
+  - state{s=roll} @self
+  - delay 5
+  - sound{s=littleroom_herobrine:littleroom.herobrine.roll;v=1;sc=HOSTILE} @self
+  - effect:particles{particle=campfire_cosy_smoke;amount=2;hs=.25;vs=0;y=.1;repeat=15;repeatInterval=1} @self
+  - lunge{velocity=.4;velocityY=-1;repeat=15;repeatInterval=1} @TargetLocation
+  - delay 20
+  - randomskill{s=herobrine_zombieCROSSBOWGROUND,herobrine_zombieROLLEND} @target
+  
+herobrine_zombieROLLEND:
+  Skills:
+  - setspeed{speed=2;type=walking} @self
+  
+herobrine_zombieCROSSBOWGROUND:
+  TargetConditions:
+  - lineofsight true
+  Conditions:
+  - targetwithin{d=3} false
+  Skills:
+  - sound{s=minecraft:item.crossbow.loading_start;v=1;sc=HOSTILE} @self
+  - gcd{ticks=20}
+  - setspeed{speed=0;type=walking} @self
+  - state{s=crossbow_straight} @self
+  - delay 5
+  - ChangePart{model=herobrine_zombie;part=lefthand;newmodel=herobrine_zombie_bits;newpart=crossbow_loaded} @self
+  - delay 5
+  - sound{s=minecraft:item.crossbow.shoot;v=1;sc=HOSTILE} @self
+  - ChangePart{model=herobrine_zombie;part=lefthand;newmodel=herobrine_zombie_bits;newpart=crossbow_unloaded} @self
+  - projectile{bulletType=ARROW;onTick=herobrine_zombieCROSSBOWTICK;onHit=herobrine_zombieCROSSBOWHIT;v=50;i=1;hR=.5;vR=.5;syo=2;sfo=1;hnp=true}
+  - delay 10
+  - ChangePart{model=herobrine_zombie;part=lefthand;newmodel=herobrine_zombie;newpart=lefthand} @self
+  - setspeed{speed=2;type=walking} @self
+  
+herobrine_zombieLEAPBACK:
+  Conditions:
+  - onground true
+  - offgcd true
+  - targetwithin{d=3} true
+  Skills:
+  - setspeed{speed=0;type=walking}
+  - gcd{ticks=80}
+  - sound{s=littleroom_herobrine:littleroom.herobrine.jump;v=1;sc=HOSTILE} @self
+  - state{s=jump} @self
+  - delay 8
+  - lunge{velocity=1.25;velocityY=.8} @forward{f=-8}
+  - setspeed{speed=2;type=walking}
+  - randomskill{skills=herobrine_zombieCROSSBOW} @target
+  - delay 5
+  - setstance{stance=inair} @self
+  
+
+  
+herobrine_zombieCROSSBOW:
+  Skills:
+  - sound{s=minecraft:item.crossbow.loading_start;v=1;sc=HOSTILE} @self
+  - state{s=inair_crossbow} @self
+  - delay 5
+  - ChangePart{model=herobrine_zombie;part=lefthand;newmodel=herobrine_zombie_bits;newpart=crossbow_loaded} @self
+  - delay 5
+  - sound{s=minecraft:item.crossbow.shoot;v=1;sc=HOSTILE} @self
+  - ChangePart{model=herobrine_zombie;part=lefthand;newmodel=herobrine_zombie_bits;newpart=crossbow_unloaded} @self
+  - projectile{bulletType=ARROW;onTick=herobrine_zombieCROSSBOWTICK;onHit=herobrine_zombieCROSSBOWHIT;v=50;i=1;hR=.5;vR=.5;syo=2;sfo=1;hnp=true}
+  - delay 10
+  - ChangePart{model=herobrine_zombie;part=lefthand;newmodel=herobrine_zombie;newpart=lefthand} @self
+  
+herobrine_zombieCROSSBOWTICK:
+  Skills:
+  - effect:particles{p=dragon_breath;amount=3;speed=0;hS=0.2;vS=0.2} @origin
+
+herobrine_zombieCROSSBOWHIT:
+  Skills:
+  - damage{a=<caster.score.herodamage>}
+  - skill{s=herobrine_zombieBLOODfx}
+  
+herobrine_zombieLAND:
+  Conditions:
+  - onground true
+  - stance{s=inair} true
+  Skills:
+  - delay 1
+  - sound{s=minecraft:entity.generic.small_fall;v=1;sc=HOSTILE} @self
+  - gcd{ticks=20}
+  - state{s=land} @self
+  - setspeed{speed=2;type=walking}
+  - setstance{stance=grounded} @self
+  
+herobrine_zombieSLASHsync:
+  Skills:
+  - CancelEvent
+  - skill{s=herobrine_zombieSLASH} @self
+  
+herobrine_zombieSLASH:
+  Conditions:
+  - onground true
+  - targetwithin{d=3} true
+  - offgcd true
+  Skills:
+  - skill{s=herobrine_zombieswingsound} @self
+  - setspeed{speed=0;type=walking}
+  - gcd{ticks=10}
+  - lunge{velocity=.75;velocityY=-1} @target
+  - effect:particles{p=sweep_attack;amount=1} @ModelPart{m=herobrine_zombie;p=lefthand}
+  - state{s=sword1} @self
+  - delay 1
+  - ChangePart{model=herobrine_zombie;part=lefthand;newmodel=herobrine_zombie_bits;newpart=sword} @self
+  - totem{ch=5;oH=herobrine_zombieSLASHDamage;int=1;hR=2;md=2;hnp=true} @Forward{f=1}
+  - delay 10
+  - ChangePart{model=herobrine_zombie;part=lefthand;newmodel=herobrine_zombie;newpart=lefthand} @self
+  - setspeed{speed=2;type=walking}
+  - skill{s=herobrine_zombieSLASH2} @self .8
+  
+herobrine_zombieSLASH2:
+  Conditions:
+  - onground true
+  - targetwithin{d=3} true
+  - offgcd true
+  Skills:
+  - skill{s=herobrine_zombieswingsound} @self
+  - setspeed{speed=0;type=walking}
+  - gcd{ticks=10}
+  - lunge{velocity=.75;velocityY=-1} @target
+  - effect:particles{p=sweep_attack;amount=1} @ModelPart{m=herobrine_zombie;p=lefthand}
+  - state{s=sword2} @self
+  - delay 1
+  - ChangePart{model=herobrine_zombie;part=lefthand;newmodel=herobrine_zombie_bits;newpart=sword} @self
+  - totem{ch=5;oH=herobrine_zombieSLASHDamage;int=1;hR=1;md=2;hnp=true} @Forward{f=1}
+  - delay 10
+  - ChangePart{model=herobrine_zombie;part=lefthand;newmodel=herobrine_zombie;newpart=lefthand} @self
+  - setspeed{speed=2;type=walking}
+  - skill{s=herobrine_zombieSLASH} @self .5
+  
+herobrine_zombieSLASHDamage:
+  Skills:
+  - damage{a=<caster.score.herodamage>} @EIR{r=2}
+  - skill{s=herobrine_zombieBLOODfx} @EIR{r=2}
+  
+herobrine_zombiePICKAXEsync:
+  Skills:
+  - CancelEvent
+  - skill{s=herobrine_zombiePICKAXE} @self
+  
+herobrine_zombiePICKAXE:
+  Cooldown: 30
+  Conditions:
+  - onground true
+  - targetwithin{d=3} true
+  - offgcd true
+  Skills:
+  - gcd{ticks=30} @self
+  - setspeed{speed=0;type=walking}
+  - state{s=swipeup} @self
+  - delay 1
+  - ChangePart{model=herobrine_zombie;part=lefthand;newmodel=herobrine_zombie_bits;newpart=pickaxe} @self
+  - delay 11
+  - skill{s=herobrine_zombieswingsound} @self
+  - totem{ch=5;oH=herobrine_zombiePICKAXEDamage;int=1;hR=1.5;md=2;hnp=true} @Forward{f=1}
+  - delay 8
+  - ChangePart{model=herobrine_zombie;part=lefthand;newmodel=herobrine_zombie;newpart=lefthand} @self
+  - delay 5
+  - skill{s=herobrine_zombieCROSSBOWup} @target
+  - setspeed{speed=2;type=walking}
+  
+herobrine_zombiePICKAXEDamage:
+  Skills:
+  - damage{a=<caster.score.herodamage>} @EIR{r=2}
+  - throw{velocity=6;velocityY=12} @EIR{r=2}
+  - skill{s=herobrine_zombieBLOODfx} @EIR{r=2}
+  
+herobrine_zombieCROSSBOWup:
+  TargetConditions:
+  - yDiff{diff=>3} true
+  Conditions:
+  - onground true  
+  - targetwithin{d=3} false
+  Skills:
+  - sound{s=minecraft:item.crossbow.loading_start;v=1;sc=HOSTILE} @self
+  - gcd{ticks=20}
+  - setspeed{speed=0;type=walking} @self
+  - state{s=crossbow_up} @self
+  - delay 5
+  - ChangePart{model=herobrine_zombie;part=lefthand;newmodel=herobrine_zombie_bits;newpart=crossbow_loaded} @self
+  - delay 5
+  - sound{s=minecraft:item.crossbow.shoot;v=1;sc=HOSTILE} @self
+  - sound{s=minecraft:entity.firework_rocket.blast;v=1;sc=HOSTILE} @self
+  - sound{s=minecraft:entity.firework_rocket.twinkle;v=1;sc=HOSTILE} @self
+  - ChangePart{model=herobrine_zombie;part=lefthand;newmodel=herobrine_zombie_bits;newpart=crossbow_unloaded} @self
+  - projectile{bulletType=ARROW;onTick=herobrine_zombieCROSSBOWfireworkTICK;onHit=herobrine_zombieCROSSBOWfireworkHIT;v=50;i=1;hR=1;vR=1;sfo=1;hnp=true}
+  - delay 10
+  - ChangePart{model=herobrine_zombie;part=lefthand;newmodel=herobrine_zombie;newpart=lefthand} @self
+  - setspeed{speed=2;type=walking} @self
+  
+herobrine_zombieCROSSBOWfireworkTICK:
+  Skills:
+  - effect:particles{p=firework;amount=15;speed=0;hS=0.2;vS=0.2} @origin
+  
+herobrine_zombieCROSSBOWfireworkHIT:
+  Skills:
+  - ignite{ticks=60} @EntitiesNearOrigin{r=4}
+  - effect:explosion
+  - sound{s=minecraft:entity.firework_rocket.launch;v=1;sc=HOSTILE} @self
+  - throw{velocity=5;velocityY=-1} @EntitiesNearOrigin{r=4}
+  - summon{t=herobrine_zombie_fireworkFX;a=3;r=3;yr=4} @origin
+  - damage{amount=<caster.level>;element=FIRE} @EntitiesNearOrigin{r=3}
+  - effect:particles{p=flame;repeat=10;repeatInterval=2;hs=.25;vs=1} @EntitiesNearOrigin{r=4}
+  - effect:particles{p=large_smoke;repeat=10;repeatInterval=2;hs=.25;vs=1} @EntitiesNearOrigin{r=4}
+  - effect:particles{p=flash} @origin
+  - effect:firework{t=3;d=1;f=true;tr=true} @origin
+  - skill{s=herobrine_zombieBLOODfx}
+  
+herobrine_zombie_fireworkFXspawn:
+  Skills:
+  - delay 20
+  - remove @self
+  
+herobrine_zombieEAT:
+  Cooldown: 5
+  Conditions:
+  - onground true  
+  - targetwithin{d=5} false
+  - offgcd true
+  Skills:
+  - gcd{ticks=30}
+  - state{s=eat} @self
+  - delay 8
+  - healpercent{m=0.1} @self
+  - ChangePart{model=herobrine_zombie;part=lefthand;newmodel=herobrine_zombie_bits;newpart=beef} @self
+  - delay 5
+  - sound{s=minecraft:entity.generic.eat;v=1;sc=HOSTILE;repeat=3;repeatInterval=4} @self
+  - effect:particles{particle=block;m=dark_oak_wood;amount=3;speed=.25;repeat=3;repeatInterval=2} @ModelPart{m=herobrine_zombie;p=lefthand;offset=LOCAL;y=-.25;z=.5}
+  - delay 7
+  - ChangePart{model=herobrine_zombie;part=lefthand;newmodel=herobrine_zombie;newpart=lefthand} @self
+  - effect:particleorbital{r=1;points=12;t=20;i=1;vy=20;particle=composter;rz=24;oy=1} @self
+  - sound{s=littleroom_herobrine:littleroom.herobrine.heal;v=1;sc=HOSTILE} @self
+  - delay 5
+
+herobrine_zombieROUNDHOUSEsync:
+  Skills:
+  - CancelEvent
+  - skill{s=herobrine_zombieROUNDHOUSE} @self
+  
+herobrine_zombieROUNDHOUSE:
+  Cooldown: 15
+  Conditions:
+  - targetwithin{d=3} true
+  Skills:
+  - gcd{ticks=30}
+  - state{s=kick} @self
+  - delay 8
+  - skill{s=herobrine_zombieswingsound;repeat=3;repeatInterval=5} @self
+  - totem{ch=1;oH=herobrine_zombieROUNDHOUSEDamage;int=1;hR=2;vR=2;md=10;hnp=true} @self
+  
+herobrine_zombieROUNDHOUSEDamage:
+  Skills:
+  - skill{s=herobrine_zombieBLOODfx} @EIR{r=2}
+  - damage{a=<caster.score.herodamage>} @EIR{r=2}
+  - throw{velocity=20;velocityY=-10} @EIR{r=2}
+
+herobrine_zombiePOWERPUNCHsync:
+  Skills:
+  - CancelEvent
+  - skill{s=herobrine_zombiePOWERPUNCH} @self
+  
+herobrine_zombiePOWERPUNCH:
+  Cooldown: 5
+  Conditions:
+  - onground true
+  - targetwithin{d=3} true
+  - offgcd true
+  Skills:
+  - sound{s=littleroom_herobrine:littleroom.herobrine.powerpunch;v=1;sc=HOSTILE} @self
+  - setspeed{speed=0;type=walking} @self
+  - gcd{ticks=30}
+  - state{s=falcon_punch} @self
+  - delay 18
+  - effect:particles{particle=campfire_cosy_smoke;amount=2;hs=.25;vs=0;y=.1;repeat=5;repeatInterval=1} @self
+  - lunge{velocity=3;velocityY=-5} @target
+  - delay 5
+  - totem{ch=1;oH=herobrine_zombiePOWERPUNCHDamage;int=1;hR=2;md=10;hnp=true} @Forward{f=.5}
+  - delay 10
+  - setspeed{speed=2;type=walking} @self
+  
+herobrine_zombiePOWERPUNCHDamage:
+  Skills:
+  - damage{a="<caster.score.herodamage>*2"} @EIR{r=2}
+  - skill{s=herobrine_zombieBLOODfx} @EIR{r=2}
+  - throw{velocity=20;velocityY=3} @EIR{r=2}
+  
+herobrine_zombieDOWNPUNCHsync:
+  Skills:
+  - CancelEvent
+  - skill{s=herobrine_zombieDOWNPUNCH} @self
+  
+herobrine_zombieDOWNPUNCH:
+  Cooldown: 15
+  Conditions:
+  - onground true
+  - targetwithin{d=3} true
+  - offgcd true
+  Skills:
+  - setspeed{speed=0;type=walking} @self
+  - gcd{ticks=20}
+  - state{s=punch_down} @self
+  - skill{s=herobrine_zombieswingsound} @self
+  - delay 8
+  - totem{ch=5;oH=herobrine_zombieDOWNPUNCHDamage;int=1;hR=1;md=2;hnp=true} @Forward{f=1}
+  - delay 10
+  - setspeed{speed=2;type=walking} @self
+  
+herobrine_zombieDOWNPUNCHDamage:
+  Skills:
+  - damage{a=<caster.score.herodamage>} @EIR{r=2}
+  - skill{s=herobrine_zombieBLOODfx} @EIR{r=2}
+  
+herobrine_zombieBLOODfx:
+  TargetConditions:
+  - isblocking false
+  Skills:
+  - skill{s=herobrine_zombieimpactsound} @self
+  - effect:particles{particle=block;m=redstone_block;amount25;hS=.25;vS=.25;y=1.25}
+  
+herobrine_zombieBLOCKprep:
+  Cooldown: 5
+  Skills:
+  - setstance{s=blocking} @self
+  - potion{type=DAMAGE_RESISTANCE;duration=20;level=5} @self
+  - delay 40
+  - setstance{s=grounded} @self
+  
+herobrine_zombieBLOCK:
+  Cooldown: 1
+  Conditions:
+  - onground true  
+  - offgcd true
+  - stance blocking true
+  Skills:
+  - skill{s=herobrine_zombieswingsound} @self
+  #- SwapModel{m=herobrine_zombie;nid=herobrine_zombie;d=false} @self
+  - gcd{ticks=15} @self
+  - sound{s=item.shield.block} @self
+  - ChangePart{model=herobrine_zombie;part=lefthand;newmodel=herobrine_zombie_bits;newpart=shield} @self
+  - setspeed{speed=0;type=walking} @self
+  - delay 1
+  - state{s=block} @self
+  - delay 15
+  #- SwapModel{m=herobrine_zombie;nid=herobrine_zombie;d=true} @self
+  - setspeed{speed=2;type=walking} @self
+  - ChangePart{model=herobrine_zombie;part=lefthand;newmodel=herobrine_zombie;newpart=lefthand} @self
+  
+herobrine_zombieULTRA:
+  Conditions:
+  - onground true  
+  - offgcd true
+  Cooldown: 240
+  Skills:
+  - sound{s=littleroom_herobrine:littleroom.herobrine.powerup;v=1;sc=HOSTILE} @self
+  - setspeed{speed=0;type=walking} @self
+  - gcd{ticks=60} @self
+  - state{s=powerup} @self
+  - velocity{m=set;x=0;y=0;z=0;repeat=30;repeatInterval=1} @self
+  - effect:particles{particle=dragon_breath;amount=10;dir=0,1,0;d=true;speed=.1;hs=1;vs=.25;repeat=3;repeatInterval=5} @self
+  - delay 15
+  - setspeed{speed=2.05;type=walking} @self
+  - setmobscore{o=herodamage;v=15}
+  - throw{velocity=20;velocityY=2} @EIR{r=4}
+  - potion{type=SPEED;duration=480;level=1} @self
+  - effect:particles{particle=dragon_breath;amount=5;dir=0,1,0;d=true;speed=.1;hs=.25;vs=1;repeat=480;repeatInterval=1} @self
+  - effect:particles{particle=flash;amount=1} @self
+  - effect:particlesphere{particle=end_rod;amount=128;radius=3;speed=1} @self
+  - delay 40
+  - setspeed{speed=2;type=walking} @self
+  - delay 480
+  - setmobscore{o=herodamage;v=10}
+  
+
+  
+herobrine_zombieULTRAtele:
+  LegacyConditions:  
+  - mobscore herodamage;15
+  Skills:
+  - effect:particles{particle=squid_ink;amount=100;vs=1;hs=.5;y=1} @self
+  - teleport{spreadh=6;spreadv=0} @self
+  - delay 1
+  - effect:particles{particle=squid_ink;amount=100;vs=1;hs=.5;y=1} @self
+  
+herobrine_zombieAXE:
+  Conditions:
+  - onground true  
+  - offgcd true
+  - targetwithin{d=5} false
+  - incombat true
+  Cooldown: 15
+  Skills:
+  - delay 1
+  - setspeed{speed=0;type=walking} @self
+  - gcd{ticks=30} @self
+  - state{s=axe_throw} @self
+  - delay 1
+  - ChangePart{model=herobrine_zombie;part=lefthand;newmodel=herobrine_zombie_bits;newpart=axe} @self
+  - skill{s=herobrine_zombieswingsound} @self
+  - delay 8
+  - sound{s=littleroom_herobrine:littleroom.herobrine.axe_spinning;v=1;sc=HOSTILE} @self
+  - projectile{bulletType=MOB;mob=herobrine_zombie_axe;onHit=herobrine_zombieAXEHIT;v=13;i=1;hR=1;vR=1;sfo=1.25;tyo=1;hnp=true;syo=2}
+  - delay 1
+  - ChangePart{model=herobrine_zombie;part=lefthand;newmodel=herobrine_zombie;newpart=lefthand} @self
+  - delay 10
+  - setspeed{speed=2;type=walking} @self
+
+herobrine_zombieAXEHIT:
+  Skills:
+  - potion{type=SLOW;duration=40;level=1}
+  - damage{a=<caster.score.herodamage>}
+  - skill{s=herobrine_zombieBLOODfx}
+  
+herobrine_zombieFISHING:
+  TargetConditions:
+  - distance{d=6to10}
+  - lineofsight true
+  Conditions:
+  - onground true  
+  - offgcd true
+  - targetwithin{d=5} false
+  - incombat true
+  Cooldown: 15
+  Skills:
+  - setspeed{speed=0;type=walking} @self
+  - gcd{ticks=30} @self
+  - state{s=fishing_rod} @self
+  - delay 1
+  - ChangePart{model=herobrine_zombie;part=lefthand;newmodel=herobrine_zombie_bits;newpart=fishingrod} @self
+  - delay 10
+  - sound{s=minecraft:entity.fishing_bobber.throw;v=1;sc=HOSTILE} @self
+  - delay 5
+  - summon{t=herobrine_zombie_bobber} @target
+  - delay 10
+  - sound{s=littleroom_herobrine:littleroom.herobrine.reel;v=1;sc=HOSTILE} @target
+  - pull{v=8;to=true}
+  - delay 10
+  - skill{s=herobrine_zombiePOWERPUNCH} @self .75
+  - ChangePart{model=herobrine_zombie;part=lefthand;newmodel=herobrine_zombie;newpart=lefthand} @self
+  - setspeed{speed=2;type=walking} @self
+  
+herobrine_zombiefishinglineHIT:
+  Skills:
+  - summon{t=herobrine_zombie_bobber;ctt=true}
+  
+herobrine_zombiebobberSPAWN:
+  Skills:
+  - mounttarget @EIR{r=2}
+  - delay 20
+  - model{mid=herobrine_zombie_bobber;r=true} @self ~onSpawn
+  
+herobrine_zombieHEIGHTJUMP4:
+  TargetConditions:
+  - yDiff{diff=>4} true
+  Cooldown: 5
+  Conditions:
+  - incombat true
+  - onground true
+  - offgcd true
+  Skills:
+  - gcd{ticks=20}
+  - setspeed{speed=0;type=walking} @self
+  - sound{s=littleroom_herobrine:littleroom.herobrine.jump;v=1;sc=HOSTILE} @self
+  - state{s=jump} @self
+  - delay 5
+  - lunge{velocity=1.5;velocityY=.7} @Target
+  - setspeed{speed=2;type=walking} @self
+  - delay 10
+  - lunge{velocity=.5;velocityY=.1} @Target
+  - skill{s=herobrine_zombieswingsound} @self
+  - state{s=frontflip} @self
+  - setstance{stance=inair} @self
+  
+herobrine_zombieHEIGHTJUMP2:
+  TargetConditions:
+  - yDiff{diff=2to3} true
+  Cooldown: 5
+  Conditions:
+  - incombat true
+  - onground true
+  - offgcd true
+  Skills:
+  - gcd{ticks=20}
+  - setspeed{speed=0;type=walking} @self
+  - sound{s=littleroom_herobrine:littleroom.herobrine.jump;v=1;sc=HOSTILE} @self
+  - state{s=jump} @self
+  - delay 5
+  - lunge{velocity=1.5;velocityY=.6} @Target
+  - setspeed{speed=2;type=walking} @self
+  - delay 10
+  - lunge{velocity=.5;velocityY=.1} @Target
+  - skill{s=herobrine_zombieswingsound} @self
+  - state{s=frontflip} @self
+  - setstance{stance=inair} @self
+  
+herobrine_zombieFLINCHhit:
+  Conditions:
+  - stance flinch true
+  Skills:
+  - state{s=stun_hit} @self  
+  - effect:particles{particle=crit;amount=5;speed=.25} @self
+  
+herobrine_zombieFLINCH75:
+  Conditions:  
+  - offgcd true
+  Cooldown: 9999
+  Skills:
+  - gcd{ticks=90}
+  - delay 1
+  - state{s=stun} @self  
+  - setspeed{speed=0;type=walking} @self
+  - setstance{stance=flinch} @self
+  - delay 90
+  - setspeed{speed=2;type=walking} @self
+  - setstance{stance=grounded} @self  
+  
+herobrine_zombieFLINCH50:
+  Conditions:  
+  - offgcd true
+  Cooldown: 9999
+  Skills:
+  - gcd{ticks=90}
+  - delay 1
+  - state{s=stun} @self 
+  - setstance{stance=flinch} @self
+  - setspeed{speed=0;type=walking} @self
+  - delay 90
+  - setspeed{speed=2;type=walking} @self
+  - setstance{stance=grounded} @self  
+  
+
+  
+herobrine_zombieVAULT:
+  TargetConditions:
+  - blocktype{type=OAK_FENCE,SPRUCE_FENCE,BIRCH_FENCE,JUNGLE_FENCE,ACACIA_FENCE,DARK_OAK_FENCE,CRIMSON_FENCE,WARPED_FENCE,NETHER_BRICK_FENCE}
+  Cooldown: 2
+  Skills:
+  - skill{s=herobrine_zombieVAULTcheck} @forward{f=1;y=1}
+  
+herobrine_zombieVAULTcheck:
+  TargetConditions:
+  - blocktype{type=AIR}
+  Skills:
+  - gcd{ticks=30} @self
+  - setAI{ai=false} @self
+  - setspeed{speed=0;type=walking} @self
+  - look{headOnly=false;immediately=true;repeat=20;repeatInterval=1}
+  - state{s=vault} @self
+  - delay 5
+  - skill{s=herobrine_zombieswingsound} @self
+  - throw{velocity=10;velocityY=2} @EIR{r=3}
+  - teleport{spreadh=0;spreadv=0;repeat=10;repeatInterval=1} @forward{f=.1}
+  - delay 10
+  - setspeed{speed=2;type=walking} @self
+  - setAI{ai=true} @self
+  
+herobrine_zombieDEATH:
+  Skills:
+  - delay 37
+  - effect:particles{particle=cloud;amount=50;hs=1;vs=.5} @self

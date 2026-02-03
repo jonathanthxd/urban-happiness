@@ -1,0 +1,91 @@
+{"warrior.furiousslash1":{"category":"master","sounds":["warrior_furiousslash1"],"subtitle":"subtitles.custom.name"},"warrior.furiousslash2":{"category":"master","sounds":["warrior_furiousslash2"],"subtitle":"subtitles.custom.name"},"warrior.furiousslash3":{"category":"master","sounds":["warrior_furiousslash3"],"subtitle":"subtitles.custom.name"},"warrior.furiousstrike.knockup":{"category":"master","sounds":["warrior_furious_strike_knockup"],"subtitle":"subtitles.custom.name"},"warrior.furiousstrike.whirlwind":{"category":"master","sounds":["warrior_furious_strike_whirlwind"],"subtitle":"subtitles.custom.name"},"warrior.leapingslash.leap":{"category":"master","sounds":["warrior_leaping_slash_leap"],"subtitle":"subtitles.custom.name"},"warrior.leapingslash.impact":{"category":"master","sounds":["warrior_leaping_slash_impact"],"subtitle":"subtitles.custom.name"},"warrior.rage":{"category":"master","sounds":["warrior_rage"],"subtitle":"subtitles.custom.name"},"warrior.whirlwind":{"category":"master","sounds":["warrior_whirlwind"],"subtitle":"subtitles.custom.name"},"warrior.hellblade":{"category":"master","sounds":["warrior_hellblade"],"subtitle":"subtitles.custom.name"},"universal.ultimate.sfx":{"category":"master","sounds":["universal_ultimate_sfx"],"subtitle":"subtitles.custom.name"},"mcmodels.fd151a492020237c6c24be9beed48bce":{"category":"master","sounds":[]
+{"mender.cascadebolt.impact":{"category":"master","sounds":["mender_cascadebolt_impact"],"subtitle":"subtitles.custom.name"},"mender.cascadebolt.shoot":{"category":"master","sounds":["mender_cascadebolt_shoot"],"subtitle":"subtitles.custom.name"},"mender.cascadebolt.split.impact":{"category":"master","sounds":["mender_cascadebolt_split_impact"],"subtitle":"subtitles.custom.name"},"mender.lifebound.skill":{"category":"master","sounds":["mender_lifebound_skill"],"subtitle":"subtitles.custom.name"},"mender.lifeweavers.grace":{"category":"master","sounds":["mender_lifeweavers_grace"],"subtitle":"subtitles.custom.name"},"mender.purging.light":{"category":"master","sounds":["mender_purging_light"],"subtitle":"subtitles.custom.name"},"mender.spiritbolt.impact":{"category":"master","sounds":["mender_spiritbolt_impact"],"subtitle":"subtitles.custom.name"},"mender.spiritbolt.shoot":{"category":"master","sounds":["mender_spiritbolt_shoot"],"subtitle":"subtitles.custom.name"},"mender.vital.beam":{"category":"master","sounds":["mender_vital_beam"],"subtitle":"subtitles.custom.name"},"universal.ultimate.sfx":{"category":"master","sounds":["universal_ultimate_sfx"],"subtitle":"subtitles.custom.name"},
+{
+  "rogue.cutthroat.combo.dash": {
+    "category": "master",
+    "sounds": [
+      "rogue_cutthroat_combo_dash"
+    ],
+    "subtitle": "subtitles.custom.name"
+  },
+
+  "rogue.cutthroat.combo.spindash": {
+    "category": "master",
+    "sounds": [
+      "rogue_cutthroat_combo_spindash"
+    ],
+    "subtitle": "subtitles.custom.name"
+  },
+
+  "rogue.cutthroat.combo.xslash": {
+    "category": "master",
+    "sounds": [
+      "rogue_cutthroat_combo_xslash"
+    ],
+    "subtitle": "subtitles.custom.name"
+  },
+
+  "rogue.grappling.hook.in": {
+    "category": "master",
+    "sounds": [
+      "rogue_grappling_hook_in"
+    ],
+    "subtitle": "subtitles.custom.name"
+  },
+
+  "rogue.grappling.hook.out": {
+    "category": "master",
+    "sounds": [
+      "rogue_grappling_hook_out"
+    ],
+    "subtitle": "subtitles.custom.name"
+  },
+
+  "rogue.mark.of.death": {
+    "category": "master",
+    "sounds": [
+      "rogue_mark_of_death"
+    ],
+    "subtitle": "subtitles.custom.name"
+  },
+
+  "rogue.mark.of.death.disappear": {
+    "category": "master",
+    "sounds": [
+      "rogue_mark_of_death_disappear"
+    ],
+    "subtitle": "subtitles.custom.name"
+  },
+
+  "rogue.slice.and.dice.1": {
+    "category": "master",
+    "sounds": [
+      "rogue_slice_and_dice_1"
+    ],
+    "subtitle": "subtitles.custom.name"
+  },
+
+  "rogue.slice.and.dice.2": {
+    "category": "master",
+    "sounds": [
+      "rogue_slice_and_dice_2"
+    ],
+    "subtitle": "subtitles.custom.name"
+  },
+
+  "rogue.slice.and.dice.3": {
+    "category": "master",
+    "sounds": [
+      "rogue_slice_and_dice_3"
+    ],
+    "subtitle": "subtitles.custom.name"
+  },
+
+  "rogue.smokebomb": {
+    "category": "master",
+    "sounds": [
+      "rogue_smokebomb"
+    ],
+    "subtitle": "subtitles.custom.name"
+  }
+}

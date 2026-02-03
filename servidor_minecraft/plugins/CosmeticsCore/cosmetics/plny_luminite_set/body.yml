@@ -1,0 +1,13 @@
+cosmetics:
+  luminite_set_cosmetics_wings:
+    display_name: Wings
+    enabled: true
+    type: BODY_ITEM
+    model:
+      gui: potion:9926722
+      normal: potion:9926722
+      normal_2: potion:9926725
+      self: potion:9926723
+      self_2: potion:9926724
+    dye:
+      enabled: false

@@ -1,0 +1,20 @@
+noenchant128:
+  texture: noenchant/font/required/null
+  ascent: -32768
+  height: -130
+  char: 
+noenchant16:
+  texture: noenchant/font/required/null
+  ascent: -32768
+  height: -18
+  char: 
+noenchant8:
+  texture: noenchant/font/required/null
+  ascent: -32768
+  height: -10
+  char: 
+noenchant2:
+  texture: noenchant/font/required/null
+  ascent: -32768
+  height: -4
+  char: 

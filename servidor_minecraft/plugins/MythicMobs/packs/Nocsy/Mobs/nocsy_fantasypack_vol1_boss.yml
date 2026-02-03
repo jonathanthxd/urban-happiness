@@ -1,0 +1,380 @@
+# #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-#
+#           Fantasy pack Vol.1             #
+#            Boss - MythicMobs             #
+#               by Nocsy                   #
+#=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-#
+
+############################################
+#               Ganondorf                  #
+############################################
+
+Nocsy_Ganondorf:
+  Type: HUSK
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  AITargetSelectors:
+  - clear
+  - players
+  Drops: []
+  Equipment: []
+  Skills:
+  - model{mid=nocsy_ganondorf;n=false;tint=false} @self ~onSpawn
+  - bodyclamp{m=nocsy_ganondorf;c=20} @self ~onSpawn
+  - skill{s=Nocsy_Ganondorf_Attack} ~onAttack
+  - skill{s=Nocsy_Ganondorf_ForceSpell} ~onDamaged =80% 1
+  - skill{s=Nocsy_Ganondorf_ForceSmash} ~onDamaged =60% 1
+  - skill{s=Nocsy_Ganondorf_ForceSpell} ~onDamaged =40% 1
+  - skill{s=Nocsy_Ganondorf_ForceSmash} ~onDamaged =20% 1
+  - skill{s=Nocsy_FPV1_CancelEvent;sync=true} @self ~onAttack
+  - skill{s=Nocsy_Ganondorf_Transform_LAUNCH} ~onDamaged <=10% 1
+  - skill{s=Nocsy_Ganondorf_Hurt} ~onDamaged
+  - skill{s=Nocsy_FPV1_CancelEvent;sync=true} ~onDamaged <=10% 1
+  - skill{s=Nocsy_Ganondorf_Sound_Ambient-Aura} ~onSpawn
+  - velocity{m=set;x=0;y=0;z=0;delay=1} @self ~onDamaged
+  Display: "§cGanondorf"
+  Health: 800
+  Damage: 0
+  Modules:
+    ThreatTable: true
+  BossBar:
+    Enabled: true
+    Title: '§cGanondorf'
+    Range: 40
+    Color: RED
+    Style: SOLID
+  Options:
+    Despawn: true
+    AlwaysShowName: false
+    PreventOtherDrops: true
+    Silent: true
+    KnockbackResistance: 1
+    FollowRange: 20
+    AttackSpeed: 1
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    MovementSpeed: 0.22
+
+############################################
+#                 Ganon                    #
+############################################
+
+Nocsy_Ganon:
+  Type: HUSK
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  AITargetSelectors:
+  - clear
+  - players
+  Drops: []
+  Equipment: []
+  Skills:
+  - model{mid=nocsy_ganon;n=false;tint=false} @self ~onSpawn
+  - bodyclamp{m=nocsy_ganon;c=10} @self ~onSpawn
+  - skill{s=Nocsy_FPV1_CancelEvent;sync=true} @self ~onAttack
+  - skill{s=Nocsy_Ganon_Attack} ~onAttack
+  - skill{s=Nocsy_Ganon_Spawn} ~onSpawn
+  - skill{s=Nocsy_Ganon_Aura} ~onSpawn
+  - skill{s=Nocsy_Ganon_Roar_FORCE} ~onDamaged =80%
+  - skill{s=Nocsy_Ganon_Roar_FORCE} ~onDamaged =40%
+  - skill{s=Nocsy_Ganon_DarkStar_FORCE} ~onDamaged =20%
+  - skill{s=Nocsy_Ganon_Rest_FORCE} ~onSignal:DARKSTAREXPLODE
+  - skill{s=Nocsy_Ganon_Death_INIT} ~onDeath
+  - skill{s=Nocsy_Ganon_Sound_Ambient-Aura} ~onSpawn
+  - sound{s=entity.wither.death;v=1;p=0.1} @self ~onDeath
+  - skill{s=Nocsy_Ganon_Sound_Hurt} ~onDamaged
+  - velocity{m=set;x=0;y=0;z=0;delay=1} @self ~onDamaged
+  Display: "§6Ganon"
+  Health: 1200
+  Damage: 0
+  Modules:
+    ThreatTable: true
+  BossBar:
+    Enabled: true
+    Title: '§6Ganon'
+    Range: 40
+    Color: GOLD
+    Style: SOLID
+  Options:
+    Despawn: true
+    AlwaysShowName: false
+    PreventOtherDrops: true
+    Silent: true
+    KnockbackResistance: 1
+    FollowRange: 20
+    AttackSpeed: 1
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    MovementSpeed: 0.20
+
+############################################
+#               Effects                    #
+############################################
+
+Nocsy_Ganondorf_Summon:
+  Type: ARMOR_STAND
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Drops: []
+  Equipment: []
+  Skills:
+  - skill{s=Nocsy_FPV1_Summon_dummy} @self ~onSpawn
+  - velocity{m=set;x=0;y=0;z=0;delay=1} @self ~onDamaged
+  Display: "§cGanondorf summon"
+  Options:
+    Despawn: true
+    NoGravity: false
+    Invisible: true
+    Invincible: true
+    AlwaysShowName: false
+    PreventOtherDrops: true
+    Silent: true
+    KnockbackResistance: 1
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+
+Nocsy_Ganondorf_Spell:
+  Type: ARMOR_STAND
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  Drops: []
+  Equipment: []
+  Skills:
+  - skill{s=Nocsy_Ganondorf_castSpell} @self ~onSpawn
+  - velocity{m=set;x=0;y=0;z=0;delay=1} @self ~onDamaged
+  Display: "§cGanondorf"
+  Options:
+    Despawn: true
+    NoGravity: false
+    Invisible: true
+    Invincible: true
+    AlwaysShowName: false
+    PreventOtherDrops: true
+    Silent: true
+    KnockbackResistance: 1
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+
+Nocsy_Ganondorf_FireSpell:
+  Type: ARMOR_STAND
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  Drops: []
+  Equipment: []
+  Skills:
+  - skill{s=Nocsy_Ganondorf_castSpellFire} @self ~onSpawn
+  - velocity{m=set;x=0;y=0;z=0;delay=1} @self ~onDamaged
+  Display: "§cGanondorf"
+  Options:
+    Despawn: true
+    NoGravity: false
+    Invisible: true
+    Invincible: true
+    AlwaysShowName: false
+    PreventOtherDrops: true
+    Silent: true
+    KnockbackResistance: 1
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+
+Nocsy_Ganon_DarkOrb_SPAWN:
+  Type: ARMOR_STAND
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Drops: []
+  Equipment: []
+  Skills:
+  - skill{s=Nocsy_FPV1_DarkStar_Spawn} @self ~onSpawn
+  - velocity{m=set;x=0;y=0;z=0;delay=1} @self ~onDamaged
+  Display: "§5Dark star"
+  Options:
+    Collidable: false
+    Despawn: true
+    HasGravity: false
+    Invisible: true
+    Invincible: true
+    AlwaysShowName: false
+    PreventOtherDrops: true
+    Silent: true
+    KnockbackResistance: 1
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+
+Nocsy_Ganon_DarkOrb_DESTROY:
+  Type: ARMOR_STAND
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Drops: []
+  Equipment: []
+  Skills:
+  - skill{s=Nocsy_FPV1_DarkStar_Destroyed} @self ~onSpawn
+  - velocity{m=set;x=0;y=0;z=0;delay=1} @self ~onDamaged
+  Display: "§5Dark star"
+  Options:
+    Collidable: false
+    Despawn: true
+    HasGravity: false
+    Invisible: true
+    Invincible: true
+    AlwaysShowName: false
+    PreventOtherDrops: true
+    Silent: true
+    KnockbackResistance: 1
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+
+Nocsy_Ganon_DarkOrb:
+  Type: HUSK
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  Drops: []
+  Equipment: []
+  Skills:
+  - model{mid=nocsy_ganon_darkorb;n=false;tint=false} @self ~onSpawn
+  - skill{s=Nocsy_FPV1_DarkStar_Destroyed_INIT} ~onDeath
+  - skill{s=Nocsy_FPV1_DarkStar_Damaged} ~onDamaged
+  - skill{s=Nocsy_FPV1_DarkStar_Aura} ~onSpawn
+  - skill{s=Nocsy_Ganon_Sound_Ambient_DarkOrb-Aura} @self ~onSpawn
+  - velocity{m=set;x=0;y=0;z=0;delay=1} @self ~onDamaged
+  Display: "§5Dark star"
+  Health: 100
+  Damage: 0
+  Modules:
+    ThreatTable: true
+  BossBar:
+    Enabled: true
+    Title: '§5Dark Star'
+    Range: 40
+    Color: PURPLE
+    Style: SOLID
+  Options:
+    Despawn: true
+    NoGravity: true
+    AlwaysShowName: false
+    PreventOtherDrops: true
+    Silent: true
+    KnockbackResistance: 1
+    FollowRange: 20
+    AttackSpeed: 1
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    MovementSpeed: 0.22
+
+Nocsy_Ganon_CorruptedFlames:
+  Type: ARMOR_STAND
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Drops: []
+  Equipment: []
+  Skills:
+  - model{mid=nocsy_corrupted_flames_around;n=false} @self ~onSpawn
+  - skill{s=Nocsy_CorruptedFlames_Spawn} ~onSpawn
+  - skill{s=Nocsy_CorruptedFlames_Aura} ~onSpawn
+  - skill{s=Nocsy_Ganon_Sound_Ambient_Fire-Aura} ~onSpawn
+  - remove @self ~onSignal:REMOVEFLAME
+  Display: "§5Corrupted Flames"
+  Options:
+    Despawn: true
+    Invisible: true
+    Invincible: true
+    AlwaysShowName: false
+    PreventOtherDrops: true
+    Silent: true
+    KnockbackResistance: 1
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+
+Nocsy_Ganon_CorruptedFlamesTransformation:
+  Type: ARMOR_STAND
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Drops: []
+  Equipment: []
+  Skills:
+  - model{mid=nocsy_corrupted_flames_transformation;n=false} @self ~onSpawn
+  - skill{s=Nocsy_CorruptedFlamesTransform_Spawn} ~onSpawn
+  - skill{s=Nocsy_CorruptedFlamesTransform_Aura} ~onSpawn
+  - skill{s=Nocsy_Ganon_Sound_Ambient_Fire-Aura} ~onSpawn
+  - skill{s=Nocsy_Ganon_Death_ANIMATION} ~onSignal:GANONDEATH
+  - remove @self ~onSignal:REMOVEFLAMETORNADO
+  Display: "§5Corrupted Flames transformation"
+  Options:
+    Despawn: true
+    Invisible: true
+    Invincible: true
+    AlwaysShowName: false
+    PreventOtherDrops: true
+    Silent: true
+    KnockbackResistance: 1
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+
+Nocsy_Ganon_CorruptedFlamesTransformation_Retro:
+  Type: ARMOR_STAND
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Drops: []
+  Equipment: []
+  Skills:
+  - model{mid=nocsy_corrupted_flames_transformation;n=false} @self ~onSpawn
+  - skill{s=Nocsy_CorruptedFlamesTransform_Spawn} ~onSpawn
+  - skill{s=Nocsy_CorruptedFlamesTransform_Aura} ~onSpawn
+  - skill{s=Nocsy_Ganon_Death_ANIMATION} ~onSpawn
+  - skill{s=Nocsy_Ganon_Sound_Ambient_Fire-Aura} ~onSpawn
+  - remove @self ~onSignal:REMOVEFLAMETORNADO
+  Display: "§5Corrupted Flames transformation"
+  Options:
+    Despawn: true
+    Invisible: true
+    Invincible: true
+    AlwaysShowName: false
+    PreventOtherDrops: true
+    Silent: true
+    KnockbackResistance: 1
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+
+Nocsy_Ganondorf_DEAD:
+  Type: HUSK
+  Drops: []
+  Equipment: []
+  Skills:
+  - model{mid=nocsy_ganondorf;n=false;tint=false} @self ~onSpawn
+  - skill{s=Nocsy_Ganondorf_Death} ~onSpawn
+  Display: "§cGanondorf"
+  Health: 800
+  Damage: 0
+  Options:
+    Despawn: true
+    AlwaysShowName: false
+    PreventOtherDrops: true
+    Silent: true
+    KnockbackResistance: 1
+    FollowRange: 20
+    AttackSpeed: 1
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    MovementSpeed: 0.22
+# eyJ1c2VyLW5hbWUiOiJGYXp6ZXIiLCJ1c2VyLWlkIjoiNzI4MSIsImRhdGUiOiIyMDI2LTAyLTAyIDAwOjE4Iiwic2l0ZSI6Imh0dHBzOi8vZ2xlYWtzLnBybyJ9

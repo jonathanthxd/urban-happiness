@@ -1,0 +1,17 @@
+Id: KPACK_mountable_horse_yellow
+MythicMob: KPACK_mountable_horse_yellow
+Permission: littleroom.KPACK_mountable_horse_yellow
+Mountable: true
+MountType: walking
+AutoRide: true
+DespawnOnDismount: true
+DespawnSkill: KPACK_mountable_horse_despawn
+Distance: 5
+SpawnRange: 5
+ComingBackRange: 5
+Icon:
+  Name: Yellow Knight Horse
+  Material: INK_SAC
+  CustomModelData: 10
+  Description:
+  - SUMMON!

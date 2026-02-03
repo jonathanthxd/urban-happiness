@@ -1,0 +1,56 @@
+#########################################################
+## Developed by Little Room, patreon.com/littleroomdev ##
+#########################################################
+
+
+  
+KPACK_longsword:
+  Id: INK_SAC
+  Display: 'Knight Longsword'
+  Model: 1
+  
+KPACK_halberd:
+  Id: INK_SAC
+  Display: 'Knight Halberd'
+  Model: 2
+  
+KPACK_knight_helmet_1:
+  Id: INK_SAC
+  Display: 'Knight Helmet'
+  Model: 3
+  
+KPACK_knight_helmet_2:
+  Id: INK_SAC
+  Display: 'Knight Helmet'
+  Model: 4
+  
+KPACK_knight_helmet_3:
+  Id: INK_SAC
+  Display: 'Knight Helmet'
+  Model: 5
+  
+KPACK_knight_helmet_4:
+  Id: INK_SAC
+  Display: 'Knight Helmet'
+  Model: 6
+    
+KPACK_shield_red:
+  Id: shield
+  Display: 'Knight Heater Shield'
+  Model: 1
+    
+KPACK_shield_blue:
+  Id: shield
+  Display: 'Knight Heater Shield'
+  Model: 2
+    
+KPACK_shield_green:
+  Id: shield
+  Display: 'Knight Heater Shield'
+  Model: 3
+    
+KPACK_shield_yellow:
+  Id: shield
+  Display: 'Knight Heater Shield'
+  Model: 4
+  

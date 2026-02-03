@@ -1,0 +1,19 @@
+Id: KPACK_mountable_horse_green
+MythicMob: KPACK_mountable_horse_green
+Permission: littleroom.KPACK_mountable_horse_green
+Mountable: true
+MountType: walking
+AutoRide: true
+DespawnOnDismount: true
+DespawnSkill: KPACK_mountable_horse_despawn
+Distance: 5
+SpawnRange: 5
+ComingBackRange: 5
+Icon:
+  Name: Green Knight Horse
+  Material: INK_SAC
+  CustomModelData: 8
+  Description:
+  - SUMMON!
+
+#QncwMGbytkN4gGNMd0T0U0dVZVWHVTbSRlVuJ1RWhVY4lUMZdXduR2VuV2R24Wd1Y0Uxk2N

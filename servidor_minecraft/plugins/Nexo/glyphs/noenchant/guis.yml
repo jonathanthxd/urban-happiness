@@ -1,0 +1,43 @@
+alchemist_menu:
+  texture: noenchant/font/gui/alchemist
+  ascent: 47
+  height: 170
+  char: ꑀ
+
+tinkerer_menu:
+  texture: noenchant/font/gui/tinkerer
+  ascent: 47
+  height: 170
+  char: ꑁ
+
+magical_shop:
+  texture: noenchant/font/gui/magical_shop
+  ascent: 47
+  height: 170
+  char: ꑂ
+
+no_enchanter:
+  texture: noenchant/font/gui/enchanter
+  ascent: 47
+  height: 170
+  char: ꑃ
+
+rune_gui:
+  texture: noenchant/font/gui/rune_gui
+  ascent: 47
+  height: 170
+  char: ꑄ
+
+scroll_gui:
+  texture: noenchant/font/gui/scroll_gui
+  ascent: 47
+  height: 170
+  char: ꑅ
+
+misc_gui:
+  texture: noenchant/font/gui/misc_gui
+  ascent: 47
+  height: 170
+  char: ꑆ
+
+

@@ -1,0 +1,240 @@
+bank_sign:
+  itemname: Bank Sign
+  material: PAPER
+  Pack:
+    model: public_signs:bank_sign
+    custom_model_data: 302011
+  Mechanics:
+    furniture:
+      properties:
+        scale: 2,2,2
+      limited_placing:
+        roof: false
+        floor: false
+        wall: true
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.stone.place
+        break_sound: block.stone.break
+      hitbox:
+        barriers:
+        - -2..2,0..1,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: bank_sign
+          probability: 1.0
+cosmetic_sign:
+  itemname: Cosmetic Sign
+  material: PAPER
+  Pack:
+    model: public_signs:cosmetic_sign
+    custom_model_data: 302012
+  Mechanics:
+    furniture:
+      properties:
+        brightness:
+          block_light: 15
+        scale: 2,2,2
+      limited_placing:
+        roof: false
+        floor: false
+        wall: true
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.vault.hit
+        break_sound: block.vault.fall
+      hitbox:
+        barriers:
+        - -2..2,0..1,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: cosmetic_sign
+          probability: 1.0
+furniture_sign:
+  itemname: Furniture Sign
+  material: PAPER
+  Pack:
+    model: public_signs:furniture_sign
+    custom_model_data: 302013
+  Mechanics:
+    furniture:
+      properties:
+        brightness:
+          block_light: 15
+        scale: 2,2,2
+      limited_placing:
+        roof: false
+        floor: false
+        wall: true
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.heavy_core.place
+        break_sound: block.heavy_core.break
+      hitbox:
+        barriers:
+        - -2..2,0..1,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: furniture_sign
+          probability: 1.0
+general_blacksmith_sign:
+  itemname: Blacksmith Sign
+  material: PAPER
+  Pack:
+    model: public_signs:general_blacksmith_sign
+    custom_model_data: 302014
+  Mechanics:
+    furniture:
+      properties:
+        scale: 2,2,2
+      limited_placing:
+        roof: false
+        floor: true
+        wall: true
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.chiseled_bookshelf.place
+        break_sound: block.chiseled_bookshelf.break
+      hitbox:
+        barriers:
+        - -2..2,0..1,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: general_blacksmith_sign
+          probability: 1.0
+general_store_sign:
+  itemname: Store Sign
+  material: PAPER
+  Pack:
+    model: public_signs:general_store_sign
+    custom_model_data: 302015
+  Mechanics:
+    furniture:
+      properties:
+        brightness:
+          block_light: 15
+        scale: 2,2,2
+      limited_placing:
+        roof: false
+        floor: false
+        wall: true
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.vault.place
+        break_sound: block.vault.break
+      hitbox:
+        barriers:
+        - -2..2,0..2,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: general_store_sign
+          probability: 1.0
+here_sign:
+  itemname: Here Sign
+  material: PAPER
+  Pack:
+    model: public_signs:here_sign
+    custom_model_data: 302016
+  Mechanics:
+    furniture:
+      properties:
+        scale: 1,1,1
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: STRICT
+      block_sounds:
+        place_sound: block.chiseled_bookshelf.place
+        break_sound: block.chiseled_bookshelf.break
+      hitbox:
+        interactions:
+        - 0,0,0 1.0,1.0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: here_sign
+          probability: 1.0
+petshop_sign:
+  itemname: Petshop Sign
+  material: PAPER
+  Pack:
+    model: public_signs:petshop_sign
+    custom_model_data: 302017
+  Mechanics:
+    furniture:
+      properties:
+        scale: 2,2,2
+      limited_placing:
+        roof: false
+        floor: false
+        wall: true
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.chiseled_bookshelf.place
+        break_sound: block.chiseled_bookshelf.break
+      hitbox:
+        barriers:
+        - -2..2,0..2,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: petshop_sign
+          probability: 1.0
+soon_sign:
+  itemname: Coming Soon Sign
+  material: PAPER
+  Pack:
+    model: public_signs:soon_sign
+    custom_model_data: 302018
+  Mechanics:
+    furniture:
+      properties:
+        scale: 1,1,1
+      limited_placing:
+        roof: false
+        floor: false
+        wall: true
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.chiseled_bookshelf.place
+        break_sound: block.chiseled_bookshelf.break
+      hitbox:
+        interactions:
+        - 0,0,0 1.0,1.0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: soon_sign
+          probability: 1.0
+we_are_open_sign:
+  itemname: We're Open Sign
+  material: PAPER
+  Pack:
+    model: public_signs:we_are_open_sign
+    custom_model_data: 302019
+  Mechanics:
+    furniture:
+      properties:
+        scale: 1,1,1
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: STRICT
+      block_sounds:
+        place_sound: block.chiseled_bookshelf.place
+        break_sound: block.chiseled_bookshelf.break
+      hitbox:
+        interactions:
+        - 0,0,0 1.0,1.0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: we_are_open_sign
+          probability: 1.0

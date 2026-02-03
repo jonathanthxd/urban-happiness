@@ -1,0 +1,239 @@
+
+open_command: 
+  # - enshop
+
+size: 54
+
+
+menu_title: '<shift:-16><glyph:rune_gui>'
+
+items:
+  'Simpleslotincreaser':
+    material: EMERALD
+    model_data: 208
+    slot: 13
+    display_name: '&f  &f &7ꜱʟᴏᴛ ɪɴᴄʀᴇᴀꜱᴇʀ'
+    lore:
+    - '&f  '
+    - '&f  &7ɪɴᴄʀᴇᴀꜱᴇ ꜱʟᴏᴛꜱ ʟɪᴍɪᴛ ᴏɴ'
+    - '&f  &7ᴀɴ ɪᴛᴇᴍ ʙʏ &a+1'
+    - '&f  '
+    - '&f  &a✦ ꜱᴜᴄᴄᴇꜱꜱ ʀᴀᴛᴇ: &f100%'
+    - '&f  '
+    - '&f  &fʀᴀʀɪᴛʏ: &f★&8★★★★'
+    - '&f  '
+    - '&f  &fᴘʀɪᴄᴇ: &b1000 EXP'
+    - '&f  '
+    - '&f  '
+    left_click_requirement:
+      requirements:
+        has_exp:
+          type: has exp
+          amount: 1000
+          level: false # true if you want to check for exp levels, false for exp points
+      deny_commands:
+        - "[message] &7You don't have enough exp."
+        - '[sound] ENTITY_VILLAGER_NO'
+    left_click_commands:
+      - '[console] ae giveitem %player_name% slotincreaser 1 SIMPLE'
+      - '[takeexp] 1000'
+      - '[sound] ENTITY_PLAYER_LEVELUP'
+
+  'Uniqueslotincreaser':
+    material: EMERALD
+    model_data: 208
+    slot: 14
+    display_name: '&f  &f &aꜱʟᴏᴛ ɪɴᴄʀᴇᴀꜱᴇʀ'
+    lore:
+    - '&f  '
+    - '&f  &7ɪɴᴄʀᴇᴀꜱᴇ ꜱʟᴏᴛꜱ ʟɪᴍɪᴛ ᴏɴ'
+    - '&f  &7ᴀɴ ɪᴛᴇᴍ ʙʏ &a+1'
+    - '&f  '
+    - '&f  &a✦ ꜱᴜᴄᴄᴇꜱꜱ ʀᴀᴛᴇ: &f100%'
+    - '&f  '
+    - '&f  &fʀᴀʀɪᴛʏ: &a★★&8★★★'
+    - '&f  '
+    - '&f  &fᴘʀɪᴄᴇ: &b1000 EXP'
+    - '&f  '
+    - '&f  '
+    left_click_requirement:
+      requirements:
+        has_exp:
+          type: has exp
+          amount: 1000
+          level: false # true if you want to check for exp levels, false for exp points
+      deny_commands:
+        - "[message] &7You don't have enough exp."
+        - '[sound] ENTITY_VILLAGER_NO'
+    left_click_commands:
+      - '[console] ae giveitem %player_name% slotincreaser 1 UNIQUE'
+      - '[takeexp] 1000'
+      - '[sound] ENTITY_PLAYER_LEVELUP'
+
+  'Eliteslotincreaser':
+    material: EMERALD
+    model_data: 208
+    slot: 15
+    display_name: '&f  &f &bꜱʟᴏᴛ ɪɴᴄʀᴇᴀꜱᴇʀ'
+    lore:
+    - '&f  '
+    - '&f  &7ɪɴᴄʀᴇᴀꜱᴇ ꜱʟᴏᴛꜱ ʟɪᴍɪᴛ ᴏɴ'
+    - '&f  &7ᴀɴ ɪᴛᴇᴍ ʙʏ &a+1'
+    - '&f  '
+    - '&f  &a✦ ꜱᴜᴄᴄᴇꜱꜱ ʀᴀᴛᴇ: &f100%'
+    - '&f  '
+    - '&f  &fʀᴀʀɪᴛʏ: &b★★★&8★★'
+    - '&f  '
+    - '&f  &fᴘʀɪᴄᴇ: &b1000 EXP'
+    - '&f  '
+    - '&f  '
+    left_click_requirement:
+      requirements:
+        has_exp:
+          type: has exp
+          amount: 1000
+          level: false # true if you want to check for exp levels, false for exp points
+      deny_commands:
+        - "[message] &7You don't have enough exp."
+        - '[sound] ENTITY_VILLAGER_NO'
+    left_click_commands:
+      - '[console] ae giveitem %player_name% slotincreaser 1 ELITE'
+      - '[takeexp] 1000'
+      - '[sound] ENTITY_PLAYER_LEVELUP'
+
+  'Ultimateslotincreaser':
+    material: EMERALD
+    model_data: 208
+    slot: 16
+    display_name: '&f  &f &eꜱʟᴏᴛ ɪɴᴄʀᴇᴀꜱᴇʀ'
+    lore:
+    - '&f  '
+    - '&f  &7ɪɴᴄʀᴇᴀꜱᴇ ꜱʟᴏᴛꜱ ʟɪᴍɪᴛ ᴏɴ'
+    - '&f  &7ᴀɴ ɪᴛᴇᴍ ʙʏ &a+1'
+    - '&f  '
+    - '&f  &a✦ ꜱᴜᴄᴄᴇꜱꜱ ʀᴀᴛᴇ: &f100%'
+    - '&f  '
+    - '&f  &fʀᴀʀɪᴛʏ: &e★★★★&8★'
+    - '&f  '
+    - '&f  &fᴘʀɪᴄᴇ: &b1000 EXP'
+    - '&f  '
+    - '&f  '
+    left_click_requirement:
+      requirements:
+        has_exp:
+          type: has exp
+          amount: 1000
+          level: false # true if you want to check for exp levels, false for exp points
+      deny_commands:
+        - "[message] &7You don't have enough exp."
+        - '[sound] ENTITY_VILLAGER_NO'
+    left_click_commands:
+      - '[console] ae giveitem %player_name% slotincreaser 1 ULTIMATE'
+      - '[takeexp] 1000'
+      - '[sound] ENTITY_PLAYER_LEVELUP'
+
+  'Legendaryslotincreaser':
+    material: EMERALD
+    model_data: 208
+    slot: 22
+    display_name: '&f  &f &6ꜱʟᴏᴛ ɪɴᴄʀᴇᴀꜱᴇʀ'
+    lore:
+    - '&f  '
+    - '&f  &7ɪɴᴄʀᴇᴀꜱᴇ ꜱʟᴏᴛꜱ ʟɪᴍɪᴛ ᴏɴ'
+    - '&f  &7ᴀɴ ɪᴛᴇᴍ ʙʏ &a+1'
+    - '&f  '
+    - '&f  &a✦ ꜱᴜᴄᴄᴇꜱꜱ ʀᴀᴛᴇ: &f100%'
+    - '&f  '
+    - '&f  &fʀᴀʀɪᴛʏ: &6★★★★★'
+    - '&f  '
+    - '&f  &fᴘʀɪᴄᴇ: &b1000 EXP'
+    - '&f  '
+    - '&f  '
+    left_click_requirement:
+      requirements:
+        has_exp:
+          type: has exp
+          amount: 1000
+          level: false # true if you want to check for exp levels, false for exp points
+      deny_commands:
+        - "[message] &7You don't have enough exp."
+        - '[sound] ENTITY_VILLAGER_NO'
+    left_click_commands:
+      - '[console] ae giveitem %player_name% slotincreaser 1 LEGENDARY'
+      - '[takeexp] 1000'
+      - '[sound] ENTITY_PLAYER_LEVELUP'
+
+  'Fabledslotincreaser':
+    material: EMERALD
+    model_data: 208
+    slot: 23
+    display_name: '&f  &f &cꜱʟᴏᴛ ɪɴᴄʀᴇᴀꜱᴇʀ'
+    lore:
+    - '&f  '
+    - '&f  &7ɪɴᴄʀᴇᴀꜱᴇ ꜱʟᴏᴛꜱ ʟɪᴍɪᴛ ᴏɴ'
+    - '&f  &7ᴀɴ ɪᴛᴇᴍ ʙʏ &a+1'
+    - '&f  '
+    - '&f  &a✦ ꜱᴜᴄᴄᴇꜱꜱ ʀᴀᴛᴇ: &f100%'
+    - '&f  '
+    - '&f  &fʀᴀʀɪᴛʏ: &c★★★★★'
+    - '&f  '
+    - '&f  &fᴘʀɪᴄᴇ: &b1000 EXP'
+    - '&f  '
+    - '&f  '
+    left_click_requirement:
+      requirements:
+        has_exp:
+          type: has exp
+          amount: 1000
+          level: false # true if you want to check for exp levels, false for exp points
+      deny_commands:
+        - "[message] &7You don't have enough exp."
+        - '[sound] ENTITY_VILLAGER_NO'
+    left_click_commands:
+      - '[console] ae giveitem %player_name% slotincreaser 1 FABLED'
+      - '[takeexp] 1000'
+      - '[sound] ENTITY_PLAYER_LEVELUP'
+
+# CATALORY
+  'rune':
+    display_name: '&x&F&B&C&D&0&8ʀ&x&E&8&B&B&0&5ᴜ&x&D&6&A&8&0&3ɴ&x&C&3&9&6&0&0ᴇ'
+    material: PAPER
+    model_data: 202
+    slots: [9,10,11]
+    lore: 
+      - ""
+      - "&7ꜱᴇʟᴇᴄᴛ ᴛʜɪꜱ ᴄᴀᴛᴇɢᴏʀʏ"
+    left_click_commands:
+      - '[player] dm open rune_shop'
+  'scroll':
+    display_name: '&x&F&B&C&D&0&8ꜱ&x&F&0&C&2&0&6ᴄ&x&E&5&B&7&0&5ʀ&x&D&9&A&C&0&3ᴏ&x&C&E&A&1&0&2ʟ&x&C&3&9&6&0&0ʟ'
+    material: PAPER
+    model_data: 202
+    slots: [18,19,20]
+    lore: 
+      - ""
+      - "&7ꜱᴇʟᴇᴄᴛ ᴛʜɪꜱ ᴄᴀᴛᴇɢᴏʀʏ"
+    left_click_commands:
+      - '[player] dm open scroll_shop'
+  'misc':
+    display_name: '&x&F&B&C&D&0&8ᴍ&x&F&6&C&8&0&7ɪ&x&F&2&C&4&0&7ꜱ&x&E&D&B&F&0&6ᴄ&x&E&8&B&B&0&5ᴇ&x&E&4&B&6&0&5ʟ&x&D&F&B&2&0&4ʟ&x&D&A&A&D&0&3ᴀ&x&D&6&A&8&0&3ɴ&x&D&1&A&4&0&2ᴇ&x&C&C&9&F&0&1ᴏ&x&C&8&9&B&0&1ᴜ&x&C&3&9&6&0&0ꜱ'
+    material: PAPER
+    model_data: 202
+    slots: [27,28,29]
+    lore: 
+      - ""
+      - "&7ꜱᴇʟᴇᴄᴛ ᴛʜɪꜱ ᴄᴀᴛᴇɢᴏʀʏ"
+    left_click_commands:
+      - '[player] dm open misc_shop'
+
+  'back':
+    display_name: '&cʙᴀᴄᴋ'
+    material: PAPER
+    model_data: 202
+    slots: [36,37,38]
+    lore: 
+      - ""
+      - "&7ʙᴀᴄᴋ ᴛᴏ ᴇɴᴄʜᴀɴᴛ ᴍᴇɴᴜꜱ"
+    left_click_commands:
+      - '[player] enchanter'
+sweet: true

@@ -1,0 +1,135 @@
+menu_title: '<shift:-12><glyph:page_two>'
+size: 54
+open_requirement:
+  requirements:
+    permission:
+      type: has permission
+      permission: fantasy.controls.huds
+      deny_commands:
+        - "[message] &cYou don't have &e&nPermission!"
+items:
+#------------------------------------------------------------------------------------------- Enable Button ------------------
+  'player_durability_bar':
+    material: BOOK
+    model_data: 85099
+    slots: 
+      - 0
+    display_name: '&aEnable'
+    lore:
+      - '&7Enable this function!'
+    left_click_commands:
+      - '[console] hud hud add %player_name% fantasy_hud_durability_bar' 
+      - "[message] &9[Fantasy-HUD] &fYou have &aEnabled &ePlayer armor durability bar"
+  'player_durability_number':
+    material: BOOK
+    model_data: 85099
+    slots: 
+      - 9
+    display_name: '&aEnable'
+    lore:
+      - '&7Enable this function!'
+    left_click_commands:
+      - '[console] hud hud add %player_name% fantasy_hud_durability_number' 
+      - "[message] &9[Fantasy-HUD] &fYou have &aEnabled &ePlayer sub skills number"
+  'vehicle_health_bar':
+    material: BOOK
+    model_data: 85099
+    slots: 
+      - 18
+    display_name: '&aEnable'
+    lore:
+      - '&7Enable this function!'
+    left_click_commands:
+      - '[console] hud hud add %player_name% fantasy_hud_vehicle_hp' 
+      - "[message] &9[Fantasy-HUD] &fYou have &aEnabled &eVehicle health bar"
+  'player_air_bar':
+    material: BOOK
+    model_data: 85099
+    slots: 
+      - 27
+    display_name: '&aEnable'
+    lore:
+      - '&7Enable this function!'
+    left_click_commands:
+      - '[console] hud hud add %player_name% fantasy_hud_air' 
+      - "[message] &9[Fantasy-HUD] &fYou have &aEnabled &ePlayer oxygen bar"
+  'player_compass_hud':
+    material: BOOK
+    model_data: 85099
+    slots: 
+      - 36
+    display_name: '&aEnable'
+    lore:
+      - '&7Enable this function!'
+    left_click_commands:
+      - '[console] hud hud add %player_name% fantasy_hud_compass' 
+      - '[console] hud compass add %player_name% fantasy_compass '
+      - "[message] &9[Fantasy-HUD] &fYou have &aEnabled &ePlayer compass bar"
+#------------------------------------------------------------------------------------------- Disabled Button ------------------
+  'player_durability_bar2':
+    material: BOOK
+    model_data: 85099
+    slots: 
+      - 8
+    display_name: '&cDisabled'
+    lore:
+      - '&7Disabled this function!'
+    left_click_commands:
+      - '[console] hud hud remove %player_name% fantasy_hud_durability_bar' 
+      - "[message] &9[Fantasy-HUD] &fYou have &cDisabled &ePlayer armor durability bar"
+  'player_durability_number2':
+    material: BOOK
+    model_data: 85099
+    slots: 
+      - 17
+    display_name: '&cDisabled'
+    lore:
+      - '&7Disabled this function!'
+    left_click_commands:
+      - '[console] hud hud remove %player_name% fantasy_hud_durability_number' 
+      - "[message] &9[Fantasy-HUD] &fYou have &cDisabled &ePlayer sub skills number"
+  'vehicle_health_bar2':
+    material: BOOK
+    model_data: 85099
+    slots: 
+      - 26
+    display_name: '&cDisabled'
+    lore:
+      - '&7Disabled this function!'
+    left_click_commands:
+      - '[console] hud hud remove %player_name% fantasy_hud_vehicle_hp' 
+      - "[message] &9[Fantasy-HUD] &fYou have &aEnabled &eVehicle health bar"
+  'player_air_bar2':
+    material: BOOK
+    model_data: 85099
+    slots: 
+      - 35
+    display_name: '&cDisabled'
+    lore:
+      - '&7Disabled this function!'
+    left_click_commands:
+      - '[console] hud hud remove %player_name% fantasy_hud_air' 
+      - "[message] &9[Fantasy-HUD] &fYou have &cDisabled &ePlayer oxygen bar"
+  'player_compass_hud2':
+    material: BOOK
+    model_data: 85099
+    slots: 
+      - 44
+    display_name: '&cDisabled'
+    lore:
+      - '&7Disabled this function!'
+    left_click_commands:
+      - '[console] hud hud remove %player_name% fantasy_hud_compass' 
+      - '[console] hud compass remove %player_name% fantasy_compass ' 
+      - "[message] &9[Fantasy-HUD] &fYou have &cDisabled &ePlayer compass bar"
+#------------------------------------------------------------------------------------------- Previous Page ------------------
+  'next_page':
+    material: BOOK
+    model_data: 85099
+    slots: 
+      - 49
+    display_name: '&ePREVIOUS'
+    lore:
+      - '&7Go to previous'
+    left_click_commands:
+      - '[openguimenu] control_huds'

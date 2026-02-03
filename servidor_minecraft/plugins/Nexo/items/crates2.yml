@@ -1,0 +1,92 @@
+key_lvl1:
+  material: PAPER
+  Pack:
+    custom_model_data: 13400
+    model: default/key_lvl1
+  itemname: <gradient:#A8B5B2:#577277>Lvl 1 Key
+
+crate_lvl1:
+  material: DIAMOND
+  Pack:
+    model: default/crate_lvl1
+    custom_model_data: 1000
+  Mechanics:
+    furniture:
+      block_sounds:
+        place_sound: block.stone.place
+        break_sound: block.stone.break
+        volume: 0.8
+        pitch: 0.8
+      properties:
+        display_transform: NONE
+  itemname: <gradient:#A8B5B2:#577277>Lvl 1 Crate
+
+key_lvl2:
+  material: PAPER
+  Pack:
+    custom_model_data: 13401
+    model: default/key_lvl2
+  itemname: <gradient:#B0D0D1:#545579>Lvl 2 Key
+
+crate_lvl2:
+  material: DIAMOND
+  Pack:
+    model: default/crate_lvl2
+    custom_model_data: 1001
+  Mechanics:
+    furniture:
+      block_sounds:
+        place_sound: block.stone.place
+        break_sound: block.stone.break
+        volume: 0.8
+        pitch: 0.8
+      properties:
+        display_transform: NONE
+  itemname: <gradient:#B0D0D1:#545579>Lvl 2 Crate
+
+key_lvl3:
+  material: PAPER
+  Pack:
+    custom_model_data: 13402
+    model: default/key_lvl3
+  itemname: <gradient:#E8C170:#7C9C44>Lvl 3 Key
+
+crate_lvl3:
+  material: DIAMOND
+  Pack:
+    model: default/crate_lvl3
+    custom_model_data: 1002
+  Mechanics:
+    furniture:
+      block_sounds:
+        place_sound: block.stone.place
+        break_sound: block.stone.break
+        volume: 0.8
+        pitch: 0.8
+      properties:
+        display_transform: NONE
+  itemname: <gradient:#E8C170:#7C9C44>Lvl 3 Crate
+
+key_lvl4:
+  material: PAPER
+  Pack:
+    custom_model_data: 13403
+    model: default/key_lvl4
+  itemname: <gradient:#DE9E41:#A53030>Lvl 4 Key
+
+crate_lvl4:
+  material: DIAMOND
+  Pack:
+    model: default/crate_lvl4
+    custom_model_data: 1003
+  Mechanics:
+    furniture:
+      block_sounds:
+        place_sound: block.stone.place
+        break_sound: block.stone.break
+        volume: 0.8
+        pitch: 0.8
+      properties:
+        display_transform: NONE
+  itemname: <gradient:#DE9E41:#A53030>Lvl 4 Crate
+

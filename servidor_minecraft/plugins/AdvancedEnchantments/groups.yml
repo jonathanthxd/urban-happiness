@@ -1,0 +1,85 @@
+settings:
+  magic-dust:
+    limit-applying-per-group: true
+  randomization-scrolls:
+    limit-applying-per-group: true
+  fallback-group: SIMPLE
+groups:
+  SIMPLE:
+    global-color: '&7'
+    group-name: '&f'
+    item:
+      type: BOOK
+      id: 0
+      custom-model-data: 200
+      rgb-color: 200;200;200
+    slot-increaser:
+      slots: 1
+      custom-model-data: 0
+    magic-dust:
+      success: 1-15
+      chance: 22
+  UNIQUE:
+    global-color: '&a'
+    group-name: '&f'
+    item:
+      type: BOOK
+      custom-model-data: 201
+      rgb-color: 122;255;80
+    slot-increaser:
+      slots: 1
+      custom-model-data: 0
+    magic-dust:
+      success: 1-15
+      chance: 22
+  ELITE:
+    global-color: '&b'
+    group-name: '&f'
+    item:
+      type: BOOK
+      custom-model-data: 202
+      rgb-color: 20;250;255
+    slot-increaser:
+      slots: 1
+      custom-model-data: 0
+    magic-dust:
+      success: 1-15
+      chance: 22
+  ULTIMATE:
+    global-color: '&e'
+    group-name: '&f'
+    item:
+      type: BOOK
+      custom-model-data: 203
+      rgb-color: 250;255;0
+    slot-increaser:
+      slots: 1
+      custom-model-data: 0
+    magic-dust:
+      success: 1-15
+      chance: '22'
+  LEGENDARY:
+    global-color: '&6'
+    group-name: '&f'
+    item:
+      type: BOOK
+      custom-model-data: 204
+      rgb-color: 133;50;168
+    slot-increaser:
+      slots: 1
+      custom-model-data: 0
+    magic-dust:
+      success: 1-15
+      chance: 22
+  FABLED:
+    global-color: '&c'
+    group-name: '&f'
+    item:
+      type: BOOK
+      custom-model-data: 205
+    slot-increaser:
+      slots: 1
+      custom-model-data: 0
+    magic-dust:
+      success: 1-20
+      chance: 22

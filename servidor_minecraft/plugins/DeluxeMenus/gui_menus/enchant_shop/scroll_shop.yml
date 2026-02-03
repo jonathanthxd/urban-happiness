@@ -1,0 +1,319 @@
+
+open_command: 
+  # - enshop
+
+size: 54
+
+
+menu_title: '<shift:-16><glyph:scroll_gui>'
+
+items:
+  'simplescroll':
+    material: PAPER
+    model_data: 207
+    slot: 13
+    display_name: '&f  &f &7ʀᴀɴᴅᴏᴍ ʀᴀᴛᴇ ꜱᴄʀᴏʟʟ'
+    lore:
+    - '&f  '
+    - '&f  &7ᴀᴘᴘʟʏ ᴛᴏ ᴀɴʏ'
+    - '&f  &f &7ᴇɴᴄʜᴀɴᴛᴍᴇɴᴛ ʙᴏᴏᴋ'
+    - '&f  &7ᴛᴏ ʀᴇʀᴏʟʟ ᴛʜᴇ ꜱᴜᴄᴄᴇꜱꜱ ᴀɴᴅ'
+    - '&f  &7ᴅᴇꜱᴛʀᴏʏ ʀᴀᴛᴇꜱ.'
+    - '&f  '
+    - '&f  &a✦ ꜱᴜᴄᴄᴇꜱꜱ ʀᴀᴛᴇ: &f100%'
+    - '&f  '
+    - '&f  &fʀᴀʀɪᴛʏ: &f★&8★★★★'
+    - '&f  '
+    - '&f  &fᴘʀɪᴄᴇ: &b500 EXP'
+    - '&f  '
+    - '&f  '
+    left_click_requirement:
+      requirements:
+        has_exp:
+          type: has exp
+          amount: 500
+          level: false # true if you want to check for exp levels, false for exp points
+      deny_commands:
+        - "[message] &7You don't have enough exp."
+        - '[sound] ENTITY_VILLAGER_NO'
+    left_click_commands:
+      - '[console] ae giveitem %player_name% randomizer 1 SIMPLE'
+      - '[takeexp] 500'
+      - '[sound] ENTITY_PLAYER_LEVELUP'
+
+  'Uniquescroll':
+    material: PAPER
+    model_data: 207
+    slot: 14
+    display_name: '&f  &f &aʀᴀɴᴅᴏᴍ ʀᴀᴛᴇ ꜱᴄʀᴏʟʟ'
+    lore:
+    - '&f  '
+    - '&f  &7ᴀᴘᴘʟʏ ᴛᴏ ᴀɴʏ'
+    - '&f  &f &aᴇɴᴄʜᴀɴᴛᴍᴇɴᴛ ʙᴏᴏᴋ'
+    - '&f  &7ᴛᴏ ʀᴇʀᴏʟʟ ᴛʜᴇ ꜱᴜᴄᴄᴇꜱꜱ ᴀɴᴅ'
+    - '&f  &7ᴅᴇꜱᴛʀᴏʏ ʀᴀᴛᴇꜱ.'
+    - '&f  '
+    - '&f  &a✦ ꜱᴜᴄᴄᴇꜱꜱ ʀᴀᴛᴇ: &f100%'
+    - '&f  '
+    - '&f  &fʀᴀʀɪᴛʏ: &a★★&8★★★'
+    - '&f  '
+    - '&f  &fᴘʀɪᴄᴇ: &b1000 EXP'
+    - '&f  '
+    - '&f  '
+    left_click_requirement:
+      requirements:
+        has_exp:
+          type: has exp
+          amount: 1000
+          level: false # true if you want to check for exp levels, false for exp points
+      deny_commands:
+        - "[message] &7You don't have enough exp."
+        - '[sound] ENTITY_VILLAGER_NO'
+    left_click_commands:
+      - '[console] ae giveitem %player_name% randomizer 1 UNIQUE'
+      - '[takeexp] 1000'
+      - '[sound] ENTITY_PLAYER_LEVELUP'
+
+  'Elitescroll':
+    material: PAPER
+    model_data: 207
+    slot: 15
+    display_name: '&f  &f &bʀᴀɴᴅᴏᴍ ʀᴀᴛᴇ ꜱᴄʀᴏʟʟ'
+    lore:
+    - '&f  '
+    - '&f  &7ᴀᴘᴘʟʏ ᴛᴏ ᴀɴʏ'
+    - '&f  &f &bᴇɴᴄʜᴀɴᴛᴍᴇɴᴛ ʙᴏᴏᴋ'
+    - '&f  &7ᴛᴏ ʀᴇʀᴏʟʟ ᴛʜᴇ ꜱᴜᴄᴄᴇꜱꜱ ᴀɴᴅ'
+    - '&f  &7ᴅᴇꜱᴛʀᴏʏ ʀᴀᴛᴇꜱ.'
+    - '&f  '
+    - '&f  &a✦ ꜱᴜᴄᴄᴇꜱꜱ ʀᴀᴛᴇ: &f100%'
+    - '&f  '
+    - '&f  &fʀᴀʀɪᴛʏ: &b★★★&8★★'
+    - '&f  '
+    - '&f  &fᴘʀɪᴄᴇ: &b1500 EXP'
+    - '&f  '
+    - '&f  '
+    left_click_requirement:
+      requirements:
+        has_exp:
+          type: has exp
+          amount: 1500
+          level: false # true if you want to check for exp levels, false for exp points
+      deny_commands:
+        - "[message] &7You don't have enough exp."
+        - '[sound] ENTITY_VILLAGER_NO'
+    left_click_commands:
+      - '[console] ae giveitem %player_name% randomizer 1 ELITE'
+      - '[takeexp] 1500'
+      - '[sound] ENTITY_PLAYER_LEVELUP'
+
+  'Ultimatescroll':
+    material: PAPER
+    model_data: 207
+    slot: 16
+    display_name: '&f  &f &eʀᴀɴᴅᴏᴍ ʀᴀᴛᴇ ꜱᴄʀᴏʟʟ'
+    lore:
+    - '&f  '
+    - '&f  &7ᴀᴘᴘʟʏ ᴛᴏ ᴀɴʏ'
+    - '&f  &f &eᴇɴᴄʜᴀɴᴛᴍᴇɴᴛ ʙᴏᴏᴋ'
+    - '&f  &7ᴛᴏ ʀᴇʀᴏʟʟ ᴛʜᴇ ꜱᴜᴄᴄᴇꜱꜱ ᴀɴᴅ'
+    - '&f  &7ᴅᴇꜱᴛʀᴏʏ ʀᴀᴛᴇꜱ.'
+    - '&f  '
+    - '&f  &a✦ ꜱᴜᴄᴄᴇꜱꜱ ʀᴀᴛᴇ: &f100%'
+    - '&f  '
+    - '&f  &fʀᴀʀɪᴛʏ: &e★★★★&8★'
+    - '&f  '
+    - '&f  &fᴘʀɪᴄᴇ: &b2000 EXP'
+    - '&f  '
+    - '&f  '
+    left_click_requirement:
+      requirements:
+        has_exp:
+          type: has exp
+          amount: 2000
+          level: false # true if you want to check for exp levels, false for exp points
+      deny_commands:
+        - "[message] &7You don't have enough exp."
+        - '[sound] ENTITY_VILLAGER_NO'
+    left_click_commands:
+      - '[console] ae giveitem %player_name% randomizer 1 ULTIMATE'
+      - '[takeexp] 2000'
+      - '[sound] ENTITY_PLAYER_LEVELUP'
+
+  'Legendaryscroll':
+    material: PAPER
+    model_data: 207
+    slot: 22
+    display_name: '&f  &f &6ʀᴀɴᴅᴏᴍ ʀᴀᴛᴇ ꜱᴄʀᴏʟʟ'
+    lore:
+    - '&f  '
+    - '&f  &7ᴀᴘᴘʟʏ ᴛᴏ ᴀɴʏ'
+    - '&f  &f &6ᴇɴᴄʜᴀɴᴛᴍᴇɴᴛ ʙᴏᴏᴋ'
+    - '&f  &7ᴛᴏ ʀᴇʀᴏʟʟ ᴛʜᴇ ꜱᴜᴄᴄᴇꜱꜱ ᴀɴᴅ'
+    - '&f  &7ᴅᴇꜱᴛʀᴏʏ ʀᴀᴛᴇꜱ.'
+    - '&f  '
+    - '&f  &a✦ ꜱᴜᴄᴄᴇꜱꜱ ʀᴀᴛᴇ: &f100%'
+    - '&f  '
+    - '&f  &fʀᴀʀɪᴛʏ: &6★★★★★'
+    - '&f  '
+    - '&f  &fᴘʀɪᴄᴇ: &b2500 EXP'
+    - '&f  '
+    - '&f  '
+    left_click_requirement:
+      requirements:
+        has_exp:
+          type: has exp
+          amount: 2500
+          level: false # true if you want to check for exp levels, false for exp points
+      deny_commands:
+        - "[message] &7You don't have enough exp."
+        - '[sound] ENTITY_VILLAGER_NO'
+    left_click_commands:
+      - '[console] ae giveitem %player_name% randomizer 1 LEGENDARY'
+      - '[takeexp] 2500'
+      - '[sound] ENTITY_PLAYER_LEVELUP'
+
+  'Fabledscroll':
+    material: PAPER
+    model_data: 207
+    slot: 23
+    display_name: '&f  &f &cʀᴀɴᴅᴏᴍ ʀᴀᴛᴇ ꜱᴄʀᴏʟʟ'
+    lore:
+    - '&f  '
+    - '&f  &7ᴀᴘᴘʟʏ ᴛᴏ ᴀɴʏ'
+    - '&f  &f &cᴇɴᴄʜᴀɴᴛᴍᴇɴᴛ ʙᴏᴏᴋ'
+    - '&f  &7ᴛᴏ ʀᴇʀᴏʟʟ ᴛʜᴇ ꜱᴜᴄᴄᴇꜱꜱ ᴀɴᴅ'
+    - '&f  &7ᴅᴇꜱᴛʀᴏʏ ʀᴀᴛᴇꜱ.'
+    - '&f  '
+    - '&f  &a✦ ꜱᴜᴄᴄᴇꜱꜱ ʀᴀᴛᴇ: &f100%'
+    - '&f  '
+    - '&f  &fʀᴀʀɪᴛʏ: &c★★★★★'
+    - '&f  '
+    - '&f  &fᴘʀɪᴄᴇ: &b3000 EXP'
+    - '&f  '
+    - '&f  '
+    left_click_requirement:
+      requirements:
+        has_exp:
+          type: has exp
+          amount: 3000
+          level: false # true if you want to check for exp levels, false for exp points
+      deny_commands:
+        - "[message] &7You don't have enough exp."
+        - '[sound] ENTITY_VILLAGER_NO'
+    left_click_commands:
+      - '[console] ae giveitem %player_name% randomizer 1 FABLED'
+      - '[takeexp] 3000'
+      - '[sound] ENTITY_PLAYER_LEVELUP'
+
+
+  'Blackscroll':
+    material: PAPER
+    model_data: 205
+    slot: 24
+    display_name: '&f  &8&lʙʟᴀᴄᴋ ꜱᴄʀᴏʟʟ'
+    lore:
+    - '&f  '
+    - '&f  &7ʀᴇᴍᴏᴠᴇꜱ ᴀ ʀᴀɴᴅᴏᴍ'
+    - '&f  &7ᴇɴᴄʜᴀɴᴛᴍᴇɴᴛ ꜰʀᴏᴍ ᴀɴ ɪᴛᴇᴍ'
+    - '&f  &7ᴀɴᴅ ᴄᴏɴᴠᴇʀᴛꜱ ɪᴛ ɪɴᴛᴏ ᴀ'
+    - '&f  &a100% &7ꜱᴜᴄᴄᴇꜱꜱ ʙᴏᴏᴋ.'
+    - '&f  '
+    - '&f  &a✦ ꜱᴜᴄᴄᴇꜱꜱ ʀᴀᴛᴇ: &f100%'
+    - '&f  '
+    - '&f  &fʀᴀʀɪᴛʏ: &f★&8★★★★'
+    - '&f  '
+    - '&f  &fᴘʀɪᴄᴇ: &b1000 EXP'
+    - '&f  '
+    - '&f  '
+    left_click_requirement:
+      requirements:
+        has_exp:
+          type: has exp
+          amount: 1000
+          level: false # true if you want to check for exp levels, false for exp points
+      deny_commands:
+        - "[message] &7You don't have enough exp."
+        - '[sound] ENTITY_VILLAGER_NO'
+    left_click_commands:
+      - '[console] ae giveitem %player_name% blackscroll 1 100'
+      - '[takeexp] 1000'
+      - '[sound] ENTITY_PLAYER_LEVELUP'
+ 
+  'whitescroll':
+    material: PAPER
+    model_data: 206
+    slot: 25
+    display_name: '&f  &cᴡʜɪᴛᴇ ꜱᴄʀᴏʟʟ'
+    lore:
+    - '&f  '
+    - '&f  &cᴘʀᴇᴠᴇɴᴛꜱ ᴀɴ ɪᴛᴇᴍ ꜰʀᴏᴍ'
+    - '&f  &cʙᴇɪɴɢ ᴅᴇꜱᴛʀᴏʏᴇᴅ ᴅᴜᴇ ᴛᴏ'
+    - '&f  &cᴀ ꜰᴀɪʟᴇᴅ ᴇɴᴄʜᴀɴᴛᴍᴇɴᴛ ʙᴏᴏᴋ.'
+    - '&f  '
+    - '&f  &2✦ ꜱᴜᴄᴄᴇꜱꜱ ʀᴀᴛᴇ: &a100%'
+    - '&f  '
+    - '&f  &4ʀᴀʀɪᴛʏ: &5★★★★&8★'
+    - '&f  '
+    - '&f  &4ᴘʀɪᴄᴇ: &b5000 EXP'
+    - '&f  '
+    - '&f  '
+    left_click_requirement:
+      requirements:
+        has_exp:
+          type: has exp
+          amount: 5000
+          level: false # true if you want to check for exp levels, false for exp points
+      deny_commands:
+        - "[message] &7You don't have enough exp."
+        - '[sound] ENTITY_VILLAGER_NO'
+    left_click_commands:
+      - '[console] ae giveitem %player_name% blackscroll 1 100'
+      - '[takeexp] 5000'
+      - '[sound] ENTITY_PLAYER_LEVELUP'
+
+
+
+# CATALORY
+  'rune':
+    display_name: '&x&F&B&C&D&0&8ʀ&x&E&8&B&B&0&5ᴜ&x&D&6&A&8&0&3ɴ&x&C&3&9&6&0&0ᴇ'
+    material: PAPER
+    model_data: 202
+    slots: [9,10,11]
+    lore: 
+      - ""
+      - "&7ꜱᴇʟᴇᴄᴛ ᴛʜɪꜱ ᴄᴀᴛᴇɢᴏʀʏ"
+    left_click_commands:
+      - '[player] dm open rune_shop'
+  'scroll':
+    display_name: '&x&F&B&C&D&0&8ꜱ&x&F&0&C&2&0&6ᴄ&x&E&5&B&7&0&5ʀ&x&D&9&A&C&0&3ᴏ&x&C&E&A&1&0&2ʟ&x&C&3&9&6&0&0ʟ'
+    material: PAPER
+    model_data: 202
+    slots: [18,19,20]
+    lore: 
+      - ""
+      - "&7ꜱᴇʟᴇᴄᴛ ᴛʜɪꜱ ᴄᴀᴛᴇɢᴏʀʏ"
+    left_click_commands:
+      - '[player] dm open scroll_shop'
+  'misc':
+    display_name: '&x&F&B&C&D&0&8ᴍ&x&F&6&C&8&0&7ɪ&x&F&2&C&4&0&7ꜱ&x&E&D&B&F&0&6ᴄ&x&E&8&B&B&0&5ᴇ&x&E&4&B&6&0&5ʟ&x&D&F&B&2&0&4ʟ&x&D&A&A&D&0&3ᴀ&x&D&6&A&8&0&3ɴ&x&D&1&A&4&0&2ᴇ&x&C&C&9&F&0&1ᴏ&x&C&8&9&B&0&1ᴜ&x&C&3&9&6&0&0ꜱ'
+    material: PAPER
+    model_data: 202
+    slots: [27,28,29]
+    lore: 
+      - ""
+      - "&7ꜱᴇʟᴇᴄᴛ ᴛʜɪꜱ ᴄᴀᴛᴇɢᴏʀʏ"
+    left_click_commands:
+      - '[player] dm open misc_shop'
+
+  'back':
+    display_name: '&cʙᴀᴄᴋ'
+    material: PAPER
+    model_data: 202
+    slots: [36,37,38]
+    lore: 
+      - ""
+      - "&7ʙᴀᴄᴋ ᴛᴏ ᴇɴᴄʜᴀɴᴛ ᴍᴇɴᴜꜱ"
+    left_click_commands:
+      - '[player] enchanter'
+sweet: true

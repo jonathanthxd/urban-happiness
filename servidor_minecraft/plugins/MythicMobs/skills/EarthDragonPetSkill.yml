@@ -1,0 +1,580 @@
+EarthDragonSummon:
+  Cooldown: 1
+  Conditions:
+  - hasaura{n=OwnerTaggingAura} false 
+  - stringequals{val1="<caster.item.hand.nbt.DragonCharge>";val2="NoCharge"} castinstead DragonNoCharge
+  - crouching{} false
+  Skills:
+  - setItemNBT{slot=MAINHAND;key=DragonCharge;value=Charge} @self
+  - delay 1
+  - setItemNBT{slot=MAINHAND;key=DragonCharge;value=NoCharge} @self
+  - summon{type=EarthDragonPet;amount=1;radius=0;summonerIsOwner=true} @origin
+EarthDragonItemRefresh:
+  Cooldown: 1
+  Conditions:
+  - hasaura{n=OwnerTaggingAura} false 
+  - RidingModel false 
+  - DrivingModel false 
+  - stringequals{val1="<caster.item.hand.nbt.DragonCharge>";val2="NoCharge"} true
+  - hasitem{i=granite;amount=<15} castinstead DragonNoMaterial
+  - crouching{} true
+  Skills:
+  - setItemNBT{slot=MAINHAND;key=DragonCharge;value=Charge} @self
+  - takeitem{i=granite;a=16} @self
+  - message{m="&2Medailon Charged"} @self
+EarthDragonReturnCharge: 
+  Cooldown: 1
+  TriggerConditions:
+  - RidingModel false 
+  - DrivingModel false 
+  - owner{} true
+  - crouching{} true
+  - holding{m=DragonMedaillonEarth} true
+  Conditions:
+  - hasaura{n=Combat} castinstead DragonInCombat
+  Skills:
+  - setItemNBT{slot=MAINHAND;key=DragonCharge;value=Charge} @trigger
+  - message{m="&6Earth Dragon Called Back"} @trigger
+  - message{m="&2Medailon Charged"} @trigger
+  - delay 1
+  - remove @self
+DragonEarthFeedingMechanic:
+  Cooldown: 0.1
+  Skills: 
+  - skill{s=DragonEarthFeedingFood} @trigger
+DragonEarthFeedingFood:
+  TriggerConditions:
+  - holding{m=granite} true
+  Conditions:
+  - hasaura Flying castinstead DragonFeedingInAirMSG
+  Cooldown: 0.1
+  Skills: 
+  - skill{s=DragonLargeHungerAddEating+10} @self
+  - heal{amount=5;overheal=false} @self
+  - sudoskill{s=DragonPetItemClean;cat=true} @trigger
+  - effect:particles{particle=heart;amount=3;hS=0.1;vS=1;y=2.5;repeat=5;repeatInterval=5} @self
+EarthDragonPetRemove30min:
+  Cooldown: 0
+  Conditions:
+  Skills:
+  - delay 34800
+  - message{m="&41 &fmin to despawn the EarthDragon"} @owner
+  - delay 600
+  - message{m="&430 &fsec to despawn the EarthDragon"} @owner
+  - delay 500
+  - message{m="&45 &fsec to despawn the EarthDragon"} @owner
+  - delay 100
+  - remove @self
+EarthDragonMountSkill:
+  Cooldown: 0
+  TriggerConditions:
+  - crouching false
+  - owner{} true
+  Skills:
+  - mountmodel{mid=ecdragonearth;mount=true;drive=true;ride=true;dmg=false;f=true} @trigger 
+EarthDragonPetMechanics:
+  Cooldown: 0
+  Conditions:
+  Skills: 
+  - skill{s=EarthDragonPetFlyAni} @self
+  - skill{s=EarthDragonPetIdleAni} @self
+  - skill{s=EarthDragonPetMoveAni} @self
+  - skill{s=EarthDragonPetLanding} @self
+  - skill{s=EarthDragonPetFlyAttacks} @self
+  - skill{s=EarthDragonPetGroundAttacks} @self
+  - skill{s=DragonGroundCheck} @Forward{f=1;y=-5}
+  - skill{s=DragonGroundCheck} @Forward{f=1;y=-4}
+  - skill{s=DragonGroundCheck} @Forward{f=1;y=-3}
+  - skill{s=DragonColission} @self
+  - skill{s=DragonStaminaChecker} @Self
+  - skill{s=DragonLargeFlyingStaminaAdd} @Self
+  - skill{s=DragonHungerRegenerationMechanic} @self
+  - skill{s=DragonPetHungerBar} @owner
+  - skill{s=DragonFlyingOwnerAura} @Self
+  - sudoskill{s=DragonOwnerSudoAttackSwing;cat=true} @owner
+EarthDragonPetIdleAni:
+  Cooldown: 0
+  Conditions:
+  - moving{} false
+  - hasaura Idle false
+  - hasaura Move false
+  - hasaura Flying false
+  - hasaura Attack false
+  - hasaura TakeOff false
+  Skills: 
+  - state{mid=ecdragonearth;s=landing;li=0;lo=0;r=true} @self 
+  - Aura{auraName=Idle;interval=1;duration=49} @self
+  - state{mid=ecdragonearth;s=walking;li=0;lo=0;r=true} @self
+  - state{mid=ecdragonearth;s=groundmelee;li=0;lo=0;r=true} @self
+  - state{mid=ecdragonearth;s=groundroar;li=0;lo=0;r=true} @self
+  - state{mid=ecdragonearth;s=groundbreath;li=0;lo=0;r=true} @self
+  - state{mid=ecdragonearth;s=groundskill;li=0;lo=0;r=true} @self
+  - state{mid=ecdragonearth;s=waiting;li=0;lo=0;r=false} @self
+  - skill{s=DragonHungerSubstract-1} @Self
+  - lockmodel @self
+EarthDragonPetMoveAni:
+  Cooldown: 0
+  Conditions:
+  - hasaura Move false
+  - hasaura Attack false
+  - hasaura Flying false
+  - hasaura TakeOff false
+  - moving{} true
+  Skills: 
+  - state{mid=ecdragonearth;s=landing;li=0;lo=0;r=true} @self 
+  - sound{s=ecdragons:custom.ecdragons.walk;v=1;p=1;sc=BLOCKS} @Self
+  - Aura{auraName=Move;interval=1;duration=39} @self
+  - state{mid=ecdragonearth;s=waiting;li=0;lo=0;r=true} @self
+  - state{mid=ecdragonearth;s=groundmelee;li=0;lo=0;r=true} @self
+  - state{mid=ecdragonearth;s=groundroar;li=0;lo=0;r=true} @self
+  - state{mid=ecdragonearth;s=groundbreath;li=0;lo=0;r=true} @self
+  - state{mid=ecdragonearth;s=groundskill;li=0;lo=0;r=true} @self 
+  - state{mid=ecdragonearth;s=walking;li=0;lo=0;r=false} @self
+  - skill{s=DragonHungerSubstract-1} @Self
+  - lockmodel @self
+  - delay 10
+  - lockmodel{l=false} @self
+  - delay 10
+  - lockmodel @self
+  - delay 10
+  - lockmodel{l=false} @self
+EarthDragonPetFlyAni:
+  Cooldown: 0
+  Conditions:
+  - hasaura Attack false
+  - hasaura Flying true
+  - hasaura FlyingAni false
+  Skills:
+  - sound{s=ecearthdragon:custom.ecearthdragon.flapping;v=2;p=1;sc=BLOCKS} @Self 
+  - Aura{auraName=FlyingAni;interval=1;duration=62} @self
+  - state{mid=ecdragonearth;s=flapping;li=0;lo=0;r=false} @self
+  - skill{s=DragonFlyingStaminaSubstract-1} @Self
+  - skill{s=DragonHungerSubstract-5} @Self
+EarthDragonPetAscendSignalReceiver:
+  TriggerConditions:
+  - owner{} true
+  Conditions:
+  Cooldown: 1
+  Skills:
+  - skill{s=EarthDragonPetFlyAscend} @self
+  - delay 1
+  - skill{s=EarthDragonPetAscendFly} @self
+EarthDragonPetFlyAscend:
+  Cooldown: 2
+  Conditions:
+  - onground{} true
+  - hasaura{n=Attack} false
+  - hasaura{n=Flying} false
+  - hasaura{n=TakeOff} false
+  Skills: 
+  - Aura{auraName=TakeOff;interval=10;duration=56} @self
+  - lockmodel{l=false} @self
+  - state{mid=ecdragonearth;s=walking;li=0;lo=0;r=true} @self
+  - state{mid=ecdragonearth;s=waiting;li=0;lo=0;r=true} @self
+  - state{mid=ecdragonearth;s=takeoff;li=0;lo=0;r=false} @self 
+  - sound{s=ecdragons:custom.ecdragons.takeoff;v=2;p=1;sc=BLOCKS} @Self 
+  - setspeed{speed=0;type=walking} 
+  - delay 15
+  - skill{s=DragonPetAscendFly+;repeat=20;repeatInterval=2} @self
+  - delay 41
+  - state{mid=ecdragonearth;s=takeoff;li=0;lo=0;r=true} @self 
+  - state{mid=ecdragonearth;s=walking;li=0;lo=0;r=true} @self
+  - state{mid=ecdragonearth;s=waiting;li=0;lo=0;r=true} @self
+  - Aura{auraName=Flying;interval=100;duration=999999} @self
+  - skill{s=DragonPetFlyingStraightY+} @self
+EarthDragonPetAscendFly:
+  TriggerConditions:
+  - owner{} true
+  Conditions:
+  - hasaura{n=Flying} true
+  - hasaura{n=DescendFlying} false
+  - hasaura{n=TakeOff} false
+  - hasaura{n=AscentFlying} false
+  Cooldown: 0
+  Skills:
+  - skill{s=DragonPetFlyY+;repeat=20;repeatInterval=2} @self
+  - Aura{auraName=AscentFlying;interval=5;duration=39} @self
+  - delay 40
+  - skill{s=DragonPetFlyingStraightY+} @self
+EarthDragonPetDescendSignalReceiver:
+  TriggerConditions:
+  - owner{} true
+  Conditions:
+  - hasaura{n=Flying} true
+  - hasaura{n=TakeOff} false
+  - hasaura{n=AscentFlying} false
+  - hasaura{n=DescendFlying} false
+  - onground{} false
+  Cooldown: 1
+  Skills:
+  - skill{s=DragonPetFlyY-;repeat=20;repeatInterval=2} @self
+  - Aura{auraName=DescendFlying;interval=5;duration=39} @self
+  - delay 40
+  - skill{s=DragonPetFlyingStraightY-} @self
+EarthDragonPetLanding:
+  Conditions:
+  - hasaura{n=Flying} true
+  - onground{} false
+  - hasaura{n=TakeOff} false
+  Skills: 
+  - skill{s=DragonGroundCheck} @Forward{f=1;y=-3}
+  - skill{s=DragonGroundCheck} @Forward{f=1;y=-2}
+  - skill{s=DragonGroundCheck} @Forward{f=1;y=-1}
+  - skill{s=EarthDragonPetLandingAni} @self
+EarthDragonPetLandingAni:
+  Conditions:
+  - hasaura{n=Ground} true
+  Skills:
+  - Aura{auraName=Attack;interval=1;duration=60} @self
+  - setspeed{speed=1.25;type=walking} 
+  - state{mid=ecdragonearth;s=flapping;li=0;lo=0;r=true} @self
+  - state{mid=ecdragonearth;s=landing;li=0;lo=0;r=false} @self
+  - sound{s=ecdragons:custom.ecdragons.landing;v=2;p=1;sc=WEATHER} @Self 
+  - potion{type=SLOW_FALLING;duration=60;lvl=1;hasParticles=false} @self
+  - auraremove{aura=Flying;stacks=1} @self
+  - auraremove{aura=DescendFlying;stacks=1} @self 
+EarthDragonPetFlyAttacks:
+  Cooldown: 1.0
+  Conditions:
+  - hasaura Attack false
+  - hasaura Flying true
+  Skills: 
+  - randomskill{skills=EarthDragonPetAttackFlyMelee,EarthDragonPetAttackFlyBreath,EarthDragonPetAttackFlyUltimate} @self
+EarthDragonPetAttackFlyMelee:
+  Cooldown: 0.0
+  Conditions:
+  - hasaura Flying true 
+  - hasaura Attack false
+  Skills:
+  - skill{s=EarthDragonPetAttackFlyMeleeSkill} @target
+EarthDragonPetAttackFlyMeleeSkill:
+  Cooldown: 3.0
+  TargetConditions:
+  - owner{} false
+  - drivingmodel false
+  - ridingmodel false
+  Conditions: 
+  - hasaura{n=Attack} false
+  - hasaura Flying true 
+  - targetwithin{d=7} true
+  Skills:
+  - Aura{auraName=Attack;interval=5;duration=90} @self
+  - state{mid=ecdragonearth;s=flapping;li=0;lo=0;r=true} @self 
+  - state{mid=ecdragonearth;s=flybreath;li=0;lo=0;r=true} @self 
+  - state{mid=ecdragonearth;s=flyskill;li=0;lo=0;r=true} @self 
+  - state{mid=ecdragonearth;s=flymelee;li=0;lo=0;r=false} @self 
+  - skill{s=DragonFlyMechanicNoCond;repeat=18;repeatInterval=5} @self
+  - sound{s=ecdragons:custom.ecdragons.flymelee;v=3;p=1;sc=RECORDS} @Self
+  - skill{s=DragonLargeFlyingStaminaAdd-20} @Self
+  - skill{s=DragonLargeHungerAddEating+40} @Self
+  - skill{s=DragonCombatOnDamage} @Self
+  - delay 20
+  - Totem{Charges=1;onTick=EarthDragonPetAttackFlyMeleeDamage;md=2;i=1;hR=1;vR=1;hp=true;hnp=true} @target
+EarthDragonPetAttackFlyMeleeDamage:
+  TargetConditions:
+  - owner{} false
+  - drivingmodel false
+  - ridingmodel false
+  Conditions:
+  Skills:
+  - damage{amount="<caster.var.damagepower> * 2";pkb=false;ignoreArmor=false;pi=true;element=DEATHBITE} @EntitiesNearOrigin{r=3.5;ignore=samefaction,self}
+  - effect:particles{p=block_crack;m=redstone_block;amount=15;speed=0;hS=0.4;vS=0.4;y=0.5} @EntitiesNearOrigin{r=3.5;ignore=samefaction,self}
+EarthDragonPetAttackFlyBreath:
+  Cooldown: 0.0
+  Conditions:
+  - hasaura Flying true 
+  - hasaura Attack false
+  Skills:
+  - skill{s=EarthDragonPetAttackFlyBreathSkill} @target
+EarthDragonPetAttackFlyBreathSkill:
+  Cooldown: 15
+  TargetConditions:
+  - owner{} false
+  - drivingmodel false
+  - ridingmodel false
+  Conditions:
+  - hasaura Landing false
+  - hasaura Attack false
+  - hasaura Flying true 
+  Skills: 
+  - Aura{auraName=Attack;interval=1;duration=110} @self
+  - state{mid=ecdragonearth;s=flapping;li=0;lo=0;r=true} @self 
+  - state{mid=ecdragonearth;s=flyskill;li=0;lo=0;r=true} @self 
+  - state{mid=ecdragonearth;s=flymelee;li=0;lo=0;r=true} @self 
+  - state{mid=ecdragonearth;s=flybreath;li=0;lo=0;r=false} @self 
+  - sound{s=ecearthdragon:custom.ecearthdragon.flybreath;v=4;p=1;sc=RECORDS} @Self 
+  - skill{s=DragonFlyMechanicNoCond;repeat=22;repeatInterval=5} @self
+  - skill{s=DragonCombatOnDamage} @Self
+  - skill{s=DragonStaminaSubstract-5} @Self
+  - skill{s=DragonHungerSubstract-5} @Self
+  - delay 34 
+  - skill{s=EarthDragonPetAttackFlyBreathProjectile;repeat=60;repeatInterval=1} @target
+EarthDragonPetAttackFlyBreathProjectile:
+  TargetConditions:
+  - owner{} false
+  Skills:
+  - projectile{bulletType=DISPLAY;material=rabbit_foot;model=2000016;onTick=EarthDragonPetAttackFlyBreath-Tick;onHit=EarthDragonPetAttackFlyBreath-Hit;onEnd=EarthDragonPetAttackFlyBreath-Hit;origin=@ModelPart{mid=ecdragonearth;pid=jaws};fromorigin=true;d=500;v=40;mr=100;i=1;sE=true;sB=true;hnp=true;g=0.05;sfo=0.5;syo=0;hR=1.5;ac=0.95;bulletCullingDistance=120;rot=2,2,2;rotationspeed=2,0,0;bulletscale=2.0,2.0,2.0}
+EarthDragonPetAttackFlyBreath-Tick:
+  Skills:
+EarthDragonPetAttackFlyBreath-Hit:
+  TargetConditions:
+  - RidingModel false 
+  - DrivingModel false 
+  - blocking{} false
+  - hasaura Blocking false
+  Skills:
+  - skill{s=EarthDragonPetAttackFlyBreathDamage} @EntitiesNearOrigin{r=1.5}
+EarthDragonPetAttackFlyBreathDamage:
+  TargetConditions:
+  - RidingModel false 
+  - DrivingModel false 
+  - blocking{} false
+  - hasaura Blocking false
+  Skills:
+  - potion{type=SLOW;duration=10;level=2;hasParticles=false} 
+  - damage{amount="<caster.var.damagepower> / 2";ignoreArmor=false;pi=true;element=Earth} 
+  - effect:particles{p=block_crack;m=redstone_block;amount=15;speed=0;hS=0.4;vS=0.4;y=0.5}
+  - blockwave{duration=10;material=granite;radius=2;radiusY=2;velocity=2;shape=sphere} @origin 0.3
+EarthDragonPetAttackFlyUltimate:
+  Cooldown: 0.0
+  Conditions:
+  - hasaura Flying true 
+  - hasaura Attack false
+  Skills:
+  - skill{s=EarthDragonPetAttackFlyUltimateSkill} @target
+EarthDragonPetAttackFlyUltimateSkill:
+  Cooldown: 15
+  TargetConditions:
+  - owner{} false
+  - drivingmodel false
+  - ridingmodel false
+  Conditions:
+  - hasaura Landing false
+  - hasaura Attack false
+  - hasaura Flying true 
+  Skills: 
+  - Aura{auraName=Attack;interval=1;duration=160} @self
+  - state{mid=ecdragonearth;s=flapping;li=0;lo=0;r=true} @self 
+  - state{mid=ecdragonearth;s=flybreath;li=0;lo=0;r=true} @self 
+  - state{mid=ecdragonearth;s=flymelee;li=0;lo=0;r=true} @self 
+  - state{mid=ecdragonearth;s=flyskill;li=0;lo=0;r=false} @self 
+  - sound{s=ecearthdragon:custom.ecearthdragon.flyskill;v=4;p=1;sc=RECORDS} @Self 
+  - velocity{m=set;x=0;y=0;z=0;repeat=130;repeatInterval=1} @self
+  - skill{s=DragonCombatOnDamage} @Self
+  - skill{s=DragonStaminaSubstract-5} @Self
+  - skill{s=DragonHungerSubstract-5} @Self
+  - velocity{m=set;x=0;y=0.0;z=0;repeat=150;repeatInterval=1} @self
+  - delay 40
+  - summon{type=EarthDummyPlanetImplosion;amount=1;radius=0;summonerIsOwner=true;inheritFaction=false} @Forward{f=20;y=1}
+EarthDragonPetGroundAttacks:
+  Cooldown: 0.5
+  Conditions:
+  - hasaura Attack false
+  - hasaura Flying false
+  - hasaura TakeOff false
+  - hasaura AttacksCD false
+  Skills: 
+  - randomskill{skills=EarthDragonPetGroundAttackMelee,EarthDragonPetGroundEarthBreath,EarthDragonPetGroundSkill,EarthDragonPetGroundRoar} @target
+EarthDragonPetGroundAttackMelee:
+  Cooldown: 1
+  TargetConditions:
+  - owner{} false
+  - drivingmodel false
+  - ridingmodel false
+  Conditions:
+  - hasaura Attack false 
+  - hasaura Eating false 
+  - hasaura StopChase false 
+  - hasaura Flying false 
+  - hasaura TakeOff false 
+  - targetwithin{d=4} true
+  Skills:
+  - Aura{auraName=Attack;interval=5;duration=30} @self
+  - state{mid=ecdragonearth;s=walking;li=0;lo=0;r=true} @self 
+  - state{mid=ecdragonearth;s=waiting;li=0;lo=0;r=true} @self 
+  - state{mid=ecdragonearth;s=groundmelee;li=0;lo=0;r=false} @self
+  - sound{s=ecdragons:custom.ecdragons.groundmelee;v=3;p=1;sc=RECORDS} @Self
+  - skill{s=DragonLargeFlyingStaminaAdd-20} @Self
+  - skill{s=DragonLargeHungerAddEating+40} @Self
+  - skill{s=DragonCombatOnDamage} @Self
+  - delay 6
+  - skill{s=EarthDragonPetGroundAttackMeleeDamage} @target
+EarthDragonPetGroundAttackMeleeDamage:
+  Conditions:
+  - targetwithin{d=5} true
+  TargetConditions:
+  - blocking{} false
+  - hasaura Blocking false
+  Skills:
+  - damage{amount="<caster.var.damagepower> * 2";ignoreArmor=false;element=Earth} @target
+  - effect:particles{p=block_crack;m=redstone_block;amount=15;speed=0;hS=0.4;vS=0.4;y=0.5} @target
+  - potion{type=SLOW;duration=10;level=2;hasParticles=false} @target 0.5
+  - potion{type=CONFUSION;duration=110;level=2;hasParticles=false} @target 0.5
+  - throw{velocity=5;velocityY=5} @target
+EarthDragonPetGroundEarthBreath:
+  Cooldown: 10
+  TargetConditions:
+  - owner{} false
+  - drivingmodel false
+  - ridingmodel false
+  Conditions:
+  - hasaura Attack false
+  - targetwithin{d=32} true
+  Skills: 
+  - Aura{auraName=Attack;interval=1;duration=80} @self
+  - state{mid=ecdragonearth;s=walking;li=0;lo=0;r=true} @self 
+  - state{mid=ecdragonearth;s=waiting;li=0;lo=0;r=true} @self 
+  - state{mid=ecdragonearth;s=meleehit;li=0;lo=0;r=true} @self 
+  - state{mid=ecdragonearth;s=groundbreath;li=0;lo=0;r=false} @self  
+  - sound{s=ecearthdragon:custom.ecearthdragon.groundbreath;v=3;p=1;sc=RECORDS} @Self 
+  - potion{type=SLOW;duration=50;level=10;hasParticles=false} @self
+  - skill{s=DragonCombatOnDamage} @Self
+  - skill{s=DragonStaminaSubstract-5} @Self
+  - skill{s=DragonHungerSubstract-5} @Self
+  - delay 20
+  - skill{s=EarthDragonPetGroundEarthBreathProjectile;repeat=44;repeatInterval=1} @target
+EarthDragonPetGroundEarthBreathProjectile:
+  Skills:
+  - projectile{bulletType=DISPLAY;material=rabbit_foot;model=2000016;onTick=EarthDragonPetEarthBreath-Tick;onHit=EarthDragonPetEarthBreath-Hit;onEnd=EarthDragonPetEarthBreath-Hit;origin=@ModelPart{mid=ecdragonearth;pid=jaws;y=0};fromorigin=true;d=500;v=32;mr=64;i=1;sE=true;sB=true;hnp=true;g=0.05;sfo=0.5;syo=0;hR=1.5;ac=0.95;bulletCullingDistance=120;rot=1,1,1;rotationspeed=2,0,0;bulletscale=2.0,2.0,2.0}
+EarthDragonPetEarthBreath-Tick:
+  Skills:
+EarthDragonPetEarthBreath-Hit:
+  TargetConditions:
+  - owner{} false
+  - drivingmodel false
+  - ridingmodel false
+  - blocking{} false
+  - hasaura Blocking false
+  Skills:
+  - damage{amount="<caster.var.damagepower> / 4";ignoreArmor=false;pi=true;element=Earth} @EntitiesNearOrigin{r=2.0}
+  - effect:particles{p=block_crack;m=redstone_block;amount=15;speed=0;hS=0.4;vS=0.4;y=0.5} @EntitiesNearOrigin{r=2.0}
+  - potion{type=SLOW;duration=10;level=2;hasParticles=false} @EntitiesNearOrigin{r=2.0}
+  - blockwave{duration=10;material=granite;radius=2;radiusY=2;velocity=2;shape=sphere} @origin 0.3
+EarthDragonPetGroundSkill:
+  Cooldown: 15
+  TargetConditions:
+  - owner{} false
+  - drivingmodel false
+  - ridingmodel false
+  Conditions:
+  - hasaura Attack false
+  - targetwithin{d=16} true
+  Skills: 
+  - Aura{auraName=Attack;interval=1;duration=60} @self
+  - state{mid=ecdragonearth;s=walking;li=0;lo=0;r=true} @self 
+  - state{mid=ecdragonearth;s=waiting;li=0;lo=0;r=true} @self 
+  - state{mid=ecdragonearth;s=groundskill;li=0;lo=0;r=false} @self 
+  - sound{s=ecearthdragon:custom.ecearthdragon.groundskill;v=3;p=1;sc=RECORDS} @Self 
+  - potion{type=SLOW;duration=60;level=10;hasParticles=false} @self
+  - skill{s=DragonCombatOnDamage} @Self  
+  - skill{s=DragonStaminaSubstract-5} @Self
+  - skill{s=DragonHungerSubstract-5} @Self
+  - delay 40
+  - summon{type=EarthDummyBoulder;amount=1;radius=0;os=false} @Forward{f=10;y=5}  
+EarthDragonPetGroundRoar:
+  Cooldown: 50
+  TargetConditions:
+  - owner{} false
+  - drivingmodel false
+  - ridingmodel false
+  Conditions:
+  - hasaura Attack false 
+  - targetwithin{d=16} true
+  Skills:
+  - Aura{auraName=Attack;interval=5;duration=92} @self
+  - state{mid=ecdragonearth;s=walking;li=0;lo=0;r=true} @self 
+  - state{mid=ecdragonearth;s=waiting;li=0;lo=0;r=true} @self 
+  - state{mid=ecdragonearth;s=groundroar;li=0;lo=0;r=false} @self
+  - potion{type=SLOW;duration=92;level=8;hasParticles=false} @self
+  - lockmodel @self
+  - sound{s=ecearthdragon:custom.ecearthdragon.groundroar;v=3;p=1;sc=WEATHER} @Self 
+  - skill{s=DragonCombatOnDamage} @Self
+  - skill{s=DragonStaminaSubstract-5} @Self
+  - skill{s=DragonHungerSubstract-5} @Self
+  - delay 20
+  - sudoskill{s=DragonsPetFearMechanic;cat=true;repeat=60;repeatInterval=1} @PlayersInRadius{r=32}
+  - delay 60
+  - lockmodel{l=false} @self
+EarthDragonDeathPetMechanic: 
+  Skills: 
+  - skill{s=EarthDragonDeathPetAirCheck} @Forward{f=1;y=-5}
+  - skill{s=EarthDragonDeathPetLandCheck} @Forward{f=1;y=-6}
+  - skill{s=EarthDragonDeathPetAirAnimationLoop} @self
+  - skill{s=EarthDragonDeathPet} @self
+EarthDragonDeathPetAirCheck:
+  Cooldown: 0
+  TargetConditions:
+  - inblock{b=AIR} true
+  Conditions:
+  - hasaura DragonGround false 
+  - hasaura DragonAir false 
+  - hasaura Attack false 
+  Skills:
+  - Aura{auraName=Attack;interval=10;duration=40} @self
+  - Aura{auraName=DragonAir;interval=10;duration=99999} @self
+  - state{mid=ecdragonearth;s=fallstart;li=0;lo=0;r=false} @self
+  - sound{s=ecdragons:custom.ecdragons.fallbody;v=3;p=1;sc=WEATHER} @Self 
+  - lunge{velocity=0.2;velocityY=-0.1;repeat=40;repeatInterval=2} @self
+  - effect:particlebox{p=block_crack;m=granite;amount=15;hS=2.2;vS=3.2;y=2.5;radius=0.5;repeat=5;repeatInterval=4} @self
+EarthDragonDeathPetLandCheck:
+  Cooldown: 0
+  TargetConditions:
+  - inblock{b=AIR} false
+  Conditions:
+  - hasaura DragonGround false 
+  - hasaura Attack false 
+  Skills:
+  - Aura{auraName=Attack;interval=10;duration=99999} @self
+  - state{mid=ecdragonearth;s=fall;li=0;lo=0;r=true} @self
+  - state{mid=ecdragonearth;s=fallend;li=0;lo=0;r=false} @self
+  - sound{s=ecdragons:custom.ecdragons.fallend;v=3;p=1;sc=WEATHER} @Self 
+  - delay 20
+  - Aura{auraName=DragonGround;onTick=EarthDragonDeathPet-Tick;interval=20;duration=300} @self
+  - state{mid=ecdragonearth;s=fall;li=0;lo=0;r=true} @self
+  - state{mid=ecdragonearth;s=fallend;li=0;lo=0;r=true} @self
+  - state{mid=ecdragonearth;s=fallbody;li=0;lo=0;r=false;repeat=30;repeatInterval=10} @self
+  - delay 100
+  - effect:blockmask{m=granite;r=5;d=100} @selflocation
+  - delay 100
+  - effect:blockmask{m=granite;r=7;d=100} @selflocation
+  - delay 100
+  - remove @self
+EarthDragonDeathPetAirAnimationLoop:
+  Cooldown: 0
+  Conditions:
+  - hasaura DragonGround false 
+  - hasaura Loop false 
+  - hasaura Attack false 
+  - hasaura DragonAir true 
+  Skills: 
+  - Aura{auraName=Loop;interval=10;duration=20} @self
+  - state{mid=ecdragonearth;s=fall;li=0;lo=0;r=false} @self
+  - sound{s=ecdragons:custom.ecdragons.fall;v=3;p=1;sc=WEATHER} @Self 
+  - lunge{velocity=0.3;velocityY=-0.2;repeat=20;repeatInterval=2} @self
+  - setrotation{relative=true;pitch=0;yaw=1;repeat=10;repeatInterval=2} @self
+  - effect:particlebox{p=block_crack;m=granite;amount=15;hS=2.2;vS=3.2;y=2.5;radius=0.5} @self
+EarthDragonMountDeath:
+  Conditions:
+  - hasaura DragonGround false 
+  - hasaura DragonAir false 
+  - onground{} true
+  Skills: 
+  - Aura{auraName=DragonGround;onTick=EarthDragonDeathPet-Tick;interval=20;duration=340} @self
+  - state{mid=ecdragonearth;s=dying;li=0;lo=0;r=false} @self
+  - sound{s=ecdragons:custom.ecdragons.dying;v=3;p=1;sc=WEATHER} @Self 
+  - delay 40
+  - state{mid=ecdragonearth;s=dying;li=0;lo=0;r=true} @self
+  - state{mid=ecdragonearth;s=body;li=0;lo=0;r=false;repeat=30;repeatInterval=10} @self
+  - effect:blockmask{m=granite;r=3;d=100} @selflocation
+  - delay 100
+  - effect:blockmask{m=granite;r=5;d=100} @selflocation
+  - delay 100
+  - effect:blockmask{m=granite;r=7;d=100} @selflocation
+  - delay 100
+  - remove @self
+EarthDragonDeathPet-Tick:
+  Skills:
+  - effect:particlebox{p=block_crack;m=granite;amount=15;hS=2.2;vS=3.2;y=1.0;radius=0.5} @self
+
+
+  

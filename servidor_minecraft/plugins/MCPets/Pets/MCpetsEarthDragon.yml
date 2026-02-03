@@ -1,0 +1,24 @@
+# Id: EarthDragonPet
+MythicMob: EarthDragonPet
+Permission: mcpets.earthdragonpet
+Mountable: true
+MountType: walking
+DespawnSkill: DragonPetRemove
+Distance: 15
+SpawnRange: 5
+ComingBackRange: 8
+Icon:
+  Name: §5Earth Dragon
+  Material: RABBIT_FOOT
+  CustomModelData: 2000017   
+  Description:
+  - §9**Stats**
+  - §fHealth - §2100 §fHP
+Signals:
+  Values:
+  Item:
+    Name: §5Earth Dragon
+    Material: RABBIT_FOOT
+    CustomModelData: 2000017
+    Description:
+# eyJ1c2VyLW5hbWUiOiJGYXp6ZXIiLCJ1c2VyLWlkIjoiNzI4MSIsImRhdGUiOiIyMDI2LTAyLTAyIDAwOjE3Iiwic2l0ZSI6Imh0dHBzOi8vZ2xlYWtzLnBybyJ9

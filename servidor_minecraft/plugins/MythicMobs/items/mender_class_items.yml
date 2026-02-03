@@ -1,0 +1,18 @@
+mender_class_lifecane:
+  Id: stone_sword
+  Display: "<gradient:#ffec93:#f2c759:#daa255>Mender Lifecane"
+  Model: 4597
+  Lore:
+  - '<gradient:#ffec93:#f2c759:#daa255>The Lifecane of the Mender Class'
+  Unbreakable: true
+  NBT:
+    Unbreakable: int/1 
+  Hide:
+  - ATTRIBUTES
+  Skills:
+  - skill{s=mender_lifebound} @self ~onTimer:100
+  - skill{s=mender_spiritbolt} @self ~onSwing
+  - skill{s=mender_cascadebolt} @self ~onUse
+  - skill{s=mender_purging_light} @self ~onCrouch
+  - skill{s=mender_vital_beam} @self ~onSwing
+  - skill{s=mender_lifeweavers_grace} @self ~onUse

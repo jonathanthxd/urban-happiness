@@ -1,0 +1,83 @@
+
+#########################################################
+## Developed by Little Room, patreon.com/littleroomdev ##
+#########################################################
+
+fighter_alex:
+  Type: IRON_GOLEM
+  Display: 'ALEX'
+  Damage: 0  
+  BossBar:
+    Enabled: true
+    Title: '<mob.name>'
+    Range: 32
+    Color: PURPLE
+    Style: SOLID
+  Options:
+    FollowRange: 32
+    Silent: true
+    PreventOtherDrops: true
+  Modules:
+    ThreatTable: true
+  AIGoalSelectors:
+  - swim
+  AITargetSelectors:
+  - players
+  - golems
+  Health: 300
+  Skills:
+  - randomskill{skills=herobrine_alexHEIGHTJUMP4,herobrine_alexHEIGHTJUMP2,herobrine_alexFISHING,herobrine_alexAXE,herobrine_alexROLL,herobrine_alexLEAPKICK} @target ~onTimer:15
+  - setmobscore{o=herodamage;v=7} @self ~onSpawn
+  - skill{s=herobrine_alexULTRAtele} @self ~onDamaged .25
+  - skill{s=herobrine_alexFLINCHhit} @self ~onDamaged
+  - skill{s=herobrine_alexFLINCH75;sync=true} @self ~onDamaged <75%
+  - skill{s=herobrine_alexFLINCH50;sync=true} @self ~onDamaged <50%
+  - skill{s=herobrine_alexVAULT} @forward{f=0.75} ~onTimer:20
+  - skill{s=herobrine_alexULTRA} @self ~onDamaged <25%
+  - skill{s=herobrine_alexBLOCK} @self ~onDamaged
+  - skill{s=herobrine_alexBLOCKprep} @self ~onTimer:15
+  - skill{s=herobrine_alexEAT} @self ~onTimer:20 <50%
+  - randomskill{skills=herobrine_alexSLASHsync,herobrine_alexSLASHsync,herobrine_alexSLASHsync,herobrine_alexPICKAXEsync,herobrine_alexROUNDHOUSEsync,herobrine_alexDOWNPUNCHsync,herobrine_alexPOWERPUNCHsync;sync=true} @self ~onAttack
+  - skill{s=herobrine_alexLEAPBACK} @self ~onTimer:120
+  - skill{s=herobrine_alexLAND} @self ~onTimer:1
+  - model{mid=herobrine_alex;n=false} @self ~onSpawn
+  - DefaultState{m=herobrine_alex;t=WALK;s=run} @self ~onEnterCombat
+  - DefaultState{m=herobrine_alex;t=WALK;s=walk} @self ~onDropCombat
+  - state{s=idle} @self ~onDropCombat
+  - skill{s=herobrine_alexDEATH} @self ~onDeath
+  
+herobrine_alex_fireworkFX:
+  Type: SILVERFISH
+  Display: 'explodeFX'
+  Equipment:
+  - torch:0
+  AITargetSelectors:
+  - clear
+  AIGoalSelectors:
+  - clear
+  Options:
+    ApplyInvisibility: true
+    PreventBlockInfection: true
+    Invincible: true
+    Silent: true
+  Skills:
+  - ignite{ticks=40} @PIR{r=2} ~onTimer:5
+  - effect:particles{particle=flame;amount=10;hS=.1;vS=.1;speed=0.02} @self ~onTimer:2
+  - effect:particles{particle=large_smoke;amount=10;hS=.2;vS=.2;speed=0;size=2} @self ~onTimer:2
+  - skill{s=herobrine_fireworkFXspawn} @self ~onSpawn
+  
+herobrine_alex_axe:
+  Type: ARMOR_STAND
+  Display: 'herobrine axe'
+  Skills:
+  - model{mid=herobrine_axe;n=false;d=false} @self ~onSpawn
+  
+herobrine_alex_bobber:
+  Type: SILVERFISH
+  Display: 'herobrine bobber'
+  Skills:
+  - skill{s=herobrinebobberSPAWN} @self ~onSpawn
+  - model{mid=herobrine_bobber;n=false;d=false} @self ~onSpawn
+  
+  
+#o3aBR1YPpXTXJHNi1UY2wUY0sWULh2aTtEZqpVSoV0UzMHMhhWamR3R0pEe5wES1cDbm1mM

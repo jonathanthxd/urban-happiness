@@ -1,0 +1,17 @@
+Id: KPACK_mountable_horse_blue
+MythicMob: KPACK_mountable_horse_blue
+Permission: littleroom.KPACK_mountable_horse_blue
+Mountable: true
+MountType: walking
+AutoRide: true
+DespawnOnDismount: true
+DespawnSkill: KPACK_mountable_horse_despawn
+Distance: 5
+SpawnRange: 5
+ComingBackRange: 5
+Icon:
+  Name: Blue Knight Horse
+  Material: INK_SAC
+  CustomModelData: 9
+  Description:
+  - SUMMON!

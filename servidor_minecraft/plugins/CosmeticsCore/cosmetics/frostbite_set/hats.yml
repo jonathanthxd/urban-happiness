@@ -1,0 +1,10 @@
+cosmetics:
+  frostbite_cosmetics_helmet:
+    display_name: §fFrostbite Helmet
+    enabled: true
+    type: HAT
+    model:
+      gui: potion:9923482
+      normal: potion:9923482
+    dye:
+      enabled: false

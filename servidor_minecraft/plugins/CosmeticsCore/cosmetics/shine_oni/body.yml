@@ -1,0 +1,15 @@
+# cosmetics:
+  shine_oni_cosmetics_wings:
+    display_name: Shine Oni Wings
+    enabled: true
+    type: BODY_ITEM
+    model:
+      gui: potion:8610000
+      normal: potion:8610000
+      normal_2: potion:8610003
+      self: potion:8610001
+      self_2: potion:8610002
+    dye:
+      enabled: false
+
+# eyJ1c2VyLW5hbWUiOiJkdXhkeGQiLCJ1c2VyLWlkIjoiNTIzOSIsImRhdGUiOiIyMDI1LTA5LTIzIDE3OjIyIiwic2l0ZSI6Imh0dHBzOi8vZ2xlYWtzLnBybyJ9

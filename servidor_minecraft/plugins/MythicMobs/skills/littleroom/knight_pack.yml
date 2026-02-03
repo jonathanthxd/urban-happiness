@@ -1,0 +1,1153 @@
+#########################################################
+## Developed by Little Room, patreon.com/littleroomdev ##
+#########################################################
+
+### MOUNTED DUST ###
+
+KPACK_mounted_dust:
+  Conditions:
+  - ismoving true
+  Skills:
+  - effect:particles{p=campfire_cosy_smoke;a=1;hs=.35;vs=.1;y=.25}
+
+
+### KEYFRAME SOUNDS ###
+
+KAG_keyframe_knightstep:
+  Skills:
+  - sound{s=littleroom_knightpack:littleroom.knight.step;v=0.15;sc=HOSTILE;p="<random.float.0.9to1.2>"} @self
+
+
+KAG_keyframe_horsestep_soft:
+  Skills:
+  - sound{s=littleroom_knightpack:littleroom.horse.step;v=0.25;sc=HOSTILE;p="<random.float.0.9to1.2>"} @self
+  
+KAG_keyframe_horsestep_hard:
+  Skills:
+  - sound{s=littleroom_knightpack:littleroom.horse.step;v=0.75;sc=HOSTILE;p="<random.float.0.9to1.2>"} @self
+  
+  
+KAG_keyframe_bodyfall:
+  Skills:
+  - sound{s=littleroom_knightpack:littleroom.groundimpact;v=1;sc=HOSTILE;p="<random.float.0.9to1.2>";delay=10} @self
+
+##################
+### SET COLORS ###
+##################
+
+
+KPACK_setgreenknight:
+  Skills:
+  - changepart{mid=kpack_knight;p=torso;nmid=kpack_knight_parts;npid=torso_green} @self
+  - changepart{mid=kpack_knight;p=torso_top;nmid=kpack_knight_parts;npid=torso_top_green} @self
+  - changepart{mid=kpack_knight;p=cape_1;nmid=kpack_knight_parts;npid=cape_1_green} @self
+  - changepart{mid=kpack_knight;p=cape_2;nmid=kpack_knight_parts;npid=cape_2_green} @self
+  - changepart{mid=kpack_knight;p=cape_3;nmid=kpack_knight_parts;npid=cape_3_green} @self
+  - changepart{mid=kpack_knight;p=shield_back;nmid=kpack_knight_parts;npid=shield_back_green} @self
+  - changepart{mid=kpack_knight;p=tabard;nmid=kpack_knight_parts;npid=tabard_green} @self
+  - changepart{mid=kpack_knight;p=shield_arm;nmid=kpack_knight_parts;npid=shield_arm_green} @self
+  - changepart{mid=kpack_knight;p=horse_body;nmid=kpack_knight_parts;npid=horse_body_green} @self
+  - changepart{mid=kpack_knight;p=tail_1;nmid=kpack_knight_parts;npid=tail_1_green} @self
+  - changepart{mid=kpack_knight;p=tail_2;nmid=kpack_knight_parts;npid=tail_2_green} @self
+  - changepart{mid=kpack_knight;p=tail_3;nmid=kpack_knight_parts;npid=tail_3_green} @self
+  - changepart{mid=kpack_knight_horse;p=horse_neck;nmid=kpack_knight_parts;npid=horse_neck_green} @self
+  - changepart{mid=kpack_knight_horse;p=horse_head;nmid=kpack_knight_parts;npid=horse_head_green} @self
+  - changepart{mid=kpack_knight_horse;p=rein;nmid=kpack_knight_parts;npid=rein_green} @self
+  - changepart{mid=kpack_knight_horse;p=front_left_leg;nmid=kpack_knight_parts;npid=front_left_leg_green} @self
+  - changepart{mid=kpack_knight_horse;p=front_left_shin;nmid=kpack_knight_parts;npid=front_left_shin_green} @self
+  - changepart{mid=kpack_knight_horse;p=front_left_foot;nmid=kpack_knight_parts;npid=front_left_foot_green} @self
+  - changepart{mid=kpack_knight_horse;p=front_right_leg;nmid=kpack_knight_parts;npid=front_right_leg_green} @self
+  - changepart{mid=kpack_knight_horse;p=front_right_shin;nmid=kpack_knight_parts;npid=front_right_shin_green} @self
+  - changepart{mid=kpack_knight_horse;p=front_right_foot;nmid=kpack_knight_parts;npid=front_right_foot_green} @self
+  - changepart{mid=kpack_knight_horse;p=front_left_leg2;nmid=kpack_knight_parts;npid=front_left_leg2_green} @self
+  - changepart{mid=kpack_knight_horse;p=front_left_shin2;nmid=kpack_knight_parts;npid=front_left_shin2_green} @self
+  - changepart{mid=kpack_knight_horse;p=front_left_foot2;nmid=kpack_knight_parts;npid=front_left_foot2_green} @self
+  - changepart{mid=kpack_knight_horse;p=front_right_leg2;nmid=kpack_knight_parts;npid=front_right_leg2_green} @self
+  - changepart{mid=kpack_knight_horse;p=front_right_shin2;nmid=kpack_knight_parts;npid=front_right_shin2_green} @self
+  - changepart{mid=kpack_knight_horse;p=front_right_foot2;nmid=kpack_knight_parts;npid=front_right_foot2_green} @self
+  - changepart{mid=kpack_knight_horse;p=flag;nmid=kpack_knight_parts;npid=flag_green} @self
+  - changepart{mid=kpack_knight_horse;p=flag_1;nmid=kpack_knight_parts;npid=flag_1_green} @self
+  - changepart{mid=kpack_knight_horse;p=flag_2;nmid=kpack_knight_parts;npid=flag_2_green} @self
+  - changepart{mid=kpack_knight_horse;p=flag_3;nmid=kpack_knight_parts;npid=flag_3_green} @self
+  - changepart{mid=kpack_knight_horse;p=torso;nmid=kpack_knight_parts;npid=torso_green} @self
+  - changepart{mid=kpack_knight_horse;p=torso_top;nmid=kpack_knight_parts;npid=torso_top_green} @self
+  - changepart{mid=kpack_knight_horse;p=cape_1;nmid=kpack_knight_parts;npid=cape_1_green} @self
+  - changepart{mid=kpack_knight_horse;p=cape_2;nmid=kpack_knight_parts;npid=cape_2_green} @self
+  - changepart{mid=kpack_knight_horse;p=cape_3;nmid=kpack_knight_parts;npid=cape_3_green} @self
+  - changepart{mid=kpack_knight_horse;p=shield_back;nmid=kpack_knight_parts;npid=shield_back_green} @self
+  - changepart{mid=kpack_knight_horse;p=tabard;nmid=kpack_knight_parts;npid=tabard_green} @self
+  - changepart{mid=kpack_knight_horse;p=shield_arm;nmid=kpack_knight_parts;npid=shield_arm_green} @self
+  - changepart{mid=kpack_knight_horse;p=horse_body;nmid=kpack_knight_parts;npid=horse_body_green} @self
+  - changepart{mid=kpack_knight_horse;p=tail_1;nmid=kpack_knight_parts;npid=tail_1_green} @self
+  - changepart{mid=kpack_knight_horse;p=tail_2;nmid=kpack_knight_parts;npid=tail_2_green} @self
+  - changepart{mid=kpack_knight_horse;p=tail_3;nmid=kpack_knight_parts;npid=tail_3_green} @self
+
+
+KPACK_setyellowknight:
+  Skills:
+  - changepart{mid=kpack_knight;p=torso;nmid=kpack_knight_parts;npid=torso_yellow} @self
+  - changepart{mid=kpack_knight;p=torso_top;nmid=kpack_knight_parts;npid=torso_top_yellow} @self
+  - changepart{mid=kpack_knight;p=cape_1;nmid=kpack_knight_parts;npid=cape_1_yellow} @self
+  - changepart{mid=kpack_knight;p=cape_2;nmid=kpack_knight_parts;npid=cape_2_yellow} @self
+  - changepart{mid=kpack_knight;p=cape_3;nmid=kpack_knight_parts;npid=cape_3_yellow} @self
+  - changepart{mid=kpack_knight;p=shield_back;nmid=kpack_knight_parts;npid=shield_back_yellow} @self
+  - changepart{mid=kpack_knight;p=tabard;nmid=kpack_knight_parts;npid=tabard_yellow} @self
+  - changepart{mid=kpack_knight;p=shield_arm;nmid=kpack_knight_parts;npid=shield_arm_yellow} @self
+  - changepart{mid=kpack_knight;p=horse_body;nmid=kpack_knight_parts;npid=horse_body_yellow} @self
+  - changepart{mid=kpack_knight;p=tail_1;nmid=kpack_knight_parts;npid=tail_1_yellow} @self
+  - changepart{mid=kpack_knight;p=tail_2;nmid=kpack_knight_parts;npid=tail_2_yellow} @self
+  - changepart{mid=kpack_knight;p=tail_3;nmid=kpack_knight_parts;npid=tail_3_yellow} @self
+  - changepart{mid=kpack_knight_horse;p=horse_neck;nmid=kpack_knight_parts;npid=horse_neck_yellow} @self
+  - changepart{mid=kpack_knight_horse;p=horse_head;nmid=kpack_knight_parts;npid=horse_head_yellow} @self
+  - changepart{mid=kpack_knight_horse;p=rein;nmid=kpack_knight_parts;npid=rein_yellow} @self
+  - changepart{mid=kpack_knight_horse;p=front_left_leg;nmid=kpack_knight_parts;npid=front_left_leg_yellow} @self
+  - changepart{mid=kpack_knight_horse;p=front_left_shin;nmid=kpack_knight_parts;npid=front_left_shin_yellow} @self
+  - changepart{mid=kpack_knight_horse;p=front_left_foot;nmid=kpack_knight_parts;npid=front_left_foot_yellow} @self
+  - changepart{mid=kpack_knight_horse;p=front_right_leg;nmid=kpack_knight_parts;npid=front_right_leg_yellow} @self
+  - changepart{mid=kpack_knight_horse;p=front_right_shin;nmid=kpack_knight_parts;npid=front_right_shin_yellow} @self
+  - changepart{mid=kpack_knight_horse;p=front_right_foot;nmid=kpack_knight_parts;npid=front_right_foot_yellow} @self
+  - changepart{mid=kpack_knight_horse;p=front_left_leg2;nmid=kpack_knight_parts;npid=front_left_leg2_yellow} @self
+  - changepart{mid=kpack_knight_horse;p=front_left_shin2;nmid=kpack_knight_parts;npid=front_left_shin2_yellow} @self
+  - changepart{mid=kpack_knight_horse;p=front_left_foot2;nmid=kpack_knight_parts;npid=front_left_foot2_yellow} @self
+  - changepart{mid=kpack_knight_horse;p=front_right_leg2;nmid=kpack_knight_parts;npid=front_right_leg2_yellow} @self
+  - changepart{mid=kpack_knight_horse;p=front_right_shin2;nmid=kpack_knight_parts;npid=front_right_shin2_yellow} @self
+  - changepart{mid=kpack_knight_horse;p=front_right_foot2;nmid=kpack_knight_parts;npid=front_right_foot2_yellow} @self
+  - changepart{mid=kpack_knight_horse;p=flag;nmid=kpack_knight_parts;npid=flag_yellow} @self
+  - changepart{mid=kpack_knight_horse;p=flag_1;nmid=kpack_knight_parts;npid=flag_1_yellow} @self
+  - changepart{mid=kpack_knight_horse;p=flag_2;nmid=kpack_knight_parts;npid=flag_2_yellow} @self
+  - changepart{mid=kpack_knight_horse;p=flag_3;nmid=kpack_knight_parts;npid=flag_3_yellow} @self
+  - changepart{mid=kpack_knight_horse;p=torso;nmid=kpack_knight_parts;npid=torso_yellow} @self
+  - changepart{mid=kpack_knight_horse;p=torso_top;nmid=kpack_knight_parts;npid=torso_top_yellow} @self
+  - changepart{mid=kpack_knight_horse;p=cape_1;nmid=kpack_knight_parts;npid=cape_1_yellow} @self
+  - changepart{mid=kpack_knight_horse;p=cape_2;nmid=kpack_knight_parts;npid=cape_2_yellow} @self
+  - changepart{mid=kpack_knight_horse;p=cape_3;nmid=kpack_knight_parts;npid=cape_3_yellow} @self
+  - changepart{mid=kpack_knight_horse;p=shield_back;nmid=kpack_knight_parts;npid=shield_back_yellow} @self
+  - changepart{mid=kpack_knight_horse;p=tabard;nmid=kpack_knight_parts;npid=tabard_yellow} @self
+  - changepart{mid=kpack_knight_horse;p=shield_arm;nmid=kpack_knight_parts;npid=shield_arm_yellow} @self
+  - changepart{mid=kpack_knight_horse;p=horse_body;nmid=kpack_knight_parts;npid=horse_body_yellow} @self
+  - changepart{mid=kpack_knight_horse;p=tail_1;nmid=kpack_knight_parts;npid=tail_1_yellow} @self
+  - changepart{mid=kpack_knight_horse;p=tail_2;nmid=kpack_knight_parts;npid=tail_2_yellow} @self
+  - changepart{mid=kpack_knight_horse;p=tail_3;nmid=kpack_knight_parts;npid=tail_3_yellow} @self
+
+
+KPACK_setblueknight:
+  Skills:
+  - changepart{mid=kpack_knight;p=torso;nmid=kpack_knight_parts;npid=torso_blue} @self
+  - changepart{mid=kpack_knight;p=torso_top;nmid=kpack_knight_parts;npid=torso_top_blue} @self
+  - changepart{mid=kpack_knight;p=cape_1;nmid=kpack_knight_parts;npid=cape_1_blue} @self
+  - changepart{mid=kpack_knight;p=cape_2;nmid=kpack_knight_parts;npid=cape_2_blue} @self
+  - changepart{mid=kpack_knight;p=cape_3;nmid=kpack_knight_parts;npid=cape_3_blue} @self
+  - changepart{mid=kpack_knight;p=shield_back;nmid=kpack_knight_parts;npid=shield_back_blue} @self
+  - changepart{mid=kpack_knight;p=tabard;nmid=kpack_knight_parts;npid=tabard_blue} @self
+  - changepart{mid=kpack_knight;p=shield_arm;nmid=kpack_knight_parts;npid=shield_arm_blue} @self
+  - changepart{mid=kpack_knight;p=horse_body;nmid=kpack_knight_parts;npid=horse_body_blue} @self
+  - changepart{mid=kpack_knight;p=tail_1;nmid=kpack_knight_parts;npid=tail_1_blue} @self
+  - changepart{mid=kpack_knight;p=tail_2;nmid=kpack_knight_parts;npid=tail_2_blue} @self
+  - changepart{mid=kpack_knight;p=tail_3;nmid=kpack_knight_parts;npid=tail_3_blue} @self
+  - changepart{mid=kpack_knight_horse;p=horse_neck;nmid=kpack_knight_parts;npid=horse_neck_blue} @self
+  - changepart{mid=kpack_knight_horse;p=horse_head;nmid=kpack_knight_parts;npid=horse_head_blue} @self
+  - changepart{mid=kpack_knight_horse;p=rein;nmid=kpack_knight_parts;npid=rein_blue} @self
+  - changepart{mid=kpack_knight_horse;p=front_left_leg;nmid=kpack_knight_parts;npid=front_left_leg_blue} @self
+  - changepart{mid=kpack_knight_horse;p=front_left_shin;nmid=kpack_knight_parts;npid=front_left_shin_blue} @self
+  - changepart{mid=kpack_knight_horse;p=front_left_foot;nmid=kpack_knight_parts;npid=front_left_foot_blue} @self
+  - changepart{mid=kpack_knight_horse;p=front_right_leg;nmid=kpack_knight_parts;npid=front_right_leg_blue} @self
+  - changepart{mid=kpack_knight_horse;p=front_right_shin;nmid=kpack_knight_parts;npid=front_right_shin_blue} @self
+  - changepart{mid=kpack_knight_horse;p=front_right_foot;nmid=kpack_knight_parts;npid=front_right_foot_blue} @self
+  - changepart{mid=kpack_knight_horse;p=front_left_leg2;nmid=kpack_knight_parts;npid=front_left_leg2_blue} @self
+  - changepart{mid=kpack_knight_horse;p=front_left_shin2;nmid=kpack_knight_parts;npid=front_left_shin2_blue} @self
+  - changepart{mid=kpack_knight_horse;p=front_left_foot2;nmid=kpack_knight_parts;npid=front_left_foot2_blue} @self
+  - changepart{mid=kpack_knight_horse;p=front_right_leg2;nmid=kpack_knight_parts;npid=front_right_leg2_blue} @self
+  - changepart{mid=kpack_knight_horse;p=front_right_shin2;nmid=kpack_knight_parts;npid=front_right_shin2_blue} @self
+  - changepart{mid=kpack_knight_horse;p=front_right_foot2;nmid=kpack_knight_parts;npid=front_right_foot2_blue} @self
+  - changepart{mid=kpack_knight_horse;p=flag;nmid=kpack_knight_parts;npid=flag_blue} @self
+  - changepart{mid=kpack_knight_horse;p=flag_1;nmid=kpack_knight_parts;npid=flag_1_blue} @self
+  - changepart{mid=kpack_knight_horse;p=flag_2;nmid=kpack_knight_parts;npid=flag_2_blue} @self
+  - changepart{mid=kpack_knight_horse;p=flag_3;nmid=kpack_knight_parts;npid=flag_3_blue} @self
+  - changepart{mid=kpack_knight_horse;p=torso;nmid=kpack_knight_parts;npid=torso_blue} @self
+  - changepart{mid=kpack_knight_horse;p=torso_top;nmid=kpack_knight_parts;npid=torso_top_blue} @self
+  - changepart{mid=kpack_knight_horse;p=cape_1;nmid=kpack_knight_parts;npid=cape_1_blue} @self
+  - changepart{mid=kpack_knight_horse;p=cape_2;nmid=kpack_knight_parts;npid=cape_2_blue} @self
+  - changepart{mid=kpack_knight_horse;p=cape_3;nmid=kpack_knight_parts;npid=cape_3_blue} @self
+  - changepart{mid=kpack_knight_horse;p=shield_back;nmid=kpack_knight_parts;npid=shield_back_blue} @self
+  - changepart{mid=kpack_knight_horse;p=tabard;nmid=kpack_knight_parts;npid=tabard_blue} @self
+  - changepart{mid=kpack_knight_horse;p=shield_arm;nmid=kpack_knight_parts;npid=shield_arm_blue} @self
+  - changepart{mid=kpack_knight_horse;p=horse_body;nmid=kpack_knight_parts;npid=horse_body_blue} @self
+  - changepart{mid=kpack_knight_horse;p=tail_1;nmid=kpack_knight_parts;npid=tail_1_blue} @self
+  - changepart{mid=kpack_knight_horse;p=tail_2;nmid=kpack_knight_parts;npid=tail_2_blue} @self
+  - changepart{mid=kpack_knight_horse;p=tail_3;nmid=kpack_knight_parts;npid=tail_3_blue} @self
+
+
+
+##################
+### RANDOMIZER ###
+##################
+
+KPACK_randomize_knight:
+  Skills:
+  - skill{s=KPACK_randomize_helmet} @self
+  - skill{s=KPACK_randomize_gear} @self
+  
+  
+  
+  ### RANDOM HELMET ###
+  
+  
+KPACK_randomize_helmet:
+  Skills:
+  - randomskill{s=KPACK_random_helm_1,KPACK_random_helm_2,KPACK_random_helm_3,KPACK_random_helm_4} @self
+  
+KPACK_random_helm_1:
+  Skills:
+  - setvariable{var=caster.helmet;value="1";type=INTEGER}
+  
+KPACK_random_helm_2:
+  Skills:
+  - setvariable{var=caster.helmet;value="2";type=INTEGER}
+  
+KPACK_random_helm_3:
+  Skills:
+  - setvariable{var=caster.helmet;value="3";type=INTEGER}
+  
+KPACK_random_helm_4:
+  Skills:
+  - setvariable{var=caster.helmet;value="4";type=INTEGER}
+  
+  
+  
+  ### RANDOM WEAPONS / SHIELDS ###
+  
+KPACK_randomize_gear:
+  Skills:
+  - randomskill{s=KPACK_random_longsword,KPACK_random_halberd,KPACK_random_joust} @self
+  - randomskill{s=KPACK_random_flag,KPACK_random_no_flag} @self
+
+  
+KPACK_random_longsword:
+  Skills:
+  - setvariable{var=caster.weapon;value="longsword";type=STRING}
+  - randomskill{skills=KPACK_random_shield,KPACK_random_no_shield} @self
+  
+KPACK_random_halberd:
+  Skills:
+  - setvariable{var=caster.weapon;value="halberd";type=STRING}
+  - skill{s=KPACK_random_no_shield} @self
+
+KPACK_random_no_shield:
+  Skills:
+  - setvariable{var=caster.shield;value="no";type=STRING}
+  
+KPACK_random_shield:
+  Skills:
+  - setvariable{var=caster.shield;value="yes";type=STRING}
+  
+KPACK_random_joust:
+  Conditions:
+  - variableEquals{var=caster.type;value="mounted"} true
+  Skills:
+  - setvariable{var=caster.weapon;value="joust";type=STRING}
+  - setvariable{var=caster.shield;value="no";type=STRING}
+
+KPACK_random_no_flag:
+  Skills:
+  - setvariable{var=caster.flag;value="no";type=STRING}
+  
+KPACK_random_flag:
+  Skills:
+  - setvariable{var=caster.flag;value="yes";type=STRING}
+
+### THIS SETS THE KNIGHTS RANDOMIZER ###
+
+KPACK_setrandomizer:
+  Skills:
+  #- message{m="<caster.var.weapon>"} @everyone
+  #- message{m="<caster.var.shield>"} @everyone
+  #- message{m="<caster.var.flag>"} @everyone
+  #- message{m="<caster.var.helmet>"} @everyone
+  - skill{s=KPACK_set_longsword} @self
+  - skill{s=KPACK_set_halberd} @self
+  - skill{s=KPACK_set_joust} @self
+  - skill{s=KPACK_set_helmet_1} @self
+  - skill{s=KPACK_set_helmet_2} @self
+  - skill{s=KPACK_set_helmet_3} @self
+  - skill{s=KPACK_set_helmet_4} @self
+  - skill{s=KPACK_set_shield} @self
+  - skill{s=KPACK_set_noshield} @self
+  - skill{s=KPACK_set_flag} @self
+  - skill{s=KPACK_set_noflag} @self
+  
+KPACK_set_longsword:
+  Conditions:
+  - variableEquals{var=caster.weapon;value="longsword"} true
+  Skills:
+  - delay 10
+  
+KPACK_set_halberd:
+  Conditions:
+  - variableEquals{var=caster.weapon;value="halberd"} true
+  Skills:
+  - partvis{p=sheath;em=false} @self
+  - changepart{mid=kpack_knight;p=weapon_back;nmid=kpack_knight_parts;npid=halberd_back} @self
+  - changepart{mid=kpack_knight;p=sword;nmid=kpack_knight_parts;npid=halberd_hand} @self
+  - changepart{mid=kpack_knight_horse;p=weapon_back;nmid=kpack_knight_parts;npid=halberd_back} @self
+  - changepart{mid=kpack_knight_horse;p=sword;nmid=kpack_knight_parts;npid=halberd_hand} @self
+  
+KPACK_set_joust:
+  Conditions:
+  - variableEquals{var=caster.weapon;value="joust"} true
+  Skills:
+  - partvis{p=sheath;em=false} @self
+  - partvis{p=sword;v=true;em=false} @self
+  - changepart{mid=kpack_knight_horse;p=sword;nmid=kpack_knight_parts;npid=joust} @self
+  #- message{m="set joust model"} @everyone
+  
+KPACK_set_helmet_1:
+  Conditions:
+  - variableEquals{var=caster.helmet;value="1"} true
+  Skills:
+  - delay 10
+  
+KPACK_set_helmet_2:
+  Conditions:
+  - variableEquals{var=caster.helmet;value="2"} true
+  Skills:
+  - changepart{mid=kpack_knight;p=head;nmid=kpack_knight_parts;npid=head} @self
+  - changepart{mid=kpack_knight_horse;p=head;nmid=kpack_knight_parts;npid=head} @self
+  
+KPACK_set_helmet_3:
+  Conditions:
+  - variableEquals{var=caster.helmet;value="3"} true
+  Skills:
+  - changepart{mid=kpack_knight;p=head;nmid=kpack_knight_parts;npid=head2} @self
+  - changepart{mid=kpack_knight_horse;p=head;nmid=kpack_knight_parts;npid=head2} @self
+  
+KPACK_set_helmet_4:
+  Conditions:
+  - variableEquals{var=caster.helmet;value="4"} true
+  Skills:
+  - changepart{mid=kpack_knight;p=head;nmid=kpack_knight_parts;npid=head3} @self
+  - changepart{mid=kpack_knight_horse;p=head;nmid=kpack_knight_parts;npid=head3} @self
+  
+KPACK_set_shield:
+  Conditions:
+  - variableEquals{var=caster.shield;value="yes"} true
+  Skills:
+  - delay 10
+  
+KPACK_set_noshield:
+  Conditions:
+  - variableEquals{var=caster.shield;value="no"} true
+  Skills:
+  - partvis{p=shield;em=false} @self
+  - partvis{p=shield_back;em=false} @self
+  
+KPACK_set_flag:
+  Conditions:
+  - variableEquals{var=caster.flag;value="yes"} true
+  Skills:
+  - delay 10
+  
+KPACK_set_noflag:
+  Conditions:
+  - variableEquals{var=caster.flag;value="no"} true
+  Skills:
+  - partvis{p=flag;em=false} @self
+
+
+
+
+
+
+  ### THIS MAINTAINS THAT THE NEXT TARGET ISNT FAR AWAY IN A BIG BATTLE ###
+  
+KPACK_nearest_aggro:
+  Conditions:
+  - incombat true
+  Skills:
+  - threat{amount=1000} @TT{sort=nearest;limit=1}
+  
+  
+
+  ### DIFFERENT TYPES OF AGGROS FOR DIFFERENT WEAPONS ###
+
+KPACK_start_aggro:
+  Skills:
+  - skill{s=KPACK_start_aggro_onehanded} @self
+  - skill{s=KPACK_start_aggro_twohanded} @self
+
+KPACK_stop_aggro:
+  Skills:
+  - skill{s=KPACK_stop_aggro_onehanded} @self
+  - skill{s=KPACK_stop_aggro_twohanded} @self
+
+
+  
+  ### ONE HANDED WEAPON AGGRO ###
+  
+KPACK_start_aggro_onehanded:
+  Cooldown: 2
+  Conditions:
+  - offgcd true
+  - incombat true
+  - variableEquals{var=caster.running;value="false"}
+  - variableEquals{var=caster.weapon;value="longsword"}
+  Skills:
+  - gcd{ticks=30}
+  #- message{m="KPACK_start_aggro_onehanded <caster.var.weapon> <caster.var.running>"} @everyone
+  - sound{s=littleroom_knightpack:littleroom.knight.unsheath;v=1;sc=HOSTILE;p="<random.float.0.9to1.2>";delay=10} @self
+  - delay <random.0to20>
+  - state{s=grab_equipment_onehanded;li=4;lo=4} @self
+  - rally{types=<caster.mythic_type>;radius=48;ot=false} @target
+  - partvis{p=sword;em=false;delay=10;v=true} @self
+  - partvis{p=shield_arm;em=false;delay=10;v=true} @self
+  - partvis{p=shield_back;em=false;delay=10;v=false} @self
+  - changepart{mid=kpack_knight;p=sheath;nmid=kpack_knight_parts;npid=sheath_empty;delay=10} @self
+  - setvariable{var=caster.running;value="true";type=STRING}
+  - defaultstate{type=walk;state=run_onehander;li=5;lo=5} @self
+  - setspeed{type=walk;speed=1.25} @self
+  - setspeed{type=walk;speed=1.75;delay=5} @self
+  
+KPACK_stop_aggro_onehanded:
+  Cooldown: 2
+  Conditions:
+  - offgcd true
+  - incombat false
+  - variableEquals{var=caster.running;value="true"}
+  - variableEquals{var=caster.weapon;value="longsword"}
+  Skills:
+  - gcd{ticks=30}
+  #- message{m="KPACK_stop_aggro_onehanded <caster.var.weapon> <caster.var.running>"} @everyone
+  - sound{s=littleroom_knightpack:littleroom.knight.sheath;v=1;sc=HOSTILE;p="<random.float.0.9to1.2>";delay=10} @self
+  - delay <random.0to20>
+  - state{s=grab_equipment_onehanded;li=4;lo=4} @self
+  - partvis{p=sword;em=false;delay=10;v=false} @self
+  - partvis{p=shield_arm;em=false;delay=10;v=false} @self
+  - partvis{p=shield_back;em=false;delay=10;v=true} @self
+  - changepart{mid=kpack_knight;p=sheath;nmid=kpack_knight;npid=sheath;delay=10} @self
+  - setvariable{var=caster.running;value="false";type=STRING}
+  - defaultstate{type=walk;state=walk;li=5;lo=5} @self
+  - setspeed{type=walk;speed=1} @self
+
+
+  
+  ### TWO HANDED WEAPON AGGRO ###
+  
+KPACK_start_aggro_twohanded:
+  Cooldown: 2
+  Conditions:
+  - offgcd true
+  - incombat true
+  - variableEquals{var=caster.running;value="false"}
+  - variableEquals{var=caster.weapon;value="halberd"}
+  Skills:
+  - gcd{ticks=30}
+  #- message{m="KPACK_start_aggro_twohanded <caster.var.weapon> <caster.var.running>"} @everyone
+  - sound{s=littleroom_knightpack:littleroom.knight.unsheath;v=1;sc=HOSTILE;p="<random.float.0.9to1.2>";delay=10} @self
+  - delay <random.0to20>
+  - state{s=grab_equipment_twohanded;li=4;lo=4} @self
+  - rally{types=<caster.mythic_type>;radius=48;ot=false} @target
+  - partvis{p=sword;em=false;delay=10;v=true} @self
+  - partvis{p=weapon_back;em=false;delay=10;v=false} @self
+  - changepart{mid=kpack_knight;p=sheath;nmid=kpack_knight_parts;npid=sheath_empty;delay=10} @self
+  - setvariable{var=caster.running;value="true";type=STRING}
+  - defaultstate{type=walk;state=run_twohander;li=5;lo=5} @self
+  - defaultstate{type=idle;state=idle_twohander} @self
+  - setspeed{type=walk;speed=1.25} @self
+  - setspeed{type=walk;speed=1.75;delay=5} @self
+  
+KPACK_stop_aggro_twohanded:
+  Cooldown: 2
+  Conditions:
+  - offgcd true
+  - incombat false
+  - variableEquals{var=caster.running;value="true"}
+  - variableEquals{var=caster.weapon;value="halberd"}
+  Skills:
+  - gcd{ticks=30}
+  #- message{m="KPACK_stop_aggro_twohanded <caster.var.weapon> <caster.var.running>"} @everyone
+  - sound{s=littleroom_knightpack:littleroom.knight.sheath;v=1;sc=HOSTILE;p="<random.float.0.9to1.2>";delay=10} @self
+  - delay <random.0to20>
+  - state{s=grab_equipment_twohanded;li=4;lo=4} @self
+  - partvis{p=sword;em=false;delay=10;v=false} @self
+  - partvis{p=weapon_back;em=false;delay=10;v=true} @self
+  - changepart{mid=kpack_knight;p=sheath;nmid=kpack_knight;npid=sheath;delay=10} @self
+  - setvariable{var=caster.running;value="false";type=STRING}
+  - defaultstate{type=walk;state=walk;li=5;lo=5} @self
+  - defaultstate{type=idle;state=idle;li=5;lo=5} @self
+  - setspeed{type=walk;speed=1} @self
+  
+  
+  
+  
+  
+  
+######################
+### KNIGHT ATTACKS ###
+######################
+
+KPACK_knight_damage:
+  TargetConditions:
+  - samefaction cancel
+  Skills:
+  - basedamage{m=1}
+  - sound{s=littleroom_knightpack:littleroom.knight.sword_hit;v=1;sc=HOSTILE;p="<random.float.0.9to1.2>"} @self
+  - skill{s=KPACK_knight_damage_throw}
+  
+KPACK_knight_shield_damage:
+  TargetConditions:
+  - samefaction cancel
+  Skills:
+  - basedamage{m=1}
+  - sound{s=littleroom_knightpack:littleroom.knight.shield_hit;v=1;sc=HOSTILE;p="<random.float.0.9to1.2>"} @self
+  - skill{s=KPACK_knight_damage_throw}
+  
+  
+KPACK_knight_damage_throw:
+  TargetConditions:
+  - samefaction cancel
+  - varEquals{var=caster.type;value="mounted"} cancel
+  Skills:
+  - throw{v=2;vy=1}
+  
+### ATTACK 1 ###
+  
+KPACK_knight_attack_1_sync:
+  Skills:
+  - CancelEvent
+  - skill{s=KPACK_knight_attack_1} @self
+  
+KPACK_knight_attack_1:
+  Conditions:
+  - (varEquals{var=caster.weapon;value="longsword"} || 
+     varEquals{var=caster.weapon;value="shortsword"}
+     )
+  - variableEquals{var=caster.running;value="true"}
+  - offgcd true
+  Skills:
+  - gcd{ticks=20}
+  - sound{s=littleroom_knightpack:littleroom.knight.armor_movement;v=1;sc=HOSTILE;p=<random.float.0.9to1.2>} @self
+  - sound{s=littleroom_knightpack:littleroom.knight.swing;v=1;sc=HOSTILE;p=<random.float.0.9to1.2>} @self
+  - sound{s=littleroom_knightpack:littleroom.knight.shout;v=1;sc=HOSTILE;p=<random.float.0.9to1.2>} @self  .25
+  - potion{type=SLOW;duration=40;level=1}
+  - state{s=attack_1} @self
+  - totem{md=2;oH=KPACK_knight_damage;hr=1;vr=1;drawhitbox=false;hnp=true} @forward{f=1}
+  
+  
+### ATTACK 2 ###
+  
+KPACK_knight_attack_2_sync:
+  Skills:
+  - CancelEvent
+  - skill{s=KPACK_knight_attack_2} @self
+  
+KPACK_knight_attack_2:
+  Conditions:
+  - (varEquals{var=caster.weapon;value="longsword"} || 
+     varEquals{var=caster.weapon;value="shortsword"}
+     )
+  - variableEquals{var=caster.running;value="true"}
+  - offgcd true
+  Skills:
+  - gcd{ticks=20}
+  - potion{type=SLOW;duration=40;level=1}
+  - sound{s=littleroom_knightpack:littleroom.knight.armor_movement;v=1;sc=HOSTILE;p="<random.float.0.9to1.2>"} @self
+  - sound{s=littleroom_knightpack:littleroom.knight.swing;v=1;sc=HOSTILE;p="<random.float.0.9to1.2>"} @self
+  - sound{s=littleroom_knightpack:littleroom.knight.shout;v=5;sc=HOSTILE;p="<random.float.0.9to1.1>"} @self  .25
+  - state{s=attack_2} @self
+  - totem{md=2;oH=KPACK_knight_damage;hr=1;vr=1;drawhitbox=false;hnp=true} @forward{f=1}
+  
+  
+### ATTACK 3 SHIELD BASH ###
+  
+KPACK_knight_attack_3_sync:
+  Skills:
+  - CancelEvent
+  - skill{s=KPACK_knight_attack_3} @self
+  
+KPACK_knight_attack_3:
+  Conditions:
+  - variableEquals{var=caster.shield;value="true"}
+  - offgcd true
+  - variableEquals{var=caster.running;value="true"}
+  Skills:
+  - gcd{ticks=20}
+  - potion{type=SLOW;duration=40;level=1}
+  - sound{s=littleroom_knightpack:littleroom.knight.armor_movement;v=1;sc=HOSTILE;p="<random.float.0.9to1.2>";delay=10} @self
+  - sound{s=littleroom_knightpack:littleroom.knight.swing;v=1;sc=HOSTILE;p="<random.float.0.9to1.2>";delay=10} @self
+  - sound{s=littleroom_knightpack:littleroom.knight.shout;v=5;sc=HOSTILE;p="<random.float.0.9to1.1>"} @self  .25
+  - state{s=attack_3} @self
+  - totem{md=2;oH=KPACK_knight_shield_damage;hr=1;vr=1;drawhitbox=false;hnp=true} @forward{f=1}
+  
+
+  
+### ATTACK 4 HALBERD ###
+  
+
+KPACK_knight_damage_halberd:
+  TargetConditions:
+  - samefaction cancel
+  Skills:
+  - basedamage{m=1}
+  - skill{s=KPACK_knight_damage_halberd_throw}
+  
+  
+KPACK_knight_damage_halberd_throw:
+  TargetConditions:
+  - samefaction cancel
+  - varEquals{var=caster.type;value="mounted"} cancel
+  Skills:
+  - throw{v=8;vy=1}
+
+
+KPACK_knight_attack_4:
+  Cooldown: 5
+  Conditions:
+  - targetwithin{d=3} true
+  - variableEquals{var=caster.weapon;value="halberd"}
+  - offgcd true
+  - variableEquals{var=caster.running;value="true"}
+  Skills:
+  - gcd{ticks=40}
+  - potion{type=SLOW;duration=20;level=4}
+  - state{s=attack_4} @self
+  - propel{v=1;delay=10} @forward
+  - sound{s=littleroom_knightpack:littleroom.knight.armor_movement;v=1;sc=HOSTILE;p="<random.float.0.9to1.2>";delay=10} @self
+  - sound{s=littleroom_knightpack:littleroom.knight.swing;v=1;sc=HOSTILE;p="<random.float.0.9to1.2>";delay=10} @self
+  - sound{s=littleroom_knightpack:littleroom.knight.shout;v=5;sc=HOSTILE;p="<random.float.0.9to1.1>"} @self  .25
+  - totem{md=2;oH=KPACK_knight_damage_halberd;hr=1;vr=1;drawhitbox=false;hnp=true;delay=10} @forward{f=1.5}
+  - totem{md=2;oH=KPACK_knight_damage_halberd;hr=1;vr=1;drawhitbox=false;hnp=true;delay=12} @forward{f=0.5}
+  
+
+  
+### ATTACK 5 JUMP ATTACK ###
+  
+KPACK_knight_attack_5:
+  Cooldown: 15
+  TargetConditions:
+  - distance{d=5to6} true
+  Conditions:
+  - (varEquals{var=caster.weapon;value="longsword"} || 
+     varEquals{var=caster.weapon;value="shortsword"}
+     )
+  - variableEquals{var=caster.running;value="true"}
+  - offgcd true
+  Skills:
+  - gcd{ticks=40}
+  - potion{type=SLOW;duration=40;level=4}
+  - state{s=jump_attack} @self
+  - setvariable{var=caster.jumpattack;value="true";type=STRING;duration=15}
+  - lockmodel{l=true} @self
+  - lockmodel{l=false;delay=15} @self
+  - propel{v=1;delay=5} @target{yo=2}
+  - sound{s=littleroom_knightpack:littleroom.knight.armor_movement;v=1;sc=HOSTILE;p="<random.float.0.9to1.2>";delay=5} @self
+  - sound{s=littleroom_knightpack:littleroom.knight.swing;v=1;sc=HOSTILE;p="<random.float.0.9to1.2>";delay=5} @self
+  - sound{s=littleroom_knightpack:littleroom.knight.shout;v=5;sc=HOSTILE;p="<random.float.0.9to1.1>"} @self  .25
+  - totem{md=2;oH=KPACK_knight_damage;hr=1;vr=1;drawhitbox=false;hnp=true;delay=15} @forward{f=1}
+  
+  
+### ATTACK 6 HALBERD SPIN ###
+  
+KPACK_knight_attack_6_sync:
+  Skills:
+  - CancelEvent
+  - skill{s=KPACK_knight_attack_6} @self
+  
+
+KPACK_knight_attack_6:
+  Cooldown: 5
+  Conditions:
+  - targetwithin{d=3} true
+  - variableEquals{var=caster.weapon;value="halberd"}
+  - variableEquals{var=caster.running;value="true"}
+  - offgcd true
+  Skills:
+  - gcd{ticks=40}
+  - potion{type=SLOW;duration=40;level=4}
+  - state{s=attack_5} @self
+  - sound{s=littleroom_knightpack:littleroom.knight.armor_movement;v=1;sc=HOSTILE;p="<random.float.0.9to1.2>";delay=15} @self
+  - sound{s=littleroom_knightpack:littleroom.knight.swing;v=1;sc=HOSTILE;p="<random.float.0.9to1.2>";delay=15} @self
+  - sound{s=littleroom_knightpack:littleroom.knight.shout;v=5;sc=HOSTILE;p="<random.float.0.9to1.1>"} @self  .25
+  - totem{md=2;oH=KPACK_knight_damage_halberd;hr=1;vr=1;drawhitbox=false;hnp=true;delay=15;repeat=10;repeati=1} @modelpart{pid=sword;offset=LOCAL;y=-.5}
+  
+
+### ATTACK 6 HALBERD SMACK ###
+  
+KPACK_knight_attack_7_sync:
+  Skills:
+  - CancelEvent
+  - skill{s=KPACK_knight_attack_7} @self
+  
+
+KPACK_knight_attack_7:
+  Conditions:
+  - variableEquals{var=caster.weapon;value="halberd"}
+  - variableEquals{var=caster.running;value="true"}
+  - offgcd true
+  Skills:
+  - gcd{ticks=10}
+  - potion{type=SLOW;duration=20;level=4}
+  - state{s=attack_6} @self
+  - propel{v=0.1} @forward{f=-1}
+  - sound{s=littleroom_knightpack:littleroom.knight.armor_movement;v=1;sc=HOSTILE;p="<random.float.0.9to1.2>"} @self
+  - sound{s=littleroom_knightpack:littleroom.knight.swing;v=1;sc=HOSTILE;p="<random.float.0.9to1.2>"} @self
+  - sound{s=littleroom_knightpack:littleroom.knight.shout;v=5;sc=HOSTILE;p="<random.float.0.9to1.1>"} @self  .25
+  - lockmodel{l=true} @self
+  - lockmodel{l=false;delay=10} @self
+  - totem{md=2;oH=KPACK_knight_damage_halberd;hr=1;vr=1;drawhitbox=false;hnp=true} @forward{f=1}
+  
+  
+  
+####################################
+### DYNAMIC AIR TIME FLAIL SYSTEM ##
+####################################
+
+
+### EXPLOSION SWEETENER ###
+
+KPACK_knight_exploded:
+  Conditions:
+  - damagecause{cause=ENTITY_EXPLOSION} true
+  Skills:
+  - setAI{ai=true} @self
+  - ignite{d=20} @self
+  - effect:particles{p=campfire_cosy_smoke;repeat=20;repeati=1;hs=.15;vs=.15;a=1} @self
+  - propel{v=1} @forward{f=<random.-10to10>;so=<random.-10to10>;yo=10;lockpitch=true}
+  
+### DETECTS VELOCITY AND APPLIES FLAILING ###
+
+KPACK_knight_toss_up:
+  Conditions:
+  - altitude{a=>2} true
+  - onground false
+  - ( directionalVelocity{y=<-0.5} || directionalVelocity{y=>0.5} )
+  - varEquals{var=caster.toss;value="true"} cancel
+  - varEquals{var=caster.jumpattack;value="true"} cancel
+  Skills:
+  - gcd{ticks=20}
+  - setAI{ai=true} @self
+  - state{s=in_air;p=2} @self
+  - sound{s=littleroom_knightpack:littleroom.knight.shout;v=5;sc=HOSTILE;p="<random.float.0.9to1.1>"} @self  .25
+  - setvariable{var=caster.toss;value="true";type=STRING;delay=5}
+  - defaultstate{type=death;state=land_death} @self
+
+### ENDS FLAIL ON GROUND IMPACT ###
+
+KPACK_knight_toss_up_land:
+  Cooldown: 2
+  Conditions:
+  - onground orElseCast gp2_goblin_toss_up_water
+  - varEquals{var=caster.toss;value="true"}
+  Skills:
+  - gcd{ticks=40}
+  - sound{s=littleroom_knightpack:littleroom.knight.armor_movement;v=1;sc=HOSTILE;p="<random.float.0.9to1.2>";delay=5} @self
+  - setvariable{var=caster.toss;value="false";type=STRING;delay=40}
+  - state{s=land} @self
+  - state{s=in_air;r=true;p=2} @self
+  - setAI{ai=false} @self
+  - setAI{ai=true;delay=40} @self
+  - defaultstate{type=death;state=death;delay=1} @self
+  
+KPACK_knight_death:
+  Skills:
+  - delay 40
+  - effect:particles{p=poof;a=50;hs=.5;vs=.25;y=.25} @modelpart{pid=torso}
+  
+######################
+### MOUNTED KNIGHT ###
+######################
+
+
+## HORSE RUN ##
+
+KPACK_mounted_run_handler:
+  Skills:
+  - skill{s=KPACK_mounted_run} @self
+  - skill{s=KPACK_mounted_runstop} @self .5
+  - skill{s=KPACK_mounted_walk} @self
+  - skill{s=KPACK_mounted_walk_proximity} @self
+  
+KPACK_mounted_run:
+  Cooldown: 1
+  Conditions:
+  - varEquals{var=caster.toss;value="true"} cancel
+  - incombat
+  - onground true
+  - targetnotwithin{d=8}
+  - varEquals{var=caster.running;value="false"}
+  Skills:
+  - skill{s=KPACK_mounted_rear_random} @self .5
+  #- message{m="running!"} @everyone
+  - defaultstate{type=walk;s=run} @self
+  - setspeed{type=walking;speed=1.75} @self
+  - setspeed{type=walking;speed=2;delay=10} @self
+  - setspeed{type=walking;speed=2.25;delay=20} @self
+  - setvariable{var=caster.running;value="true";type=STRING;delay=10}
+  
+KPACK_mounted_runstop:
+  Conditions:
+  - varEquals{var=caster.toss;value="true"} cancel
+  - incombat
+  - targetwithin{d=5}
+  - varEquals{var=caster.running;value="true"}
+  - varEquals{var=caster.weapon;value="joust"} cancel
+  - offgcd true
+  Skills:
+  #- message{m="stopping!"} @everyone
+  - sound{s=littleroom_knightpack:littleroom.horse.skid;v=0.75;sc=HOSTILE;p="<random.float.0.9to1.2>"} @self
+  - gcd{ticks=20}
+  - state{s=fast_stop} @self
+  - defaultstate{type=walk;s=walk} @self
+  - lockmodel{l=true} @self
+  - lockmodel{l=false;delay=10} @self
+  - propel{v=.15;repeat=10;repeat=1} @forward{f=1}
+  - setspeed{type=walking;speed=1.5} @self
+  - setvariable{var=caster.running;value="false";type=STRING}
+  - effect:particles{p=campfire_cosy_smoke;a=2;hs=.25;vs=.1;repeat=5;repeatI=2;y=.25} @self
+  
+KPACK_mounted_walk:
+  Conditions:
+  - varEquals{var=caster.toss;value="true"} cancel
+  - incombat false
+  - variableEquals{var=caster.running;value="true"}
+  Skills:
+  #- message{m="walking!"} @everyone
+  - defaultstate{type=walk;s=walk} @self
+  - setspeed{type=walking;speed=1.5} @self
+  - setvariable{var=caster.running;value="false";type=STRING}
+  
+KPACK_mounted_walk_proximity:
+  Conditions:
+  - varEquals{var=caster.toss;value="true"} cancel
+  - incombat true
+  - targetwithin{d=4} true
+  - variableEquals{var=caster.running;value="true"}
+  Skills:
+  #- message{m="walking!"} @everyone
+  - defaultstate{type=walk;s=walk} @self
+  - setspeed{type=walking;speed=1.5} @self
+  - setvariable{var=caster.running;value="false";type=STRING}
+  
+## WEAPON DRAW ##
+  
+
+  ### DIFFERENT TYPES OF AGGROS FOR DIFFERENT WEAPONS ###
+
+KPACK_mounted_start_aggro:
+  Skills:
+  - skill{s=KPACK_mounted_start_aggro_onehanded} @self
+  - skill{s=KPACK_mounted_start_aggro_twohanded} @self
+
+KPACK_mounted_stop_aggro:
+  Skills:
+  - skill{s=KPACK_mounted_stop_aggro_onehanded} @self
+  - skill{s=KPACK_mounted_stop_aggro_twohanded} @self
+  
+  
+  ## ONEHANDED WEAPONS ##
+  
+KPACK_mounted_start_aggro_onehanded:
+  Cooldown: 2
+  Conditions:
+  - offgcd true
+  - incombat true
+  - variableEquals{var=caster.weapon;value="longsword"}
+  - variableEquals{var=caster.aggro;value="no"}
+  Skills:
+  - gcd{ticks=30}
+  #- message{m="KPACK_start_aggro_onehanded <caster.var.weapon> <caster.var.running>"} @everyone
+  - sound{s=littleroom_knightpack:littleroom.knight.unsheath;v=1;sc=HOSTILE;p="<random.float.0.9to1.2>";delay=10} @self
+  - delay <random.0to20>
+  - state{s=grab_equipment_onehanded;li=4;lo=4;p=1} @self
+  - rally{types=KNIGHT;radius=48;ot=false} @target
+  - rally{types=KNIGHT_mounted;radius=48;ot=false} @target
+  - partvis{p=sword;em=false;delay=10;v=true} @self
+  - partvis{p=shield_arm;em=false;delay=10;v=true} @self
+  - partvis{p=shield_back;em=false;delay=10;v=false} @self
+  - changepart{mid=kpack_knight;p=sheath;nmid=kpack_knight_parts;npid=sheath_empty;delay=10} @self
+  - setvariable{var=caster.aggro;value="yes";type=STRING}
+  
+KPACK_mounted_stop_aggro_onehanded:
+  Cooldown: 2
+  Conditions:
+  - offgcd true
+  - incombat false
+  - variableEquals{var=caster.weapon;value="longsword"}
+  - variableEquals{var=caster.aggro;value="yes"}
+  Skills:
+  - gcd{ticks=30}
+  #- message{m="KPACK_stop_aggro_onehanded <caster.var.weapon> <caster.var.running>"} @everyone
+  - sound{s=littleroom_knightpack:littleroom.knight.sheath;v=1;sc=HOSTILE;p="<random.float.0.9to1.2>";delay=10} @self
+  - delay <random.0to20>
+  - state{s=grab_equipment_onehanded;li=4;lo=4;p=2} @self
+  - partvis{p=sword;em=false;delay=10;v=false} @self
+  - partvis{p=shield_arm;em=false;delay=10;v=false} @self
+  - partvis{p=shield_back;em=false;delay=10;v=true} @self
+  - changepart{mid=kpack_knight;p=sheath;nmid=kpack_knight;npid=sheath;delay=10} @self
+  - setvariable{var=caster.aggro;value="no";type=STRING}
+  
+  ## TWOHANDED WEAPONS ##
+  
+KPACK_mounted_start_aggro_twohanded:
+  Cooldown: 2
+  Conditions:
+  - offgcd true
+  - incombat true
+  - variableEquals{var=caster.weapon;value="halberd"}
+  - variableEquals{var=caster.aggro;value="no"}
+  Skills:
+  - gcd{ticks=30}
+  #- message{m="KPACK_mounted_start_aggro_twohanded <caster.var.weapon> <caster.var.running>"} @everyone
+  - sound{s=littleroom_knightpack:littleroom.knight.unsheath;v=1;sc=HOSTILE;p="<random.float.0.9to1.2>";delay=10} @self
+  - delay <random.0to20>
+  - state{s=grab_equipment_twohanded;li=4;lo=4;p=1} @self
+  - partvis{p=sword;em=false;delay=10;v=true} @self
+  - partvis{p=weapon_back;em=false;delay=10;v=false} @self
+  - changepart{mid=kpack_knight;p=sheath;nmid=kpack_knight_parts;npid=sheath_empty;delay=10} @self
+  - setvariable{var=caster.aggro;value="yes";type=STRING}
+  
+KPACK_mounted_stop_aggro_twohanded:
+  Cooldown: 2
+  Conditions:
+  - offgcd true
+  - incombat false
+  - variableEquals{var=caster.weapon;value="halberd"}
+  - variableEquals{var=caster.aggro;value="yes"}
+  Skills:
+  - gcd{ticks=30}
+  #- message{m="KPACK_mounted_stop_aggro_twohanded <caster.var.weapon> <caster.var.running>"} @everyone
+  - sound{s=littleroom_knightpack:littleroom.knight.sheath;v=1;sc=HOSTILE;p="<random.float.0.9to1.2>";delay=10} @self
+  - delay <random.0to20>
+  - state{s=grab_equipment_twohanded;li=4;lo=4;p=2} @self
+  - partvis{p=sword;em=false;delay=10;v=false} @self
+  - partvis{p=weapon_back;em=false;delay=10;v=true} @self
+  - changepart{mid=kpack_knight;p=sheath;nmid=kpack_knight;npid=sheath;delay=10} @self
+  - setvariable{var=caster.aggro;value="no";type=STRING}
+  
+  
+  
+## MOUNTED ATTACKS ##
+
+KPACK_mounted_attack:
+  Conditions:
+  - varEquals{var=caster.toss;value="true"} cancel
+  - targetwithin{d=4}
+  - incombat true
+  - offgcd true
+  - variableEquals{var=caster.weapon;value="joust"} cancel
+  Skills:
+  - gcd{ticks=40}
+  - state{s=attack_1;p=2} @self
+  #- potion{type=SLOW;duration=40;level=4}
+  - sound{s=littleroom_knightpack:littleroom.knight.armor_movement;v=1;sc=HOSTILE;p="<random.float.0.9to1.2>";delay=10} @self
+  - sound{s=littleroom_knightpack:littleroom.knight.swing;v=1;sc=HOSTILE;p="<random.float.0.9to1.2>";delay=10} @self
+  - sound{s=littleroom_knightpack:littleroom.knight.shout;v=5;sc=HOSTILE;p="<random.float.0.9to1.1>"} @self  .25
+  - totem{md=2;oH=KPACK_knight_damage_mounted_halberd;hr=1.5;vr=1.5;drawhitbox=false;hnp=true;delay=10;repeat=5;repeati=1} @modelpart{pid=sword;offset=LOCAL;y=-1}
+  - delay 20
+  #- setvariable{var=caster.running;value="true";type=STRING;delay=20}
+  - defaultstate{type=walk;s=run} @self
+  - setspeed{type=walking;speed=2} @self
+  - summon{t=KPACK_KNIGHT_dummy;s=true;r=6} @self
+  - goto{speedModifier=1;repeat=20;repeatI=1} @children{target=armorstands}
+  - delay 20
+  - remove @children{target=armorstands}
+
+KPACK_mounted_attack_2:
+  Conditions:
+  - varEquals{var=caster.toss;value="true"} cancel
+  - targetwithin{d=4}
+  - incombat true
+  - offgcd true
+  - variableEquals{var=caster.weapon;value="joust"} cancel
+  Skills:
+  - gcd{ticks=40}
+  - state{s=attack_joust;p=2} @self
+  #- potion{type=SLOW;duration=40;level=4}
+  - sound{s=littleroom_knightpack:littleroom.knight.armor_movement;v=1;sc=HOSTILE;p="<random.float.0.9to1.2>";delay=10} @self
+  - sound{s=littleroom_knightpack:littleroom.knight.swing;v=1;sc=HOSTILE;p="<random.float.0.9to1.2>";delay=10} @self
+  - sound{s=littleroom_knightpack:littleroom.knight.shout;v=5;sc=HOSTILE;p="<random.float.0.9to1.1>"} @self  .25
+  - totem{md=2;oH=KPACK_knight_damage_halberd;hr=1.5;vr=1.5;drawhitbox=false;hnp=true;delay=10;repeat=5;repeati=1} @modelpart{pid=sword;offset=LOCAL;y=-1}
+  - delay 20
+  #- setvariable{var=caster.running;value="true";type=STRING;delay=20}
+  - defaultstate{type=walk;s=run} @self
+  - setspeed{type=walking;speed=2} @self
+  - summon{t=KPACK_KNIGHT_dummy;s=true;r=6} @self
+  - goto{speedModifier=1;repeat=20;repeatI=1} @children{target=armorstands}
+  - delay 20
+  - remove @children{target=armorstands}
+  
+  
+KPACK_knight_damage_rear:
+  Skills:
+  - basedamage{m=1}
+  - skill{s=KPACK_knight_damage_rear_throw}
+  - signal{s=JOUSTHIT} .25
+  
+KPACK_knight_damage_rear_throw:
+  TargetConditions:
+  - varEquals{var=caster.type;value="mounted"} cancel
+  - samefaction cancel
+  Skills:
+  - throw{v=4;vy=1}
+  
+KPACK_knight_damage_mounted_halberd:
+  Skills:
+  - basedamage{m=1}
+  - skill{s=KPACK_knight_damage_mounted_halberd_throw}
+  
+KPACK_knight_damage_mounted_halberd_throw:
+  TargetConditions:
+  - varEquals{var=caster.type;value="mounted"} cancel
+  - samefaction cancel
+  Skills:
+  - throw{v=4;vy=4}
+  
+KPACK_mounted_rear_attack:
+  Cooldown: 6
+  Conditions:
+  - varEquals{var=caster.toss;value="true"} cancel
+  - targetwithin{d=4}
+  - incombat true
+  - offgcd true
+  Skills:
+  - gcd{ticks=20}
+  - state{s=rear} @self
+  - potion{type=SLOW;duration=20;level=4}
+  - sound{s=littleroom_knightpack:littleroom.horse.neigh;v=1;sc=HOSTILE;p="<random.float.0.8to1.1>"} @self .5
+  - totem{md=2;oH=KPACK_knight_damage_rear;hr=1.5;vr=1.5;drawhitbox=false;hnp=true;repeat=10;repeati=1;delay=5} @modelpart{pid=front_right_foot}
+  
+
+KPACK_mounted_attack_joust:
+  Conditions:
+  - varEquals{var=caster.toss;value="true"} cancel
+  - targetwithin{d=5}
+  - incombat true
+  - offgcd true
+  - variableEquals{var=caster.weapon;value="joust"}
+  Skills:
+  - gcd{ticks=60}
+  - state{s=attack_joust} @self
+  - propel{v=1;delay=10} @forward{f=2}
+  #- potion{type=SLOW;duration=40;level=4}
+  - sound{s=littleroom_knightpack:littleroom.knight.armor_movement;v=1;sc=HOSTILE;p="<random.float.0.9to1.2>";delay=5} @self
+  - sound{s=littleroom_knightpack:littleroom.knight.swing;v=1;sc=HOSTILE;p="<random.float.0.9to1.2>";delay=5} @self
+  - sound{s=littleroom_knightpack:littleroom.knight.shout;v=5;sc=HOSTILE;p="<random.float.0.9to1.1>"} @self  .25
+  - totem{md=2;oH=KPACK_knight_damage_joust;hr=1.5;vr=1.5;drawhitbox=false;hnp=true;delay=10;repeat=5;repeati=1} @modelpart{pid=sword;offset=LOCAL;z=-1}
+  - delay 30
+  #- setvariable{var=caster.running;value="true";type=STRING;delay=20}
+  - defaultstate{type=walk;s=run} @self
+  - setspeed{type=walking;speed=2} @self
+  - summon{t=KPACK_KNIGHT_dummy;s=true;r=15} @self
+  - goto{speedModifier=1;repeat=40;repeatI=1} @children{target=armorstands}
+  - delay 40
+  - remove @children{target=armorstands}
+  
+### MOUNTED REAR ###
+
+KPACK_mounted_rear_random:
+  Cooldown: 20
+  Conditions:
+  - varEquals{var=caster.toss;value="true"} cancel
+  - offgcd true
+  - moving false
+  Skills:
+  - gcd{ticks=20}
+  - state{s=rear} @self
+  - potion{type=SLOW;duration=20;level=4}
+  - sound{s=littleroom_knightpack:littleroom.horse.neigh;v=1;sc=HOSTILE;p="<random.float.0.8to1.1>"} @self .5
+  - totem{md=2;oH=KPACK_knight_damage_halberd;hr=1.5;vr=1.5;drawhitbox=false;hnp=true;repeat=10;repeati=1;delay=5} @modelpart{pid=front_right_foot}
+  
+KPACK_mounted_poop:
+  Cooldown: 10
+  Conditions:
+  - offgcd true
+  - moving false
+  Skills:
+  - state{s=poop} @self
+  #- potion{type=SLOW;duration=50;level=4}
+  - delay 20
+  - effect:particles{p=block;m=dirt;a=2;hs=.1;vs=.1;repeat=10;repeati=1;delay=10;s=0} @modelpart{pid=tail_1}
+  
+KPACK_knight_damage_joust:
+  TargetConditions:
+  - samefaction cancel
+  Skills:
+  - basedamage{m=1}
+  - skill{s=KPACK_knight_damage_joust_throw}
+  - signal{s=JOUSTHIT} .5
+  
+  
+KPACK_knight_damage_joust_throw:
+  TargetConditions:
+  - samefaction cancel
+  - varEquals{var=caster.type;value="mounted"} cancel
+  Skills:
+  - throw{v=10;vy=4}
+  
+  
+KPACK_joust_attack:
+  Cooldown: 2
+  Conditions:
+  - varEquals{var=caster.toss;value="true"} cancel
+  - targetnotwithin{d=4} true
+  - targetwithin{d=8} true
+  - variableEquals{var=caster.weapon;value="joust"}
+  - variableEquals{var=caster.running;value="true"}
+  - offgcd true
+  Skills:
+  - summon{t=KPACK_KNIGHT_dummy;s=true} @forward{f=20;lockpitch=true}
+  #- defaultstate{type=walk;s=run_joust} @self
+  #- goto @children{target=armorstands}
+  - skill{s=KPACK_joust_propel_to_dummy;repeat=20;repeat=2} @children{target=armorstands}
+  - lockmodel{l=true} @self
+  - lockmodel{l=false;delay=20} @self
+  - gcd{ticks=70}
+  - totem{md=2;oH=KPACK_knight_damage_joust;hr=2;vr=2;drawhitbox=false;hnp=true;repeat=20;repeati=1} @modelpart{pid=horse_body;offset=LOCAL;z=-1;y=-1}
+  - delay 20
+  #- message{m="stopping!"} @everyone
+  - sound{s=littleroom_knightpack:littleroom.horse.skid;v=0.75;sc=HOSTILE;p="<random.float.0.9to1.2>"} @self
+  - state{s=fast_stop} @self
+  - defaultstate{type=walk;s=walk} @self
+  - lockmodel{l=true} @self
+  - lockmodel{l=false;delay=10} @self
+  - skill{s=KPACK_joust_attack_propel;repeat=10;repeat=1} @forward{f=5}
+  - setspeed{type=walking;speed=1.5} @self
+  - setvariable{var=caster.running;value="false";type=STRING}
+  - effect:particles{p=campfire_cosy_smoke;a=2;hs=.25;vs=.1;repeat=5;repeatI=2;y=.25} @self
+  - remove @children{target=armorstands}
+  - delay 10
+  - defaultstate{type=walk;s=run} @self
+  - setspeed{type=walking;speed=2} @self
+  - summon{t=KPACK_KNIGHT_dummy;s=true;r=15} @self
+  - goto{speedModifier=1;repeat=40;repeatI=1} @children{target=armorstands}
+  #- setvariable{var=caster.running;value="true";type=STRING}
+  - delay 40
+  - remove @children{target=armorstands}
+  
+  
+KPACK_joust_propel_to_dummy:
+  Skills:
+  - propel{v=2}
+  
+KPACK_joust_attack_propel:
+  Conditions:
+  - altitude{a=<1}
+  Skills:
+  - propel{v=.15}
+  
+KPACK_joust_hit:
+  Cooldown: 2
+  Skills:
+  #- message{m="i just got jousted yall!"} @everyone
+  - effect:particles{p=crit;a=25;s=0.5} @modelpart{pid=torso}
+  - state{s=joust_hit;p=2} @self
+  - gcd{ticks=60}
+  
+  
+KPACK_knight_mounted_death:
+  Skills:
+  - sound{s=littleroom_knightpack:littleroom.horse.death;v=1;sc=HOSTILE;p="<random.float.0.9to1.2>";delay=10} @self
+  - delay 50
+  - effect:particles{p=poof;a=125;hs=1.25;vs=.25;y=.25} @modelpart{pid=horse_body}
+  
+
+# 0623NIDBY8STP
+#QncwMGbytkN4gGNMd0T0U0dVZVWHVTbSRlVuJ1RWhVY4lUMZdXduR2VuV2R24Wd1Y0Uxk2N

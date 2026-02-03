@@ -1,0 +1,14 @@
+﻿#########################################################
+## Developed by Little Room, patreon.com/littleroomdev ##
+#########################################################
+
+KPACK_mountable_horse_despawn:
+  Skills:
+  - effect:particles{p=poof;a=75;hs=1;vs=1;y=1} @self
+  - remove @self
+  
+KPACK_mountable_horse_spawn:
+  Skills:
+  - effect:particles{p=poof;a=75;hs=1;vs=1;y=1} @self
+  - state{s=rear} @self
+  - sound{s=littleroom_knightpack:littleroom.horse.rear;v=1;sc=HOSTILE;p="<random.float.0.9to1.1>"} @self

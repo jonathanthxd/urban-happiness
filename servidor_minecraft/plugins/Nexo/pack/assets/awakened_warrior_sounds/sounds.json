@@ -1,0 +1,65 @@
+{
+  "samus.awakened_warrior.ult_stomp": {
+    "category": "master",
+    "sounds": [
+      "samus/awakened_warrior/ult_stomp"
+    ]
+  },
+  "samus.awakened_warrior.warrior_airdash": {
+    "category": "master",
+    "sounds": [
+      "samus/awakened_warrior/warrior_airdash"
+    ]
+  },
+  "samus.awakened_warrior.warrior_charge": {
+    "category": "master",
+    "sounds": [
+      "samus/awakened_warrior/warrior_charge"
+    ]
+  },
+  "samus.awakened_warrior.warrior_pierce": {
+    "category": "master",
+    "sounds": [
+      "samus/awakened_warrior/warrior_pierce",
+      "samus/awakened_warrior/warrior_pierce2"
+    ]
+  },
+  "samus.awakened_warrior.warrior_slash_ult": {
+    "category": "master",
+    "sounds": [
+      "samus/awakened_warrior/warrior_slash_ult1",
+      "samus/awakened_warrior/warrior_slash_ult2"
+    ]
+  },
+  "samus.awakened_warrior.warrior_slash_ult_slash": {
+    "category": "master",
+    "sounds": [
+      "samus/awakened_warrior/warrior_slash_ult3"
+    ]
+  },
+  "samus.awakened_warrior.warrior_slash": {
+    "category": "master",
+    "sounds": [
+      "samus/awakened_warrior/warrior_slash1",
+      "samus/awakened_warrior/warrior_slash2"
+    ]
+  },
+  "samus.awakened_warrior.warrior_stomp": {
+    "category": "master",
+    "sounds": [
+      "samus/awakened_warrior/warrior_stomp"
+    ]
+  },
+  "samus.awakened_warrior.warrior_stomp_charge": {
+    "category": "master",
+    "sounds": [
+      "samus/awakened_warrior/warrior_stomp_charge"
+    ]
+  },
+  "samus.awakened_warrior.warrior_wheel_spin": {
+    "category": "master",
+    "sounds": [
+      "samus/awakened_warrior/warrior_wheel_spin"
+    ]
+  }
+}

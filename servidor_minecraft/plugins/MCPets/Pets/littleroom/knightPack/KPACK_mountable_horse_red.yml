@@ -1,0 +1,19 @@
+Id: KPACK_mountable_horse_red
+MythicMob: KPACK_mountable_horse_red
+Permission: littleroom.KPACK_mountable_horse_red
+Mountable: true
+MountType: walking
+AutoRide: true
+DespawnOnDismount: true
+DespawnSkill: KPACK_mountable_horse_despawn
+Distance: 5
+SpawnRange: 5
+ComingBackRange: 5
+Icon:
+  Name: Red Knight Horse
+  Material: INK_SAC
+  CustomModelData: 7
+  Description:
+  - SUMMON!
+
+# saf08njF3FSICFLrnMxLrTrWvKiYCElF4UNm09qPMPJzOJ2v39DcpO4euBbAAzQxZLAXWgNm/4eP16hoa578zkjU/KJnCmRRsseQQ92rzUI=

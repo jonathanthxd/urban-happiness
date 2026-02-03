@@ -1,0 +1,659 @@
+language: en-us
+
+commands:
+  advancedenchantments:
+    permissionMessageEnabled: true
+  enchanter:
+    enabled: true
+    command: /enchanter
+    aliases:
+    - e
+    - ce
+  tinkerer:
+    enabled: true
+    command: /tinkerer
+    aliases:
+    - tinker
+  alchemist:
+    enabled: true
+    command: /alchemist
+    aliases:
+    - alchem
+  withdrawsouls:
+    enabled: true
+    command: /withdrawsouls
+    aliases:
+    - wsouls
+  apply:
+    enabled: true
+    command: /apply
+    aliases:
+    - reapply
+
+permissions:
+  enchanter:
+    enabled: false
+    perm: ae.enchanter
+  tinkerer:
+    enabled: false
+    perm: ae.tinkerer
+  gkits:
+    enabled: false
+    perm: ae.gkits
+  alchemist:
+    enabled: false
+    perm: ae.alchemist
+
+disable-enchants:
+  test_world:
+  - test_enchant
+
+souls:
+  enabled: true
+  lore: '&cSouls Collected: %souls%'
+  item:
+    type: AMETHYST_SHARD
+    id: 0
+    custom-model-data: 200
+    name: '&f  &fꜱᴏᴜʟ ᴛʀᴀᴄᴋᴇʀ'
+    lore:
+    - '&f  '
+    - '&f  &7ᴀᴘᴘʟʏ ᴛᴏ ᴡᴇᴀᴘᴏɴꜱ ᴛᴏ ꜱᴛᴀʀᴛ'
+    - '&f  &7ᴛʀᴀᴄᴋɪɴɢ ꜱᴏᴜʟꜱ ᴄᴏʟʟᴇᴄᴛᴇᴅ'
+    - '&f  &7ꜰʀᴏᴍ ᴋɪʟʟꜱ.'
+    - '&f  '
+    - '&f  '
+    force-glow: false
+
+enchantLimitation:
+  enabled: true
+  lore: '&c&lUnmodifiable'
+  NBT-tag: unmodifiable
+
+combining:
+  enabled: true
+  chances:
+    use-chances: true
+    break-item: false
+    upgrade: true
+
+slots:
+  enabled: true
+  max: 9
+  max-increase-of-slots: 13
+  display-in-lore: false
+  display: '&eItem Slots&7: %left%'
+
+applying:
+  cosmetics:
+    applied:
+      particle: HAPPY_VILLAGER
+      sound: LEVEL_UP
+    failed:
+      particle: LAVA_POP
+      sound: ANVIL_BREAK
+
+enchanter-books:
+  firework-on-open: true
+  cosmetics:
+    particle: HAPPY_VILLAGER
+    sound: LEVEL_UP
+  display-right-click-message: true
+  type: BOOK
+  id: 0
+  custom-model-data: 0
+  force-glow: false
+  name: '%group-color%%group-name% ᴇɴᴄʜᴀɴᴛᴍᴇɴᴛ ʙᴏᴏᴋ'
+  lore:
+  - '&7ʀɪɢʜᴛ ᴄʟɪᴄᴋ ᴡʜɪʟᴇ ʜᴏʟᴅɪɴɢ ᴛᴏ ʀᴇᴄᴇɪᴠᴇ ᴀ ʀᴀɴᴅᴏᴍ'
+  - '%group-color%%group-name% &7ᴇɴᴄʜᴀɴᴛᴍᴇɴᴛ ʙᴏᴏᴋ'
+
+items:
+  settings:
+    can-apply-to:
+    - ALL_SWORD
+    - ALL_ARMOR
+    - ALL_PICKAXE
+    - ALL_AXE
+    - ALL_SPADE
+    - ALL_HOE
+    - ALL_EDIBLE
+    - BOOK
+    - BOW
+    - CROSSBOW
+    - SKULL_ITEM
+    - PLAYER_HEAD
+    - ELYTRA
+    - TRIDENT
+  transmogscroll:
+    type: PAPER
+    id: 0
+    custom-model-data: 207
+    force-glow: false
+    name: '&c&lTransmog Scroll'
+    lore:
+    - ''
+    - '&fOrganizes enchants by &e&nrarity&f on item'
+    - '&fand adds the &dlore &bcount&f to name.'
+    - ''
+    - '&8▲ Place scroll on item to apply.'
+    enchants-count-formatting: '&d[&b&n%count%&d]'
+  
+  soulgem:
+    type: EMERALD
+    id: 0
+    custom-model-data: 209
+    force-glow: false
+    name: '&8&lSoul Gem &7[&a%count%&7]'
+    lore:
+    - ''
+    - '&fApply to an item to add souls.'
+    - ''
+  
+  itemnametag:
+    type: NAME_TAG
+    id: 0
+    custom-model-data: 200
+    force-glow: false
+    name: '&f  &6ɪᴛᴇᴍ ɴᴀᴍᴇᴛᴀɢ'
+    lore:
+    - '&f  '
+    - '&f  &7ʀᴇɴᴀᴍᴇ ᴀɴᴅ ᴄᴜꜱᴛᴏᴍɪᴢᴇ ʏᴏᴜʀ'
+    - '&f  &7ᴇǫᴜɪᴘᴍᴇɴᴛ'
+    - '&f  '
+    - '&f  '
+    - '&f  '
+    messages:
+      success:
+      - '&a&l(!) &aYou have successfully renamed your item to &e%name%'
+      activated:
+      - '&a&l(!) &aYour next message will rename your item in hand'
+      air:
+      - '&c&l(!) &cYou need to be holding an item to do this'
+      renaming-not-enchanted-item:
+      - '&c&l(!) &cYou can only rename enchanted items'
+    settings:
+      colors: true
+      magic: false
+      word-blacklist:
+      - fuck
+      - dick
+      - bitch
+  randomization-scroll:
+    type: PAPER
+    id: 0
+    custom-model-data: 207
+    force-glow: false
+    name: '&f  %group-name%%group-color%ʀᴀɴᴅᴏᴍ ʀᴀᴛᴇ ꜱᴄʀᴏʟʟ'
+    lore:
+    - '&f  '
+    - '&f  &7ᴀᴘᴘʟʏ ᴛᴏ ᴀɴʏ'
+    - '&f  %group-name%%group-color% ᴇɴᴄʜᴀɴᴛᴍᴇɴᴛ ʙᴏᴏᴋ'
+    - '&f  &7ᴛᴏ ʀᴇʀᴏʟʟ ᴛʜᴇ ꜱᴜᴄᴄᴇꜱꜱ ᴀɴᴅ'
+    - '&f  &7ᴅᴇꜱᴛʀᴏʏ ʀᴀᴛᴇꜱ.'
+    - '&f  '
+    - '&f  &8▲ ᴅʀᴀɢ ɴ'' ᴅʀᴏᴘ ᴏɴᴛᴏ'
+    - '&f  &8ᴇɴᴄʜᴀɴᴛᴍᴇɴᴛ ʙᴏᴏᴋ'
+    - '&f  &8ᴛᴏ ᴀᴘᴘʟʏ.'
+    - '&f  '
+    - '&f  '
+  black-scroll:
+    type: PAPER
+    id: 0
+    custom-model-data: 205
+    force-glow: false
+    name: '&f  &8&lʙʟᴀᴄᴋ ꜱᴄʀᴏʟʟ'
+    lore:
+    - '&f  '
+    - '&f  &7ʀᴇᴍᴏᴠᴇꜱ ᴀ ʀᴀɴᴅᴏᴍ'
+    - '&f  &7ᴇɴᴄʜᴀɴᴛᴍᴇɴᴛ ꜰʀᴏᴍ ᴀɴ ɪᴛᴇᴍ'
+    - '&f  &7ᴀɴᴅ ᴄᴏɴᴠᴇʀᴛꜱ ɪᴛ ɪɴᴛᴏ ᴀ'
+    - '&f  &a%success%% &7ꜱᴜᴄᴄᴇꜱꜱ ʙᴏᴏᴋ.'
+    - '&f  '
+    - '&f  &a✦ ꜱᴜᴄᴄᴇꜱꜱ ʀᴀᴛᴇ: &f%success%%'
+    - '&f  '
+    - '&f  &8▲ ᴘʟᴀᴄᴇ ꜱᴄʀᴏʟʟ ᴏɴᴛᴏ ɪᴛᴇᴍ'
+    - '&f  &8ᴛᴏ ᴇxᴛʀᴀᴄᴛ.'
+    - '&f  '
+    - '&f  '
+    success: 95
+    destroy: 5
+    random: true
+  secret-dust:
+    type: SNOWBALL
+    custom-model-data: 200
+    force-glow: false
+    name: '&f  %group-name%%group-color% ꜱᴇᴄʀᴇᴛ ᴄʜᴇꜱᴛ'
+    lore:
+    - '&f  '
+    - '&f  &7ᴄᴏɴᴛᴀɪɴꜱ:'
+    - '&f   &8• &bᴍᴀɢɪᴄ ᴅᴜꜱᴛ'
+    - '&f   &8• &5ᴍʏꜱᴛᴇʀʏ ɢᴇᴍ.'
+    - '&f  '
+    - '&f  &8ᴀɴ ᴜɴɪᴅᴇɴᴛɪꜰɪᴇᴅ ꜱᴀᴛᴄʜᴇʟ'
+    - '&f  &8ᴏꜰ ᴅᴜꜱᴛ.'
+    - '&f  '
+    - '&f  &7ʀɪɢʜᴛ ᴄʟɪᴄᴋ ᴛᴏ ʀᴀɴᴅᴏᴍɪᴢᴇ'
+    - '&f  '
+    - '&f  '
+  mystery-dust:
+    type: EMERALD
+    id: 0
+    custom-model-data: 207
+    force-glow: false
+    name: '&f  &5ᴍʏꜱᴛᴇʀʏ ɢᴇᴍ'
+    lore:
+    - '&f  '
+    - '&f  &7ᴀ ꜰᴀɪʟᴇᴅ ʙɪ-ᴘʀᴏᴅᴜᴄᴛ'
+    - '&f  &7ᴏꜰ ᴍᴀɢɪᴄ ᴅᴜꜱᴛ.'
+    - '&f  '
+    - '&f  '
+    settings:
+      shift-click: false
+  magic-dust:
+    type: SUGAR
+    id: 0
+    custom-model-data: 200
+    force-glow: false
+    name: '&f  %group-color%%group-name%%group-color% ᴍᴀɢɪᴄ ᴅᴜꜱᴛ'
+    lore:
+    - '&f  '
+    - '&f  &7ᴀᴘᴘʟʏ ᴛᴏ ᴀ ᴀɴʏ'
+    - '&f  %group-color%%group-name% &7ᴇɴᴄʜᴀɴᴛᴍᴇɴᴛ ʙᴏᴏᴋ'
+    - '&f  &7ᴛᴏ ɪɴᴄʀᴇᴀꜱᴇ ɪᴛꜱ ꜱᴜᴄᴄᴇꜱꜱ'
+    - '&f  &7ʙʏ %group-color%%percent%%'
+    - '&f  '
+    - '&f  &a✦ ꜱᴜᴄᴄᴇꜱꜱ ʀᴀᴛᴇ: &f+%percent%% '
+    - '&f  '
+    - '&f  '
+    messages:
+      cannotApplyToStacked: '&c&l(!) &cCannot be applied to stacked books'
+  slot-increaser:
+    type: EMERALD
+    id: 0
+    custom-model-data: 208
+    force-glow: false
+    name: '&f  %group-name% %group-color%ꜱʟᴏᴛ ɪɴᴄʀᴇᴀꜱᴇʀ'
+    lore:
+    - '&f  '
+    - '&f  &7ɪɴᴄʀᴇᴀꜱᴇ ꜱʟᴏᴛꜱ ʟɪᴍɪᴛ ᴏɴ '
+    - '&f  &7ᴀɴ ɪᴛᴇᴍ ʙʏ &a+%count%'
+    - '&f  '
+    - '&f  &8▲ ᴅʀᴀɢ ᴏɴᴛᴏᴘ ᴏꜰ ᴀɴᴏᴛʜᴇʀ'
+    - '&f  &8ɪᴛᴇᴍ ᴛᴏ ᴀᴘᴘʟʏ ɪᴛ'
+    - '&f  '
+    - '&f  '
+    messages:
+      success:
+      - '&a&l(!) &aYou have successfully increased maximum slots on item by %count%!'
+  
+  
+  blocktrak:
+    type: EMERALD
+    id: 0
+    custom-model-data: 204
+    force-glow: false
+    name: '&f  &aʙʟᴏᴄᴋ ꜱᴛᴀᴛᴛʀᴀᴋ™'
+    lore:
+    - '&f  '
+    - '&f  &7ᴛʀᴀᴄᴋ ʜᴏᴡ ᴍᴀɴʏ ʙʟᴏᴄᴋꜱ ʏᴏᴜ'
+    - '&f  &7ʙʀᴇᴀᴋ ᴡɪᴛʜ ᴀ ᴛᴏᴏʟ'
+    - '&f  '
+    - '&f  &8▲ ᴅʀᴀɢ ᴏɴᴛᴏᴘ ᴏꜰ ᴀɴᴏᴛʜᴇʀ'
+    - '&f  &8ɪᴛᴇᴍ ᴛᴏ ᴀᴘᴘʟʏ ɪᴛ'
+    - '&f  '
+    - '&f  '
+    messages:
+      success:
+      - '&7You successfully applied &aBlock StatTrak™'
+    settings:
+      lore-display: '&aBlock StatTrak™ : &6%stats%'
+  stattrak:
+    type: EMERALD
+    id: 0
+    custom-model-data: 206
+    force-glow: false
+    name: '&f  &cᴋɪʟʟꜱ ꜱᴛᴀᴛᴛʀᴀᴋ™'
+    lore:
+    - '&f  '
+    - '&f  &7ᴛʀᴀᴄᴋ ʜᴏᴡ ᴍᴀɴʏ ᴋɪʟʟꜱ ʏᴏᴜ'
+    - '&f  &7ʜᴀᴠᴇ ᴡɪᴛʜ ᴀ ᴡᴇᴀᴘᴏɴ'
+    - '&f  '
+    - '&f  &8▲ ᴅʀᴀɢ ᴏɴᴛᴏᴘ ᴏꜰ ᴀɴᴏᴛʜᴇʀ'
+    - '&f  &8ɪᴛᴇᴍ ᴛᴏ ᴀᴘᴘʟʏ ɪᴛ'
+    - '&f  '
+    - '&f  '
+    messages:
+      success:
+      - '&7You successfully applied &eKills StatTrak™'
+    settings:
+      lore-display: '&1Kills StatTrak™ : &6%stats%'
+  mobtrak:
+    type: EMERALD
+    id: 0
+    custom-model-data: 205
+    force-glow: false
+    name: '&f  &1ᴍᴏʙꜱ ꜱᴛᴀᴛᴛʀᴀᴋ™'
+    lore:
+    - '&f  '
+    - '&f  &7ᴛʀᴀᴄᴋ ʜᴏᴡ ᴍᴀɴʏ ᴍᴏʙ ᴋɪʟʟꜱ'
+    - '&f  &7ʏᴏᴜ ʜᴀᴠᴇ ᴡɪᴛʜ ᴀ ᴡᴇᴀᴘᴏɴ'
+    - '&f  '
+    - '&f  &8▲ ᴅʀᴀɢ ᴏɴᴛᴏᴘ ᴏꜰ ᴀɴᴏᴛʜᴇʀ'
+    - '&f  &8ɪᴛᴇᴍ ᴛᴏ ᴀᴘᴘʟʏ ɪᴛ'
+    - '&f  '
+    - '&f  '
+    messages:
+      success:
+      - '&7You successfully applied &3Mobs StatTrak™'
+    settings:
+      lore-display: '&3Mob StatTrak™ : &f%stats%'
+  holywhitescroll:
+    type: BOOK
+    custom-model-data: 206
+    force-glow: true
+    name: '&f  &cʜᴏʟʏ ᴡʜɪᴛᴇ ʙᴏᴏᴋ'
+    lore:
+    - '&f  '
+    - '&f  &4ᴀ ʟᴇɢᴇɴᴅᴀʀʏ ʀᴇᴡᴀʀᴅ ᴛʜᴀᴛ'
+    - '&f  &4ᴄᴀɴ ʙᴇ ᴀᴘᴘʟɪᴇᴅ ᴛᴏ ᴀʀᴍᴏʀ'
+    - '&f  &4ᴡᴇᴀᴘᴏɴꜱ, ɢɪᴠᴇꜱ ᴀ 100%'
+    - '&f  &4ᴄʜᴀɴᴄᴇ ᴏꜰ ɴᴏᴛ ʟᴏꜱɪɴɢ'
+    - '&f  &4ᴛʜᴇ ʙʟᴇꜱꜱᴇᴅ ɪᴛᴇᴍ ᴏɴ ᴅᴇᴀᴛʜ.'
+    - '&f  '
+    - '&f  &8▲ ᴅʀᴀɢ ᴏɴᴛᴏᴘ ᴏꜰ ᴀɴᴏᴛʜᴇʀ'
+    - '&f  &8ɪᴛᴇᴍ ᴛᴏ ᴀᴘᴘʟʏ ɪᴛ'
+    - '&f  '
+    - '&f  '
+    messages:
+      applied:
+      - '&7You successfully applied &6&lHoly White Scroll'
+    settings:
+      lore-display: '&e&l*&f&lHOLY&e&l* &f&lPROTECTED'
+      keep-after-death: false
+    id: 0
+  orb:
+    lore: '&a%max% Enchantment Slots &7(Orb [&a+%increased%&7])'
+    weapon:
+      material: EMERALD
+      custom-model-data: 201
+      force-glow: true
+      name: '&f  &bᴡᴇᴀᴘᴏɴ ꜱʜᴀʀᴅ &8[ &a%max% &8]'
+      lore:
+      - '&f  '
+      - '&f  &6+%new% ᴇɴᴄʜᴀɴᴛᴍᴇɴᴛ ꜱʟᴏᴛꜱ'
+      - '&f  &6%max% ᴍᴀx ᴇɴᴄʜᴀɴᴛᴍᴇɴᴛ ꜱʟᴏᴛꜱ'
+      - '&f  '
+      - '&f  &7ɪɴᴄʀᴇᴀꜱᴇꜱ ᴛʜᴇ # ᴏꜰ '
+      - '&f  &7ᴇɴᴄʜᴀɴᴛᴍᴇɴᴛ ꜱʟᴏᴛꜱ ᴏɴ'
+      - '&f  &7ᴀ ᴡᴇᴀᴘᴏɴ ʙʏ %new%,ᴜᴘ ᴛᴏ'
+      - '&f  &7ᴀ ᴍᴀxɪᴍᴜᴍ ᴏꜰ %max%'
+      - '&f  '
+      - '&f  &a✦ ꜱᴜᴄᴄᴇꜱꜱ ʀᴀᴛᴇ: &f%success%% '
+      - '&f  '
+      - '&f  &8▲ ᴅʀᴀɢ ɴ'' ᴅʀᴏᴘ ᴏɴᴛᴏ ᴀɴ'
+      - '&f  &8ɪᴛᴇᴍ ᴛᴏ ᴀᴘᴘʟʏ.'
+      - '&f  '
+      - '&f  '
+    armor:
+      material: EMERALD
+      custom-model-data: 202
+      force-glow: true
+      name: '&f  &5ᴀʀᴍᴏʀ ꜱʜᴀʀᴅ &8[ &a%max% &8]'
+      lore:
+      - '&f  '
+      - '&f  &6+%new% ᴇɴᴄʜᴀɴᴛᴍᴇɴᴛ ꜱʟᴏᴛꜱ'
+      - '&f  &6%max% ᴍᴀx ᴇɴᴄʜᴀɴᴛᴍᴇɴᴛ ꜱʟᴏᴛꜱ'
+      - '&f  '
+      - '&f  &7ɪɴᴄʀᴇᴀꜱᴇꜱ ᴛʜᴇ # ᴏꜰ '
+      - '&f  &7ᴇɴᴄʜᴀɴᴛᴍᴇɴᴛ ꜱʟᴏᴛꜱ ᴏɴ'
+      - '&f  &7ᴀ ᴡᴇᴀᴘᴏɴ ʙʏ %new%,ᴜᴘ ᴛᴏ'
+      - '&f  &7ᴀ ᴍᴀxɪᴍᴜᴍ ᴏꜰ %max%'
+      - '&f  '
+      - '&f  &a✦ ꜱᴜᴄᴄᴇꜱꜱ ʀᴀᴛᴇ: &f%success%% '
+      - '&f  '
+      - '&f  &8▲ ᴅʀᴀɢ ɴ'' ᴅʀᴏᴘ ᴏɴᴛᴏ ᴀɴ'
+      - '&f  &8ɪᴛᴇᴍ ᴛᴏ ᴀᴘᴘʟʏ.'
+      - '&f  '
+      - '&f  '
+    tool:
+      material: EMERALD
+      custom-model-data: 203
+      force-glow: true
+      name: '&f  &aᴛᴏᴏʟ ꜱʜᴀʀᴅ &8[ &a%max% &8]'
+      lore:
+      - '&f  '
+      - '&f  &6+%new% ᴇɴᴄʜᴀɴᴛᴍᴇɴᴛ ꜱʟᴏᴛꜱ'
+      - '&f  &6%max% ᴍᴀx ᴇɴᴄʜᴀɴᴛᴍᴇɴᴛ ꜱʟᴏᴛꜱ'
+      - '&f  '
+      - '&f  &7ɪɴᴄʀᴇᴀꜱᴇꜱ ᴛʜᴇ # ᴏꜰ '
+      - '&f  &7ᴇɴᴄʜᴀɴᴛᴍᴇɴᴛ ꜱʟᴏᴛꜱ ᴏɴ'
+      - '&f  &7ᴀ ᴡᴇᴀᴘᴏɴ ʙʏ %new%,ᴜᴘ ᴛᴏ'
+      - '&f  &7ᴀ ᴍᴀxɪᴍᴜᴍ ᴏꜰ %max%'
+      - '&f  '
+      - '&f  &a✦ ꜱᴜᴄᴄᴇꜱꜱ ʀᴀᴛᴇ: &f%success%% '
+      - '&f  '
+      - '&f  &8▲ ᴅʀᴀɢ ɴ'' ᴅʀᴏᴘ ᴏɴᴛᴏ ᴀɴ'
+      - '&f  &8ɪᴛᴇᴍ ᴛᴏ ᴀᴘᴘʟʏ.'
+      - '&f  '
+      - '&f  '
+  fishtrak:
+    type: FIREWORK_STAR
+    id: 0
+    custom-model-data: 0
+    force-glow: false
+    name: '&bFishTrak Creator'
+    lore:
+    - '&7Track how many fish you catch with a fishing rod'
+    - '&7Drag ontop of a fishing rod to apply it'
+    messages:
+      success:
+      - '&7You successfully applied &bFishTrak Creator'
+    settings:
+      lore-display: '&eFishTrak Fish Caught: &6%stats%'
+
+armor-items:
+  helmet:
+  - HEAD
+  - SKULL_ITEM
+  - SKULL
+  - PLAYER_HEAD
+  - CREEPER_HEAD
+  - DRAGON_HEAD
+  - ZOMBIE_HEAD
+  - NETHERITE_HELMET
+  - DIAMOND_HELMET
+  - GOLD_HELMET
+  - GOLDEN_HELMET
+  - IRON_HELMET
+  - CHAINMAIL_HELMET
+  - LEATHER_HELMET
+  - TURTLE_SHELL
+  - PUMPKIN
+  - CARVED_PUMPKIN
+  - TURTLE_HELMET
+  chest-plate:
+  - NETHERITE_CHESTPLATE
+  - DIAMOND_CHESTPLATE
+  - GOLD_CHESTPLATE
+  - GOLDEN_CHESTPLATE
+  - IRON_CHESTPLATE
+  - CHAINMAIL_CHESTPLATE
+  - LEATHER_CHESTPLATE
+  - ELYTRA
+  leggings:
+  - LEGS
+  - DIAMOND_LEGGINGS
+  - NETHERITE_LEGGINGS
+  - GOLD_LEGGINGS
+  - GOLDEN_LEGGINGS
+  - IRON_LEGGINGS
+  - CHAINMAIL_LEGGINGS
+  - LEATHER_LEGGINGS
+  boots:
+  - FEET
+  - DIAMOND_BOOTS
+  - NETHERITE_BOOTS
+  - GOLD_BOOTS
+  - GOLDEN_BOOTS
+  - IRON_BOOTS
+  - CHAINMAIL_BOOTS
+  - LEATHER_BOOTS
+# - "EGG"
+
+white-scroll:
+  delete: true
+  # Display in item lore
+  lore-display: '&f&lPROTECTED'
+  item:
+    type: PAPER
+    id: 0
+    force-glow: false
+    name: '&f  &cᴡʜɪᴛᴇ ꜱᴄʀᴏʟʟ'
+    lore:
+    - '&f  '
+    - '&f  &cᴘʀᴇᴠᴇɴᴛꜱ ᴀɴ ɪᴛᴇᴍ ꜰʀᴏᴍ'
+    - '&f  &cʙᴇɪɴɢ ᴅᴇꜱᴛʀᴏʏᴇᴅ ᴅᴜᴇ ᴛᴏ'
+    - '&f  &cᴀ ꜰᴀɪʟᴇᴅ ᴇɴᴄʜᴀɴᴛᴍᴇɴᴛ ʙᴏᴏᴋ.'
+    - '&f  '
+    - '&f  &7▲ ᴘʟᴀᴄᴇ ꜱᴄʀᴏʟʟ ᴏɴ ɪᴛᴇᴍ ᴛᴏ'
+    - '&f  &7ᴀᴘᴘʟʏ.'
+    - '&f  '
+    - '&f  '
+  custom-model-data: 206
+
+destroy:
+  enabled: true
+  destroy-item: false
+
+chances:
+  random: true
+  success: 92
+  destroy: 8
+  destroy-if-fail:
+    enabled: false
+
+enchantment-book:
+  anvil-application: false
+  drag-drop-application: true
+  item:
+    type: ENCHANTED_BOOK
+    id: 0
+    custom-model-data: 0
+    force-glow: false
+  # Variables: %enchant%, %enchant-no-color%, %description%, %applies%, %success%, %destroy%, %color%, %max-level%
+  name: '%group-name% %group-color% %enchant-no-color% %level%'
+  lore:
+  - ''
+  - '&f%description%'
+  - ''
+  - '&a✦ Success Rate: &f%success%%'
+  - ''
+  - '&8▲ Drag n'' drop onto item to enchant'
+  - '&8→ %applies-to%'
+
+applies-groups:
+  MISC_HELMETS:
+  - CARVED_PUMPKIN
+  SKULL_ITEM: []
+
+settings:
+  right-click-triggers-on-off-hand: false
+  grindstones-remove-custom-enchants: true
+  organizeEnchantsOnItems: true
+  # 0 = No organization.
+  # 1 = Organize by group.
+  # 2 = Organize by group & alphabetically.
+  # 3 = Organize alphabetically.
+  lore-organize-mode: 2
+  custom-enchants-cause-glow: false
+  use-legacy-potions-system: true
+  fortune-works-on-iron-gold: false
+  steal-money:
+    message-enabled: false
+  trench-autoadd-items: false
+  trench-works-with-more-drops: false
+  renametag-enchanted-only: true
+  itemnametag-max-name-length: 32
+  trench-do-all-durab: true
+  lower-destroy-with-magic-dust: true
+  enable-combo-for-mobs: true
+  clear-potion-effects-on-quit: true
+  ae-market-enabled: true
+  use-numbers: false
+  activate-non-armor-in-armor-slots: false
+  held-effect-static-cross-update: false
+  held-shift-cross-update: true
+  use-experimental-damage: false
+  trench-blacklist: []
+  trench-whitelist: []
+  veinmine-whitelist:
+  - COAL_ORE
+  - COPPER_ORE
+  - IRON_ORE
+  - GOLD_ORE
+  - LAPIS_ORE
+  - REDSTONE_ORE
+  - DIAMOND_ORE
+  - EMERALD_ORE
+  - NETHER_QUARTZ_ORE
+  - NETHER_GOLD_ORE
+  - ANCIENT_DEBRIS
+  - DEEPSLATE_COAL_ORE
+  - DEEPSLATE_COPPER_ORE
+  - DEEPSLATE_IRON_ORE
+  - DEEPSLATE_GOLD_ORE
+  - DEEPSLATE_LAPIS_ORE
+  - DEEPSLATE_REDSTONE_ORE
+  - DEEPSLATE_DIAMOND_ORE
+  - DEEPSLATE_EMERALD_ORE
+  enchantment-world-blacklist:
+  - no_enchantments_world
+  holy-whitescrolls-world-blacklist:
+  - no_holywhitescrolls_world
+  fly-world-blacklist:
+  - no_fly_world
+  open-enchanter-by-right-clicking-enchantment-table: false
+  stems-count-as-trees: false
+  respect-player-placed-blocks: true
+  enchants-debug-mode: false
+  apply-cooldown: 20
+  whitescroll-material-blacklist:
+  - STONE
+  souls-per-kill: 1
+  trench-optimization:
+    automaticallyDetect: true
+  lava-walker-radius: 2
+  water-walker-radius: 2
+  collect-souls-from-mobs: false
+  collect-souls-from-players: false
+  showFirstLevel: true
+  heal-check: true
+  use-worldguard-fly-flag: false
+  custom-drops-from-spawners: false
+  miningSouls:
+    enabled: false
+    chance: 20
+  bow-full-power: true
+  lore-descriptions:
+    enabled: false
+    display: '%group-color%* &8%description%'
+  held-check-frequency: 5
+  give-mcmmo-with-custom-block-breaks: true
+  allow-place-of-armor-block: true
+  break-block-effect-blacklist:
+  - SPAWNER
+  - AIR
+  - LAVA
+  - WATER
+  - CAULDRON
+  - BEDROCK
+  fishingSouls:
+    enabled: true
+    chance: 20
+  minecraft-stats-blocks-broken-count: true
+  exp-effect-ignore-silktouch: false
+  ignored-metadata-block-drops: []
+
+# Do not edit this setting
+version: 1.0

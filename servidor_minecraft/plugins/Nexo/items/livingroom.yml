@@ -1,0 +1,4056 @@
+comfortablechairblack:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/comfortablechairblack
+    custom_model_data: 8000
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.8,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: comfortablechairblackchair
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Comfortable Chair Black
+comfortablechairwhite:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/comfortablechairwhite
+    custom_model_data: 8001
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.8,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: comfortablechairwhite
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Comfortable Chair White
+comfortablechairred:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/comfortablechairred
+    custom_model_data: 8002
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.8,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: comfortablechairred
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Comfortable Chair Red
+comfortablechairgreen:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/comfortablechairgreen
+    custom_model_data: 8003
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.8,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: comfortablechairgreen
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Comfortable Chair Green
+comfortablechairorange:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/comfortablechairorange
+    custom_model_data: 8004
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.8,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: comfortablechairorange
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Comfortable Chair Orange
+comfortablechairyellow:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/comfortablechairyellow
+    custom_model_data: 8005
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.8,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: comfortablechairyellow
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Comfortable Chair Yellow
+comfortablechairblue:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/comfortablechairblue
+    custom_model_data: 8006
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.8,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: comfortablechairblue
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Comfortable Chair Blue
+comfortablechairgray:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/comfortablechairgray
+    custom_model_data: 8007
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.8,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: comfortablechairgray
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Comfortable Chair Gray
+comfortablechairpink:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/comfortablechairpink
+    custom_model_data: 8008
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.8,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: comfortablechairpink
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Comfortable Chair Pink
+comfortablechairbeige:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/comfortablechairbeige
+    custom_model_data: 8009
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.8,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: comfortablechairbeige
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Comfortable Chair Beige
+doublecouchblack:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/doublecouchblack
+    custom_model_data: 8010
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.7,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: doublecouchblack
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Double Couch Black
+doublecouchwhite:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/doublecouchwhite
+    custom_model_data: 8011
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.7,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: doublecouchwhite
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Double Couch White
+doublecouchred:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/doublecouchred
+    custom_model_data: 8012
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.7,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: doublecouchred
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Double Couch Red
+doublecouchgreen:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/doublecouchgreen
+    custom_model_data: 8013
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.7,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: doublecouchgreen
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Double Couch Green
+doublecouchyellow:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/doublecouchyellow
+    custom_model_data: 8014
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.7,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: doublecouchyellow
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Double Couch Yellow
+doublecouchorange:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/doublecouchorange
+    custom_model_data: 8015
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.7,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: doublecouchorange
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Double Couch Orange
+doublecouchblue:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/doublecouchblue
+    custom_model_data: 8016
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.7,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: doublecouchblue
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Double Couch Blue
+doublecouchpink:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/doublecouchpink
+    custom_model_data: 8017
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.7,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: doublecouchpink
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Double Couch Pink
+doublecouchbeige:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/doublecouchbeige
+    custom_model_data: 8018
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.7,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: doublecouchbeige
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Double Couch Beige
+doublecouchgray:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/doublecouchgray
+    custom_model_data: 8019
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.7,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: doublecouchgray
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Double Couch Gray
+lcouchblack:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/lcouchblack
+    custom_model_data: 8020
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.7,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: lcouchblack
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: L Couch Black
+lcouchwhite:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/lcouchwhite
+    custom_model_data: 8021
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.7,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: lcouchwhite
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: L Couch White
+lcouchblue:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/lcouchblue
+    custom_model_data: 8022
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.7,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: lcouchblue
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: L Couch Blue
+lcouchred:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/lcouchred
+    custom_model_data: 8023
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.7,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: lcouchred
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: L Couch Red
+lcouchyellow:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/lcouchyellow
+    custom_model_data: 8024
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.7,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: lcouchyellow
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: L Couch Yellow
+lcouchorange:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/lcouchorange
+    custom_model_data: 8025
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.7,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: lcouchorange
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: L Couch Orange
+lcouchgreen:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/lcouchgreen
+    custom_model_data: 8026
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.7,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: lcouchgreen
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: L Couch Green
+lcouchgray:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/lcouchgray
+    custom_model_data: 8027
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.7,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: lcouchgray
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: L Couch Gray
+lcouchpink:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/lcouchpink
+    custom_model_data: 8028
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.7,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: lcouchpink
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: L Couch Pink
+lcouchbeige:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/lcouchbeige
+    custom_model_data: 8029
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.7,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: lcouchbeige
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: L Couch Beige
+rockingchair:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/rockingchair
+    custom_model_data: 8030
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.6,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: rockingchair
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Rocking Chair
+rockingchairdark:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/rockingchairdark
+    custom_model_data: 8031
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.6,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: rockingchairdark
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Rocking Chair Dark
+singlecouchblack:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/singlecouchblack
+    custom_model_data: 8032
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.7,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: singlecouchblack
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Single Couch Black
+singlecouchwhite:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/singlecouchwhite
+    custom_model_data: 8033
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.7,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: singlecouchwhite
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Single Couch White
+singlecouchred:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/singlecouchred
+    custom_model_data: 8034
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.7,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: singlecouchred
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Single Couch Red
+singlecouchgreen:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/singlecouchgreen
+    custom_model_data: 8035
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.7,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: singlecouchgreen
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Single Couch Green
+singlecouchyellow:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/singlecouchyellow
+    custom_model_data: 8036
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.7,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: singlecouchyellow
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Single Couch Yellow
+singlecouchorange:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/singlecouchorange
+    custom_model_data: 8037
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.7,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: singlecouchorange
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Single Couch Orange
+singlecouchblue:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/singlecouchblue
+    custom_model_data: 8038
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.7,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: singlecouchblue
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Single Couch Blue
+singlecouchpink:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/singlecouchpink
+    custom_model_data: 8039
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.7,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: singlecouchpink
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Single Couch Pink
+singlecouchgray:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/singlecouchgray
+    custom_model_data: 8040
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.7,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: singlecouchgray
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Single Couch Gray
+singlecouchbeige:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/singlecouchbeige
+    custom_model_data: 8041
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.7,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: singlecouchbeige
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Single Couch Beige
+smallchairblack:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/smallchairblack
+    custom_model_data: 8042
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.7,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: smallchairblack
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Small Chair Black
+smallchairwhite:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/smallchairwhite
+    custom_model_data: 8043
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.7,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: smallchairwhite
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Small Chair White
+smallchairyellow:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/smallchairyellow
+    custom_model_data: 8044
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.7,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: smallchairyellow
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Small Chair Yellow
+smallchairred:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/smallchairred
+    custom_model_data: 8045
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.7,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: smallchairred
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Small Chair Red
+smallchairgreen:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/smallchairgreen
+    custom_model_data: 8046
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.7,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: smallchairgreen
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Small Chair Green
+smallchairorange:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/smallchairorange
+    custom_model_data: 8047
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.7,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: smallchairorange
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Small Chair Orange
+smallchairblue:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/smallchairblue
+    custom_model_data: 8048
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.7,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: smallchairblue
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Small Chair Blue
+smallchairpink:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/smallchairpink
+    custom_model_data: 8049
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.7,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: smallchairpink
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Small Chair Pink
+smallchairgray:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/smallchairgray
+    custom_model_data: 8050
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.7,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: smallchairgray
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Small Chair Gray
+smallchairbeige:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/smallchairbeige
+    custom_model_data: 8051
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.7,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: smallchairbeige
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Small Chair Beige
+woodenchair:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/woodenchair
+    custom_model_data: 8052
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.8,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: woodenchair
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Wooden Chair
+woodenchairdark:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/woodenchairdark
+    custom_model_data: 8053
+  Mechanics:
+    furniture:
+      seats:
+      - 0,0.8,0
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: woodenchairdark
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Wooden Chair Dark
+2shelftable:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/2shelftable
+    custom_model_data: 8054
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: 2shelftable
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: 2 Shelf Table
+2shelftabledark:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/2shelftabledark
+    custom_model_data: 8055
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: 2shelftabledark
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: 2 Shelf Table Dark
+airconditionerwhite:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/airconditionerwhite
+    custom_model_data: 8056
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: airconditionerwhite
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Air Conditioner White
+airconditionerblack:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/airconditionerblack
+    custom_model_data: 8057
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: airconditionerblack
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Air Conditioner Black
+aquariumblack:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/aquariumblack
+    custom_model_data: 8058
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: aquariumblack
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Aquarium Black
+aquariumwhite:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/aquariumwhite
+    custom_model_data: 8059
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: aquariumwhite
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Aquarium White
+bookshelfwooden:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/bookshelfwooden
+    custom_model_data: 8060
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: bookshelfwooden
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Bookshelf Wooden
+bookshelfdark:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/bookshelfdark
+    custom_model_data: 8061
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: bookshelfdark
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Bookshelf Dark
+bookshelfwhite:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/bookshelfwhite
+    custom_model_data: 8062
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: bookshelfwhite
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Bookshelf White
+bookshelfblack:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/bookshelfblack
+    custom_model_data: 8063
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: bookshelfblack
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Bookshelf Black
+ceilingfanwhite:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/ceilingfanwhite
+    custom_model_data: 8064
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: ceilingfanwhite
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Ceiling fan White
+ceilingfanblack:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/ceilingfanblack
+    custom_model_data: 8065
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: ceilingfanblack
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Ceiling fan Black
+coffeetable:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/coffeetable
+    custom_model_data: 8066
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: coffeetable
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Coffee Table
+coffeetabledark:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/coffeetabledark
+    custom_model_data: 8067
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: coffeetabledark
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Coffee Table Dark
+coffeetableblack:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/coffeetableblack
+    custom_model_data: 8068
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: coffeetableblack
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Coffee Table Black
+coffeetablewhite:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/coffeetablewhite
+    custom_model_data: 8069
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: coffeetablewhite
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Coffee Table White
+curtainblack:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/curtainblack
+    custom_model_data: 8070
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: curtainblack
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Curtain Black
+curtainwhite:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/curtainwhite
+    custom_model_data: 8071
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: curtainwhite
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Curtain White
+curtainred:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/curtainred
+    custom_model_data: 8072
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: curtainred
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Curtain Red
+curtaingreen:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/curtaingreen
+    custom_model_data: 8073
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: curtaingreen
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Curtain Green
+curtainyellow:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/curtainyellow
+    custom_model_data: 8074
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: curtainyellow
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Curtain Yellow
+curtainorange:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/curtainorange
+    custom_model_data: 8075
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: curtainorange
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Curtain Orange
+curtainblue:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/curtainblue
+    custom_model_data: 8076
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: curtainblue
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Curtain Blue
+curtainpink:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/curtainpink
+    custom_model_data: 8077
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: curtainpink
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Curtain Pink
+curtaingray:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/curtaingray
+    custom_model_data: 8078
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: curtaingray
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Curtain Gray
+curtainbeige:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/curtainbeige
+    custom_model_data: 8079
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: curtainbeige
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Curtain Beige
+desk:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/desk
+    custom_model_data: 8080
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: desk
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Desk
+deskdark:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/deskdark
+    custom_model_data: 8081
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: deskdark
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Desk Dark
+floorlampwooden:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/floorlampwooden
+    custom_model_data: 8082
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: floorlampwooden
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Floor Lamp Wooden
+floorlampblack:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/floorlampblack
+    custom_model_data: 8083
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: floorlampblack
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Floor Lamp Black
+floorlampwhite:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/floorlampwhite
+    custom_model_data: 8084
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: floorlampwhite
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Floor Lamp White
+flowerpot:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/flowerpot
+    custom_model_data: 8085
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: flowerpot
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Flower pot
+flowerpotdark:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/flowerpotdark
+    custom_model_data: 8086
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: flowerpotdark
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Flower pot Dark
+flowerpotblack:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/flowerpotblack
+    custom_model_data: 8087
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: flowerpotblack
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Flower pot Black
+flowerpotwhite:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/flowerpotwhite
+    custom_model_data: 8088
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: flowerpotwhite
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Flower pot White
+glasstable:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/glasstable
+    custom_model_data: 8089
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: glasstable
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Glass Table
+glasstabledark:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/glasstabledark
+    custom_model_data: 8090
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: glasstabledark
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Glass Table Dark
+glasstableblack:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/glasstableblack
+    custom_model_data: 8091
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: glasstableblack
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Glass Table Black
+glasstablewhite:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/glasstablewhite
+    custom_model_data: 8092
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: glasstablewhite
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Glass Table White
+grandfatherclock:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/grandfatherclock
+    custom_model_data: 8093
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: grandfatherclock
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Grandfather Clock
+grandfatherclockdark:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/grandfatherclockdark
+    custom_model_data: 8094
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: grandfatherclockdark
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Grandfather Clock Dark
+livingroomchandeliergold:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/livingroomchandeliergold
+    custom_model_data: 8095
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: livingroomchandeliergold
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Living Room Chandelier Gold
+livingroomchandelierblack:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/livingroomchandelierblack
+    custom_model_data: 8096
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: livingroomchandelierblack
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Living Room Chandelier Black
+longcarpetblack:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/longcarpetblack
+    custom_model_data: 8097
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: longcarpetblack
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Long Carpet Black
+longcarpetwhite:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/longcarpetwhite
+    custom_model_data: 8098
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: longcarpetwhite
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Long Carpet White
+longcarpetred:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/longcarpetred
+    custom_model_data: 8099
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: longcarpetred
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Long Carpet Red
+longcarpetgreen:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/longcarpetgreen
+    custom_model_data: 8100
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: longcarpetgreen
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Long Carpet Green
+longcarpetyellow:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/longcarpetyellow
+    custom_model_data: 8101
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: longcarpetyellow
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Long Carpet Yellow
+longcarpetorange:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/longcarpetorange
+    custom_model_data: 8102
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: longcarpetorange
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Long Carpet Orange
+longcarpetblue:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/longcarpetblue
+    custom_model_data: 8103
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: longcarpetblue
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Long Carpet Blue
+longcarpetpink:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/longcarpetpink
+    custom_model_data: 8104
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: longcarpetpink
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Long Carpet Pink
+longcarpetgray:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/longcarpetgray
+    custom_model_data: 8105
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: longcarpetgray
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Long Carpet Gray
+longcarpetbeige:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/longcarpetbeige
+    custom_model_data: 8106
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: longcarpetbeige
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Long Carpet Beige
+longtable:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/longtable
+    custom_model_data: 8107
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: longtable
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Long Table
+longtablewhite:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/longtablewhite
+    custom_model_data: 8108
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: longtablewhite
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Long Table White
+longtabledark:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/longtabledark
+    custom_model_data: 8109
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: longtabledark
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Long Table Dark
+longtableblack:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/longtableblack
+    custom_model_data: 8110
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: longtableblack
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Long Table Black
+mediumcarpetblack:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/mediumcarpetblack
+    custom_model_data: 8111
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: mediumcarpetblack
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Medium Carpet Black
+mediumcarpetwhite:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/mediumcarpetwhite
+    custom_model_data: 8112
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: mediumcarpetwhite
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Medium Carpet White
+mediumcarpetred:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/mediumcarpetred
+    custom_model_data: 8113
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: mediumcarpetred
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Medium Carpet Red
+mediumcarpetyellow:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/mediumcarpetyellow
+    custom_model_data: 8114
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: mediumcarpetyellow
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Medium Carpet Yellow
+mediumcarpetgreen:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/mediumcarpetgreen
+    custom_model_data: 8115
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: mediumcarpetgreen
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Medium Carpet Green
+mediumcarpetblue:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/mediumcarpetblue
+    custom_model_data: 8116
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: mediumcarpetblue
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Medium Carpet Blue
+mediumcarpetorange:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/mediumcarpetorange
+    custom_model_data: 8117
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: mediumcarpetorange
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Medium Carpet Orange
+mediumcarpetpink:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/mediumcarpetpink
+    custom_model_data: 8118
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: mediumcarpetpink
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Medium Carpet Pink
+mediumcarpetgray:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/mediumcarpetgray
+    custom_model_data: 8119
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: mediumcarpetgray
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Medium Carpet Gray
+mediumcarpetbeige:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/mediumcarpetbeige
+    custom_model_data: 8120
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: mediumcarpetbeige
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Medium Carpet Beige
+radiowooden:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/radiowooden
+    custom_model_data: 8121
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: radiowooden
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Radio Wooden
+radioblack:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/radioblack
+    custom_model_data: 8122
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: radioblack
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Radio Black
+smallcarpetblack:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/smallcarpetblack
+    custom_model_data: 8123
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: smallcarpetblack
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Small Carpet Black
+smallcarpetwhite:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/smallcarpetwhite
+    custom_model_data: 8124
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: smallcarpetwhite
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Small Carpet White
+smallcarpetred:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/smallcarpetred
+    custom_model_data: 8125
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: smallcarpetred
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Small Carpet Red
+smallcarpetyellow:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/smallcarpetyellow
+    custom_model_data: 8126
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: smallcarpetyellow
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Small Carpet Yellow
+smallcarpetgreen:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/smallcarpetgreen
+    custom_model_data: 8127
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: smallcarpetgreen
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Small Carpet Green
+smallcarpetorange:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/smallcarpetorange
+    custom_model_data: 8128
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: smallcarpetorange
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Small Carpet Orange
+smallcarpetblue:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/smallcarpetblue
+    custom_model_data: 8129
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: smallcarpetblue
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Small Carpet Blue
+smallcarpetpink:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/smallcarpetpink
+    custom_model_data: 8130
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: smallcarpetpink
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Small Carpet Pink
+smallcarpetgray:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/smallcarpetgray
+    custom_model_data: 8131
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: smallcarpetgray
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Small Carpet Gray
+smallcarpetbeige:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/smallcarpetbeige
+    custom_model_data: 8132
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: smallcarpetbeige
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Small Carpet Beige
+smalltable:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/smalltable
+    custom_model_data: 8133
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: smalltable
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Small Table
+smalltabledark:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/smalltabledark
+    custom_model_data: 8134
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: smalltabledark
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Small Table Dark
+tv:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/tv
+    custom_model_data: 8135
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: tv
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: TV
+tvspeaker:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/tvspeaker
+    custom_model_data: 8136
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: tvspeaker
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: TV Speaker
+tvstand:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/tvstand
+    custom_model_data: 8137
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: tvstand
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: TV Stand
+tvstandblack:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/tvstandblack
+    custom_model_data: 8138
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: tvstandblack
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: TV Stand Black
+wallclockblack:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/wallclockblack
+    custom_model_data: 8139
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: wallclockblack
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Wall Clock Black
+wallclockwooden:
+  material: PAPER
+  Pack:
+    generate_model: false
+    model: livingroom/wallclockwooden
+    custom_model_data: 8140
+  Mechanics:
+    furniture:
+      rotatable: false
+      limited_placing:
+        roof: false
+        floor: true
+        wall: false
+      restricted_rotation: VERY_STRICT
+      block_sounds:
+        place_sound: block.wood.place
+        break_sound: block.wood.break
+      hitbox:
+        barriers:
+        - 0,0,0
+      drop:
+        silktouch: false
+        loots:
+        - nexo_item: wallclockwooden
+          probability: 1.0
+      properties:
+        display_transform: FIXED
+  itemname: Wall Clock Wooden

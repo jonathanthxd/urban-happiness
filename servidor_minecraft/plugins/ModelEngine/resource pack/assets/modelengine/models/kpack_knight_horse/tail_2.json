@@ -1,0 +1,1 @@
+{"textures":{"2":"modelengine:entity/kpack_knight_horse_black","particle":"#2"},"elements":[{"from":[2.0,8.0,8.0],"to":[14.0,8.0,17.0],"faces":{"up":{"uv":[8.75,8.125,7.25,7.0],"tintindex":0,"rotation":0,"texture":"#2"},"down":{"uv":[2.375,7.375,0.875,8.5],"tintindex":0,"rotation":0,"texture":"#2"}}}],"display":{"gui":{"rotation":[-150.0,-45.0,180.0]}}}

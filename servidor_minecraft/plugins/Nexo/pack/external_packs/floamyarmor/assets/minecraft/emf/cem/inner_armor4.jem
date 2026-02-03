@@ -1,0 +1,70 @@
+{
+  "credit" : "Made with Blockbench",
+  "textureSize" : [ 64, 32 ],
+  "texture" : "textures/armor/licorn_fenrir/layer_2.png",
+  "models" : [ {
+    "part" : "waist",
+    "id" : "waist",
+    "invertAxis" : "xy",
+    "translate" : [ 0, -24, 0 ],
+    "boxes" : [ {
+      "coordinates" : [ -4, 12, -2, 8, 12, 4 ],
+      "uvNorth" : [ 4, 4, 12, 16 ],
+      "uvEast" : [ 0, 4, 4, 16 ],
+      "uvSouth" : [ 16, 4, 24, 16 ],
+      "uvWest" : [ 12, 4, 16, 16 ],
+      "uvUp" : [ 12, 4, 4, 0 ],
+      "uvDown" : [ 20, 0, 12, 4 ],
+      "sizeAdd" : 0.775
+    } ]
+  }, {
+    "part" : "left_leg",
+    "id" : "left_leg",
+    "invertAxis" : "xy",
+    "mirrorTexture" : "u",
+    "translate" : [ 1.9, -12, 0 ],
+    "submodels" : [ {
+      "id" : "bone",
+      "invertAxis" : "xy",
+      "mirrorTexture" : "u",
+      "translate" : [ 2.5, 0.75, -0.125 ],
+      "rotate" : [ 0, 0, 22.5 ]
+    } ],
+    "boxes" : [ {
+      "coordinates" : [ -4.9, 7, -3, 3, 6, 6 ],
+      "textureOffset" : [ 24, 18 ],
+      "sizeAdd" : 0.1
+    }, {
+      "coordinates" : [ -6.9, 7, -3, 2, 6, 6 ],
+      "textureOffset" : [ 36, 0 ]
+    }, {
+      "coordinates" : [ -3.9, 3, -2, 4, 9, 4 ],
+      "textureOffset" : [ 5, 18 ],
+      "sizeAdd" : 0.1
+    } ]
+  }, {
+    "part" : "right_leg",
+    "id" : "right_leg",
+    "invertAxis" : "xy",
+    "translate" : [ -1.9, -12, 0 ],
+    "submodels" : [ {
+      "id" : "bone2",
+      "invertAxis" : "xy",
+      "mirrorTexture" : "u",
+      "translate" : [ 1.5, -0.75, -0.1 ],
+      "rotate" : [ 0, 0, -22.5 ]
+    } ],
+    "boxes" : [ {
+      "coordinates" : [ 1.9, 7, -3, 3, 6, 6 ],
+      "textureOffset" : [ 24, 18 ],
+      "sizeAdd" : 0.1
+    }, {
+      "coordinates" : [ 4.9, 7, -3, 2, 6, 6 ],
+      "textureOffset" : [ 36, 0 ]
+    }, {
+      "coordinates" : [ -0.1, 3, -2, 4, 9, 4 ],
+      "textureOffset" : [ 5, 18 ],
+      "sizeAdd" : 0.1
+    } ]
+  } ]
+}

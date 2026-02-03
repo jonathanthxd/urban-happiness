@@ -1,0 +1,30 @@
+Nocsy_Mokoblin_Sword:
+  Id: DIAMOND_SWORD
+  Model: 76501
+  Display: "&7Mokoblin sword"
+
+Nocsy_Ganondorf_Sword:
+  Id: DIAMOND_SWORD
+  Model: 76502
+  Display: "&6Ganondorf's sword"
+
+Nocsy_Moblin_Chopper:
+  Id: DIAMOND_SWORD
+  Model: 76503
+  Display: "&7Moblin chopper"
+
+Nocsy_Moblin_Hammer:
+  Id: DIAMOND_SWORD
+  Model: 76504
+  Display: "&7Moblin hammer"
+
+Nocsy_Mokoblin_Scepter:
+  Id: DIAMOND_SWORD
+  Model: 76505
+  Display: "&7Mokoblin scepter"
+
+Nocsy_Mokoblin_Stick:
+  Id: DIAMOND_SWORD
+  Model: 76506
+  Display: "&6Huge stick"
+# eyJ1c2VyLW5hbWUiOiJGYXp6ZXIiLCJ1c2VyLWlkIjoiNzI4MSIsImRhdGUiOiIyMDI2LTAyLTAyIDAwOjE4Iiwic2l0ZSI6Imh0dHBzOi8vZ2xlYWtzLnBybyJ9

@@ -1,0 +1,863 @@
+#=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-#
+#           Fantasy pack Vol.1             #
+#             Boss - Skills                #
+#               by Nocsy                   #
+#=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-#
+
+############################################
+#                Ganondorf                 #
+############################################
+
+#-----------  Ganondorf Force Spell -----------#
+Nocsy_Ganondorf_ForceSpell:
+  Conditions:
+  - hastag{t=forcespell} false
+  Skills:
+  - addtag{t=forcespell} @self
+  - Aura{auraName=Nocsy_Ganondorf_ForceSpell-Aura;onTick=Nocsy_Ganondorf_ForceSpell-Tick;interval=10;d=2000} @self
+Nocsy_Ganondorf_ForceSpell-Tick:
+  Conditions:
+  - hastag{t=attacking} false
+  - hastag{t=fire} false
+  - hastag{t=forcesmash} false
+  - hastag{t=forcespell} true
+  Skills:
+  - removetag{t=forcespell} @self
+  - skill{s=Nocsy_Ganondorf_Spell} @self
+
+#-----------  Ganondorf Force Smash -----------#
+Nocsy_Ganondorf_ForceSmash:
+  Conditions:
+  - hastag{t=forcespell} false
+  - hastag{t=forcesmash} false
+  - hastag{t=summoned} false
+  Skills:
+  - addtag{t=forcesmash} @self
+  - Aura{auraName=Nocsy_Ganondorf_ForceSmash-Aura;onTick=Nocsy_Ganondorf_ForceSmash-Tick;interval=10;d=2000} @self
+Nocsy_Ganondorf_ForceSmash-Tick:
+  Conditions:
+  - hastag{t=attacking} false
+  - hastag{t=summoned} false
+  - hastag{t=forcesmash} true
+  Skills:
+  - removetag{t=forcesmash} @self
+  - skill{s=Nocsy_Ganondorf_SmashGround} @self
+  
+#-----------  Ganondorf Attack -----------#
+Nocsy_Ganondorf_Attack:
+  Conditions:
+  - hastag{t=attacking} false
+  - playerwithin{d=4} true
+  Skills:
+  - randomskill{s=Nocsy_Ganondorf_PierceAttack,Nocsy_Ganondorf_SlashAttack,Nocsy_Ganondorf_SmashGround}
+  
+#-----------  Ganondorf Pierce Attack -----------#
+Nocsy_Ganondorf_PierceAttack:
+  Conditions:
+  - hastag{t=attacking} false
+  Skills:
+  - addtag{t=attacking} @self
+  - state{s=pierce_attack;li=0;lo=0;speed=1.1} @self
+  - setAI{ai=false} @self
+  - delay 15
+  - sound{s=entity.player.attack.knockback;v=1;p=0.1} @self
+  - delay 6
+  - damage{a=18} @LivingInCone{a=50.0;r=5.2;rot=0.0;target=players}
+  - potion{type=WEAKNESS;duration=200;level=2;hasParticles=false} @LivingInCone{a=20.0;r=4;rot=0.0;target=players}
+  - effect:particles{p=explosion_normal;amount=2;speed=0.1;hS=0.01;vS=0.15} @Cone{angle=20;points=50;range=4;rotation=0;yoffset=0.5}
+  - delay 28
+  - setAI{ai=true} @self
+  - removetag{t=attacking} @self
+  
+#-----------  Ganondorf Slash Attack -----------#
+Nocsy_Ganondorf_SlashAttack:
+  Conditions:
+  - hastag{t=attacking} false
+  Skills:
+  - addtag{t=attacking} @self
+  - state{s=slash_attack;li=0;lo=0;speed=1} @self
+  - setAI{ai=false} @self
+  - delay 22
+  - sound{s=entity.player.attack.sweep;v=1;p=0.1} @self
+  - delay 10
+  - sound{s=entity.player.attack.crit;v=1;p=0.1} @self
+  - damage{a=20} @LivingInCone{a=70.0;r=6;rot=0.0;target=players}
+  - throw{velocity=8;velocityY=2} @LivingInCone{a=20.0;r=4;rot=0.0;target=players}
+  - effect:particles{p=explosion_normal;amount=2;speed=0.1;hS=0.01;vS=0.15} @Cone{angle=20;points=50;range=4;rotation=0;yoffset=0}
+  - delay 29
+  - setAI{ai=true} @self
+  - removetag{t=attacking} @self
+
+#-----------  Ganondorf Smash Ground -----------#
+Nocsy_Ganondorf_SmashGround:
+  Conditions:
+  - hastag{t=attacking} false
+  - hastag{t=summoned} false
+  Skills:
+  - addtag{t=attacking} @self
+  - addtag{t=summoned} @self
+  - addtag{t=fire} @self
+  - state{s=smash_ground;li=0;lo=0;speed=1} @self
+  - setAI{ai=false} @self
+  - delay 40
+  - sound{s=entity.blaze.shoot;v=1;p=0.1} @self
+  - damage{a=10} @PIR{r=4}
+  - effect:particles{p=explosion_huge;amount=3;speed=0.01;hS=0.01;vS=0.01} @SelfLocation{y=-3}
+  - summon{type=Nocsy_Ganon_CorruptedFlames;amount=1;radius=0;os=true;yRadiusUpOnly=true;yRadius=0;inheritFaction=true} @self
+  - randomskill{s=Nocsy_Ganondorf_SmashGround_SummonFlames,Nocsy_Ganondorf_SmashGround_SummonSpells} @Ring{radius=8;points=4}
+  - delay 38
+  - setAI{ai=true} @self
+  - removetag{t=attacking} @self
+  - delay 82
+  - removetag{t=fire} @self # Says when the fire extinguishes so he can eventually cast another fire spell
+  - delay 318
+  - removetag{t=summoned} @self
+
+Nocsy_Ganondorf_SmashGround_SummonSpells:
+  Skills:
+  - summon{type=Nocsy_Ganon_CorruptedFlames;amount=1;radius=0;os=true;yRadiusUpOnly=true;yRadius=0;inheritFaction=true}
+  - delay 30
+  - sound{s=entity.illusioner.mirror_move;v=1;p=0.1} @self
+  - effect:particles{p=explosion_huge;amount=1;speed=0.01;hS=0.01;vS=0.01}
+  - delay 10
+  - summon{type=Nocsy_Ganondorf_FireSpell;amount=1;radius=0;os=true;yRadiusUpOnly=true;yRadius=0;inheritFaction=true}
+  - delay 230
+  - signal{s=REMOVEFLAME} @MobsInRadius{r=10;t=Nocsy_Ganon_CorruptedFlames}
+
+Nocsy_Ganondorf_castSpellFire:
+  Skills:
+  - orbital{onTick=Nocsy_Ganondorf_castSpell-Effect3;hp=false;points=20;interval=1;duration=240;r=0.5;vy=0;rZ=60;rX=-60} @SelfLocation{y=2}
+  - orbital{onTick=Nocsy_Ganondorf_castSpell-Effect3;hp=false;points=20;interval=1;duration=240;r=0.8;vy=-45;rZ=60;rX=10} @SelfLocation{y=2}
+  - orbital{onTick=Nocsy_Ganondorf_castSpell-Effect4;hp=false;points=20;interval=1;duration=240;r=1;vy=-90;rZ=60;rX=-20} @SelfLocation{y=2}
+  - orbital{onTick=Nocsy_Ganondorf_castSpell-Effect4;hp=false;points=20;interval=1;duration=240;r=0.4;vy=-30;rZ=60;rX=30} @SelfLocation{y=2}
+  - delay 60
+  - skill{s=Nocsy_FPV1_GanondorfSpellFire-Launch;repeat=2;repeatInterval=60}
+  - delay 180
+  - remove @self
+
+Nocsy_FPV1_GanondorfSpellFire-Launch:
+  Skills:
+  - sound{s=entity.illusioner.cast_spell;v=1;p=1.2} @self
+  - missile{oT=Nocsy_FPV1_GanondorfFireSpell-Tick;oH=Nocsy_FPV1_GanondorfFireSpell-End;oE=Nocsy_FPV1_GanondorfFireSpell-End;v=5;i=1;hR=1;vR=1;in=200;md=20000;mr=400;sfo=0;fo=false;syo=4;} @NearestPlayer{r=15}
+Nocsy_FPV1_GanondorfFireSpell-Tick:
+  Skills:
+  - effect:particles{p=squid_ink;amount=2;speed=0.05;hS=0.1;vS=0.1} @origin
+  - effect:particles{p=spell_witch;amount=10;speed=0.1;hS=0.15;vS=0.15} @origin
+Nocsy_FPV1_GanondorfFireSpell-End:
+  Skills:
+  - sound{s=entity.illusioner.cast_spell;v=1;p=1.2} @self
+  - damage{a=8} @PlayersNearOrigin{r=2}
+  - potion{type=BLINDNESS;duration=60;lvl=1} @PlayersNearOrigin{r=2}
+Nocsy_Ganondorf_SmashGround_SummonFlames:
+  Conditions:
+  - hastag{t=monstersummoned} false
+  Skills:
+  - addtag{t=monstersummoned} @self
+  - summon{type=Nocsy_Ganon_CorruptedFlames;amount=1;radius=0;os=true;yRadiusUpOnly=true;yRadius=0;inheritFaction=true}
+  - delay 30
+  - sound{s=entity.evoker.prepare_summon;v=1;p=0.1} @self
+  - effect:particles{p=explosion_huge;amount=1;speed=0.01;hS=0.01;vS=0.01}
+  - skill{s=Nocsy_FPV1_Summon}
+  - delay 90
+  - signal{s=REMOVEFLAME} @MobsInRadius{r=10;t=Nocsy_Ganon_CorruptedFlames}
+  - delay 600
+  - removetag{t=monstersummoned} @self
+
+Nocsy_FPV1_Summon:
+  Skills:
+  - summon{type=Nocsy_Ganondorf_Summon;amount=1;radius=0;os=true;yRadiusUpOnly=true;yRadius=0;inheritFaction=true}
+
+Nocsy_FPV1_Summon_dummy:
+  Skills:
+  - randomskill{s=Nocsy_FPV1_SummonBW,Nocsy_FPV1_SummonBS,Nocsy_FPV1_SummonBSh,Nocsy_FPV1_SummonMB,Nocsy_FPV1_SummonMR} @self
+  - delay 10
+  - remove @self
+Nocsy_FPV1_SummonBW:
+  Conditions:
+  - hastag{t=BW} castinstead Nocsy_FPV1_SummonBSh
+  Skills:
+  - summon{type=Nocsy_Bokoblin_Warrior;amount=1;radius=0;os=true;yRadiusUpOnly=true;yRadius=0;inheritFaction=true}
+  - addtag{t=BW} @self
+  - delay 20
+  - removetag{t=BW} @self
+Nocsy_FPV1_SummonBS:
+  Conditions:
+  - hastag{t=BS} castinstead Nocsy_FPV1_SummonMB
+  Skills:
+  - summon{type=Nocsy_Bokoblin_Swordsman;amount=1;radius=0;os=true;yRadiusUpOnly=true;yRadius=0;inheritFaction=true}
+  - addtag{t=BS} @self
+  - delay 20
+  - removetag{t=BS} @self
+Nocsy_FPV1_SummonBSh:
+  Conditions:
+  - hastag{t=BSh} castinstead Nocsy_FPV1_SummonBS
+  Skills:
+  - summon{type=Nocsy_Bokoblin_Shaman;amount=1;radius=0;os=true;yRadiusUpOnly=true;yRadius=0;inheritFaction=true}
+  - addtag{t=BSh} @self
+  - delay 20
+  - removetag{t=BSh} @self
+Nocsy_FPV1_SummonMB:
+  Conditions:
+  - hastag{t=MB} castinstead Nocsy_FPV1_SummonMR
+  Skills:
+  - summon{type=Nocsy_Moblin_Brute;amount=1;radius=0;os=true;yRadiusUpOnly=true;yRadius=0;inheritFaction=true}
+  - addtag{t=MB} @self
+  - delay 20
+  - removetag{t=MB} @self
+Nocsy_FPV1_SummonMR:
+  Conditions:
+  - hastag{t=MR} castinstead Nocsy_FPV1_SummonBW
+  Skills:
+  - summon{type=Nocsy_Moblin_Ravager;amount=1;radius=0;os=true;yRadiusUpOnly=true;yRadius=0;inheritFaction=true}
+  - addtag{t=MR} @self
+  - delay 20
+  - removetag{t=MR} @self 
+  
+#-----------  Ganondorf Spell -----------#
+Nocsy_Ganondorf_Spell:
+  Conditions:
+  - hastag{t=attacking} false
+  - hastag{t=fire} false
+  Skills:
+  - addtag{t=attacking} @self
+  - state{s=spell_start;li=0;lo=0;speed=1} @self
+  - setAI{ai=false} @self
+  - delay 47
+  - summon{type=Nocsy_Ganon_CorruptedFlames;amount=1;radius=0;os=true;yRadiusUpOnly=true;yRadius=0;inheritFaction=true} @self
+  - summon{type=Nocsy_Ganondorf_Spell;amount=1;radius=0;os=false;yRadiusUpOnly=true;yRadius=0;inheritFaction=true} @SelfLocation{y=3.5}
+  - state{s=spell_loop;li=0;lo=0;speed=1;repeat=8;repeatInterval=30} @self
+  - sound{s=entity.evoker.prepare_attack;v=1;p=0.2} @self
+  - delay 240
+  - state{s=spell_end;li=0;lo=0;speed=1} @self
+  - delay 47
+  - setAI{ai=true} @self
+  - signal{s=REMOVEFLAME} @MobsInRadius{r=10;t=Nocsy_Ganon_CorruptedFlames}
+  - removetag{t=attacking} @self
+
+Nocsy_Ganondorf_castSpell:
+  Skills:
+  - orbital{onTick=Nocsy_Ganondorf_castSpell-Effect1;hp=false;points=20;interval=1;duration=240;r=1.2;vy=0;rZ=60;rX=-60} @SelfLocation{y=1}
+  - orbital{onTick=Nocsy_Ganondorf_castSpell-Effect1;hp=false;points=20;interval=1;duration=240;r=0.8;vy=-45;rZ=60;rX=10} @SelfLocation{y=1}
+  - orbital{onTick=Nocsy_Ganondorf_castSpell-Effect2;hp=false;points=20;interval=1;duration=240;r=1;vy=-90;rZ=60;rX=-20} @SelfLocation{y=1}
+  - orbital{onTick=Nocsy_Ganondorf_castSpell-Effect2;hp=false;points=20;interval=1;duration=240;r=1.5;vy=-30;rZ=60;rX=30} @SelfLocation{y=1}
+  - delay 60
+  - skill{s=Nocsy_FPV1_GanondorfSpell-Launch;repeat=3;repeatInterval=60}
+  - delay 180
+  - remove @self
+
+Nocsy_FPV1_GanondorfSpell-Launch:
+  Skills:
+  - sound{s=entity.illusioner.cast_spell;v=1;p=0.8} @self
+  - missile{
+        oT=Nocsy_FPV1_GanondorfSpell-Tick;
+        oH=Nocsy_FPV1_GanondorfSpell-End;
+        oE=Nocsy_FPV1_GanondorfSpell-End;
+        v=5;
+        i=1;
+        hR=1;
+        vR=1;
+        in=50;
+        md=20000;
+        mr=400;
+        sfo=0;
+        fo=false;
+        syo=4;
+        } @PIR{r=80;limit=6;sort=RANDOM}
+        
+Nocsy_FPV1_GanondorfSpell-Tick:
+  Skills:
+  - effect:particles{p=fireworks_spark;amount=5;speed=0.05;hS=0.1;vS=0.1} @origin
+  - effect:particles{p=spell_witch;amount=1;speed=0.05;hS=0.1;vS=0.1} @origin
+Nocsy_FPV1_GanondorfSpell-End:
+  Skills:
+  - damage{a=8} @PlayersNearOrigin{r=3}
+  - potion{type=WITHER;duration=100;lvl=1} @PlayersNearOrigin{r=3}
+Nocsy_Ganondorf_castSpell-Effect1:
+  Skills:
+  - effect:particles{p=fireworks_spark;amount=1;speed=0.01;hS=0.01;vS=0.01} @origin
+Nocsy_Ganondorf_castSpell-Effect2:
+  Skills:
+  - effect:particles{p=spell_witch;amount=1;speed=0.01;hS=0.01;vS=0.01} @origin
+Nocsy_Ganondorf_castSpell-Effect3:
+  Skills:
+  - effect:particles{p=spell_witch;amount=1;speed=0.01;hS=0.01;vS=0.01} @origin
+Nocsy_Ganondorf_castSpell-Effect4:
+  Skills:
+  - effect:particles{p=squid_ink;amount=1;speed=0.01;hS=0.01;vS=0.01} @origin
+  
+#-----------  Ganondorf Hurt -----------#
+Nocsy_Ganondorf_Hurt:
+  Conditions:
+  - hastag{t=attacking} false
+  - hastag{t=hurt} false
+  Skills:
+  - addtag{t=attacking} @self
+  - addtag{t=hurt} @self
+  - state{s=hurt;li=0;lo=0;speed=1} @self
+  - setAI{ai=false} @self
+  - sound{s=entity.illusioner.death;v=1;p=0.6} @self
+  - delay 36
+  - setAI{ai=true} @self
+  - removetag{t=attacking} @self
+  - delay 200
+  - removetag{t=hurt} @self
+  
+#-----------  Ganondorf Transform -----------#
+Nocsy_Ganondorf_Transform_LAUNCH:
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=2000;level=255;hasParticles=false} @self
+  - removetag{t=forcespell} @self
+  - removetag{t=forcesmash} @self
+  - Aura{auraName=Nocsy_Ganondorf_Transform_LAUNCH-Aura;onTick=Nocsy_Ganondorf_Transform;interval=10;d=2000} @self
+  
+Nocsy_Ganondorf_Transform:
+  Conditions:
+  - hastag{t=attacking} false
+  Skills:
+  - addtag{t=attacking} @self
+  - state{s=transform;li=0;lo=0;speed=1} @self
+  - setAI{ai=false} @self
+  - delay 30
+  - sound{s=entity.ender_dragon.ambient;v=1;p=0.1} @self
+  - summon{type=Nocsy_Ganon_CorruptedFlamesTransformation;amount=1;radius=0;os=true;yRadiusUpOnly=true;yRadius=0;inheritFaction=true}
+  - delay 80
+  - summon{type=Nocsy_Ganon;amount=1;radius=0;os=true;yRadiusUpOnly=true;yRadius=0;inheritFaction=true}
+  - effect:particles{p=explosion_huge;amount=5;speed=0.01;hS=0.01;vS=0.01} @ModelPart{m=nocsy_ganondorf;p=body;offset=LOCAL;y=0;x=0}
+  - signal{s=REMOVEFLAMETORNADO} @MobsInRadius{r=10;t=Nocsy_Ganon_CorruptedFlamesTransformation}
+  - remove @self
+
+#-----------  Ganondorf Death -----------#
+Nocsy_Ganondorf_Death:
+  Skills:
+  - addtag{t=attacking} @self
+  - state{s=force_death;li=0;lo=0;speed=1} @self
+  - setAI{ai=false} @self
+  - delay 100
+  - remove @self
+
+############################################
+#                  Ganon                   #
+############################################
+
+#-----------  Ganon Spawn -----------#
+Nocsy_Ganon_Spawn:
+  Skills:
+  - addtag{t=attacking} @self
+  - state{s=spawn;li=0;lo=0;speed=1} @self
+  - setAI{ai=false} @self
+  - sound{s=entity.ravager.step;v=1;p=2} @self
+  - delay 8
+  - sound{s=entity.ravager.step;v=1;p=2} @self
+  - delay 22
+  - sound{s=entity.ravager.roar;v=1;p=0.1} @self
+  - delay 106
+  - setAI{ai=true} @self
+  - removetag{t=attacking} @self
+  
+#-----------  Ganon Aura -----------#
+Nocsy_Ganon_Aura:
+  Skills:
+  - Aura{auraName=Nocsy_Ganon_Aura-Aura;onTick=Nocsy_Ganon_Aura-Tick;interval=200;d=916000000} @self
+
+Nocsy_Ganon_Aura-Tick:
+  Conditions:
+  - playernotwithin{d=10} true
+  Skills:
+  - skill{s=Nocsy_Ganon_Charge}
+#-----------  Ganon Attack -----------#
+Nocsy_Ganon_Attack:
+  Conditions:
+  - hastag{t=attacking} false
+  Skills:
+  - randomskill{s=Nocsy_Ganon_SlashOneSide,Nocsy_Ganon_SlashDual,Nocsy_Ganon_JumpSmash,Nocsy_Ganon_Charge}
+  
+#-----------  Ganon Slash OneSide -----------#
+Nocsy_Ganon_SlashOneSide:
+  Conditions:
+  - hastag{t=attacking} false
+  - playerwithin{d=4} true
+  Skills:
+  - addtag{t=attacking} @self
+  - randomskill{s=Nocsy_Ganon_SlashOneSide_Animation1,Nocsy_Ganon_SlashOneSide_Animation2}
+  - setAI{ai=false} @self
+  - delay 15
+  - skill{s=Nocsy_Ganon_Sound_Attack}
+  - delay 7
+  - sound{s=entity.player.attack.crit;v=1;p=0.1} @self
+  - damage{a=24} @LivingInCone{a=30.0;r=6.5;rot=0.0;target=players}
+  - potion{type=SLOW;duration=200;lvl=1} @LivingInCone{a=30.0;r=5.5;rot=0.0;target=players}
+  - effect:particles{p=sweep_attack;amount=2;speed=0.1;hS=0.01;vS=0.15} @Cone{angle=30;points=150;range=5.5;rotation=0;yoffset=-1.1}
+  - delay 12
+  - setAI{ai=true} @self
+  - removetag{t=attacking} @self
+
+Nocsy_Ganon_SlashOneSide_Animation1:
+  Skills:
+  - state{s=slash1;li=0;lo=0;speed=1.2} @self
+Nocsy_Ganon_SlashOneSide_Animation2:
+  Skills:
+  - state{s=slash2;li=0;lo=0;speed=1.2} @self
+  
+#-----------  Ganon Slash Dual -----------#
+Nocsy_Ganon_SlashDual:
+  Conditions:
+  - hastag{t=attacking} false
+  - playerwithin{d=4} true
+  Skills:
+  - addtag{t=attacking} @self
+  - state{s=slash_dual;li=0;lo=0;speed=1.2} @self
+  - setAI{ai=false} @self
+  - delay 30
+  - skill{s=Nocsy_Ganon_Sound_Attack}
+  - delay 7
+  - sound{s=entity.player.attack.knockback;v=1;p=0.1} @self
+  - damage{a=28} @LivingInCone{a=45.0;r=7.5;rot=0.0;target=players}
+  - throw{velocity=5;velocityY=4} @LivingInCone{a=45.0;r=5.5;rot=0.0;target=players}
+  - effect:particles{p=explosion_normal;amount=2;speed=0.1;hS=0.01;vS=0.15} @Cone{angle=45;points=200;range=5.5;rotation=0;yoffset=-1.1}
+  - delay 27
+  - setAI{ai=true} @self
+  - removetag{t=attacking} @self
+  
+#-----------  Ganon Roar -----------#
+Nocsy_Ganon_Roar_FORCE:
+  Skills:
+  - addtag{t=roarforce} @self
+  - Aura{auraName=Nocsy_Ganon_Roar_FORCE-Aura;onTick=Nocsy_Ganon_Roar;interval=10;d=600} @self
+  
+Nocsy_Ganon_Roar:
+  Conditions:
+  - hastag{t=attacking} false
+  - hastag{t=roarforce} true
+  Skills:
+  - removetag{t=roarforce} @self
+  - addtag{t=attacking} @self
+  - state{s=roar;li=0;lo=0;speed=1} @self
+  - setAI{ai=false} @self
+  - delay 20 # This is where the roar starts
+  - skill{s=Nocsy_Ganon_Sound_Roar}
+  - throw{velocity=4;velocityY=2} @PIR{r=8}
+  - delay 23
+  - skill{s=Nocsy_Ganondorf_SmashGround_SummonFlames} @Ring{radius=6;points=4}
+  - removetag{t=monstersummoned} @self
+  - delay 20
+  - skill{s=Nocsy_Ganon_Sound_Roar}
+  - skill{s=Nocsy_Ganondorf_SmashGround_SummonFlames} @Ring{radius=8;points=3}
+  - removetag{t=monstersummoned} @self
+  - delay 23
+  - skill{s=Nocsy_Ganondorf_SmashGround_SummonFlames} @Ring{radius=10;points=2}
+  - delay 10 # This is when it ends
+  - delay 20 # This represents the end of the animation
+  - setAI{ai=true} @self
+  - removetag{t=attacking} @self
+  
+#-----------  Ganon Jump Smash -----------#
+Nocsy_Ganon_JumpSmash:
+  Conditions:
+  - hastag{t=attacking} false
+  - hastag{t=jump} false
+  Skills:
+  - addtag{t=jump} @self
+  - addtag{t=attacking} @self
+  - state{s=jump_smash;li=0;lo=0;speed=1} @self
+  - setAI{ai=false} @self
+  - delay 20
+  - sound{s=entity.ravager.attack;v=1;p=0.4} @self
+  - delay 26
+  - damage{a=15} @PIR{r=8}
+  - throw{velocity=1;velocityY=15} @PIR{r=8}
+  - effect:particles{p=explosion_huge;amount=5;speed=0.01;hS=0.01;vS=0.01} @SelfLocation{y=-3}
+  - effect:particles{p=explosion_normal;amount=2;speed=0.01;hS=0.01;vS=0.01} @Ring{radius=8;points=50}
+  - effect:particles{p=explosion_normal;amount=2;speed=0.025;hS=0.01;vS=0.05} @Ring{radius=6;points=50}
+  - effect:particles{p=explosion_normal;amount=2;speed=0.05;hS=0.05;vS=0.05} @Ring{radius=5;points=50}
+  - effect:particles{p=explosion_normal;amount=2;speed=0.1;hS=0.05;vS=0.1} @Ring{radius=4;points=50}
+  - effect:particles{p=explosion_normal;amount=2;speed=0.2;hS=0.1;vS=0.1} @Ring{radius=3;points=50}
+  - sound{s=entity.generic.explode;v=1;p=0.6} @self
+  - delay 34
+  - setAI{ai=true} @self
+  - removetag{t=attacking} @self
+  - delay 400
+  - removetag{t=jump} @self
+  
+#-----------  Ganon Rest -----------#
+Nocsy_Ganon_Rest_FORCE:
+  Skills:
+  - removetag{t=attacking} @self
+  - removetag{t=darkstar} @self
+  - setAI{ai=true} @self
+  - delay 5
+  - skill{s=Nocsy_Ganon_Rest}
+
+Nocsy_Ganon_Rest:
+  Conditions:
+  - hastag{t=attacking} false
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=1;lvl=1} @self  
+  - sound{s=entity.hoglin.angry;v=1;p=0.2} @self
+  - addtag{t=attacking} @self
+  - state{s=rest_start;li=0;lo=0;speed=1} @self
+  - setAI{ai=false} @self
+  - delay 20
+  - state{s=rest_loop;li=0;lo=0;speed=1;repeat=5;repeatInterval=40} @self
+  - delay 200
+  - state{s=rest_end;li=0;lo=0;speed=1} @self
+  - delay 40 # duration of coming back from rest pose  
+  - sound{s=entity.hoglin.angry;v=1;p=0.2} @self
+  - setAI{ai=true} @self
+  - removetag{t=attacking} @self
+  
+#-----------  Ganon Dark Star -----------#
+Nocsy_Ganon_DarkStar_FORCE:
+  Skills:
+  - addtag{t=darkstarforce} @self
+  - potion{type=DAMAGE_RESISTANCE;duration=600;lvl=255} @self
+  - Aura{auraName=Nocsy_Ganon_DarkStar_FORCE-Aura;onTick=Nocsy_Ganon_DarkStar_INIT;interval=10;d=600} @self
+  
+Nocsy_Ganon_DarkStar_INIT:
+  Conditions:
+  - hastag{t=attacking} false
+  - hastag{t=darkstarforce} true
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=700;lvl=3} @self  
+  - removetag{t=darkstarforce} @self
+  - addtag{t=attacking} @self
+  - state{s=dark_orb_start;li=0;lo=0;speed=1} @self
+  - setAI{ai=false} @self  
+  - sound{s=entity.ravager.roar;v=1;p=0.2} @self
+  - delay 46
+  - sound{s=block.beacon.power_select;v=2;p=2} @self
+  - summon{type=Nocsy_Ganon_DarkOrb_SPAWN;amount=1;radius=0;os=false;yRadiusUpOnly=true;yRadius=0;inheritFaction=true} @SelfLocation{y=5.5}
+  - delay 30 # end of start animation
+  - addtag{t=darkstar} @self
+  - skill{s=Nocsy_Ganon_DarkStar_Loop;repeat=25;repeatInterval=40} # Maximum duration of the Dark Orb before it triggers
+Nocsy_Ganon_DarkStar_Loop:
+  Conditions:
+  - hastag{t=darkstar}
+  Skills:
+  - state{s=dark_orb_loop;li=0;lo=0;speed=1} @self
+  
+#-----------  Ganon Charge -----------#
+Nocsy_Ganon_Charge:
+  Conditions:
+  - hastag{t=attacking} false
+  - hastag{t=charged} false
+  Skills:
+  - addtag{t=attacking} @self
+  - addtag{t=charged} @self
+  - state{s=charge_start;li=0;lo=0;speed=1} @self
+  - look{immediately=true}
+  - setAI{ai=false} @self
+  - sound{s=entity.hoglin.angry;v=1;p=0.2} @self
+  - delay 30
+  - sound{s=entity.hoglin.angry;v=1;p=0.2} @self
+  - addtag{t=chargeAnimation} @self
+  - projectile{i=1;maxRange=20;v=8;md=100;hitRadius=3;sE=false;sb=true;hs=true;hfs=0.5;
+      onTick=[
+        - teleport
+        - skill{s=Nocsy_Charge_Animation}
+        - skill{delay=6;s=[ 
+            - throw{v=10;vy=10;fromOrigin=true}
+            - damage{amount=20}
+          ]} @EntitiesNearOrigin{r=4}
+      ];
+      onEnd=[
+        - skill{s=[
+            - damage{amount=20}
+            - throw{v=30;vy=15;fromOrigin=true}
+          ]} @ENO{r=4;ignore=faction}
+        - state{s=charge_end} @self
+        - delay 40
+        - setAI{ai=true} @self
+        - removetag{t=attacking} @self
+        - removetag{t=chargeAnimation} @self
+        - delay 400
+        - removetag{t=charged} @self
+      ]} @target
+Nocsy_Charge_Animation:
+  Conditions:
+  - hastag{t=chargeAnimation} true
+  - hastag{t=chargeRunning} false
+  Skills:
+  - addtag{t=chargeRunning} @self
+  - state{s=charge_loop;li=0;lo=0;speed=1} @self
+  - delay 4
+  - effect:particles{p=explosion_normal;amount=2;speed=0.1;hS=0.01;vS=0.15} @Cone{angle=10;points=100;range=2.5;rotation=180;yoffset=-1.1}
+  - sound{s=entity.ravager.step;v=1;p=2} @self
+  - delay 10
+  - sound{s=entity.ravager.step;v=1;p=2} @self
+  - effect:particles{p=explosion_normal;amount=2;speed=0.1;hS=0.01;vS=0.15} @Cone{angle=10;points=100;range=2.5;rotation=180;yoffset=-1.1}
+  - delay 2
+  - removetag{t=chargeRunning} @self
+#-----------  Ganon Death -----------#
+
+Nocsy_Ganon_Death_INIT:
+  Skills:
+  - summon{type=Nocsy_Ganon_CorruptedFlamesTransformation_Retro;amount=1;radius=0;os=true;yRadiusUpOnly=true;yRadius=0;inheritFaction=true} @origin
+
+Nocsy_Ganon_Death_ANIMATION:
+  Skills:
+  - delay 130 # Duration of the death animation
+  - effect:particles{p=explosion_huge;amount=5;speed=0.01;hS=0.01;vS=0.01} @ModelPart{m=nocsy_ganondorf;p=body;offset=LOCAL;y=0;x=0} @SelfLocation{y=3}
+  - summon{type=Nocsy_Ganondorf_DEAD;amount=1;radius=0;os=true;yRadiusUpOnly=true;yRadius=0;inheritFaction=true} @origin
+  - remove @self
+  
+############################################
+#            Corrupted Flames              #
+############################################
+
+#-----------  CF Spawn -----------#
+Nocsy_CorruptedFlames_Spawn:
+  Skills:
+  - state{s=spawn;li=0;lo=0;speed=1} @self
+  - delay 400
+  - remove @self
+  
+#-----------  CF Aura -----------#
+Nocsy_CorruptedFlames_Aura:
+  Skills:
+  - Aura{auraName=Nocsy_CorruptedFlames_Aura-Aura;onTick=Nocsy_CorruptedFlames_Aura-Tick;interval=10;d=916000000} @self
+
+Nocsy_CorruptedFlames_Aura-Tick:
+  Skills:
+  - damage{a=4;ia=true} @PIR{r=3}
+  - throw{velocity=1;velocityY=1} @PIR{r=3}
+  - ignite{ticks=100} @PIR{r=3}
+
+############################################
+#        Corrupted Flames Transform        #
+############################################
+
+#-----------  CFT Spawn -----------#
+Nocsy_CorruptedFlamesTransform_Spawn:
+  Skills:
+  - state{s=transformation;li=0;lo=0;speed=1} @self
+  - delay 400
+  - remove @self
+  
+#-----------  CFT Aura -----------#
+Nocsy_CorruptedFlamesTransform_Aura:
+  Skills:
+  - Aura{auraName=Nocsy_CorruptedFlamesTransform_Aura-Aura;onTick=Nocsy_CorruptedFlamesTransform_Aura-Tick;interval=10;d=916000000} @self
+
+Nocsy_CorruptedFlamesTransform_Aura-Tick:
+  Skills:
+  - damage{a=4;ia=true} @PIR{r=3}
+  - throw{velocity=4;velocityY=3} @PIR{r=3}
+  - ignite{ticks=100} @PIR{r=3}
+
+############################################
+#                Dark star                 #
+############################################
+
+#-----------  DS Effect Spawn/destroyed -----------#
+Nocsy_FPV1_DarkStar_Effect:
+  Skills:
+  - effect:particlesphere{p=reddust;color=#BA00FF;amount=500;radius=5} @self
+  - effect:particlesphere{p=spell_witch;amount=300;radius=5.1} @self
+  - delay 10
+  - effect:particlesphere{p=reddust;color=#BA00FF;amount=500;radius=4} @self
+  - effect:particlesphere{p=spell_witch;amount=300;radius=4.1} @self
+  - delay 8
+  - effect:particlesphere{p=reddust;color=#BA00FF;amount=500;radius=5} @self
+  - effect:particlesphere{p=spell_witch;amount=300;radius=5.1} @self
+  - delay 5
+  - effect:particlesphere{p=reddust;color=#BA00FF;amount=500;radius=3} @self
+  - effect:particlesphere{p=spell_witch;amount=300;radius=3.1} @self
+  - projectile{onTick=Nocsy_FPV1_DarkStar_Effect-Missile-Tick;;v=6;i=1;hR=1;vR=1;hs=false;d=100} @Ring{radius=3;points=8}
+
+Nocsy_FPV1_DarkStar_Effect-Missile-Tick:
+  Skills:
+  - effect:particlesphere{p=reddust;color=#BA00FF;amount=30;radius=0.5} @origin
+  - effect:particlesphere{p=spell_witch;amount=10;radius=0.3} @origin
+
+#-----------  DS Spawn -----------#
+Nocsy_FPV1_DarkStar_Spawn:
+  Skills:
+  - skill{s=Nocsy_FPV1_DarkStar_Effect}
+  - delay 24 # Sphere effects
+  - summon{type=Nocsy_Ganon_DarkOrb;amount=1;radius=0;os=false;yRadiusUpOnly=true;yRadius=0;inheritFaction=true} @origin
+  - delay 60 # Projectiles here
+  - remove @self
+
+#-----------  DS Aura -----------#
+Nocsy_FPV1_DarkStar_Aura:
+  Skills:
+  - effect:particleorbital{r=3;points=40;t=90;i=1;vy=50;rZ=30;rX=10;particle=spell_witch} @SelfLocation{y=0.7}
+  - effect:particleorbital{r=3;points=40;t=90;i=1;vy=-50;rZ=-30;rX=10;particle=spell_witch} @SelfLocation{y=0.7}
+  - delay 90
+  - Aura{auraName=Nocsy_FPV1_DarkStar_Aura-Aura;onTick=Nocsy_FPV1_DarkStar_Aura-Tick;interval=100;d=91600000} @self
+  - delay 600
+  - skill{s=Nocsy_FPV1_DarkStar_Explode}
+Nocsy_FPV1_DarkStar_Aura-Tick:
+  Skills:
+  - missile{
+        oT=Nocsy_FPV1_DarkStar_Missile-Tick;
+        oH=Nocsy_FPV1_DarkStar_Missile-End;
+        oE=Nocsy_FPV1_DarkStar_Missile-End;
+        v=8.2;
+        i=2;
+        hR=1;
+        vR=1;
+        in=400;
+        md=20000;
+        mr=400;
+        sfo=1.5;
+        } @PIR{r=80}
+  - effect:particleorbital{r=3;points=40;t=100;i=1;vy=50;rZ=30;rX=10;particle=spell_witch} @SelfLocation{y=0.7}
+  - effect:particleorbital{r=3;points=40;t=100;i=1;vy=-50;rZ=-30;rX=10;particle=spell_witch} @SelfLocation{y=0.7}
+
+Nocsy_FPV1_DarkStar_Missile-Tick:
+  Skills:
+  - effect:particlesphere{p=reddust;color=#BA00FF;amount=15;radius=0.5} @origin
+  - effect:particlesphere{p=spell_witch;amount=10;radius=0.3} @origin
+  
+Nocsy_FPV1_DarkStar_Missile-End:
+  Skills:
+  - damage{a=10} @PlayersNearOrigin{r=3}
+  - potion{type=SLOW;duration=200;level=2;hasParticles=false} @PlayersNearOrigin{r=3}
+
+#-----------  DS Explode -----------#
+Nocsy_FPV1_DarkStar_Explode:
+  Skills:
+  - sound{s=entity.ender_dragon.death;v=1;p=2} @self
+  - skill{s=Nocsy_FPV1_DarkStar_Destroyed}
+  - effect:particleorbital{r=1.8;points=20;t=80;i=1;vy=50;rZ=30;rX=10;particle=cloud} @SelfLocation{y=0.7}
+  - effect:particleorbital{r=1.2;points=20;t=80;i=1;vy=50;rZ=30;rX=10;particle=explosion_normal} @SelfLocation{y=0.7}
+  - summon{type=Nocsy_Ganon_DarkOrb_DESTROY;amount=1;radius=0;os=true;yRadiusUpOnly=true;yRadius=0;inheritFaction=true} @origin
+  - signal{s=DARKSTAREXPLODE} @MobsInRadius{r=20;t=Nocsy_Ganon}
+  - delay 10
+  - sound{s=block.beacon.deactivate;v=1;p=0.6} @self
+  - delay 13
+  - sound{s=block.beacon.deactivate;v=1;p=0.1} @self
+  - sound{s=entity.generic.explode;v=1;p=0.1} @PlayersNearOrigin{r=80}
+  - effect:particles{p=explosion_huge;amount=2;speed=0.01;hS=0.01;vS=0.01} @PlayersNearOrigin{r=80}
+  - lightning{d=40} @PlayersNearOrigin{r=100}
+
+#-----------  DS Damaged -----------#
+Nocsy_FPV1_DarkStar_Damaged:
+  Skills:
+  - effect:particlesphere{p=reddust;color=#BA00FF;amount=500;radius=2} @SelfLocation{y=1}
+  - effect:particlesphere{p=spell_witch;amount=300;radius=2.1} @SelfLocation{y=1}
+  - skill{s=Nocsy_Ganon_Sound_DarkOrb_damaged}
+  
+#-----------  DS Destroyed -----------#
+Nocsy_FPV1_DarkStar_Destroyed_INIT:
+  Skills:
+  - sound{s=entity.generic.explode;v=1;p=0.1} @self
+  - effect:particleorbital{r=1.8;points=20;t=80;i=1;vy=50;rZ=30;rX=10;particle=cloud} @SelfLocation{y=0.7}
+  - effect:particleorbital{r=1.2;points=20;t=80;i=1;vy=50;rZ=30;rX=10;particle=explosion_normal} @SelfLocation{y=0.7}
+  - effect:particles{p=explosion_huge;amount=2;speed=0.01;hS=0.01;vS=0.01} @origin
+  - summon{type=Nocsy_Ganon_DarkOrb_DESTROY;amount=1;radius=0;os=true;yRadiusUpOnly=true;yRadius=0;inheritFaction=true} @origin
+  - signal{s=DARKSTAREXPLODE} @MobsInRadius{r=20;t=Nocsy_Ganon}
+  - remove @self
+  
+Nocsy_FPV1_DarkStar_Destroyed:
+  Skills:
+  - skill{s=Nocsy_FPV1_DarkStar_Effect}
+  - delay 24 # Sphere effects
+  - sound{s=block.beacon.deactivate;v=1;p=0.6} @self
+  - delay 40 # Projectile effects
+  - sound{s=block.beacon.deactivate;v=1;p=0.1} @self
+  - effect:particles{p=explosion_huge;amount=2;speed=0.01;hS=0.01;vS=0.01} @self
+  - remove @self
+
+############################################
+#              Global Sounds               #
+############################################
+Nocsy_Ganondorf_Sound_Ambient-Aura:
+  Skills:
+  - Aura{auraName=Nocsy_Ganondorf_Sound_Ambient-Aura;onTick=Nocsy_Ganondorf_Sound_Ambient;interval=100;d=91600000} @self
+Nocsy_Ganondorf_Sound_Ambient:
+  Conditions:
+  - hastag{t=sound} false
+  - hastag{t=ambientsound} false
+  Skills:
+  - addtag{t=sound} @self
+  - addtag{t=ambientsound} @self
+  - sound{s=entity.evoker.celebrate;v=1;p=0.2} @self
+  - delay 20
+  - removetag{t=sound} @self
+  - delay 80
+  - removetag{t=ambientsound} @self
+Nocsy_Ganon_Sound_Ambient-Aura:
+  Skills:
+  - Aura{auraName=Nocsy_Ganon_Sound_Ambient-Aura;onTick=Nocsy_Ganon_Sound_Ambient;interval=100;d=91600000} @self
+Nocsy_Ganon_Sound_Ambient:
+  Conditions:
+  - hastag{t=sound} false
+  - hastag{t=ambientsound} false
+  Skills:
+  - addtag{t=sound} @self
+  - addtag{t=ambientsound} @self
+  - sound{s=entity.ravager.ambient;v=1;p=0.1} @self
+  - delay 20
+  - removetag{t=sound} @self
+  - delay 80
+  - removetag{t=ambientsound} @self
+Nocsy_Ganon_Sound_Roar:
+  Conditions:
+  - hastag{t=roarsound} false
+  Skills:
+  - addtag{t=sound} @self
+  - addtag{t=roarsound} @self
+  - sound{s=entity.ravager.roar;v=1;p=0.1} @self
+  - sound{s=entity.ravager.stunned;v=1;p=0.1} @self 
+  - delay 20
+  - removetag{t=sound} @self
+  - delay 80
+  - removetag{t=roarsound} @self
+Nocsy_Ganon_Sound_Attack:
+  Conditions:
+  - hastag{t=sound} false
+  - hastag{t=attacksound} false
+  Skills:
+  - addtag{t=sound} @self
+  - addtag{t=attacksound} @self
+  - sound{s=entity.ravager.attack;v=1;p=0.2} @self 
+  - delay 20
+  - removetag{t=sound} @self
+  - delay 80
+  - removetag{t=attacksound} @self
+Nocsy_Ganon_Sound_Charge:
+  Conditions:
+  - hastag{t=chargesound} false
+  Skills:
+  - addtag{t=sound} @self
+  - addtag{t=chargesound} @self
+  - sound{s=entity.hoglin.angry;v=1;p=0.4} @self 
+  - delay 20
+  - removetag{t=sound} @self
+  - delay 10
+  - removetag{t=chargesound} @self
+Nocsy_Ganon_Sound_Hurt:
+  Conditions:
+  - hastag{t=sound} false
+  - hastag{t=hurtsound} false
+  Skills:
+  - addtag{t=sound} @self
+  - addtag{t=hurtsound} @self
+  - sound{s=entity.hoglin.ambient;v=1;p=0.5} @self 
+  - delay 20
+  - removetag{t=sound} @self
+  - delay 300
+  - removetag{t=hurtsound} @self
+Nocsy_Ganon_Sound_Ambient_Fire-Aura:
+  Skills:
+  - Aura{auraName=Nocsy_Ganon_Sound_Ambient_Fire-Aura;onTick=Nocsy_Ganon_Sound_Ambient_Fire;interval=70;d=91600000} @self
+Nocsy_Ganon_Sound_Ambient_Fire:
+  Skills:
+  - sound{s=entity.blaze.burn;v=1;p=0.1} @self
+Nocsy_Ganon_Sound_Ambient_DarkOrb-Aura:
+  Skills:
+  - Aura{auraName=Nocsy_Ganon_Sound_Ambient_DarkOrb-Aura;onTick=Nocsy_Ganon_Sound_Ambient_DarkOrb;interval=50;d=91600000} @self
+Nocsy_Ganon_Sound_Ambient_DarkOrb:
+  Skills:
+  - sound{s=block.beacon.ambient;v=1;p=0.1} @self
+  - sound{s=block.beacon.ambient;v=1;p=0.6} @self
+Nocsy_Ganon_Sound_DarkOrb_damaged:
+  Conditions:
+  - hastag{t=sound} false
+  Skills:
+  - addtag{t=sound} @self
+  - sound{s=block.beacon.deactivate;v=1;p=0.8} @self
+  - delay 40
+  - removetag{t=sound} @self

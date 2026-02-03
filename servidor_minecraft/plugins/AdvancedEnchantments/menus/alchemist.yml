@@ -1,0 +1,78 @@
+general:
+  settings:
+    combine-books: true
+    combine-dust: true
+    books:
+      add-up-chances: true
+      pre-set-chances:
+        enabled: false
+        success: 50
+        destroy: 50
+    dusts:
+      add-up: true
+    price:
+      experience: true
+      let-plugin-count: true
+      custom-price: 250
+    other-items-slot:
+      first-item-slot: 3
+      second-item-slot: 5
+
+inventory:
+  open-sound: "BLOCK_CHEST_OPEN"
+
+  name: ":<shift:-16><glyph:alchemist_menu>"
+
+  size: 27
+
+  items:
+    preview-item:
+      type: BARRIER
+      damage: 0
+      custom-model-data: 0
+      slot: 22
+      name: "&e&lɪᴛᴇᴍ ᴘʀᴇᴠɪᴇᴡ"
+      lore:
+        - ''
+        - "&fᴀ ᴘʀᴇᴠɪᴇᴡ ᴏꜰ ɪᴛᴇᴍ ʏᴏᴜ ᴡɪʟʟ"
+        - "&fʀᴇᴄᴇɪᴠᴇ ꜰʀᴏᴍ ᴛʜᴇ ᴀʟᴄʜᴇᴍɪꜱᴛ"
+        - "&fᴡɪʟʟ ʙᴇ ᴅɪꜱᴘʟᴀʏᴇᴅ ʜᴇʀᴇ."
+        - ''
+    explanation-item:
+      type: PAPER
+      custom-model-data: 201
+      slot: 16
+      name: "&e&lᴀʟᴄʜᴇᴍɪꜱᴛ"
+      lore:
+        - ''
+        - "&7ᴛʜᴇ ᴀʟᴄʜᴇᴍɪꜱᴛ ᴡɪʟʟ ᴇxᴄʜᴀɴɢᴇ..."
+        - ""
+        - "&b&l* &f2x ᴇɴᴄʜᴀɴᴛᴍᴇɴᴛ ʙᴏᴏᴋꜱ"
+        - "&7(ᴏꜰ ᴛʜᴇ ꜱᴀᴍᴇ ᴛʏᴘᴇ ᴀɴᴅ ʟᴇᴠᴇʟ)"
+        - "&d= &f1x ᴇɴᴄʜᴀɴᴛᴍᴇɴᴛ ʙᴏᴏᴋ"
+        - "&7(ᴏꜰ ʜɪɢʜᴇʀ ʟᴇᴠᴇʟ)"
+        - ""
+        - "&b&l* &f2x ᴍᴀɢɪᴄ ᴅᴜꜱᴛ"
+        - "&7(ᴏꜰ ᴛʜᴇ ꜱᴀᴍᴇ ʀᴀʀɪᴛʏ)"
+        - "&d= &f1x ᴍᴀɢɪᴄ ᴅᴜꜱᴛ"
+        - "&7(ᴏꜰ ʜɪɢʜᴇʀ ᴄʜᴀɴᴄᴇꜱ)"
+    confirm-item:
+      type: PAPER
+      custom-model-data: 200
+      slot: 16
+      name: "&b&lᴄʟɪᴄᴋ ᴛᴏ ᴇxᴄʜᴀɴɢᴇ"
+      lore:
+        - ''
+        - "&c&lᴄᴏꜱᴛꜱ &c%price% EXP"
+        - ""
+        - "&7ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ᴄᴏɴꜰɪʀᴍ ᴛʜɪꜱ"
+        - "&7ɪᴛᴇᴍ ᴇxᴄʜᴀɴɢᴇ ᴀɴᴅ ʀᴇᴄᴇɪᴠᴇ ʏᴏᴜʀ"
+        - "&7ᴇᴘɪᴄ ɴᴇᴡ ɪᴛᴇᴍ ꜱʜᴏᴡɴ ᴀʙᴏᴠᴇ!"
+    filler-item:
+      # Enable or disable the filler item.
+      enabled: true
+      type: PAPER
+      custom-model-data: 202
+      damage: 15
+      name: " "
+      lore: [ ]

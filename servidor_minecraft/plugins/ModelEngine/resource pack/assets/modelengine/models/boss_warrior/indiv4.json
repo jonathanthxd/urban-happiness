@@ -1,0 +1,1 @@
+{"textures":{"0":"modelengine:entity/boss_warrior","particle":"#0"},"elements":[{"from":[5.5,8.0,4.5],"to":[10.5,8.0,11.5],"faces":{"up":{"uv":[2.5625,5.1875,2.25,5.625],"tintindex":0,"rotation":180,"texture":"#0"},"down":{"uv":[2.25,5.1875,2.5625,5.625],"tintindex":0,"rotation":0,"texture":"#0"}}}],"display":{"gui":{"rotation":[-150.0,-45.0,180.0]}}}

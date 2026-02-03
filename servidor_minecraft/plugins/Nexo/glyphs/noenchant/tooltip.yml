@@ -1,0 +1,340 @@
+top_simple:
+  texture: noenchant/font/tooltip/top_simple
+  ascent: 19
+  height: 23
+  char: 
+middle_simple:
+  texture: noenchant/font/tooltip/middle_simple
+  ascent: 8
+  height: 10
+  char: 
+buttom_simple:
+  texture: noenchant/font/tooltip/buttom_simple
+  ascent: 14
+  height: 21
+  char: 
+
+# UNIQUE
+top_unique:
+  texture: noenchant/font/tooltip/top_unique.png
+  ascent: 19
+  height: 23
+  char: 
+middle_unique:
+  texture: noenchant/font/tooltip/middle_unique.png
+  ascent: 8
+  height: 10
+  char: 
+buttom_unique:
+  texture: noenchant/font/tooltip/buttom_unique.png
+  ascent: 14
+  height: 21
+  char: 
+# ELITE
+top_elite:
+  texture: noenchant/font/tooltip/top_elite.png
+  ascent: 19
+  height: 23
+  char: 
+middle_elite:
+  texture: noenchant/font/tooltip/middle_elite.png
+  ascent: 8
+  height: 10
+  char: 
+buttom_elite:
+  texture: noenchant/font/tooltip/buttom_elite.png
+  ascent: 14
+  height: 21
+  char: 
+# ULTIMATE
+top_ultimate:
+  texture: noenchant/font/tooltip/top_ultimate.png
+  ascent: 19
+  height: 23
+  char: 
+middle_ultimate:
+  texture: noenchant/font/tooltip/middle_ultimate.png
+  ascent: 8
+  height: 10
+  char: 
+buttom_ultimate:
+  texture: noenchant/font/tooltip/buttom_ultimate.png
+  ascent: 14
+  height: 21
+  char: 
+# LEGENDARY
+top_legendary:
+  texture: noenchant/font/tooltip/top_legendary.png
+  ascent: 19
+  height: 23
+  char: 
+middle_legendary:
+  texture: noenchant/font/tooltip/middle_legendary.png
+  ascent: 8
+  height: 10
+  char: 
+buttom_legendary:
+  texture: noenchant/font/tooltip/buttom_legendary.png
+  ascent: 14
+  height: 21
+  char: 
+# FABLED
+top_fabled:
+  texture: noenchant/font/tooltip/top_fabled.png
+  ascent: 19
+  height: 23
+  char: 
+middle_fabled:
+  texture: noenchant/font/tooltip/middle_fabled.png
+  ascent: 8
+  height: 10
+  char: 
+buttom_fabled:
+  texture: noenchant/font/tooltip/buttom_fabled.png
+  ascent: 14
+  height: 21
+  char: 
+
+
+# SECRET CHEST
+top_secretchest:
+  texture: noenchant/font/tooltip/secretchest/top_secretchest.png
+  ascent: 19
+  height: 23
+  char: 
+middle_secretchest:
+  texture: noenchant/font/tooltip/secretchest/middle_secretchest.png
+  ascent: 8
+  height: 10
+  char: 
+buttom_secretchest:
+  texture: noenchant/font/tooltip/secretchest/buttom_secretchest.png
+  ascent: 14
+  height: 21
+  char: 
+
+# MAGIC DUST
+top_magicdust:
+  texture: noenchant/font/tooltip/magicdust/top_magicdust.png
+  ascent: 19
+  height: 23
+  char: 
+middle_magicdust:
+  texture: noenchant/font/tooltip/magicdust/middle_magicdust.png
+  ascent: 8
+  height: 10
+  char: 
+buttom_magicdust:
+  texture: noenchant/font/tooltip/magicdust/buttom_magicdust.png
+  ascent: 14
+  height: 21
+  char: 
+buttom_mysterygem:
+  texture: noenchant/font/tooltip/magicdust/buttom_mysterygem.png
+  ascent: 14
+  height: 21
+  char: 
+
+# RUNE
+top_rune:
+  texture: noenchant/font/tooltip/rune/top_rune.png
+  ascent: 19
+  height: 23
+  char: 
+middle_rune:
+  texture: noenchant/font/tooltip/rune/middle_rune.png
+  ascent: 8
+  height: 10
+  char: 
+button_rune:
+  texture: noenchant/font/tooltip/rune/button_rune.png
+  ascent: 14
+  height: 21
+  char: 
+
+# SCROLL
+top_scroll:
+  texture: noenchant/font/tooltip/scroll/top_scroll.png
+  ascent: 19
+  height: 23
+  char: 
+middle_scroll:
+  texture: noenchant/font/tooltip/scroll/middle_scroll.png
+  ascent: 8
+  height: 10
+  char: 
+button_scroll:
+  texture: noenchant/font/tooltip/scroll/button_scroll.png
+  ascent: 14
+  height: 21
+  char: 
+
+# BLACK SCROLL
+top_blackscroll:
+  texture: noenchant/font/tooltip/scroll/top_blackscroll.png
+  ascent: 19
+  height: 23
+  char: 
+middle_blackscroll:
+  texture: noenchant/font/tooltip/scroll/middle_blackscroll.png
+  ascent: 8
+  height: 10
+  char: 
+button_blackscroll:
+  texture: noenchant/font/tooltip/scroll/button_blackscroll.png
+  ascent: 14
+  height: 21
+  char: 
+
+# WHITE SCROLL
+top_whitescroll:
+  texture: noenchant/font/tooltip/scroll/top_whitescroll.png
+  ascent: 19
+  height: 23
+  char: 
+middle_whitescroll:
+  texture: noenchant/font/tooltip/scroll/middle_whitescroll.png
+  ascent: 8
+  height: 10
+  char: 
+button_whitescroll:
+  texture: noenchant/font/tooltip/scroll/button_whitescroll.png
+  ascent: 14
+  height: 21
+  char: 
+
+# weapon orb
+top_weaponorb:
+  texture: noenchant/font/tooltip/misc/top_weaponorb.png
+  ascent: 19
+  height: 23
+  char: 
+middle_weaponorb:
+  texture: noenchant/font/tooltip/misc/middle_weaponorb.png
+  ascent: 8
+  height: 10
+  char: 
+buttom_weaponorb:
+  texture: noenchant/font/tooltip/misc/buttom_weaponorb.png
+  ascent: 14
+  height: 21
+  char: 
+
+# armpr orb
+top_armororb:
+  texture: noenchant/font/tooltip/misc/top_armororb.png
+  ascent: 19
+  height: 23
+  char: 
+middle_armororb:
+  texture: noenchant/font/tooltip/misc/middle_armororb.png
+  ascent: 8
+  height: 10
+  char: 
+bottom_armororb:
+  texture: noenchant/font/tooltip/misc/bottom_armororb.png
+  ascent: 14
+  height: 21
+  char: 
+
+# tool orb
+top_toolorb:
+  texture: noenchant/font/tooltip/misc/top_toolorb.png
+  ascent: 19
+  height: 23
+  char: 
+middle_toolorb:
+  texture: noenchant/font/tooltip/misc/middle_toolorb.png
+  ascent: 8
+  height: 10
+  char: 
+buttom_toolorb:
+  texture: noenchant/font/tooltip/misc/buttom_toolorb.png
+  ascent: 14
+  height: 21
+  char: 
+
+# holy white 
+top_holy:
+  texture: noenchant/font/tooltip/misc/top_holy.png
+  ascent: 19
+  height: 23
+  char: 
+middle_holy:
+  texture: noenchant/font/tooltip/misc/middle_holy.png
+  ascent: 8
+  height: 10
+  char: 
+buttom_holy:
+  texture: noenchant/font/tooltip/misc/buttom_holy.png
+  ascent: 14
+  height: 21
+  char: 
+
+# block traks
+top_blocktrak:
+  texture: noenchant/font/tooltip/misc/top_blocktrak.png
+  ascent: 19
+  height: 23
+  char: 
+middle_blocktrak:
+  texture: noenchant/font/tooltip/misc/middle_blocktrak.png
+  ascent: 8
+  height: 10
+  char: 
+buttom_blocktrak:
+  texture: noenchant/font/tooltip/misc/buttom_blocktrak.png
+  ascent: 14
+  height: 21
+  char: 
+
+# mob traks
+top_mobtrak:
+  texture: noenchant/font/tooltip/misc/top_mobtrak.png
+  ascent: 19
+  height: 23
+  char: 
+middle_mobtrak:
+  texture: noenchant/font/tooltip/misc/middle_mobtrak.png
+  ascent: 8
+  height: 10
+  char: 
+buttom_mobtrak:
+  texture: noenchant/font/tooltip/misc/buttom_mobtrak.png
+  ascent: 14
+  height: 21
+  char: 
+
+# kill traks
+top_stattrak:
+  texture: noenchant/font/tooltip/misc/top_stattrak.png
+  ascent: 19
+  height: 23
+  char: 
+middle_stattrak:
+  texture: noenchant/font/tooltip/misc/middle_stattrak.png
+  ascent: 8
+  height: 10
+  char: 
+buttom_stattrak:
+  texture: noenchant/font/tooltip/misc/buttom_stattrak.png
+  ascent: 14
+  height: 21
+  char: 
+
+# items
+top_items:
+  texture: noenchant/font/tooltip/misc/top_items.png
+  ascent: 19
+  height: 23
+  char: 
+middle_items:
+  texture: noenchant/font/tooltip/misc/middle_items.png
+  ascent: 8
+  height: 10
+  char: 
+bottom_items:
+  texture: noenchant/font/tooltip/misc/bottom_items.png
+  ascent: 14
+  height: 21
+  char: 

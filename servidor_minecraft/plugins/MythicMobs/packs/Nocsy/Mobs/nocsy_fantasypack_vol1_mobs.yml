@@ -1,0 +1,217 @@
+#=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-#
+#           Fantasy pack Vol.1             #
+#            Mobs - MythicMobs             #
+#               by Nocsy                   #
+#=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-#
+
+############################################
+#             Bokoblin warrior             #
+############################################
+
+Nocsy_Bokoblin_Warrior:
+  Type: HUSK
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  AITargetSelectors:
+  - clear
+  - players
+  Drops: []
+  Equipment: []
+  Skills:
+  - model{mid=nocsy_ganon_minion;n=false;tint=false} @self ~onSpawn
+  - skill{s=Nocsy_FPV1_CancelEvent;sync=true} @self ~onAttack
+  - skill{s=Nocsy_BokoblinW_Attack} ~onAttack
+  - skill{s=Nocsy_Bokoblin_Hurt} ~onDamaged
+  - sound{s=entity.piglin.death;v=0.6;p=0.6} @self ~onDeath
+  Display: "§6Bokoblin Warrior"
+  Health: 50
+  Damage: 0
+  Options:
+    Despawn: true
+    AlwaysShowName: false
+    PreventOtherDrops: true
+    Silent: true
+    KnockbackResistance: 1
+    FollowRange: 20
+    AttackSpeed: 1
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    MovementSpeed: 0.24
+
+############################################
+#           Bokoblin swordsman             #
+############################################
+
+Nocsy_Bokoblin_Swordsman:
+  Type: HUSK
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  AITargetSelectors:
+  - clear
+  - players
+  Drops: []
+  Equipment: []
+  Skills:
+  - model{mid=nocsy_ganon_minion2;n=false;tint=false} @self ~onSpawn
+  - skill{s=Nocsy_FPV1_CancelEvent;sync=true} @self ~onAttack
+  - skill{s=Nocsy_BokoblinS_Attack} ~onAttack
+  - skill{s=Nocsy_Bokoblin_Hurt} ~onDamaged
+  - sound{s=entity.piglin.death;v=0.6;p=0.6} @self ~onDeath
+  Display: "§9Bokoblin Swordsman"
+  Health: 60
+  Damage: 0
+  Options:
+    Despawn: true
+    AlwaysShowName: false
+    PreventOtherDrops: true
+    Silent: true
+    KnockbackResistance: 1
+    FollowRange: 20
+    AttackSpeed: 1
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    MovementSpeed: 0.25
+
+############################################
+#             Bokoblin shaman              #
+############################################
+
+Nocsy_Bokoblin_Shaman:
+  Type: HUSK
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  AITargetSelectors:
+  - clear
+  - players
+  Drops: []
+  Equipment: []
+  Skills:
+  - model{mid=nocsy_ganon_minion3;n=false;tint=false} @self ~onSpawn
+  - skill{s=Nocsy_BobokoblinSh_Cast_Spell} ~onTimer:200
+  - skill{s=Nocsy_BobokoblinSh_AI} ~onSpawn
+  - skill{s=Nocsy_BobokoblinSh_Explosion} ~onDamaged <=100% 0.3
+  - skill{s=Nocsy_FPV1_CancelEvent;sync=true} @self ~onAttack
+  - skill{s=Nocsy_Bokoblin_Hurt} ~onDamaged
+  - sound{s=entity.piglin.death;v=0.6;p=0.6} @self ~onDeath
+  Display: "§aBokoblin Shaman"
+  Health: 40
+  Damage: 0
+  Options:
+    Despawn: true
+    AlwaysShowName: false
+    PreventOtherDrops: true
+    Silent: true
+    KnockbackResistance: 1
+    FollowRange: 20
+    AttackSpeed: 1
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    MovementSpeed: 0.24
+
+############################################
+#              Moblin brute                #
+############################################
+
+Nocsy_Moblin_Brute:
+  Type: HUSK
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  AITargetSelectors:
+  - clear
+  - players
+  Drops: []
+  Equipment: []
+  Skills:
+  - model{mid=nocsy_moblin;n=false;tint=false} @self ~onSpawn
+  - skill{s=Nocsy_MoblinB_Attack} ~onAttack
+  - skill{s=Nocsy_FPV1_CancelEvent;sync=true} @self ~onAttack
+  - skill{s=Nocsy_Moblin_Hurt} ~onDamaged
+  - sound{s=entity.piglin.death;v=0.6;p=0.9} @self ~onDeath
+  Display: "§aMoblin Brute"
+  Health: 210
+  Damage: 0
+  Options:
+    Despawn: true
+    AlwaysShowName: false
+    PreventOtherDrops: true
+    Silent: true
+    KnockbackResistance: 1
+    FollowRange: 20
+    AttackSpeed: 1
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    MovementSpeed: 0.24
+
+############################################
+#            Moblin ravager                #
+############################################
+
+Nocsy_Moblin_Ravager:
+  Type: HUSK
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  AITargetSelectors:
+  - clear
+  - players
+  Drops: []
+  Equipment: []
+  Skills:
+  - model{mid=nocsy_moblin2;n=false;tint=false} @self ~onSpawn
+  - skill{s=Nocsy_FPV1_CancelEvent;sync=true} @self ~onAttack
+  - skill{s=Nocsy_MoblinR_Attack} ~onAttack
+  - skill{s=Nocsy_Moblin_Hurt} ~onDamaged
+  - sound{s=entity.piglin.death;v=0.6;p=0.9} @self ~onDeath
+  Display: "§9Moblin Ravager"
+  Health: 180
+  Damage: 0
+  Options:
+    Despawn: true
+    AlwaysShowName: false
+    PreventOtherDrops: true
+    Silent: true
+    KnockbackResistance: 1
+    FollowRange: 20
+    AttackSpeed: 1
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    MovementSpeed: 0.25
+
+############################################
+#                 Fairy                    #
+############################################
+
+Nocsy_FPV1_Fairy:
+  Type: BEE
+  AIGoalSelectors:
+  - clear
+  - randomstroll
+  AITargetSelectors:
+  - clear
+  Drops: []
+  Equipment: []
+  Skills:
+  - model{mid=nocsy_fantasy_fairy;n=false;tint=false} @self ~onSpawn
+  - skill{s=Nocsy_FPV1_Particles} @self ~onSpawn
+  - skill{s=Nocsy_FPV1_Interact} @self ~onInteract
+  - skill{s=Nocsy_FPV1_Spawn} @self ~onSpawn
+  - skill{s=Nocsy_FPV1_Fairy_Sounds} ~onSpawn
+  Display: "§bFairy"
+  Health: 40
+  Damage: 0
+  Options:
+    Invincible: true
+    Despawn: true
+    AlwaysShowName: false
+    PreventOtherDrops: true
+    Silent: true
+    KnockbackResistance: 1
+    FollowRange: 20
+    AttackSpeed: 1
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    MovementSpeed: 0.24

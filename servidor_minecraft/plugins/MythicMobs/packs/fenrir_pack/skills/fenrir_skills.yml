@@ -1,0 +1,71 @@
+fenrir_attacks:
+  Conditions:
+  - hasAura{n=fenrir_in_skill} false
+  TargetConditions:
+  - distance{d=<3} true
+  Skills:
+  - randomskill{s=fenrir_attack_1,fenrir_attack_2} @self
+fenrir_attack_1:
+  Skills:
+  - aura{n=fenrir_in_skill}
+  - state{s=attack_1}
+  - delay 5
+  - s{s=entity.fox.eat;v=30}
+  - damage{a=10} @LivingInCone{a=90;r=4}
+  - delay 15
+  - auraRemove{n=fenrir_in_skill}
+fenrir_attack_2:
+  Skills:
+  - aura{n=fenrir_in_skill}
+  - state{s=attack_2}
+  - delay 17
+  - s{s=block.basalt.break;v=30}
+  - damage{a=10} @EIR{r=5}
+  - delay 6
+  - auraRemove{n=fenrir_in_skill}
+fenrir_attack_3:
+  Cooldown: 999999
+  Skills:
+  - aura{n=fenrir_in_skill}
+  - state{s=attack_3}
+  - ai{ai=false}
+  - potion{t=RESISTANCE;l=99;d=9999}
+  - delay 10
+  - s{s=entity.wolf.howl;v=2}
+  - delay 10
+  - aura{oT=fenrir_meteorite_tick;i=2;n=fenrir_meteorite;d=9999999}
+  - delay 80
+  - auraRemove{n=fenrir_meteorite}
+  - delay 20
+  - potionclear
+  - ai{ai=true}
+  - auraRemove{n=fenrir_in_skill}
+fenrir_attack_3_final:
+  Cooldown: 999999
+  Skills:
+  - aura{n=fenrir_in_skill}
+  - state{s=attack_3}
+  - ai{ai=false}
+  - potion{t=RESISTANCE;l=99;d=9999}
+  - delay 10
+  - s{s=entity.wolf.howl;v=2}
+  - delay 10
+  - aura{oT=fenrir_meteorite_tick;i=1;n=fenrir_meteorite;d=9999999}
+  - delay 80
+  - auraRemove{n=fenrir_meteorite}
+  - delay 20
+  - potionclear
+  - ai{ai=true}
+  - auraRemove{n=fenrir_in_skill}
+fenrir_meteorite_tick:
+  Skills:
+  - projectile{
+    oE=[
+      - e:p{p=dust_color_transition;color1=#492cc9;color2=#af7fff;a=40;size=2;spread=0.5;hs=2;y=0.2}
+      - summon{m=fenrir_meteorite_damage;os=true}
+      - s{s=entity.generic.explode;v=0.1} @PIR{r=30}
+    ];
+    oT=[
+      - e:p{p=dust_color_transition;color1=#492cc9;color2=#af7fff;a=40;size=2;spread=0.2}
+    ];d=400;mr=999;v=15;sE=false;sB=true;syo=30;sfo=0;fo=true;origin=@RLNC{a=1;r=20;mr=1;s=5;os=true}} @RLNC{a=1;r=20;mr=1;s=5;os=true}
+#47e7d8380463997116cdcf7fcceaa871

@@ -1,0 +1,1 @@
+{"textures":{"0":"modelengine:entity/nocsy_ganondorf","particle":"#0"},"elements":[{"from":[-4.51,-3.010412,8.0057],"to":[20.51,8.009588,8.025701],"faces":{"south":{"uv":[0.0,2.0625,1.5625,2.75],"tintindex":0,"rotation":0,"texture":"#0"},"north":{"uv":[1.75,1.75,3.3125,2.4375],"tintindex":0,"rotation":0,"texture":"#0"}}}],"display":{"gui":{"rotation":[-150.0,-45.0,180.0]}}}

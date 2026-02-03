@@ -1,0 +1,490 @@
+#########################################################
+## Developed by Little Room, patreon.com/littleroomdev ##
+#########################################################
+
+
+KPACK_KNIGHT_dummy:
+  Type: ARMORSTAND
+  Options:
+    Marker: true
+    Invisible: true
+    
+
+
+### RED KNIGHTS ###
+
+KPACK_KNIGHT_RED:
+  Type: HUSK
+  Display: 'Knight'
+  Health: 50
+  Faction: KPACK_RED  
+  Damage: 5
+  AITargetSelectors:
+  - clear
+  - monsters
+  - specificfactionmonsters{f=KPACK_GREEN}
+  Modules:
+    ThreatTable: true
+  Options:
+    MovementSpeed: .2
+    PreventOtherDrops: true
+    Despawn: true
+    Persistent: false
+    KnockbackResistance: 1
+    Collidable: true
+    Silent: true
+    FollowRange: 64
+    PreventSunburn: true  
+    PreventJockeyMounts: true
+  Skills:
+  - CancelEvent @self ~onInteract
+  - CancelEvent{sync=true} @self ~onAttack
+  - model{m=kpack_knight;usm=true;step=1} @self ~onSpawn
+  - model{m=kpack_knight;usm=true;step=1} @self ~onLoad
+  - BodyClamp{mh=25;mb=25;rde=30;rdu=30} @self ~onSpawn
+  - BodyClamp{mh=25;mb=25;rde=30;rdu=30} @self ~onLoad
+  - setspeed{type=walking;speed=1} @self ~onSpawn
+  - setspeed{type=walking;speed=1} @self ~onLoad
+  - partvis{p=sword;em=false;v=false} @self ~onSpawn
+  - partvis{p=shield_arm;em=false;v=false} @self ~onSpawn
+  - skill{s=KPACK_randomize_knight} @self ~onSpawn
+  - skill{s=KPACK_setrandomizer;delay=1} @self ~onSpawn
+  - skill{s=KPACK_setrandomizer} @self ~onLoad
+  - skill{s=KPACK_start_aggro} @self ~onTimer:10
+  - skill{s=KPACK_stop_aggro} @self ~onTimer:10
+  - skill{s=KPACK_nearest_aggro} @self ~onTimer:10
+  - setvariable{var=caster.running;value="false";type=STRING} @self ~onSpawn
+  - randomskill{s=KPACK_knight_attack_1_sync,KPACK_knight_attack_2_sync,KPACK_knight_attack_3_sync;sync=true} @self ~onAttack ## LONGSWORD ATTACKS ##
+  - skill{s=KPACK_knight_attack_4} @self ~onTimer:5
+  - skill{s=KPACK_knight_attack_5} @target ~onTimer:1
+  - randomskill{s=KPACK_knight_attack_6_sync,KPACK_knight_attack_7_sync;sync=true} @self ~onAttack ## HALBERD ATTACKS ##
+  - skill{s=KPACK_knight_toss_up} @self ~onTimer:1
+  - skill{s=KPACK_knight_toss_up_land} @self ~onTimer:1
+  - skill{s=KPACK_knight_exploded} @self ~onDamaged
+  - skill{s=KPACK_knight_death} @self ~onDeath
+  - sound{s=littleroom_knightpack:littleroom.knight.armor_hit;v=0.25;sc=HOSTILE;p="<random.float.0.6to1.2>"} @self ~onDamaged
+  - sound{s=littleroom_knightpack:littleroom.knight.knight_grunt;v=1;sc=HOSTILE;p="<random.float.0.9to1.1>"} @self ~onDamaged .25
+  
+  
+KPACK_KNIGHT_MOUNT_RED:
+  Type: HUSK
+  Display: 'Mounted Knight'
+  Health: 150
+  Faction: KPACK_RED
+  Damage: 7
+  AITargetSelectors:
+  - clear
+  - monsters
+  - specificfactionmonsters{f=KPACK_GREEN,KPACK_YELLOW,KPACK_BLUE}
+  Modules:
+    ThreatTable: true
+  Options:
+    MovementSpeed: .2
+    PreventOtherDrops: true
+    Despawn: true
+    Persistent: false
+    KnockbackResistance: 1
+    Collidable: true
+    Silent: true
+    FollowRange: 64
+    PreventSunburn: true  
+    PreventJockeyMounts: true
+  Skills:
+  - CancelEvent @self ~onInteract
+  - CancelEvent{sync=true} @self ~onAttack
+  - model{m=kpack_knight_horse;usm=true;step=1} @self ~onSpawn
+  - model{m=kpack_knight_horse;usm=true;step=1} @self ~onLoad
+  - BodyClamp{mh=25;mb=25;rde=30;rdu=30} @self ~onSpawn
+  - BodyClamp{mh=25;mb=25;rde=30;rdu=30} @self ~onLoad
+  - setspeed{type=walking;speed=1.5} @self ~onSpawn
+  - setspeed{type=walking;speed=1.5} @self ~onLoad
+  - setvariable{var=caster.type;value="mounted";type=STRING} @self ~onSpawn
+  - setvariable{var=caster.running;value="false";type=STRING} @self ~onSpawn
+  - setvariable{var=caster.aggro;value="no";type=STRING} @self ~onSpawn
+  - partvis{p=sword;em=false;v=false} @self ~onSpawn
+  - partvis{p=shield_arm;em=false;v=false} @self ~onSpawn
+  - skill{s=KPACK_randomize_knight} @self ~onSpawn
+  - skill{s=KPACK_setrandomizer;delay=2} @self ~onSpawn
+  - skill{s=KPACK_setrandomizer} @self ~onLoad
+  - skill{s=KPACK_mounted_run_handler} @self ~onTimer:5
+  - skill{s=KPACK_mounted_start_aggro} @self ~onTimer:5
+  - skill{s=KPACK_mounted_stop_aggro} @self ~onTimer:5
+  - randomskill{skills=KPACK_mounted_attack,KPACK_mounted_rear_attack} @self ~onTimer:20
+  - skill{s=KPACK_mounted_rear_attack} @self ~onTimer:20
+  - skill{s=KPACK_mounted_rear_random} @self ~onTimer:20 .1
+  - sound{s=littleroom_knightpack:littleroom.horse.snort;v=1;sc=HOSTILE;p="<random.float.0.8to1.2>"} @self ~onTimer:60 .1
+  - skill{s=KPACK_mounted_poop} @self ~onTimer:80 .1
+  - skill{s=KPACK_knight_mounted_death} @self ~onDeath
+  #- skill{s=KPACK_joust_attack} @target ~onTimer:5
+  - skill{s=KPACK_knight_toss_up} @self ~onTimer:1
+  - skill{s=KPACK_knight_toss_up_land} @self ~onTimer:1
+  - skill{s=KPACK_mounted_attack_joust} @self ~onTimer:20
+  - skill{s=KPACK_joust_hit} @self ~onSignal:JOUSTHIT
+  - throw{v=2;vy=-1} @eir{r=2} ~onTimer:1
+  - skill{s=KPACK_mounted_dust} @self ~onTimer:2
+  - sound{s=littleroom_knightpack:littleroom.knight.knight_grunt;v=1;sc=HOSTILE;p="<random.float.0.9to1.1>"} @self ~onDamaged .25
+  
+
+
+
+
+### GREEN KNIGHTS ###
+
+KPACK_KNIGHT_GREEN:
+  Type: HUSK
+  Display: 'Knight'
+  Health: 50
+  Faction: KPACK_GREEN
+  Damage: 5
+  AITargetSelectors:
+  - clear
+  - monsters
+  - specificfactionmonsters{f=KPACK_RED,KPACK_YELLOW,KPACK_BLUE}
+  Modules:
+    ThreatTable: true
+  Options:
+    MovementSpeed: .2
+    PreventOtherDrops: true
+    Despawn: true
+    Persistent: false
+    KnockbackResistance: 1
+    Collidable: true
+    Silent: true
+    FollowRange: 64
+    PreventSunburn: true  
+    PreventJockeyMounts: true
+  Skills:
+  - CancelEvent @self ~onInteract
+  - CancelEvent{sync=true} @self ~onAttack
+  - model{m=kpack_knight;usm=true;step=1} @self ~onSpawn
+  - model{m=kpack_knight;usm=true;step=1} @self ~onLoad
+  - BodyClamp{mh=25;mb=25;rde=30;rdu=30} @self ~onSpawn
+  - BodyClamp{mh=25;mb=25;rde=30;rdu=30} @self ~onLoad
+  - setspeed{type=walking;speed=1} @self ~onSpawn
+  - setspeed{type=walking;speed=1} @self ~onLoad
+  - partvis{p=sword;em=false;v=false} @self ~onSpawn
+  - partvis{p=shield_arm;em=false;v=false} @self ~onSpawn
+  - skill{s=KPACK_randomize_knight} @self ~onSpawn
+  - skill{s=KPACK_setrandomizer;delay=1} @self ~onSpawn
+  - skill{s=KPACK_setrandomizer} @self ~onLoad
+  - skill{s=KPACK_setgreenknight} @self ~onSpawn   #SET GREEN KNIGHT#
+  - skill{s=KPACK_setgreenknight} @self ~onLoad   #SET GREEN KNIGHT#
+  - skill{s=KPACK_start_aggro} @self ~onTimer:10
+  - skill{s=KPACK_stop_aggro} @self ~onTimer:10
+  - skill{s=KPACK_nearest_aggro} @self ~onTimer:10
+  - setvariable{var=caster.running;value="false";type=STRING} @self ~onSpawn
+  - randomskill{s=KPACK_knight_attack_1_sync,KPACK_knight_attack_2_sync,KPACK_knight_attack_3_sync;sync=true} @self ~onAttack ## LONGSWORD ATTACKS ##
+  - skill{s=KPACK_knight_attack_4} @self ~onTimer:5
+  - skill{s=KPACK_knight_attack_5} @target ~onTimer:1
+  - randomskill{s=KPACK_knight_attack_6_sync,KPACK_knight_attack_7_sync;sync=true} @self ~onAttack ## HALBERD ATTACKS ##
+  - skill{s=KPACK_knight_toss_up} @self ~onTimer:1
+  - skill{s=KPACK_knight_toss_up_land} @self ~onTimer:1
+  - skill{s=KPACK_knight_exploded} @self ~onDamaged
+  - skill{s=KPACK_knight_death} @self ~onDeath
+  - sound{s=littleroom_knightpack:littleroom.knight.armor_hit;v=0.25;sc=HOSTILE;p="<random.float.0.6to1.2>"} @self ~onDamaged
+  - sound{s=littleroom_knightpack:littleroom.knight.knight_grunt;v=1;sc=HOSTILE;p="<random.float.0.9to1.1>"} @self ~onDamaged .25
+  
+  
+KPACK_KNIGHT_MOUNT_GREEN:
+  Type: HUSK
+  Display: 'Mounted Knight'
+  Health: 150
+  Faction: KPACK_GREEN
+  Damage: 8
+  AITargetSelectors:
+  - clear
+  - monsters
+  - specificfactionmonsters{f=KPACK_RED,KPACK_YELLOW,KPACK_BLUE}
+  Modules:
+    ThreatTable: true
+  Options:
+    MovementSpeed: .2
+    PreventOtherDrops: true
+    Despawn: true
+    Persistent: false
+    KnockbackResistance: 1
+    Collidable: true
+    Silent: true
+    FollowRange: 64
+    PreventSunburn: true  
+    PreventJockeyMounts: true
+  Skills:
+  - CancelEvent @self ~onInteract
+  - CancelEvent{sync=true} @self ~onAttack
+  - model{m=kpack_knight_horse;usm=true;step=1} @self ~onSpawn
+  - model{m=kpack_knight_horse;usm=true;step=1} @self ~onLoad
+  - BodyClamp{mh=25;mb=25;rde=30;rdu=30} @self ~onSpawn
+  - BodyClamp{mh=25;mb=25;rde=30;rdu=30} @self ~onLoad
+  - setspeed{type=walking;speed=1.5} @self ~onSpawn
+  - setspeed{type=walking;speed=1.5} @self ~onLoad
+  - setvariable{var=caster.type;value="mounted";type=STRING} @self ~onSpawn
+  - setvariable{var=caster.running;value="false";type=STRING} @self ~onSpawn
+  - setvariable{var=caster.aggro;value="no";type=STRING} @self ~onSpawn
+  - partvis{p=sword;em=false;v=false} @self ~onSpawn
+  - partvis{p=shield_arm;em=false;v=false} @self ~onSpawn
+  - skill{s=KPACK_randomize_knight} @self ~onSpawn
+  - skill{s=KPACK_setrandomizer;delay=2} @self ~onSpawn
+  - skill{s=KPACK_setrandomizer} @self ~onLoad
+  - skill{s=KPACK_setgreenknight} @self ~onSpawn   #SET GREEN KNIGHT#
+  - skill{s=KPACK_setgreenknight} @self ~onLoad   #SET GREEN KNIGHT#
+  - skill{s=KPACK_mounted_run_handler} @self ~onTimer:5
+  - skill{s=KPACK_mounted_start_aggro} @self ~onTimer:5
+  - skill{s=KPACK_mounted_stop_aggro} @self ~onTimer:5
+  - randomskill{skills=KPACK_mounted_attack,KPACK_mounted_rear_attack} @self ~onTimer:20
+  - skill{s=KPACK_mounted_rear_attack} @self ~onTimer:20
+  - skill{s=KPACK_mounted_rear_random} @self ~onTimer:20 .1
+  - sound{s=littleroom_knightpack:littleroom.horse.snort;v=1;sc=HOSTILE;p="<random.float.0.8to1.2>"} @self ~onTimer:60 .1
+  - skill{s=KPACK_mounted_poop} @self ~onTimer:80 .1
+  - skill{s=KPACK_knight_mounted_death} @self ~onDeath
+  #- skill{s=KPACK_joust_attack} @target ~onTimer:5
+  - skill{s=KPACK_knight_toss_up} @self ~onTimer:1
+  - skill{s=KPACK_knight_toss_up_land} @self ~onTimer:1
+  - skill{s=KPACK_mounted_attack_joust} @self ~onTimer:20
+  - skill{s=KPACK_joust_hit} @self ~onSignal:JOUSTHIT
+  - throw{v=2;vy=-1} @eir{r=2} ~onTimer:1
+  - skill{s=KPACK_mounted_dust} @self ~onTimer:5
+  - sound{s=littleroom_knightpack:littleroom.knight.knight_grunt;v=1;sc=HOSTILE;p="<random.float.0.9to1.1>"} @self ~onDamaged .25
+    
+    
+    
+    
+    
+
+### YELLOW KNIGHTS ###
+
+KPACK_KNIGHT_YELLOW:
+  Type: HUSK
+  Display: 'Knight'
+  Health: 50
+  Faction: KPACK_YELLOW
+  Damage: 5
+  AITargetSelectors:
+  - clear
+  - monsters
+  - specificfactionmonsters{f=KPACK_RED,KPACK_GREEN,KPACK_BLUE}
+  Modules:
+    ThreatTable: true
+  Options:
+    MovementSpeed: .2
+    PreventOtherDrops: true
+    Despawn: true
+    Persistent: false
+    KnockbackResistance: 1
+    Collidable: true
+    Silent: true
+    FollowRange: 64
+    PreventSunburn: true  
+    PreventJockeyMounts: true
+  Skills:
+  - CancelEvent @self ~onInteract
+  - CancelEvent{sync=true} @self ~onAttack
+  - model{m=kpack_knight;usm=true;step=1} @self ~onSpawn
+  - model{m=kpack_knight;usm=true;step=1} @self ~onLoad
+  - BodyClamp{mh=25;mb=25;rde=30;rdu=30} @self ~onSpawn
+  - BodyClamp{mh=25;mb=25;rde=30;rdu=30} @self ~onLoad
+  - setspeed{type=walking;speed=1} @self ~onSpawn
+  - setspeed{type=walking;speed=1} @self ~onLoad
+  - partvis{p=sword;em=false;v=false} @self ~onSpawn
+  - partvis{p=shield_arm;em=false;v=false} @self ~onSpawn
+  - skill{s=KPACK_randomize_knight} @self ~onSpawn
+  - skill{s=KPACK_setrandomizer;delay=1} @self ~onSpawn
+  - skill{s=KPACK_setrandomizer} @self ~onLoad
+  - skill{s=KPACK_setyellowknight} @self ~onSpawn   #SET YELLOW KNIGHT#
+  - skill{s=KPACK_setyellowknight} @self ~onLoad   #SET YELLOW KNIGHT#
+  - skill{s=KPACK_start_aggro} @self ~onTimer:10
+  - skill{s=KPACK_stop_aggro} @self ~onTimer:10
+  - skill{s=KPACK_nearest_aggro} @self ~onTimer:10
+  - setvariable{var=caster.running;value="false";type=STRING} @self ~onSpawn
+  - randomskill{s=KPACK_knight_attack_1_sync,KPACK_knight_attack_2_sync,KPACK_knight_attack_3_sync;sync=true} @self ~onAttack ## LONGSWORD ATTACKS ##
+  - skill{s=KPACK_knight_attack_4} @self ~onTimer:5
+  - skill{s=KPACK_knight_attack_5} @target ~onTimer:1
+  - randomskill{s=KPACK_knight_attack_6_sync,KPACK_knight_attack_7_sync;sync=true} @self ~onAttack ## HALBERD ATTACKS ##
+  - skill{s=KPACK_knight_toss_up} @self ~onTimer:1
+  - skill{s=KPACK_knight_toss_up_land} @self ~onTimer:1
+  - skill{s=KPACK_knight_exploded} @self ~onDamaged
+  - skill{s=KPACK_knight_death} @self ~onDeath
+  - sound{s=littleroom_knightpack:littleroom.knight.armor_hit;v=0.25;sc=HOSTILE;p="<random.float.0.6to1.2>"} @self ~onDamaged
+  - sound{s=littleroom_knightpack:littleroom.knight.knight_grunt;v=1;sc=HOSTILE;p="<random.float.0.9to1.1>"} @self ~onDamaged .25
+  
+  
+KPACK_KNIGHT_MOUNT_YELLOW:
+  Type: HUSK
+  Display: 'Mounted Knight'
+  Health: 150
+  Faction: KPACK_YELLOW
+  Damage: 8
+  AITargetSelectors:
+  - clear
+  - monsters
+  - specificfactionmonsters{f=KPACK_RED,KPACK_GREEN,KPACK_BLUE}
+  Modules:
+    ThreatTable: true
+  Options:
+    MovementSpeed: .2
+    PreventOtherDrops: true
+    Despawn: true
+    Persistent: false
+    KnockbackResistance: 1
+    Collidable: true
+    Silent: true
+    FollowRange: 64
+    PreventSunburn: true  
+    PreventJockeyMounts: true
+  Skills:
+  - CancelEvent @self ~onInteract
+  - CancelEvent{sync=true} @self ~onAttack
+  - model{m=kpack_knight_horse;usm=true;step=1} @self ~onSpawn
+  - model{m=kpack_knight_horse;usm=true;step=1} @self ~onLoad
+  - BodyClamp{mh=25;mb=25;rde=30;rdu=30} @self ~onSpawn
+  - BodyClamp{mh=25;mb=25;rde=30;rdu=30} @self ~onLoad
+  - setspeed{type=walking;speed=1.5} @self ~onSpawn
+  - setspeed{type=walking;speed=1.5} @self ~onLoad
+  - setvariable{var=caster.type;value="mounted";type=STRING} @self ~onSpawn
+  - setvariable{var=caster.running;value="false";type=STRING} @self ~onSpawn
+  - setvariable{var=caster.aggro;value="no";type=STRING} @self ~onSpawn
+  - partvis{p=sword;em=false;v=false} @self ~onSpawn
+  - partvis{p=shield_arm;em=false;v=false} @self ~onSpawn
+  - skill{s=KPACK_randomize_knight} @self ~onSpawn
+  - skill{s=KPACK_setrandomizer;delay=2} @self ~onSpawn
+  - skill{s=KPACK_setrandomizer} @self ~onLoad
+  - skill{s=KPACK_setyellowknight} @self ~onSpawn   #SET YELLOW KNIGHT#
+  - skill{s=KPACK_setyellowknight} @self ~onLoad   #SET YELLOW KNIGHT#
+  - skill{s=KPACK_mounted_run_handler} @self ~onTimer:5
+  - skill{s=KPACK_mounted_start_aggro} @self ~onTimer:5
+  - skill{s=KPACK_mounted_stop_aggro} @self ~onTimer:5
+  - randomskill{skills=KPACK_mounted_attack,KPACK_mounted_rear_attack} @self ~onTimer:20
+  - skill{s=KPACK_mounted_rear_attack} @self ~onTimer:20
+  - skill{s=KPACK_mounted_rear_random} @self ~onTimer:20 .1
+  - sound{s=littleroom_knightpack:littleroom.horse.snort;v=1;sc=HOSTILE;p="<random.float.0.8to1.2>"} @self ~onTimer:60 .1
+  - skill{s=KPACK_mounted_poop} @self ~onTimer:80 .1
+  - skill{s=KPACK_knight_mounted_death} @self ~onDeath
+  #- skill{s=KPACK_joust_attack} @target ~onTimer:5
+  - skill{s=KPACK_knight_toss_up} @self ~onTimer:1
+  - skill{s=KPACK_knight_toss_up_land} @self ~onTimer:1
+  - skill{s=KPACK_mounted_attack_joust} @self ~onTimer:20
+  - skill{s=KPACK_joust_hit} @self ~onSignal:JOUSTHIT
+  - throw{v=2;vy=-1} @eir{r=2} ~onTimer:1
+  - skill{s=KPACK_mounted_dust} @self ~onTimer:5
+  - sound{s=littleroom_knightpack:littleroom.knight.knight_grunt;v=1;sc=HOSTILE;p="<random.float.0.9to1.1>"} @self ~onDamaged .25
+    
+    
+    
+    
+    
+
+### BLUE KNIGHTS ###
+
+KPACK_KNIGHT_BLUE:
+  Type: HUSK
+  Display: 'Knight'
+  Health: 50
+  Faction: KPACK_BLUE
+  Damage: 5
+  AITargetSelectors:
+  - clear
+  - monsters
+  - specificfactionmonsters{f=KPACK_GREEN,KPACK_RED,KPACK_YELLOW}
+  Modules:
+    ThreatTable: true
+  Options:
+    MovementSpeed: .2
+    PreventOtherDrops: true
+    Despawn: true
+    Persistent: false
+    KnockbackResistance: 1
+    Collidable: true
+    Silent: true
+    FollowRange: 64
+    PreventSunburn: true  
+    PreventJockeyMounts: true
+  Skills:
+  - CancelEvent @self ~onInteract
+  - CancelEvent{sync=true} @self ~onAttack
+  - model{m=kpack_knight;usm=true;step=1} @self ~onSpawn
+  - model{m=kpack_knight;usm=true;step=1} @self ~onLoad
+  - BodyClamp{mh=25;mb=25;rde=30;rdu=30} @self ~onSpawn
+  - BodyClamp{mh=25;mb=25;rde=30;rdu=30} @self ~onLoad
+  - setspeed{type=walking;speed=1} @self ~onSpawn
+  - setspeed{type=walking;speed=1} @self ~onLoad
+  - partvis{p=sword;em=false;v=false} @self ~onSpawn
+  - partvis{p=shield_arm;em=false;v=false} @self ~onSpawn
+  - skill{s=KPACK_randomize_knight} @self ~onSpawn
+  - skill{s=KPACK_setrandomizer;delay=1} @self ~onSpawn
+  - skill{s=KPACK_setrandomizer} @self ~onLoad
+  - skill{s=KPACK_setblueknight} @self ~onSpawn   #SET BLUE KNIGHT#
+  - skill{s=KPACK_setblueknight} @self ~onLoad   #SET BLUE KNIGHT#
+  - skill{s=KPACK_start_aggro} @self ~onTimer:10
+  - skill{s=KPACK_stop_aggro} @self ~onTimer:10
+  - skill{s=KPACK_nearest_aggro} @self ~onTimer:10
+  - setvariable{var=caster.running;value="false";type=STRING} @self ~onSpawn
+  - randomskill{s=KPACK_knight_attack_1_sync,KPACK_knight_attack_2_sync,KPACK_knight_attack_3_sync;sync=true} @self ~onAttack ## LONGSWORD ATTACKS ##
+  - skill{s=KPACK_knight_attack_4} @self ~onTimer:5
+  - skill{s=KPACK_knight_attack_5} @target ~onTimer:1
+  - randomskill{s=KPACK_knight_attack_6_sync,KPACK_knight_attack_7_sync;sync=true} @self ~onAttack ## HALBERD ATTACKS ##
+  - skill{s=KPACK_knight_toss_up} @self ~onTimer:1
+  - skill{s=KPACK_knight_toss_up_land} @self ~onTimer:1
+  - skill{s=KPACK_knight_exploded} @self ~onDamaged
+  - skill{s=KPACK_knight_death} @self ~onDeath
+  - sound{s=littleroom_knightpack:littleroom.knight.armor_hit;v=0.25;sc=HOSTILE;p="<random.float.0.6to1.2>"} @self ~onDamaged
+  - sound{s=littleroom_knightpack:littleroom.knight.knight_grunt;v=1;sc=HOSTILE;p="<random.float.0.9to1.1>"} @self ~onDamaged .25
+  
+  
+KPACK_KNIGHT_MOUNT_BLUE:
+  Type: HUSK
+  Display: 'Mounted Knight'
+  Health: 150
+  Faction: KPACK_BLUE
+  Damage: 8
+  AITargetSelectors:
+  - clear
+  - monsters
+  - specificfactionmonsters{f=KPACK_GREEN,KPACK_RED,KPACK_YELLOW}
+  Modules:
+    ThreatTable: true
+  Options:
+    MovementSpeed: .2
+    PreventOtherDrops: true
+    Despawn: true
+    Persistent: false
+    KnockbackResistance: 1
+    Collidable: true
+    Silent: true
+    FollowRange: 64
+    PreventSunburn: true  
+    PreventJockeyMounts: true
+  Skills:
+  - CancelEvent @self ~onInteract
+  - CancelEvent{sync=true} @self ~onAttack
+  - model{m=kpack_knight_horse;usm=true;step=1} @self ~onSpawn
+  - model{m=kpack_knight_horse;usm=true;step=1} @self ~onLoad
+  - BodyClamp{mh=25;mb=25;rde=30;rdu=30} @self ~onSpawn
+  - BodyClamp{mh=25;mb=25;rde=30;rdu=30} @self ~onLoad
+  - setspeed{type=walking;speed=1.5} @self ~onSpawn
+  - setspeed{type=walking;speed=1.5} @self ~onLoad
+  - setvariable{var=caster.type;value="mounted";type=STRING} @self ~onSpawn
+  - setvariable{var=caster.running;value="false";type=STRING} @self ~onSpawn
+  - setvariable{var=caster.aggro;value="no";type=STRING} @self ~onSpawn
+  - partvis{p=sword;em=false;v=false} @self ~onSpawn
+  - partvis{p=shield_arm;em=false;v=false} @self ~onSpawn
+  - skill{s=KPACK_randomize_knight} @self ~onSpawn
+  - skill{s=KPACK_setrandomizer;delay=2} @self ~onSpawn
+  - skill{s=KPACK_setrandomizer} @self ~onLoad
+  - skill{s=KPACK_setblueknight} @self ~onSpawn   #SET BLUE KNIGHT#
+  - skill{s=KPACK_setblueknight} @self ~onLoad   #SET BLUE KNIGHT#
+  - skill{s=KPACK_mounted_run_handler} @self ~onTimer:5
+  - skill{s=KPACK_mounted_start_aggro} @self ~onTimer:5
+  - skill{s=KPACK_mounted_stop_aggro} @self ~onTimer:5
+  - randomskill{skills=KPACK_mounted_attack,KPACK_mounted_rear_attack} @self ~onTimer:20
+  - skill{s=KPACK_mounted_rear_attack} @self ~onTimer:20
+  - skill{s=KPACK_mounted_rear_random} @self ~onTimer:20 .1
+  - sound{s=littleroom_knightpack:littleroom.horse.snort;v=1;sc=HOSTILE;p="<random.float.0.8to1.2>"} @self ~onTimer:60 .1
+  - skill{s=KPACK_mounted_poop} @self ~onTimer:80 .1
+  - skill{s=KPACK_knight_mounted_death} @self ~onDeath
+  #- skill{s=KPACK_joust_attack} @target ~onTimer:5
+  - skill{s=KPACK_knight_toss_up} @self ~onTimer:1
+  - skill{s=KPACK_knight_toss_up_land} @self ~onTimer:1
+  - skill{s=KPACK_mounted_attack_joust} @self ~onTimer:20
+  - skill{s=KPACK_joust_hit} @self ~onSignal:JOUSTHIT
+  - throw{v=2;vy=-1} @eir{r=2} ~onTimer:1
+  - skill{s=KPACK_mounted_dust} @self ~onTimer:5
+  - sound{s=littleroom_knightpack:littleroom.knight.knight_grunt;v=1;sc=HOSTILE;p="<random.float.0.9to1.1>"} @self ~onDamaged .25

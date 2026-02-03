@@ -1,0 +1,42 @@
+fenrir:
+  Type: ZOMBIE
+  Health: 500
+  Damage: 0
+  Display: "Fenrir"
+  BossBar:
+    Color: PURPLE
+    Enabled: true
+    Title: "&l&dFenrir"
+    Style: SEGMENTED_20
+  Options:
+    MovementSpeed: 0.5
+    PreventOtherDrops: true
+    PreventSunburn: true
+    PreventRandomEquipment: true
+    PreventJockeyMounts: true
+    Collidable: false
+    LockPitch: true
+    Silent: true
+    KnockbackResistance: 1
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  AITargetSelectors:
+  - clear
+  - players
+  Skills:
+  - model{m=fenrir;ride=true;drive=true} @self ~onSpawn
+  - skill{s=fenrir_attack_3} @self <80%
+  - skill{s=fenrir_attack_3_final} @self <20%
+  - skill{s=fenrir_attacks} @t ~onTimer:1
+fenrir_meteorite_damage:
+  Type: ARMOR_STAND
+  Options:  
+    NoAI: true
+    Collidable: false
+    Invisible: true
+    Invincibe: true
+  Skills:
+  - d{a=20} @EIR{r=3.5} ~onSpawn 
+  - remove{delay=20} @self ~onSpawn
+#47e7d8380463997116cdcf7fcceaa871

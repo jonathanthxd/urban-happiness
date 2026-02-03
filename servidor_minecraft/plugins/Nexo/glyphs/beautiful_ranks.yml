@@ -1,0 +1,390 @@
+# #################################
+
+# made by Yassou  yassou-design.com
+
+# #################################
+
+exemple: # ################ see video tutorial for the exemple please ####################
+  texture: beautiful_ranks/exemple
+  ascent: 8
+  height: 8
+  tabcomplete: true
+  placeholders:
+  - ':exemple:'
+  permission: beautfulranks.pack
+  char: ꐐ
+
+owner:
+  texture: beautiful_ranks/owner
+  ascent: 8
+  height: 8
+  tabcomplete: true
+  placeholders:
+  - ':owner:'
+  permission: beautfulranks.pack
+  char: ꐛ
+
+owner_icon:
+  texture: beautiful_ranks/owner_icon
+  ascent: 8
+  height: 8
+  tabcomplete: true
+  placeholders:
+  - ':owner_icon:'
+  permission: beautfulranks.pack
+  char: ꐜ
+
+admin:
+  texture: beautiful_ranks/admin
+  ascent: 8
+  height: 8
+  tabcomplete: true
+  placeholders:
+  - ':admin:'
+  permission: beautfulranks.pack
+  char: ꐝ
+
+admin_icon:
+  texture: beautiful_ranks/admin_icon
+  ascent: 8
+  height: 8
+  tabcomplete: true
+  placeholders:
+  - ':admin_icon:'
+  permission: beautfulranks.pack
+  char: ꐞ
+
+manager:
+  texture: beautiful_ranks/manager
+  ascent: 8
+  height: 8
+  tabcomplete: true
+  placeholders:
+  - ':manager:'
+  permission: beautfulranks.pack
+  char: ꐟ
+
+manager_icon:
+  texture: beautiful_ranks/manager_icon
+  ascent: 8
+  height: 8
+  tabcomplete: true
+  placeholders:
+  - ':manager_icon:'
+  permission: beautfulranks.pack
+  char: ꐠ
+
+dev:
+  texture: beautiful_ranks/dev
+  ascent: 8
+  height: 8
+  tabcomplete: true
+  placeholders:
+  - ':dev:'
+  permission: beautfulranks.pack
+  char: ꐡ
+
+dev_icon:
+  texture: beautiful_ranks/dev_icon
+  ascent: 8
+  height: 8
+  tabcomplete: true
+  placeholders:
+  - ':dev_icon:'
+  permission: beautfulranks.pack
+  char: ꐢ
+
+builder:
+  texture: beautiful_ranks/builder
+  ascent: 8
+  height: 8
+  tabcomplete: true
+  placeholders:
+  - ':builder:'
+  permission: beautfulranks.pack
+  char: ꐣ
+
+builder_icon:
+  texture: beautiful_ranks/builder_icon
+  ascent: 8
+  height: 8
+  tabcomplete: true
+  placeholders:
+  - ':builder_icon:'
+  permission: beautfulranks.pack
+  char: ꐤ
+
+graphiste:
+  texture: beautiful_ranks/graphiste
+  ascent: 8
+  height: 8
+  tabcomplete: true
+  placeholders:
+  - ':graphiste:'
+  permission: beautfulranks.pack
+  char: ꐥ
+
+graphiste_icon:
+  texture: beautiful_ranks/graphiste_icon
+  ascent: 8
+  height: 8
+  tabcomplete: true
+  placeholders:
+  - ':graphiste_icon:'
+  permission: beautfulranks.pack
+  char: ꐦ
+
+mod:
+  texture: beautiful_ranks/mod
+  ascent: 8
+  height: 8
+  tabcomplete: true
+  placeholders:
+  - ':mod:'
+  permission: beautfulranks.pack
+  char: ꐧ
+
+mod_icon:
+  texture: beautiful_ranks/mod_icon
+  ascent: 8
+  height: 8
+  tabcomplete: true
+  placeholders:
+  - ':mod_icon:'
+  permission: beautfulranks.pack
+  char: ꐨ
+
+helper:
+  texture: beautiful_ranks/helper
+  ascent: 8
+  height: 8
+  tabcomplete: true
+  placeholders:
+  - ':helper:'
+  permission: beautfulranks.pack
+  char: ꐩ
+
+helper_icon:
+  texture: beautiful_ranks/helper_icon
+  ascent: 8
+  height: 8
+  tabcomplete: true
+  placeholders:
+  - ':helper_icon:'
+  permission: beautfulranks.pack
+  char: ꐪ
+
+staff:
+  texture: beautiful_ranks/staff
+  ascent: 8
+  height: 8
+  tabcomplete: true
+  placeholders:
+  - ':staff:'
+  permission: beautfulranks.pack
+  char: ꐫ
+
+staff_icon:
+  texture: beautiful_ranks/staff_icon
+  ascent: 8
+  height: 8
+  tabcomplete: true
+  placeholders:
+  - ':staff_icon:'
+  permission: beautfulranks.pack
+  char: ꐬ
+
+vip:
+  texture: beautiful_ranks/vip
+  ascent: 8
+  height: 8
+  tabcomplete: true
+  placeholders:
+  - ':vip:'
+  permission: beautfulranks.pack
+  char: ꐭ
+
+vip_icon:
+  texture: beautiful_ranks/vip_icon
+  ascent: 8
+  height: 8
+  tabcomplete: true
+  placeholders:
+  - ':vip_icon:'
+  permission: beautfulranks.pack
+  char: ꐮ
+
+vip_plus:
+  texture: beautiful_ranks/vip_plus
+  ascent: 8
+  height: 8
+  tabcomplete: true
+  placeholders:
+  - ':vip_plus:'
+  permission: beautfulranks.pack
+  char: ꐯ
+
+vip_plus_icon:
+  texture: beautiful_ranks/vip_plus_icon
+  ascent: 8
+  height: 8
+  tabcomplete: true
+  placeholders:
+  - ':vip_plus_icon:'
+  permission: beautfulranks.pack
+  char: ꐰ
+
+mvp:
+  texture: beautiful_ranks/mvp
+  ascent: 8
+  height: 8
+  tabcomplete: true
+  placeholders:
+  - ':mvp:'
+  permission: beautfulranks.pack
+  char: ꐱ
+
+mvp_icon:
+  texture: beautiful_ranks/mvp_icon
+  ascent: 8
+  height: 8
+  tabcomplete: true
+  placeholders:
+  - ':mvp_icon:'
+  permission: beautfulranks.pack
+  char: ꐲ
+
+mvp_plus:
+  texture: beautiful_ranks/mvp_plus
+  ascent: 8
+  height: 8
+  tabcomplete: true
+  placeholders:
+  - ':mvp_plus:'
+  permission: beautfulranks.pack
+  char: ꐳ
+
+mvp_plus_icon:
+  texture: beautiful_ranks/mvp_plus_icon
+  ascent: 8
+  height: 8
+  tabcomplete: true
+  placeholders:
+  - ':mvp_plus_icon:'
+  permission: beautfulranks.pack
+  char: ꐴ
+
+player:
+  texture: beautiful_ranks/player
+  ascent: 8
+  height: 8
+  tabcomplete: true
+  placeholders:
+  - ':player:'
+  permission: beautfulranks.pack
+  char: ꐵ
+
+player_icon:
+  texture: beautiful_ranks/player_icon
+  ascent: 8
+  height: 8
+  tabcomplete: true
+  placeholders:
+  - ':player_icon:'
+  permission: beautfulranks.pack
+  char: ꐶ
+
+ytb:
+  texture: beautiful_ranks/ytb
+  ascent: 8
+  height: 8
+  tabcomplete: true
+  placeholders:
+  - ':ytb:'
+  permission: beautfulranks.pack
+  char: ꐷ
+
+ytb_icon:
+  texture: beautiful_ranks/ytb_icon
+  ascent: 8
+  height: 8
+  tabcomplete: true
+  placeholders:
+  - ':ytb_icon:'
+  permission: beautfulranks.pack
+  char: ꐸ
+
+ytb_v2:
+  texture: beautiful_ranks/ytb_v2
+  ascent: 8
+  height: 8
+  tabcomplete: true
+  placeholders:
+  - ':ytb_v2:'
+  permission: beautfulranks.pack
+  char: ꐹ
+
+twitch:
+  texture: beautiful_ranks/twitch
+  ascent: 8
+  height: 8
+  tabcomplete: true
+  placeholders:
+  - ':twitch:'
+  permission: beautfulranks.pack
+  char: ꐺ
+
+twitch_icon:
+  texture: beautiful_ranks/twitch_icon
+  ascent: 8
+  height: 8
+  tabcomplete: true
+  placeholders:
+  - ':twitch_icon:'
+  permission: beautfulranks.pack
+  char: ꐻ
+
+twitch_v2:
+  texture: beautiful_ranks/twitch_v2
+  ascent: 8
+  height: 8
+  tabcomplete: true
+  placeholders:
+  - ':twitch_v2:'
+  permission: beautfulranks.pack
+  char: ꐼ
+
+tiktok:
+  texture: beautiful_ranks/tiktok
+  ascent: 8
+  height: 8
+  tabcomplete: true
+  placeholders:
+  - ':tiktok:'
+  permission: beautfulranks.pack
+  char: ꐽ
+
+tiktok_icon:
+  texture: beautiful_ranks/tiktok_icon
+  ascent: 8
+  height: 8
+  tabcomplete: true
+  placeholders:
+  - ':tiktok_icon:'
+  permission: beautfulranks.pack
+  char: ꐾ
+
+tiktok_v2:
+  texture: beautiful_ranks/tiktok_v2
+  ascent: 8
+  height: 8
+  tabcomplete: true
+  placeholders:
+  - ':tiktok_v2:'
+  permission: beautfulranks.pack
+  char: ꐿ
+
+
+
+
+# cGa5ImZZtEdKh0dtZETyV2UVxmU3dGVNdXT61EMRRlT51ESWdDUahlMLJnM2EFd1Z3Sx0UN

@@ -1,0 +1,13 @@
+cosmetics:
+  frostbite_cosmetics_wings:
+    display_name: §fFrostbite Wings
+    enabled: true
+    type: BODY_ITEM
+    model:
+      gui: potion:9923483
+      normal: potion:9923483
+      normal_2: potion:9923486
+      self: potion:9923484
+      self_2: potion:9923485
+    dye:
+      enabled: false

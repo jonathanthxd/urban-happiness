@@ -1,0 +1,298 @@
+# set to "none" to disable
+open-sound: "ENDERDRAGON_WINGS"
+disabled-in-worlds:
+  - "bad_world"
+messages:
+  sound: LEVEL_UP
+right-click-to-view-enchants: true
+go-back-item:
+  enabled: true
+  item:
+    type: NETHER_STAR
+    id: 0
+    custom-model-data: 0
+  name: "&c&lɢᴏ ʙᴀᴄᴋ"
+  lore: [ ]
+keep-open: true
+inventory:
+  size: 54
+  name: "<shift:-16><glyph:no_enchanter>"
+  settings:
+    enchanterBookLevel: "ALL"
+  items:
+    11:
+      item:
+        type: BOOK
+        id: 0
+        custom-model-data: 200
+        force-glow: false
+      enchant-group: SIMPLE
+      price: exp:400
+      sound: ANVIL_LAND
+      name: "&f  &fꜱɪᴍᴘʟᴇ ᴇɴᴄʜᴀɴᴛᴍᴇɴᴛ"
+      lore:
+        - "&f  &7ᴛɪᴇʀ: &f"
+        - "&f  "
+        - "&f  &7ᴇxᴀᴍɪɴᴇ ᴛᴏ ʀᴇᴄᴇɪᴠᴇ ᴀ"
+        - "&f  &7ʀᴀɴᴅᴏᴍ &fꜱɪᴍᴘʟᴇ &7ᴇɴᴄʜᴀɴᴛᴍᴇɴᴛ"
+        - "&f  &7ʙᴏᴏᴋ."
+        - "&f  "
+        - "&f  &b&lᴄᴏꜱᴛ &f%price% ᴇxᴘ"
+        - "&f  &7ʏᴏᴜ ɴᴇᴇᴅ %left% ᴍᴏʀᴇ ᴇxᴘ"
+        - "&f  "
+        - "&f  "
+    12:
+      item:
+        type: BOOK
+        id: 0
+        custom-model-data: 201
+        force-glow: false
+      enchant-group: UNIQUE
+      sound: ANVIL_LAND
+      price: exp:800
+      name: "&f  &aᴜɴɪǫᴜᴇ ᴇɴᴄʜᴀɴᴛᴍᴇɴᴛ"
+      lore:
+        - "&f  &7ᴛɪᴇʀ: &f"
+        - "&f  "
+        - "&f  &7ᴇxᴀᴍɪɴᴇ ᴛᴏ ʀᴇᴄᴇɪᴠᴇ ᴀ"
+        - "&f  &7ʀᴀɴᴅᴏᴍ &aᴜɴɪǫᴜᴇ &7ᴇɴᴄʜᴀɴᴛᴍᴇɴᴛ"
+        - "&f  &7ʙᴏᴏᴋ."
+        - "&f  "
+        - "&f  &b&lᴄᴏꜱᴛ &f%price% ᴇxᴘ"
+        - "&f  &7ʏᴏᴜ ɴᴇᴇᴅ %left% ᴍᴏʀᴇ ᴇxᴘ"
+        - "&f  "
+        - "&f  "
+    13:
+      item:
+        type: BOOK
+        id: 0
+        custom-model-data: 202
+        force-glow: false
+      enchant-group: ELITE
+      price: exp:2500
+      sound: ANVIL_LAND
+      name: "&f  &bᴇʟɪᴛᴇ ᴇɴᴄʜᴀɴᴛᴍᴇɴᴛ"
+      lore:
+        - '&f  &7ᴛɪᴇʀ: &f'
+        - '&f  '
+        - "&f  &7ᴇxᴀᴍɪɴᴇ ᴛᴏ ʀᴇᴄᴇɪᴠᴇ ᴀ"
+        - "&f  &7ʀᴀɴᴅᴏᴍ &bᴇʟɪᴛᴇ &7ᴇɴᴄʜᴀɴᴛᴍᴇɴᴛ"
+        - "&f  &7ʙᴏᴏᴋ."
+        - "&f  "
+        - "&f  &b&lᴄᴏꜱᴛ &f%price% ᴇxᴘ"
+        - '&f  &7ʏᴏᴜ ɴᴇᴇᴅ %left% ᴍᴏʀᴇ ᴇxᴘ'
+        - '&f  '
+        - '&f  '
+    14:
+      item:
+        type: BOOK
+        id: 0
+        custom-model-data: 203
+        force-glow: false
+      enchant-group: ULTIMATE
+      price: exp:5000
+      sound: ANVIL_LAND
+      name: "&f  &eᴜʟᴛɪᴍᴀᴛᴇ ᴇɴᴄʜᴀɴᴛᴍᴇɴᴛ"
+      lore:
+        - '&f  &7ᴛɪᴇʀ: &f'
+        - '&f  '
+        - "&f  &7ᴇxᴀᴍɪɴᴇ ᴛᴏ ʀᴇᴄᴇɪᴠᴇ ᴀ"
+        - "&f  &7ʀᴀɴᴅᴏᴍ &eᴜʟᴛɪᴍᴀᴛᴇ"
+        - "&f  &7ᴇɴᴄʜᴀɴᴛᴍᴇɴᴛ ʙᴏᴏᴋ."
+        - "&f  "
+        - "&f  &b&lᴄᴏꜱᴛ &f%price% ᴇxᴘ"
+        - '&f  &7ʏᴏᴜ ɴᴇᴇᴅ %left% ᴍᴏʀᴇ ᴇxᴘ'
+        - '&f  '
+        - '&f  '
+    15:
+      item:
+        type: BOOK
+        id: 0
+        custom-model-data: 204
+        force-glow: false
+      enchant-group: LEGENDARY
+      price: exp:25000
+      sound: ANVIL_LAND
+      name: "&f  &6ʟᴇɢᴇɴᴅᴀʀʏ ᴇɴᴄʜᴀɴᴛᴍᴇɴᴛ"
+      lore:
+        - '&f  &7ᴛɪᴇʀ: &f'
+        - '&f  '
+        - "&f  &7ᴇxᴀᴍɪɴᴇ ᴛᴏ ʀᴇᴄᴇɪᴠᴇ ᴀ"
+        - "&f  &7ʀᴀɴᴅᴏᴍ &6ʟᴇɢᴇɴᴅᴀʀʏ"
+        - "&f  &7ᴇɴᴄʜᴀɴᴛᴍᴇɴᴛ ʙᴏᴏᴋ."
+        - "&f  "
+        - "&f  &b&lᴄᴏꜱᴛ &f%price% ᴇxᴘ"
+        - '&f  &7ʏᴏᴜ ɴᴇᴇᴅ %left% ᴍᴏʀᴇ ᴇxᴘ'
+        - '&f  '
+        - '&f  '
+    22:
+      item:
+        type: BOOK
+        id: 0
+        custom-model-data: 205
+        force-glow: false
+      enchant-group: FABLED
+      price: exp:40000
+      sound: ANVIL_LAND
+      name: "&f  &cꜰᴀʙʟᴇᴅ ᴇɴᴄʜᴀɴᴛᴍᴇɴᴛ"
+      lore:
+        - '&f  &7ᴛɪᴇʀ: &f'
+        - '&f  '
+        - "&f  &7ᴇxᴀᴍɪɴᴇ ᴛᴏ ʀᴇᴄᴇɪᴠᴇ ᴀ"
+        - "&f  &7ʀᴀɴᴅᴏᴍ &cꜰᴀʙʟᴇᴅ &7ᴇɴᴄʜᴀɴᴛᴍᴇɴᴛ"
+        - "&f  &7ʙᴏᴏᴋ."
+        - "&f  "
+        - "&f  &b&lᴄᴏꜱᴛ &f%price% ᴇxᴘ"
+        - '&f  &7ʏᴏᴜ ɴᴇᴇᴅ %left% ᴍᴏʀᴇ ᴇxᴘ'
+        - '&f  '
+        - '&f  '
+    36:
+      item:
+        type: PAPER
+        id: 0
+        custom-model-data: 202
+        force-glow: false
+      sound: ANVIL_USE
+      player-command:
+        - "tinkerer"
+      name: "&fᴏᴘᴇɴ &b&lᴛɪɴᴋᴇʀᴇʀ"
+      lore:
+        - ''
+        - "&7ᴛɪɴᴋᴇʀ ʙᴏᴏᴋꜱ ꜰᴏʀ ᴍᴀɢɪᴄ ᴅᴜꜱᴛꜱ ᴀɴᴅ ᴇxᴘ."
+        - ""
+        - "&b&lʟᴇꜰᴛ ᴄʟɪᴄᴋ ᴛᴏ ᴠɪꜱɪᴛ"
+    37:
+      item:
+        type: PAPER
+        id: 0
+        custom-model-data: 202
+        force-glow: false
+      sound: ANVIL_USE
+      player-command:
+        - "tinkerer"
+      name: "&fᴏᴘᴇɴ &b&lᴛɪɴᴋᴇʀᴇʀ"
+      lore:
+        - ''
+        - "&7ᴛɪɴᴋᴇʀ ʙᴏᴏᴋꜱ ꜰᴏʀ ᴍᴀɢɪᴄ ᴅᴜꜱᴛꜱ ᴀɴᴅ ᴇxᴘ."
+        - ""
+        - "&b&lʟᴇꜰᴛ ᴄʟɪᴄᴋ ᴛᴏ ᴠɪꜱɪᴛ"
+    38:
+      item:
+        type: PAPER
+        id: 0
+        custom-model-data: 202
+        force-glow: false
+      sound: ANVIL_USE
+      player-command:
+        - "tinkerer"
+      name: "&fᴏᴘᴇɴ &b&lᴛɪɴᴋᴇʀᴇʀ"
+      lore:
+        - ''
+        - "&7ᴛɪɴᴋᴇʀ ʙᴏᴏᴋꜱ ꜰᴏʀ ᴍᴀɢɪᴄ ᴅᴜꜱᴛꜱ ᴀɴᴅ ᴇxᴘ."
+        - ""
+        - "&b&lʟᴇꜰᴛ ᴄʟɪᴄᴋ ᴛᴏ ᴠɪꜱɪᴛ"
+    39:
+      item:
+        type: PAPER
+        id: 0
+        custom-model-data: 202
+        force-glow: false
+      sound: ARROW_HIT
+      player-command:
+        - "alchemist"
+      name: "&fᴏᴘᴇɴ &5&lᴀʟᴄʜᴇᴍɪꜱᴛ"
+      lore:
+        - ''
+        - "&7ᴄᴏᴍʙɪɴᴇ ʙᴏᴏᴋꜱ ᴀɴᴅ ᴍᴀɢɪᴄ ᴅᴜꜱᴛꜱ."
+        - ""
+        - "&5&lʟᴇꜰᴛ ᴄʟɪᴄᴋ ᴛᴏ ᴠɪꜱɪᴛ"
+    40:
+      item:
+        type: PAPER
+        id: 0
+        custom-model-data: 202
+        force-glow: false
+      sound: ARROW_HIT
+      player-command:
+        - "alchemist"
+      name: "&fᴏᴘᴇɴ &5&lᴀʟᴄʜᴇᴍɪꜱᴛ"
+      lore:
+        - ''
+        - "&7ᴄᴏᴍʙɪɴᴇ ʙᴏᴏᴋꜱ ᴀɴᴅ ᴍᴀɢɪᴄ ᴅᴜꜱᴛꜱ."
+        - ""
+        - "&5&lʟᴇꜰᴛ ᴄʟɪᴄᴋ ᴛᴏ ᴠɪꜱɪᴛ"
+    41:
+      item:
+        type: PAPER
+        id: 0
+        custom-model-data: 202
+        force-glow: false
+      sound: ARROW_HIT
+      player-command:
+        - "alchemist"
+      name: "&fᴏᴘᴇɴ &5&lᴀʟᴄʜᴇᴍɪꜱᴛ"
+      lore:
+        - ''
+        - "&7ᴄᴏᴍʙɪɴᴇ ʙᴏᴏᴋꜱ ᴀɴᴅ ᴍᴀɢɪᴄ ᴅᴜꜱᴛꜱ."
+        - ""
+        - "&5&lʟᴇꜰᴛ ᴄʟɪᴄᴋ ᴛᴏ ᴠɪꜱɪᴛ"
+    42:
+      item:
+        type: PAPER
+        id: 0
+        custom-model-data: 202
+        force-glow: false
+      sound: ARROW_HIT
+      player-command:
+        - "dm open rune_shop"
+      name: "&fᴏᴘᴇɴ &6&lᴇɴᴄʜᴀɴᴛ ꜱʜᴏᴘ"
+      lore:
+        - ''
+        - "&7ꜱʜᴏᴘ ᴇɴᴄʜᴀɴᴛᴍᴇɴᴛꜱ & ᴇᴠᴇʀʏᴛʜɪɴɢ"
+        - ""
+        - "&6&lʟᴇꜰᴛ ᴄʟɪᴄᴋ ᴛᴏ ᴠɪꜱɪᴛ"
+    43:
+      item:
+        type: PAPER
+        id: 0
+        custom-model-data: 202
+        force-glow: false
+      sound: ARROW_HIT
+      player-command:
+        - "dm open rune_shop"
+      name: "&fᴏᴘᴇɴ &6&lᴇɴᴄʜᴀɴᴛ ꜱʜᴏᴘ"
+      lore:
+        - ''
+        - "&7ꜱʜᴏᴘ ᴇɴᴄʜᴀɴᴛᴍᴇɴᴛꜱ & ᴇᴠᴇʀʏᴛʜɪɴɢ"
+        - ""
+        - "&6&lʟᴇꜰᴛ ᴄʟɪᴄᴋ ᴛᴏ ᴠɪꜱɪᴛ"
+    44:
+      item:
+        type: PAPER
+        id: 0
+        custom-model-data: 202
+        force-glow: false
+      sound: ARROW_HIT
+      player-command:
+        - "dm open rune_shop"
+      name: "&fᴏᴘᴇɴ &6&lᴇɴᴄʜᴀɴᴛ ꜱʜᴏᴘ"
+      lore:
+        - ''
+        - "&7ꜱʜᴏᴘ ᴇɴᴄʜᴀɴᴛᴍᴇɴᴛꜱ & ᴇᴠᴇʀʏᴛʜɪɴɢ"
+        - ""
+        - "&6&lʟᴇꜰᴛ ᴄʟɪᴄᴋ ᴛᴏ ᴠɪꜱɪᴛ"
+
+confirmation-inventory:
+  enabled: true
+  name: "&aᴄᴏɴꜰɪʀᴍᴀᴛɪᴏɴ ɪɴᴠᴇɴᴛᴏʀʏ"
+  accept:
+    material: STAINED_GLASS_PANE
+    damage: 5
+    name: "&aᴀᴄᴄᴇᴘᴛ ᴛʀᴀɴꜱᴀᴄᴛɪᴏɴ"
+    lore:
+      - "&7ᴄʟɪᴄᴋ ᴛʜɪꜱ ᴛᴏ ᴘᴀʏ %price% ᴡɪᴛʜ %paymentType%"
+  cancel:
+    material: STAINED_GLASS_PANE
+    damage: 14
+    name: "&cᴄʟɪᴄᴋ ᴛᴏ ᴄᴀɴᴄᴇʟ"
+    lore: [ ]

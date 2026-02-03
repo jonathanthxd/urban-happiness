@@ -1,0 +1,44 @@
+fenrir_helmet:
+  itemname: Fenrir Helmet
+  material: paper
+  Pack:
+    model: nexo:item/fenrir_armor/fenrir_helmet
+    custom_model_data: 170626
+  Components:
+    equippable:
+      slot: HEAD
+fenrir_chestplate:
+  itemname: Fenrir Chestplate
+  material: paper
+  Pack:
+    model: nexo:item/fenrir_armor/fenrir_chestplate
+    custom_model_data: 170627
+  color: 255, 4, 255
+  Components:
+    equippable:
+      slot: CHEST
+      model: minecraft:licorn_fenrir
+fenrir_leggings:
+  itemname: Fenrir leggings
+  material: paper
+  Pack:
+    model: nexo:item/fenrir_armor/fenrir_leggings
+    custom_model_data: 170628
+  color: 255, 4, 255
+  Components:
+    equippable:
+      slot: LEGS
+      model: minecraft:licorn_fenrir
+fenrir_boots:
+  itemname: Fenrir Boots
+  material: paper
+  Pack:
+    model: nexo:item/fenrir_armor/fenrir_boots
+    custom_model_data: 170629
+  color: 255,4,255
+  Components:
+    equippable:
+      slot: FEET
+      model: minecraft:licorn_fenrir
+
+#47e7d8380463997116cdcf7fcceaa871

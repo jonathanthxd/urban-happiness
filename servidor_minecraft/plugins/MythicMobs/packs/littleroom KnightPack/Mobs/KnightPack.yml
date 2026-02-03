@@ -1,0 +1,138 @@
+﻿#########################################################
+## Developed by Little Room, patreon.com/littleroomdev ##
+#########################################################
+
+KPACK_mountable_horse_red:
+  Type: PIG
+  Display: "Red Knight Horse"
+  Drops: []
+  Equipment: []
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+  Skills: 
+  - model{m=kpack_knight_horse;usm=true;step=1;drive=true} @self ~onSpawn
+  - model{m=kpack_knight_horse;usm=true;step=1;drive=true} @self ~onLoad
+  - BodyClamp{mh=25;mb=25;rde=30;rdu=30} @self ~onSpawn
+  - BodyClamp{mh=25;mb=25;rde=30;rdu=30} @self ~onLoad
+  - partvis{m=kpack_knight_horse;p=torso;c=true} @self ~onSpawn
+  - defaultstate{type=walk;state=run} @self ~onSpawn
+  - skill{s=KPACK_mountable_horse_spawn} @self ~onSpawn
+  - dismountmodel{d=true;delay=30} @self ~onDeath
+  Options:
+    Tamed: true
+    Collidable: true
+    Despawn: true
+    AlwaysShowName: false
+    PreventOtherDrops: true
+    Silent: true
+    KnockbackResistance: 1
+    FollowRange: 20
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    MovementSpeed: .25
+    
+    
+KPACK_mountable_horse_green:
+  Type: PIG
+  Display: "Green Knight Horse"
+  Drops: []
+  Equipment: []
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+  Skills: 
+  - model{m=kpack_knight_horse;usm=true;step=1;drive=true} @self ~onSpawn
+  - model{m=kpack_knight_horse;usm=true;step=1;drive=true} @self ~onLoad
+  - BodyClamp{mh=25;mb=25;rde=30;rdu=30} @self ~onSpawn
+  - BodyClamp{mh=25;mb=25;rde=30;rdu=30} @self ~onLoad
+  - partvis{m=kpack_knight_horse;p=torso;c=true} @self ~onSpawn
+  - defaultstate{type=walk;state=run} @self ~onSpawn
+  - skill{s=KPACK_mountable_horse_spawn} @self ~onSpawn
+  - skill{s=KPACK_setgreenknight} @self ~onSpawn   #SET GREEN KNIGHT#
+  - skill{s=KPACK_setgreenknight} @self ~onLoad   #SET GREEN KNIGHT#
+  - dismountmodel{d=true;delay=30} @self ~onDeath
+  Options:
+    Tamed: true
+    Collidable: true
+    Despawn: true
+    AlwaysShowName: false
+    PreventOtherDrops: true
+    Silent: true
+    KnockbackResistance: 1
+    FollowRange: 20
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    MovementSpeed: .25
+    
+    
+KPACK_mountable_horse_blue:
+  Type: PIG
+  Display: "Blue Knight Horse"
+  Drops: []
+  Equipment: []
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+  Skills: 
+  - model{m=kpack_knight_horse;usm=true;step=1;drive=true} @self ~onSpawn
+  - model{m=kpack_knight_horse;usm=true;step=1;drive=true} @self ~onLoad
+  - BodyClamp{mh=25;mb=25;rde=30;rdu=30} @self ~onSpawn
+  - BodyClamp{mh=25;mb=25;rde=30;rdu=30} @self ~onLoad
+  - partvis{m=kpack_knight_horse;p=torso;c=true} @self ~onSpawn
+  - defaultstate{type=walk;state=run} @self ~onSpawn
+  - skill{s=KPACK_mountable_horse_spawn} @self ~onSpawn
+  - skill{s=KPACK_setblueknight} @self ~onSpawn   #SET BLUE KNIGHT#
+  - skill{s=KPACK_setblueknight} @self ~onLoad   #SET BLUE KNIGHT#
+  - dismountmodel{d=true;delay=30} @self ~onDeath
+  Options:
+    Tamed: true
+    Collidable: true
+    Despawn: true
+    AlwaysShowName: false
+    PreventOtherDrops: true
+    Silent: true
+    KnockbackResistance: 1
+    FollowRange: 20
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    MovementSpeed: .25
+    
+    
+KPACK_mountable_horse_yellow:
+  Type: PIG
+  Display: "Yellow Knight Horse"
+  Drops: []
+  Equipment: []
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+  Skills: 
+  - model{m=kpack_knight_horse;usm=true;step=1;drive=true} @self ~onSpawn
+  - model{m=kpack_knight_horse;usm=true;step=1;drive=true} @self ~onLoad
+  - BodyClamp{mh=25;mb=25;rde=30;rdu=30} @self ~onSpawn
+  - BodyClamp{mh=25;mb=25;rde=30;rdu=30} @self ~onLoad
+  - partvis{m=kpack_knight_horse;p=torso;c=true} @self ~onSpawn
+  - defaultstate{type=walk;state=run} @self ~onSpawn
+  - skill{s=KPACK_mountable_horse_spawn} @self ~onSpawn
+  - skill{s=KPACK_setyellowknight} @self ~onSpawn   #SET YELLOW KNIGHT#
+  - skill{s=KPACK_setyellowknight} @self ~onLoad   #SET YELLOW KNIGHT#
+  - dismountmodel{d=true;delay=30} @self ~onDeath
+  Options:
+    Tamed: true
+    Collidable: true
+    Despawn: true
+    AlwaysShowName: false
+    PreventOtherDrops: true
+    Silent: true
+    KnockbackResistance: 1
+    FollowRange: 20
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    MovementSpeed: .25
+    
+#QncwMGbytkN4gGNMd0T0U0dVZVWHVTbSRlVuJ1RWhVY4lUMZdXduR2VuV2R24Wd1Y0Uxk2N

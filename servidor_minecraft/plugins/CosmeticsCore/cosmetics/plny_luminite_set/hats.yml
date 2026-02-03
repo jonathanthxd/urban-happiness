@@ -1,0 +1,12 @@
+cosmetics:
+  luminite_set_cosmetics_helmet:
+    display_name: Helmet
+    enabled: true
+    type: HAT
+    model:
+      gui: potion:9926721
+      normal: potion:9926721
+    dye:
+      enabled: false
+
+# 4156989

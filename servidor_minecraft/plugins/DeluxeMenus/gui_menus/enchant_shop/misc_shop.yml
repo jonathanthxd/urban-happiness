@@ -1,0 +1,328 @@
+
+open_command: 
+  # - enshop
+
+size: 54
+
+
+menu_title: '<shift:-16><glyph:misc_gui>'
+
+items:
+  'weaponorb':
+    material: EMERALD
+    model_data: 201
+    slot: 13
+    display_name: '&f  &bᴡᴇᴀᴘᴏɴ ᴏʀʙ &8[ &a10 &8]'
+    lore:
+    - '&f  '
+    - '&f  &6+1 ᴇɴᴄʜᴀɴᴛᴍᴇɴᴛ ꜱʟᴏᴛꜱ'
+    - '&f  &610 ᴍᴀx ᴇɴᴄʜᴀɴᴛᴍᴇɴᴛ ꜱʟᴏᴛꜱ'
+    - '&f  '
+    - '&f  &7ɪɴᴄʀᴇᴀꜱᴇꜱ ᴛʜᴇ # ᴏꜰ '
+    - '&f  &7ᴇɴᴄʜᴀɴᴛᴍᴇɴᴛ ꜱʟᴏᴛꜱ ᴏɴ'
+    - '&f  &7ᴀ ᴡᴇᴀᴘᴏɴ ʙʏ 1,ᴜᴘ ᴛᴏ'
+    - '&f  &7ᴀ ᴍᴀxɪᴍᴜᴍ ᴏꜰ 10'
+    - '&f  '
+    - '&f  &fʀᴀʀɪᴛʏ: &b★★★&8★★'
+    - '&f  '
+    - '&f  &fᴘʀɪᴄᴇ: &b2500 EXP'
+    - '&f  '
+    - '&f  '
+    left_click_requirement:
+      requirements:
+        has_exp:
+          type: has exp
+          amount: 2500
+          level: false # true if you want to check for exp levels, false for exp points
+      deny_commands:
+        - "[message] &7You don't have enough exp."
+        - '[sound] ENTITY_VILLAGER_NO'
+    left_click_commands:
+      - '[console] ae giveitem %player_name% orb 1 WEAPON 10 100'
+      - '[takeexp] 2500'
+      - '[sound] ENTITY_PLAYER_LEVELUP'
+
+  'armororb':
+    material: EMERALD
+    model_data: 202
+    slot: 14
+    display_name: '&f  &5ᴀʀᴍᴏʀ ᴏʀʙ &8[ &a10 &8]'
+    lore:
+    - '&f  '
+    - '&f  &6+1 ᴇɴᴄʜᴀɴᴛᴍᴇɴᴛ ꜱʟᴏᴛꜱ'
+    - '&f  &610 ᴍᴀx ᴇɴᴄʜᴀɴᴛᴍᴇɴᴛ ꜱʟᴏᴛꜱ'
+    - '&f  '
+    - '&f  &7ɪɴᴄʀᴇᴀꜱᴇꜱ ᴛʜᴇ # ᴏꜰ '
+    - '&f  &7ᴇɴᴄʜᴀɴᴛᴍᴇɴᴛ ꜱʟᴏᴛꜱ ᴏɴ'
+    - '&f  &7ᴀ ᴡᴇᴀᴘᴏɴ ʙʏ 1,ᴜᴘ ᴛᴏ'
+    - '&f  &7ᴀ ᴍᴀxɪᴍᴜᴍ ᴏꜰ 10'
+    - '&f  '
+    - '&f  &fʀᴀʀɪᴛʏ: &b★★★&8★★'
+    - '&f  '
+    - '&f  &fᴘʀɪᴄᴇ: &b2500 EXP'
+    - '&f  '
+    - '&f  '
+    left_click_requirement:
+      requirements:
+        has_exp:
+          type: has exp
+          amount: 2500
+          level: false # true if you want to check for exp levels, false for exp points
+      deny_commands:
+        - "[message] &7You don't have enough exp."
+        - '[sound] ENTITY_VILLAGER_NO'
+    left_click_commands:
+      - '[console] ae giveitem %player_name% orb 1 ARMOR 10 100'
+      - '[takeexp] 2500'
+      - '[sound] ENTITY_PLAYER_LEVELUP'
+
+  'toolorb':
+    material: EMERALD
+    model_data: 203
+    slot: 15
+    display_name: '&f  &aᴛᴏᴏʟ ᴏʀʙ &8[ &a10 &8]'
+    lore:
+    - '&f  '
+    - '&f  &6+1 ᴇɴᴄʜᴀɴᴛᴍᴇɴᴛ ꜱʟᴏᴛꜱ'
+    - '&f  &610 ᴍᴀx ᴇɴᴄʜᴀɴᴛᴍᴇɴᴛ ꜱʟᴏᴛꜱ'
+    - '&f  '
+    - '&f  &7ɪɴᴄʀᴇᴀꜱᴇꜱ ᴛʜᴇ # ᴏꜰ '
+    - '&f  &7ᴇɴᴄʜᴀɴᴛᴍᴇɴᴛ ꜱʟᴏᴛꜱ ᴏɴ'
+    - '&f  &7ᴀ ᴡᴇᴀᴘᴏɴ ʙʏ 1,ᴜᴘ ᴛᴏ'
+    - '&f  &7ᴀ ᴍᴀxɪᴍᴜᴍ ᴏꜰ 10'
+    - '&f  '
+    - '&f  &fʀᴀʀɪᴛʏ: &b★★★&8★★'
+    - '&f  '
+    - '&f  &fᴘʀɪᴄᴇ: &b2500 EXP'
+    - '&f  '
+    - '&f  '
+    left_click_requirement:
+      requirements:
+        has_exp:
+          type: has exp
+          amount: 2500
+          level: false # true if you want to check for exp levels, false for exp points
+      deny_commands:
+        - "[message] &7You don't have enough exp."
+        - '[sound] ENTITY_VILLAGER_NO'
+    left_click_commands:
+      - '[console] ae giveitem %player_name% orb 1 TOOL 10 100'
+      - '[takeexp] 2500'
+      - '[sound] ENTITY_PLAYER_LEVELUP'
+
+  'soultracker':
+    material: AMETHYST_SHARD
+    model_data: 200
+    slot: 16
+    display_name: '&f  &fꜱᴏᴜʟ ᴛʀᴀᴄᴋᴇʀ'
+    lore:
+    - '&f  '
+    - '&f  &7ᴀᴘᴘʟʏ ᴛᴏ ᴡᴇᴀᴘᴏɴꜱ ᴛᴏ ꜱᴛᴀʀᴛ'
+    - '&f  &7ᴛʀᴀᴄᴋɪɴɢ ꜱᴏᴜʟꜱ ᴄᴏʟʟᴇᴄᴛᴇᴅ'
+    - '&f  &7ꜰʀᴏᴍ ᴋɪʟʟꜱ.'
+    - '&f  '
+    - '&f  &fʀᴀʀɪᴛʏ: &f★&8★★★★'
+    - '&f  '
+    - '&f  &fᴘʀɪᴄᴇ: &b500 EXP'
+    - '&f  '
+    - '&f  '
+    left_click_requirement:
+      requirements:
+        has_exp:
+          type: has exp
+          amount: 500
+          level: false # true if you want to check for exp levels, false for exp points
+      deny_commands:
+        - "[message] &7You don't have enough exp."
+        - '[sound] ENTITY_VILLAGER_NO'
+    left_click_commands:
+      - '[console] ae giveitem %player_name% soultracker 1'
+      - '[takeexp] 500'
+      - '[sound] ENTITY_PLAYER_LEVELUP'
+
+  'stattrak':
+    material: EMERALD
+    model_data: 206
+    slot: 22
+    display_name: '&f  &cᴋɪʟʟꜱ ꜱᴛᴀᴛᴛʀᴀᴋ™'
+    lore:
+    - '&f  '
+    - '&f  &7ᴛʀᴀᴄᴋ ʜᴏᴡ ᴍᴀɴʏ ᴋɪʟʟꜱ ʏᴏᴜ'
+    - '&f  &7ʜᴀᴠᴇ ᴡɪᴛʜ ᴀ ᴡᴇᴀᴘᴏɴ'
+    - '&f  '
+    - '&f  &fʀᴀʀɪᴛʏ: &f★&8★★★★'
+    - '&f  '
+    - '&f  &fᴘʀɪᴄᴇ: &b500 EXP'
+    - '&f  '
+    - '&f  '
+    left_click_requirement:
+      requirements:
+        has_exp:
+          type: has exp
+          amount: 500
+          level: false # true if you want to check for exp levels, false for exp points
+      deny_commands:
+        - "[message] &7You don't have enough exp."
+        - '[sound] ENTITY_VILLAGER_NO'
+    left_click_commands:
+      - '[console] ae giveitem %player_name% stattrak 1'
+      - '[takeexp] 500'
+      - '[sound] ENTITY_PLAYER_LEVELUP'
+
+  'blocktrak':
+    material: EMERALD
+    model_data: 204
+    slot: 23
+    display_name: '&f  &aʙʟᴏᴄᴋ ꜱᴛᴀᴛᴛʀᴀᴋ™'
+    lore:
+    - '&f  '
+    - '&f  &7ᴛʀᴀᴄᴋ ʜᴏᴡ ᴍᴀɴʏ ʙʟᴏᴄᴋꜱ ʏᴏᴜ'
+    - '&f  &7ʙʀᴇᴀᴋ ᴡɪᴛʜ ᴀ ᴛᴏᴏʟ'
+    - '&f  '
+    - '&f  &fʀᴀʀɪᴛʏ: &f★&8★★★★'
+    - '&f  '
+    - '&f  &fᴘʀɪᴄᴇ: &b500 EXP'
+    - '&f  '
+    - '&f  '
+    left_click_requirement:
+      requirements:
+        has_exp:
+          type: has exp
+          amount: 500
+          level: false # true if you want to check for exp levels, false for exp points
+      deny_commands:
+        - "[message] &7You don't have enough exp."
+        - '[sound] ENTITY_VILLAGER_NO'
+    left_click_commands:
+      - '[console] ae giveitem %player_name% blocktrak 1'
+      - '[takeexp] 500'
+      - '[sound] ENTITY_PLAYER_LEVELUP'
+
+  'mobtrak':
+    material: EMERALD
+    model_data: 205
+    slot: 24
+    display_name: '&f  &1ᴍᴏʙꜱ ꜱᴛᴀᴛᴛʀᴀᴋ™'
+    lore:
+    - '&f  '
+    - '&f  &7ᴛʀᴀᴄᴋ ʜᴏᴡ ᴍᴀɴʏ ᴍᴏʙ ᴋɪʟʟꜱ'
+    - '&f  &7ʏᴏᴜ ʜᴀᴠᴇ ᴡɪᴛʜ ᴀ ᴡᴇᴀᴘᴏɴ'
+    - '&f  '
+    - '&f  &fʀᴀʀɪᴛʏ: &f★&8★★★★'
+    - '&f  '
+    - '&f  &fᴘʀɪᴄᴇ: &b500 EXP'
+    - '&f  '
+    - '&f  '
+    left_click_requirement:
+      requirements:
+        has_exp:
+          type: has exp
+          amount: 500
+          level: false # true if you want to check for exp levels, false for exp points
+      deny_commands:
+        - "[message] &7You don't have enough exp."
+        - '[sound] ENTITY_VILLAGER_NO'
+    left_click_commands:
+      - '[console] ae giveitem %player_name% mobtrak 1'
+      - '[takeexp] 500'
+      - '[sound] ENTITY_PLAYER_LEVELUP'
+
+  'whitebook':
+    material: BOOK
+    model_data: 206
+    slot: 25
+    display_name: '&f  &cʜᴏʟʏ ᴡʜɪᴛᴇ ʙᴏᴏᴋ'
+    lore:
+    - '&f  '
+    - '&f  &4ᴀ ʟᴇɢᴇɴᴅᴀʀʏ ʀᴇᴡᴀʀᴅ ᴛʜᴀᴛ'
+    - '&f  &4ᴄᴀɴ ʙᴇ ᴀᴘᴘʟɪᴇᴅ ᴛᴏ ᴀʀᴍᴏʀ'
+    - '&f  &4ᴡᴇᴀᴘᴏɴꜱ, ɢɪᴠᴇꜱ ᴀ &a100%'
+    - '&f  &4ᴄʜᴀɴᴄᴇ ᴏꜰ ɴᴏᴛ ʟᴏꜱɪɴɢ'
+    - '&f  &4ᴛʜᴇ ʙʟᴇꜱꜱᴇᴅ ɪᴛᴇᴍ ᴏɴ ᴅᴇᴀᴛʜ.'
+    - '&f  '
+    - '&f  &2✦ ꜱᴜᴄᴄᴇꜱꜱ ʀᴀᴛᴇ: &a100%'
+    - '&f  '
+    - '&f  &4ʀᴀʀɪᴛʏ: &6★★★★★'
+    - '&f  '
+    - '&f  &4ᴘʀɪᴄᴇ: &b10000 EXP'
+    - '&f  '
+    - '&f  '
+    left_click_requirement:
+      requirements:
+        has_exp:
+          type: has exp
+          amount: 10000
+          level: false # true if you want to check for exp levels, false for exp points
+      deny_commands:
+        - "[message] &7You don't have enough exp."
+        - '[sound] ENTITY_VILLAGER_NO'
+    left_click_commands:
+      - '[console] ae giveitem %player_name% holywhitescroll 1 100'
+      - '[takeexp] 10000'
+      - '[sound] ENTITY_PLAYER_LEVELUP'
+
+  'back_page':
+    display_name: '&x&B&C&0&0&0&0ʙ&x&B&4&0&0&0&0ᴀ&x&A&C&0&0&0&0ᴄ&x&A&4&0&0&0&0ᴋ &x&9&4&0&0&0&0ᴘ&x&8&C&0&0&0&0ᴀ&x&8&4&0&0&0&0ɢ&x&7&C&0&0&0&0ᴇ'
+    material: PAPER
+    model_data: 202
+    slot: 40
+    lore:
+      - ''
+      - '&7ꜱᴇʟᴇᴄᴛ ᴛᴏ ʙᴀᴄᴋ ᴘᴀɢᴇ'
+    left_click_commands:
+      - '[player] dm open misc_shop'
+
+  'next_page':
+    display_name: '&x&2&1&B&C&0&0ɴ&x&1&F&B&2&0&0ᴇ&x&1&E&A&8&0&0x&x&1&C&9&E&0&0ᴛ &x&1&8&8&9&0&0ᴘ&x&1&7&7&F&0&0ᴀ&x&1&5&7&5&0&0ɢ&x&1&3&6&B&0&0ᴇ'
+    material: PAPER
+    model_data: 202
+    slot: 43
+    lore:
+      - ''
+      - '&7ꜱᴇʟᴇᴄᴛ ᴛᴏ ɴᴇxᴛ ᴘᴀɢᴇ'
+    left_click_commands:
+      - '[player] dm open misc_shop2'
+
+# CATALORY
+  'rune':
+    display_name: '&x&F&B&C&D&0&8ʀ&x&E&8&B&B&0&5ᴜ&x&D&6&A&8&0&3ɴ&x&C&3&9&6&0&0ᴇ'
+    material: PAPER
+    model_data: 202
+    slots: [9,10,11]
+    lore: 
+      - ""
+      - "&7ꜱᴇʟᴇᴄᴛ ᴛʜɪꜱ ᴄᴀᴛᴇɢᴏʀʏ"
+    left_click_commands:
+      - '[player] dm open rune_shop'
+  'scroll':
+    display_name: '&x&F&B&C&D&0&8ꜱ&x&F&0&C&2&0&6ᴄ&x&E&5&B&7&0&5ʀ&x&D&9&A&C&0&3ᴏ&x&C&E&A&1&0&2ʟ&x&C&3&9&6&0&0ʟ'
+    material: PAPER
+    model_data: 202
+    slots: [18,19,20]
+    lore: 
+      - ""
+      - "&7ꜱᴇʟᴇᴄᴛ ᴛʜɪꜱ ᴄᴀᴛᴇɢᴏʀʏ"
+    left_click_commands:
+      - '[player] dm open scroll_shop'
+  'misc':
+    display_name: '&x&F&B&C&D&0&8ᴍ&x&F&6&C&8&0&7ɪ&x&F&2&C&4&0&7ꜱ&x&E&D&B&F&0&6ᴄ&x&E&8&B&B&0&5ᴇ&x&E&4&B&6&0&5ʟ&x&D&F&B&2&0&4ʟ&x&D&A&A&D&0&3ᴀ&x&D&6&A&8&0&3ɴ&x&D&1&A&4&0&2ᴇ&x&C&C&9&F&0&1ᴏ&x&C&8&9&B&0&1ᴜ&x&C&3&9&6&0&0ꜱ'
+    material: PAPER
+    model_data: 202
+    slots: [27,28,29]
+    lore: 
+      - ""
+      - "&7ꜱᴇʟᴇᴄᴛ ᴛʜɪꜱ ᴄᴀᴛᴇɢᴏʀʏ"
+    left_click_commands:
+      - '[player] dm open misc_shop'
+
+  'back':
+    display_name: '&cʙᴀᴄᴋ'
+    material: PAPER
+    model_data: 202
+    slots: [36,37,38]
+    lore: 
+      - ""
+      - "&7ʙᴀᴄᴋ ᴛᴏ ᴇɴᴄʜᴀɴᴛ ᴍᴇɴᴜꜱ"
+    left_click_commands:
+      - '[player] enchanter'
+sweet: true

@@ -1,0 +1,578 @@
+DragonFlyCircle:
+  Cooldown: 0
+  Conditions:
+  - onground{} false
+  - hasaura Descend false
+  - hasaura TakeOff false
+  - hasaura Dragon5Blocks false
+  - hasaura LandingGround false
+  - hasaura TimeBone false
+  Skills:
+  - effect:spin{duration=10;velocity=5} @self
+DragonsFlyTurnCheckSkill:
+  Cooldown: 0.5
+  TargetConditions:
+  - inblock{b=AIR,TALL_GRASS,ROSE_BUSH,SUNFLOWER,LILAC,LARGE_FERN} false
+  Conditions:
+  - hasaura{n=Flying} true
+  - hasaura{n=Ground} false
+  Skills:
+  - lunge{velocity=0.3;velocityY=0.5;repeat=5;repeatInterval=10} @Self
+  - effect:spin{duration=10;velocity=4;repeat=2;repeatInterval=50} @self
+DragonFlyingStop:
+  Skills:
+  - randomskill{skills=DragonEmpty,DragonFlyingStopSkill,DragonEmpty} @self 0.5
+DragonFlyingStopSkill:
+  Conditions:
+  - hasaura{n=Attack} false
+  Skills:
+  - Aura{auraName=Descend;interval=100;duration=999999} @self
+DragonEmpty:
+  Skills:
+DragonFlyMechanic:
+  Cooldown: 0
+  Conditions:
+  - onground{} false
+  - hasaura Flying true
+  - hasaura GroundCheckAura false
+  - hasaura Dragon5Blocks false
+  - hasaura LandingGround false
+  - hasaura TooHigh false
+  Skills:
+  - randomskill{skills=DragonFly1,DragonFly2,DragonFly3,DragonFly4} @self 
+  - skill{s=DragonFlyGroundCheck1} @Forward{f=0;y=-10}
+  - skill{s=DragonFlyGroundCheck1} @Forward{f=0;y=-15}
+  - skill{s=DragonFlyGroundCheck1} @Forward{f=0;y=-20}
+  - skill{s=DragonFlyGroundCheck1} @Forward{f=0;y=-30}
+  - skill{s=DragonFlyGroundCheck2} @Forward{f=0;y=-40}
+DragonFlyGroundCheck1:
+  Cooldown: 0
+  TargetConditions:
+  - inblock{b=AIR} false
+  Skills:
+  - Aura{auraName=NotHigh;interval=100;duration=100} @self
+DragonFlyGroundCheck2:
+  Cooldown: 0
+  TargetConditions:
+  - inblock{b=AIR} false
+  Conditions:
+  - hasaura NotHigh false
+  - hasaura TooHigh false
+  Skills:
+  - Aura{auraName=TooHigh;onTick=DragonFlyTooHigh;interval=4;duration=50} @self
+  
+DragonFlyTooHigh:
+  Cooldown: 0
+  Skills:
+  - lunge{velocity="<caster.var.flypower>";velocityY="<caster.var.flymaneuverability> *(-1)"} @Self
+DragonFly1:
+  Cooldown: 0
+  Skills:
+  - lunge{velocity="<caster.var.flypower>";velocityY="<caster.var.flymaneuverability> * 1.1"} @Self
+DragonFly2:
+  Cooldown: 0
+  Skills:
+  - lunge{velocity="<caster.var.flypower>";velocityY="<caster.var.flymaneuverability>"} @Self
+DragonFly3:
+  Cooldown: 0
+  Skills:
+  - lunge{velocity="<caster.var.flypower> * 1.4";velocityY="<caster.var.flymaneuverability> / 1.3"} @Self
+DragonFly4:
+  Cooldown: 0
+  Skills:
+  - lunge{velocity="<caster.var.flypower> * 1.8";velocityY="<caster.var.flymaneuverability> / 1.5"} @Self
+DragonFlyMechanicNoCond:
+  Cooldown: 0
+  Conditions:
+  Skills:
+  - lunge{velocity="<caster.var.flypower>";velocityY="<caster.var.flymaneuverability>"} @Self
+DragonFlyCD1:
+  Skills:
+  - Aura{auraName=FlyCD;interval=1;duration=200} @self
+DragonFlyCD2:
+  Skills:
+  - Aura{auraName=FlyCD;interval=1;duration=400} @self
+DragonFlyCD3:
+  Skills:
+  - Aura{auraName=FlyCD;interval=1;duration=600} @self
+DragonGroundCheck:
+  Cooldown: 0
+  TargetConditions:
+  - inblock{b=AIR} false
+  Conditions:
+  - hasaura{n=Ground} false
+  - hasaura{n=TakeOff} false
+  Skills:
+  - Aura{auraName=Ground;interval=1;duration=60} @self
+DragonDive:
+  Cooldown: 0
+  Conditions:
+  - hasaura{n=Ground} false
+  - onground{} false
+  - hasaura{n=Attack} false
+  Skills:
+  - look{headOnly=false;immediately=true} @target
+  - lunge{velocity="<caster.var.flypower>";velocityY="(<caster.var.flymaneuverability> * (-1)) - 0.15"} @Self
+DragonsThreat:
+  Cooldown: 5.0
+  TargetConditions:
+  - RidingModel false 
+  - DrivingModel false 
+  Conditions:
+  - hasaura Attack false
+  - hasaura{n=Flying} false
+  - hasaura{n=TakeOff} false
+  Skills: 
+  - clearThreat{} @self 0.5
+  - delay 1
+  - threat{amount=50} @PlayersInRadius{r=50;sort=NEAREST;limit=1}
+  - threat{amount=70} @PlayersInRadius{r=50;sort=RANDOM;limit=2} 0.5
+  - threat{amount=20} @LivingEntitiesInRadius{r=50;sort=NEAREST;limit=2;ignore=samefaction}
+  - threat{amount=30} @LivingEntitiesInRadius{r=50;sort=RANDOM;limit=2;ignore=samefaction} 0.5 
+DragonsRegeneration:
+  Cooldown: 15
+  Conditions:
+  - targetwithin{d=80} false
+  Skills: 
+  - healpercent{m=0.02} @self
+DragonsFearMechanic:
+  Cooldown: 0
+  Conditions:
+  - isPlayer{} true
+  - hasaura Flying false
+  Skills:
+  - randomskill{skills=DragonsFearRecoilUp,DragonsFearRecoilDown} @Self
+DragonsPetFearMechanic:
+  Cooldown: 0
+  TargetConditions:
+  - owner{} false
+  Conditions:
+  - isPlayer{} true
+  - hasaura Flying false
+  Skills:
+  - randomskill{skills=DragonsFearRecoilUp,DragonsFearRecoilDown} @Self
+DragonsFearRecoilUp:
+  Cooldown: 0
+  Conditions:
+  Skills:
+  - recoil{r=1;pitch=2}
+DragonsFearRecoilDown:
+  Cooldown: 0
+  Conditions:
+  Skills:
+  - recoil{r=1;pitch=-2}
+DragonJump:
+  Cooldown: 0.1
+  Conditions:
+  - onground{} true
+  Skills:
+  - skill{s=DragonStaminaSubstract-15} @self
+  - jump{velocity=0.15;repeat=3;repeatInterval=1} @self
+  - delay 10
+  - potion{type=SLOW_FALLING;duration=20;level=1;hasParticles=false} @self 
+  - lunge{velocity=0.3;velocityY=0.2;repeat=2;repeatInterval=1} @Forward{f=1;y=1}
+  - delay 10
+  - potion{type=SLOW_FALLING;duration=5;level=1;hasParticles=false} @self 
+DragonFlyingOwnerAura:
+  Cooldown: 2
+  Conditions:
+  Skills:
+  - sudoskill{s=DragonFlyingOwnerAuraSudo;cat=true} @owner
+DragonFlyingOwnerAuraSudo:
+  TargetConditions:
+  - hasaura{n=MountOwnerAura} false
+  Conditions:
+  - hasaura{n=MountOwnerAura} false
+  Skills:
+  - Aura{auraName=MountOwnerAura;onTick=DragonFlyingOwnerSkill;interval=1;duration=999999} @self
+DragonFlyingOwnerSkill:
+  Conditions:
+  Skills:
+  - skill{s=DragonFlyingOwnerOnCrouch} @self
+  - skill{s=DragonFlyingOwnerPitchUp} @self
+  - skill{s=DragonFlyingOwnerPitchDown} @self
+  - skill{s=DragonFlyingOwnerPitchDive} @self
+DragonFlyingOwnerOnCrouch:
+  Conditions:
+  - crouching true
+  Skills:
+  - auraremove{aura=MountOwnerAura;stacks=1} @self
+DragonFlyingOwnerPitchUp:
+  Cooldown: 0.5
+  Conditions:
+  - DrivingModel true 
+  - pitch{p=<-15} true
+  - pitch{p=>-15} false
+  - onground{} false
+  Skills:
+  - signal{s=Ascend} @children #@LivingEntitiesInRadius{r=5;sort=NEAREST}
+DragonFlyingOwnerPitchDown:
+  Cooldown: 0.5
+  Conditions:
+  - DrivingModel treue 
+  - pitch{p=>45} true
+  - pitch{p=<80} true
+  - onground{} false
+  Skills:
+  - signal{s=Descend} @children #LivingEntitiesInRadius{r=5;sort=NEAREST}
+DragonFlyingOwnerPitchDive:
+  Cooldown: 0.5
+  Conditions:
+  - DrivingModel true 
+  - pitch{p=>80} true
+  - onground{} false
+  Skills:
+  - signal{s=Dive} @children #LivingEntitiesInRadius{r=5;sort=NEAREST}
+DragonOwnerSudoAttackSwing:
+  Cooldown: 1
+  TargetConditions:
+  - hasaura{n=OwnerTaggingAura} false 
+  Conditions:
+  - hasaura{n=OwnerTaggingAura} false 
+  Skills:
+  - onSwing{auraname=OwnerTaggingAura;osw=DragonOwnerSudoAttackSwingProjectile;d=20;i=1} @self
+DragonOwnerSudoAttackSwingProjectile:
+  Conditions:
+  - crouching{} false
+  Skills:
+  - projectile{onTick=DragonTargetLockedProjectileOnTick;onEnd=DragonOwnerSudoAttackSwingDummy;d=300;v=100;mr=14;i=1;hR=1;syo=2.5;sfo=3;vR=1;sE=false;sB=true;hnp=true} @TargetLocation
+DragonTargetLockedProjectileOnTick:
+  Skills:
+DragonOwnerSudoAttackSwingDummy:
+  Skills:
+  - summon{type=DragonDummyThreat;amount=1;radius=0;yr=0;summonerIsOwner=false;inheritFaction=false} @origin
+  - sudoskill{s=DragonTargetLockedProjectile;cat=true} @children
+DragonTargetLockedProjectile:
+  TriggerConditions:
+  Skills:
+  - clearThreat{} @self
+  - delay 2
+  - projectile{onTick=DragonTargetLockedProjectileThreat;d=300;v=60;mr=64;i=1;hR=1;syo=2.5;sfo=3;vR=1;sE=false;sB=false;hnp=true} @MobsInRadius{r=32;types=DragonDummyThreat;target=armorstands;limit=1;sort=NEAREST}
+DragonTargetLockedProjectileThreat:
+  Skills:
+  - skill{s=DragonTargetLockedProjectileThreatSkill} @EntitiesNearOrigin{r=5.0}
+DragonTargetLockedProjectileThreatSkill:
+  TargetConditions:
+  - owner{} false
+  - faction{faction=Carcass} false
+  - drivingmodel false
+  - ridingmodel false
+  Skills:
+  - threat{amount=500}
+DragonMountThreatOnDamage:
+  TriggerConditions:
+  - owner{} false
+  - drivingmodel false
+  - ridingmodel false
+  Skills:
+  - threat{amount=500} @trigger
+DragonLargeFlyingStaminaAdd:
+  Cooldown: 0.5
+  Conditions:
+  - inblock{m=WATER} false
+  - hasaura{n=Flying} false
+  - variableInRange{scope=CASTER;var=hunger;value=<1} false
+  - variableInRange{scope=CASTER;var=stamina;value=>300} false
+  Skills:
+  - variableadd{scope=CASTER;var=stamina;amount=2} @self 
+DragonLargeFlyingStaminaAdd-20:
+  Cooldown: 0.5
+  Conditions:
+  - hasaura{n=Flying} false
+  - variableInRange{scope=CASTER;var=stamina;value=>300} false
+  - variableInRange{scope=CASTER;var=hunger;value=<1} false
+  Skills:
+  - variableadd{scope=CASTER;var=stamina;amount=20} @self 
+DragonLargeFlyingStaminaAdd-10:
+  Cooldown: 0.5
+  Conditions:
+  - hasaura{n=Flying} false
+  - variableInRange{scope=CASTER;var=stamina;value=>300} false
+  - variableInRange{scope=CASTER;var=hunger;value=<1} false
+  Skills:
+  - variableadd{scope=CASTER;var=stamina;amount=10} @self 
+DragonLargeFlyingStaminaAdd-5:
+  Cooldown: 0.5
+  Conditions:
+  - hasaura{n=Flying} false
+  - variableInRange{scope=CASTER;var=stamina;value=>300} false
+  - variableInRange{scope=CASTER;var=hunger;value=<1} false
+  Skills:
+  - variableadd{scope=CASTER;var=stamina;amount=5} @self 
+DragonStaminaSubstract-25:
+  Cooldown: 1
+  Conditions:
+  - variableInRange{scope=CASTER;var=stamina;value=<1} castinstead DragonStaminaOut
+  Skills:
+  - variablesubtract{scope=CASTER;var=stamina;amount=25} @self
+DragonStaminaSubstract-15:
+  Cooldown: 1
+  Conditions:
+  - variableInRange{scope=CASTER;var=stamina;value=<1} castinstead DragonStaminaOut
+  Skills:
+  - variablesubtract{scope=CASTER;var=stamina;amount=15} @self
+DragonStaminaSubstract-10:
+  Cooldown: 1
+  Conditions:
+  - variableInRange{scope=CASTER;var=stamina;value=<1} castinstead DragonStaminaOut
+  Skills:
+  - variablesubtract{scope=CASTER;var=stamina;amount=10} @self
+DragonStaminaSubstract-5:
+  Cooldown: 1
+  Conditions:
+  - variableInRange{scope=CASTER;var=stamina;value=<1} castinstead DragonStaminaOut
+  Skills:
+  - variablesubtract{scope=CASTER;var=stamina;amount=5} @self
+DragonStaminaSubstract-1:
+  Cooldown: 1
+  Conditions:
+  - variableInRange{scope=CASTER;var=stamina;value=<1} castinstead DragonStaminaOut
+  Skills:
+  - variablesubtract{scope=CASTER;var=stamina;amount=1} @self
+DragonFlyingStaminaSubstract-1:
+  Cooldown: 1
+  Conditions:
+  - hasaura{n=Flying} true
+  - variableInRange{scope=CASTER;var=stamina;value=<1} castinstead DragonStaminaOut
+  Skills:
+  - variablesubtract{scope=CASTER;var=stamina;amount=1} @self
+DragonFlyingStaminaSubstract-2:
+  Cooldown: 1
+  Conditions:
+  - hasaura{n=Flying} true
+  - variableInRange{scope=CASTER;var=stamina;value=<1} castinstead DragonStaminaOut
+  Skills:
+  - variablesubtract{scope=CASTER;var=stamina;amount=1} @self
+DragonFlyingStaminaSubstract-4:
+  Cooldown: 1
+  Conditions:
+  - hasaura{n=Flying} true
+  - variableInRange{scope=CASTER;var=stamina;value=<1} castinstead DragonStaminaOut
+  Skills:
+  - variablesubtract{scope=CASTER;var=stamina;amount=1} @self
+DragonStaminaOut:
+  Cooldown: 1
+  Skills:
+  - damagepercent{percent=0.02;pkb=true;ignoreArmor=true} @self{targetself=true}
+DragonStaminaChecker:
+  Cooldown: 1
+  Skills:
+  - actionmessage{m="&6Stamina&f-(&5<caster.var.stamina>&f)"} @owner
+  - skill{s=DragonPetTargetParticle} @target
+DragonPetTargetParticle:
+  Cooldown: 0
+  Skills:
+  - effect:particlering{p=Egg_Crack;radius=2;points=20;amount=1;hS=0;vS=0;y=0.1;vd=50;audience=@Owner;repeat=4;repeatInterval=5} 
+DragonFlyingStaminaOut:
+  Cooldown: 2
+  Conditions:
+  Skills:
+  - damagepercent{percent=0.04;pkb=true;ignoreArmor=true} @self
+  - message{m="&fOut of Stamina"} @owner
+  - potion{type=SLOW;duration=40;level=2;hasParticles=false} @self
+DragonPetItemClean:
+  Skills:
+  - consumeHeldItem {amount=1} @trigger
+DragonPetHungerBar:
+  Conditions:
+  - variableInRange{scope=CASTER;var=nohunger;value=1} false
+  Cooldown: 15
+  Skills:
+  - delay 10
+  - message{m="&5Dragon Hunger= &a(&2<caster.var.hunger>&a)"} @owner
+DragonLargeHungerAddEating+40:
+  Cooldown: 0.5
+  Conditions:
+  - variableInRange{scope=CASTER;var=nohunger;value=1} false
+  - variableInRange{scope=CASTER;var=hunger;value=>370} castinstead DragonHungerFull
+  Skills:
+  - variableadd{scope=CASTER;var=hunger;amount=40} @self 
+DragonLargeHungerAddEating+10:
+  Cooldown: 0.5
+  Conditions:
+  - variableInRange{scope=CASTER;var=nohunger;value=1} false
+  - variableInRange{scope=CASTER;var=hunger;value=>390} castinstead DragonHungerFull
+  Skills:
+  - variableadd{scope=CASTER;var=hunger;amount=10} @self 
+DragonMediumHungerAddEating+30:
+  Cooldown: 0.5
+  Conditions:
+  - variableInRange{scope=CASTER;var=nohunger;value=1} false
+  - variableInRange{scope=CASTER;var=hunger;value=>300} castinstead DragonHungerFull
+  Skills:
+  - variableadd{scope=CASTER;var=hunger;amount=30} @self 
+DragonMediumHungerAddEating+8:
+  Cooldown: 0.5
+  Conditions:
+  - variableInRange{scope=CASTER;var=nohunger;value=1} false
+  - variableInRange{scope=CASTER;var=hunger;value=>300} castinstead DragonHungerFull
+  Skills:
+  - variableadd{scope=CASTER;var=hunger;amount=8} @self 
+DragonSmallHungerAddEating+20:
+  Cooldown: 0.5
+  Conditions:
+  - variableInRange{scope=CASTER;var=nohunger;value=1} false
+  - variableInRange{scope=CASTER;var=hunger;value=>200} castinstead DragonHungerFull
+  Skills:
+  - variableadd{scope=CASTER;var=hunger;amount=30} @self 
+DragonSmallHungerAddEating+6:
+  Cooldown: 0.5
+  Conditions:
+  - variableInRange{scope=CASTER;var=nohunger;value=1} false
+  - variableInRange{scope=CASTER;var=hunger;value=>200} castinstead DragonHungerFull
+  Skills:
+  - variableadd{scope=CASTER;var=hunger;amount=6} @self 
+DragonHungerSubstract-25:
+  Cooldown: 1
+  Conditions:
+  - variableInRange{scope=CASTER;var=nohunger;value=1} false
+  - variableInRange{scope=CASTER;var=hunger;value=<1} castinstead DragonHungerOut
+  Skills:
+  - variablesubtract{scope=CASTER;var=hunger;amount=10} @self
+DragonHungerSubstract-5:
+  Cooldown: 1
+  Conditions:
+  - variableInRange{scope=CASTER;var=nohunger;value=1} false
+  - variableInRange{scope=CASTER;var=hunger;value=<1} castinstead DragonHungerOut
+  Skills:
+  - variablesubtract{scope=CASTER;var=hunger;amount=2} @self
+DragonHungerSubstract-1:
+  Cooldown: 1
+  Conditions:
+  - variableInRange{scope=CASTER;var=nohunger;value=1} false
+  - variableInRange{scope=CASTER;var=hunger;value=<1} castinstead DragonHungerOut
+  Skills:
+  - variablesubtract{scope=CASTER;var=hunger;amount=1} @self
+DragonHungerOut:
+  Cooldown: 0
+  Conditions:
+  Skills:
+  - damagepercent{percent=0.02;pkb=true;ignoreArmor=true} @self{targetself=true}
+  - message{m="&fYour Dragon is Starving"} @owner
+DragonHungerFull:
+  Cooldown: 0
+  Conditions:
+  - hasaura{n=DragonHungerFull} false
+  Skills:
+  - message{m="&fYour Dragon is Full"} @owner
+  - Aura{auraName=DragonHungerFull;interval=20;duration=200} @self
+DragonHungerRegenerationMechanic:
+  Conditions:
+  Cooldown: 15
+  Skills: 
+  - skill{s=DragonHungerRegeneration} @self
+  - skill{s=DragonNoHungerRegeneration} @self
+DragonHungerRegeneration:
+  Conditions:
+  - variableInRange{scope=CASTER;var=nohunger;value=1} false
+  - variableInRange{scope=CASTER;var=hunger;value=<1} false
+  Cooldown: 15
+  Skills:  
+  - healpercent{m=0.05} @self
+DragonNoHungerRegeneration:
+  Conditions:
+  - variableInRange{scope=CASTER;var=nohunger;value=1} true
+  Cooldown: 15
+  Skills:  
+  - healpercent{m=0.05} @self
+DragonPetAscendFly+:
+  Skills:
+  - lunge{velocity="<caster.var.flypower> * 1.5";velocityY="<caster.var.flymaneuverability> * 2"} @Self
+
+DragonPetFlyY+:
+  Conditions:
+  - hasaura{n=DescendFlying} false
+  Skills:
+  - skill{s=DragonPetFly+} @self
+DragonPetFly+:
+  Skills:
+  - lunge{velocity="<caster.var.flypower>";velocityY="<caster.var.flymaneuverability>"} @Self
+DragonPetFlyY-:
+  Conditions:
+  - onground{} false
+  - hasaura{n=AscentFlying} false
+  Skills:
+  - skill{s=DragonPetFly-} @self
+DragonPetFly-:
+  Conditions:
+  - inblock{b=WATER} false
+  Skills:
+  - lunge{velocity="<caster.var.flypower>";velocityY="<caster.var.flymaneuverability> *(-1)"} @Self
+DragonPetFlyingStraightY+:
+  Conditions:
+  - hasaura{n=DescendFlying} false
+  - hasaura{n=AscentFlying} false
+  - hasaura{n=TakeOff} false
+  - hasaura{n=Landed} false
+  - hasaura{n=Flying} true
+  Skills:
+  - skill{s=DragonPetFlyingStraightFlyY+;repeat=4;repeatInterval=1} @self
+  - delay 4
+  - skill{s=DragonPetFlyingStraightY-} @self
+DragonPetFlyingStraightFlyY+:
+  Skills:
+  - lunge{velocity="<caster.var.flypower>";velocityY="<caster.var.flymaneuverability>"} @Self
+DragonPetFlyingStraightY-:
+  Conditions:
+  - onground{} false
+  - hasaura{n=DescendFlying} false
+  - hasaura{n=AscentFlying} false
+  - hasaura{n=TakeOff} false
+  - hasaura{n=Landed} false
+  - hasaura{n=Flying} true
+  Skills:
+  - skill{s=DragonPetFlyingStraightFlyY-;repeat=4;repeatInterval=1} @self
+  - delay 4
+  - skill{s=DragonPetFlyingStraightY+} @self
+DragonPetFlyingStraightFlyY-:
+  Conditions:
+  - inblock{b=WATER} false
+  Skills:
+  - lunge{velocity="<caster.var.flypower>";velocityY="(<caster.var.flymaneuverability> *(-1)) / 4"} @Self
+DragonCallingItBack:
+  Cooldown: 1
+  Conditions:
+  - crouching{} true
+  - stringequals{val1="<caster.item.hand.nbt.DragonCharge>";val2="NoCharge"} true
+  Skills:
+  - message{m="Dragon CallingIt Back"} @self
+  - signal{s=ReturnCharge} @LivingEntitiesInRadius{r=15;sort=NEAREST} 
+DragonCombatOnDamage:
+  Cooldown: 1
+  Conditions:
+  - hasaura{n=Combat} false
+  Skills:
+  - Aura{auraName=Combat;onEnd=DragonInCombatEnd;interval=20;duration=300} @self
+  - message{m="&4Your Dragon is in Combat"} @owner
+DragonInCombatEnd:
+  Skills:
+  - message{m="&4Dragon is no longer in Combat"} @owner
+DragonInCombat:
+  Skills:
+  - message{m="&4Cant do that in Combat"} @owner
+
+DragonNoCharge:
+  Conditions:
+  - crouching{} false
+  Skills:
+  - message{m="&6Medailon out of Charge"} @self
+DragonNoMaterial:
+  Cooldown: 1
+  Conditions:
+  - RidingModel false 
+  - DrivingModel false 
+  - hasaura{n=OwnerTaggingAura} false 
+  Skills:
+  - message{m="&cNot Enough of material"} @self
+DragonFeedingInAirMSG:
+  Skills:
+  - message{m="&cYou cant feed the dragon while flying"} @self
+DragonColission:
+  Skills:
+  - throw{velocity=1;velocityY=0} @LivingEntitiesInRadius{r=2}
+DragonPetRemove:
+  Cooldown: 0
+  Conditions:
+  Skills:
+  - delay 1
+  - remove @self

@@ -1,0 +1,1 @@
+{"textures":{"5":"modelengine:entity/hv_selenia_moon_vfx"},"elements":[{"from":[8,1.5,-8.8125],"to":[8,16.5,24.8125],"faces":{"east":{"uv":[0,0,13.400001,6],"tintindex":0,"rotation":0,"texture":"#5"},"west":{"uv":[0,6,13.400001,12],"tintindex":0,"rotation":0,"texture":"#5"}}}],"display":{"gui":{"rotation":[30,225,0]}},"mcmodels":"3bc5167c5bf5ec836727ab7fd4a13363"}

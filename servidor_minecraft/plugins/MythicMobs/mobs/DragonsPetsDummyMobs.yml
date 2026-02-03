@@ -1,0 +1,25 @@
+DragonDummyThreat:
+  Type: armor_stand
+  Display: ''
+  Health: 50
+  Damage: 0
+  ShowHealth: true
+  Despawn: true
+  Options:
+    NoGravity: true
+    Invisible: true
+    Marker: true
+    PreventOtherDrops: true
+    Silent: true
+    PreventMobKillDrops: true
+    PreventItemPickup: true
+    MovementSpeed: 0.0
+    PreventSunburn: true
+    KnockbackResistance: 1
+  Faction: DummyThreat
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Skills:  
+  - remove{delay=10} @self ~onSpawn 

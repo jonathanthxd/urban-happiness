@@ -1,0 +1,334 @@
+######## created by samus2002 #########
+
+# Orc Minion #
+
+Orc_Minion:
+  Type: ZOMBIE
+  Display: '&2Orc Minion'
+  Health: 15
+  Damage: 2
+  Options:
+    MovementSpeed: 0.18
+    ShowHealth: false
+    PreventRandomEquipment: true
+    AlwaysShowName: false
+    Persistent: false
+    Despawn: true
+    PreventOtherDrops: true
+    FollowRange: 20
+    Silent: true
+    KnockbackResistance: 1
+    PreventSunburn: true
+  Drops:
+  - orc_club 1 1
+  Modules:
+    ThreatTable: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 movetowardstarget
+  - 3 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  Skills:
+  - model{mid=orc_minion;n=false;step=1} @self ~onSpawn
+  - effect:sound{s=orc_sounds:samus.orc_idle;volume=1;pitch=1.2} @self ~onTimer:140 0.35
+  - effect:sound{s=orc_sounds:samus.orc_idle;volume=1;pitch=1.2} @self ~onDeath
+  - skill{s=Changetarget} ~onTimer:160 <99%
+  - skill{s=Cancelattack;sync=true} ~onAttack
+  - skill{s=Orc_Minion_Attack} ~onTimer:10
+  - skill{s=Orc_Minion_Run} ~onEnterCombat
+  - skill{s=Orc_Minion_Walk} ~onDropCombat
+  
+# Orc Warrior #
+
+Orc_Warrior:
+  Type: ZOMBIE
+  Display: '&2Orc Warrior'
+  Health: 60
+  Damage: 3
+  Options:
+    MovementSpeed: 0.2
+    ShowHealth: false
+    PreventRandomEquipment: true
+    Collidable: false
+    AlwaysShowName: false
+    Persistent: false
+    Despawn: true
+    PreventOtherDrops: true
+    FollowRange: 20
+    Silent: true
+    KnockbackResistance: 1
+    PreventSunburn: true
+  Drops:
+  - orc_axe 1 1
+  - orc_shield 1 1
+  Modules:
+    ThreatTable: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 movetowardstarget
+  - 3 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  Skills:
+  - model{mid=orc_warrior;n=false;step=1} @self ~onSpawn
+  - effect:sound{s=orc_sounds:samus.orc_idle;volume=1;pitch=1} @self ~onTimer:140 0.35
+  - effect:sound{s=orc_sounds:samus.orc_idle;volume=1;pitch=1} @self ~onDeath
+  - skill{s=Changetarget} ~onTimer:160 <99%
+  - skill{s=Orc_Warrior_Run} ~onEnterCombat
+  - skill{s=Orc_Warrior_Walk} ~onDropCombat
+  - skill{s=Cancelattack;sync=true} ~onAttack
+  - setstance{stance=combat} @self ~onSpawn
+  - skill{s=Orc_Warrior_Attack} ~onTimer:10
+  - skill{s=Orc_Warrior_Shield_Blockmode_ON} ~onDamaged 0.4
+  - skill{s=Orc_Warrior_Shield_Blockmode_OFF} ~onTimer:40
+  
+Orc_Warrior_Shield:
+  Type: ZOMBIE
+  Display: '&c'
+  Health: 5
+  Damage: 1
+  Options:
+    MovementSpeed: 0.01
+    PreventRandomEquipment: true
+    Collidable: true
+    PreventOtherDrops: true
+    Silent: true
+    KnockbackResistance: 1
+    PreventSunburn: true
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+  Skills:
+  - skill{s=Cancelattack;sync=true} @self ~onDamaged
+  - setAI{ai=false} @self ~onSpawn
+  - skill{s=Orc_Warrior_Shield_BLOCK} ~onDamaged
+  - skill{s=Orc_Warrior_Shield_BLOCK_PRO} ~onDamaged
+  - model{mid=orc_shield;n=false;step=1} @self ~onSpawn
+  - skill{s=Orc_Warrior_Shield_DIE} @Parent ~onTimer:1
+  
+# Orc Archer #
+
+Orc_Archer:
+  Type: SKELETON
+  Display: '&2Orc Archer'
+  Health: 45
+  Damage: 5
+  Options:
+    MovementSpeed: 0.2
+    ShowHealth: false
+    PreventRandomEquipment: true
+    AlwaysShowName: false
+    Persistent: false
+    Despawn: true
+    PreventOtherDrops: true
+    FollowRange: 20
+    Silent: true
+    KnockbackResistance: 1
+    PreventSunburn: true
+  Drops:
+  - orc_crossbow 1 1
+  Equipment:
+  - bow:HAND
+  Modules:
+    ThreatTable: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 lookatplayers
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  Skills:
+  - model{mid=orc_archer;n=false;step=1} @self ~onSpawn
+  - effect:sound{s=orc_sounds:samus.orc_idle;volume=1;pitch=1} @self ~onTimer:140 0.35
+  - effect:sound{s=orc_sounds:samus.orc_idle;volume=1;pitch=1} @self ~onDeath
+  - bodyclamp{c=30} @self ~onSpawn
+  - skill{s=Changetarget} ~onTimer:160 <99%
+  - skill{s=Cancelattack;sync=true} ~onShoot
+  - skill{s=Orc_Archer_Attack} ~onTimer:60
+  
+Orc_Arrow:
+  Type: ARMOR_STAND
+  ItemHead: orc_arrow
+  Options:
+    Marker: true
+    Small: false
+    Invisible: true
+    Invincible: true
+  Skills:
+  - look{headOnly=false;immediately=true} @forward{f=5;y=1.5} ~onSpawn
+  #- effect:particles{particle=lava;amount=12;hS=1;vS=1;speed=0.1;delay=1} @self ~onSpawn
+  - equip{item=orc_arrow:4} ~onSpawn
+
+# Orc Giant #
+
+Orc_Giant:
+  Type: ZOMBIE
+  Display: '&2Orc Giant'
+  Health: 350
+  Damage: 6
+  BossBar:
+    Enabled: true
+    Title: '&2Orc Giant'
+    Range: 25
+    Color: RED
+    Style: SEGMENTED_12
+    DarkenSky: false
+  Options:
+    MovementSpeed: 0.23
+    ShowHealth: false
+    PreventRandomEquipment: true
+    AlwaysShowName: false
+    Persistent: false
+    Despawn: true
+    PreventOtherDrops: true
+    FollowRange: 50
+    Silent: true
+    KnockbackResistance: 1
+    PreventSunburn: true
+  Modules:
+    ThreatTable: true
+  DamageModifiers:
+  - FALL 0
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 movetowardstarget
+  - 3 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  Skills:
+  - model{mid=orc_giant;n=false;step=1} @self ~onSpawn
+  - partvisibility{m=orc_giant;p=stone;v=false;delay=1} @self ~onSpawn
+  - effect:sound{s=orc_sounds:samus.orc_giant_idle;volume=2;pitch=1} @self ~onTimer:140 0.35
+  - effect:sound{s=orc_sounds:samus.orc_giant_roar;volume=3;pitch=1} @self ~onDeath
+  - skill{s=Changetarget} ~onTimer:160 <99%
+  - skill{s=Cancelattack;sync=true} ~onAttack
+  - skill{s=Orc_Giant_Attack} ~onTimer:10
+  - skill{s=Orc_Giant_Skill} ~onTimer:40
+  
+Orc_Stone:
+  Type: ARMOR_STAND
+  Pose:
+      Head: 0,0,0
+  ItemHead: orc_stone
+  Options:
+    Marker: true
+    Small: false
+    Invisible: true
+    Invincible: true
+  Skills:
+  - equip{item=orc_stone:4} ~onSpawn
+  
+# Orc King #
+
+Orc_King:
+  Type: ZOMBIE
+  Display: '&2Orc King'
+  Health: 650
+  Damage: 6
+  BossBar:
+    Enabled: true
+    Title: '&2Orc King'
+    Range: 25
+    Color: RED
+    Style: SEGMENTED_12
+    DarkenSky: false
+  Options:
+    MovementSpeed: 0.2
+    ShowHealth: false
+    PreventRandomEquipment: true
+    AlwaysShowName: false
+    Persistent: false
+    Despawn: true
+    PreventOtherDrops: true
+    FollowRange: 50
+    Silent: true
+    KnockbackResistance: 1
+    PreventSunburn: true
+  Drops:
+  - orc_glaive 1 1
+  Modules:
+    ThreatTable: true
+  DamageModifiers:
+  - FALL 0
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 movetowardstarget
+  - 3 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  Skills:
+  - model{mid=orc_king;n=false;step=1} @self ~onSpawn
+  - partvisibility{m=orc_king;p=skulls;v=false;delay=1} @self ~onSpawn
+  - effect:sound{s=orc_sounds:samus.orc_idle;volume=1.5;pitch=1} @self ~onTimer:140 0.35
+  - effect:sound{s=orc_sounds:samus.orc_idle;volume=1.5;pitch=1} @self ~onDeath
+  - skill{s=Changetarget} ~onTimer:160 <99%
+  - skill{s=Cancelattack;sync=true} ~onAttack
+  - skill{s=Orc_King_Attack} ~onTimer:10
+  - skill{s=Orc_King_Skill} ~onTimer:30
+  
+Orc_Glaive:
+  Type: ARMOR_STAND
+  Pose:
+      Head: 0,0,0
+  ItemHead: orc_glaive
+  Options:
+    Marker: true
+    Small: false
+    Invisible: true
+    Invincible: true
+  Skills:
+  - equip{item=orc_glaive:4} ~onSpawn
+  - look{headOnly=false;immediately=true} @forward{f=5;y=1.5} ~onSpawn
+  
+Orc_Skull:
+  Type: ARMOR_STAND
+  Pose:
+      Head: 0,0,0
+  ItemHead: orc_skull
+  Options:
+    Marker: true
+    Small: false
+    Invisible: true
+    Invincible: true
+  Skills:
+  - equip{item=orc_skull:4} ~onSpawn
+  
+
+Orc_Boar:
+  Type: wolf
+  Display: '&cOrc Boar'
+  Health: 40
+  Damage: 2
+  Options:
+    MovementSpeed: 0.39
+    ShowHealth: false
+    PreventRandomEquipment: true
+    AlwaysShowName: true
+    Persistent: false
+    Invincible: true
+    Despawn: false
+    PreventOtherDrops: true
+    FollowRange: 20
+    Silent: true
+    KnockbackResistance: 1
+    PreventSunburn: true
+  DamageModifiers:
+  - FALL 0
+  AIGoalSelectors:
+  - 0 clear
+  - 1 randomstroll
+  - 2 lookatplayers
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - model{mid=orc_boar;n=false;step=1;drive=true} @self ~onSpawn
